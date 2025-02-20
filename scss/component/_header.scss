@@ -1,0 +1,17 @@
+@media (min-width: 1440px) {
+    .side-header {
+        padding-left: 40px;
+        padding-right: 40px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 280px;
+        height: 100%;
+    }
+}
+
+    .header-nav-item {
+        font-size: 20px;
+        font-weight: 700;
+    }
