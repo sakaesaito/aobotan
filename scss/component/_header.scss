@@ -1,26 +1,121 @@
-    .content {
-        max-width: 1440px;
-        width: 100%;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+body {
+    color: #4282B8;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 16px;
+    line-height: 1;
+    color: #000;
+    overflow-x: hidden;
+}
+nav {
+    list-style: none;
+  }
+
+.content {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse
+}
+.side {
+    width: 280px;
+}
+.side-header {
+    position: fixed;
+    padding-left: 40px;
+    padding-right: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 280px;
+    height: 100%;
+}
+.side-header-logo {
+    width: 100%;
+    margin-top: 75px;
+}
+
+.header-nav-list {
+    font-size: 20px;
+    font-weight: 700;
+}
+.header-nav-item {
+    display: inline-block;
+}  
+.header-nav-main {
+  padding-top: 32px;
+  padding-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #B1C6DC;
+}
+
+.header-nav-drop {
+    display:inline-block;
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+    padding-left: 17px;
+    line-height: 2;
+    font-size: 14px;
+}
+.header-nav-drop:nth-child(3) {
+    margin-bottom: 32px;
+}
+.header-nav-drop-link {
+    display: inline-block;
+    padding-top: 24px;
+}
+
+.header-nav-drop-bar1 {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    right: 0px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background: #4282B8;
+}
+.fv {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    margin-top: 40px;
+    margin-right: 40px;
+    position: relative;
+}
+.fv-img p {
+    width: 540px;
+    position: absolute;
+    font-size: 16px;
+    font-weight: 700;line-height: 2;
+    color: #000;
+    left: 450px;
+    bottom: 450px;
+  }
+  .fv-img h2 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #000;
+    background-color: #fff;
+    padding: 13px 14px;
+    position: absolute;
+    bottom: 100px;
+    left: 450px;
+    width: 540px;
+  }
+  .header-nav-main::before {
     
-    .side-header {
-        padding-left: 40px;
-        padding-right: 40px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        width: 280px;
-        height: 100%;
-    }
-    .side-inner {
-        width: 100%;
-        padding: 0 40px;        
-    }
-    .side-header-logo {
-        margin-top: 75px;
-        width: 100%;
-        height: 121px;
-    }
-   
-    
+  }

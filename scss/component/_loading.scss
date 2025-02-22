@@ -1,48 +1,33 @@
-
-  .loading {
+.hidden {
     display: none;
+  }
+  .loading {
     position: absolute;
-    top:0px;
-    left: 0px;
-    background-color: #fff;
-    width: 100%;
-    height: 100%;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: #fff;
+    z-index: 2147483647;
     display: grid;
     place-content: center;
-    place-items: center;
-    opacity: 0;
-    transition: 0.5s;
-    pointer-events: none;
-    animation: loaderAnime 1s infinite linear;
-    margin: auto;
-    z-index: 900;
+    opacity: 0; /* 初期状態は透明にする */
+    transition: opacity 0.5s ease; /* アニメーションを適用 */
+    pointer-events: none; /* 背後のコンテンツにマウスイベントが影響しないようにする */
   }
-
-
-  .loadingWrap {
-    width: 100%;
-    height: 100vh;
-    text-align: center;
+  .loading.active {
+    display: grid;
+    opacity: 1;
+    transition: opacity 0.5s ease; /* アニメーションを適用 */
   }
-        
-  // @keyframes loaderAnime {
-  //   0% {
-  //       transform: rotate(0deg);
-  //   }
-  //   100% {
-  //       transform: rotate(360deg);
-  //   }
-  // }
-        
-  .loadingNone {
-    animation: loadingAnime 1s forwards;
+  img {
+    width: 300px;
+    height: 200px;
   }
-        
-  @keyframes loadingAnime {
-    0% {
-        opacity: 1;
+  /* JS が無効なときのスタイル */
+  @media (scripting: none) {
+    .loading {
+      display: none;
     }
-    100% {
-        opacity: 0;
+    .hidden {
+      display: block;
     }
   }

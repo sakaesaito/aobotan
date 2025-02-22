@@ -184,7 +184,7 @@ svg, img, embed, object, iframe {
 /* ============================================ */
 /**
  * Reset form fields to make them styleable.
- * 1. Make form elements stylable across systems iOS especially.
+ * 1. Make form elements styleable across systems iOS especially.
  * 2. Inherit text-transform from parent.
  */
 button, input, optgroup, select, textarea {
@@ -356,112 +356,18 @@ th {
   font-weight: bold;
 }
 
-.side-header {
-  padding-left: 40px;
-  padding-right: 40px;
-  flex-direction: column;
-  width: 280px;
-  height: 100%;
-}
-
-.side-inner {
-  max-width: 19.5%;
+.content {
   width: 100%;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.side-header-logo {
-  margin-top: 75px;
-  width: 100%;
-  height: 121px;
-}
-
-.loading {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  place-content: center;
-  place-items: center;
-  opacity: 0;
-  transition: 0.5s;
-  pointer-events: none;
-  -webkit-animation: loaderAnime 1s infinite linear;
-          animation: loaderAnime 1s infinite linear;
-  margin: auto;
-  z-index: 900;
+  height: 100vh;
 }
 
 .loadingWrap {
   width: 100%;
   height: 100vh;
-  text-align: center;
-}
-
-@-webkit-keyframes loaderAnime {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes loaderAnime {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.loadingNone {
-  -webkit-animation: loadingAnime 1s forwards;
-          animation: loadingAnime 1s forwards;
-}
-
-@-webkit-keyframes loadingAnime {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes loadingAnime {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.header-nav-list {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.header-nav-item {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.header-nav-main {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
-.header-nav-drop {
-  display: block;
-  display: flex;
-  flex-direction: column;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
 * {
@@ -482,9 +388,124 @@ body {
 
 nav {
   list-style: none;
+  font-weight: 700;
 }
 
-.drop-menu-item {
-  list-style: none;
+.content {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.side {
+  width: 280px;
+}
+
+.side-header {
+  padding-left: 40px;
+  padding-right: 40px;
+  flex-direction: column;
+  max-width: 280px;
+  height: 100%;
+}
+
+.side-header-logo {
+  width: 100%;
+  margin-top: 75px;
+}
+
+.header-nav-list {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header-nav-item {
+  display: inline-block;
+}
+
+.header-nav-main {
+  padding-top: 32px;
+  padding-bottom: 30px;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #B1C6DC;
+  display: inline-block;
+  width: 200px;
+}
+
+.header-nav-drop {
+  display: inline-block;
+  display: flex;
+  width: 200px;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-left: 17px;
+  line-height: 2;
+  font-size: 14px;
+  border-bottom: 1px solid #B1C6DC;
+}
+.header-nav-drop:nth-child(3) {
+  padding-bottom: 32px;
+}
+
+.fv {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin-top: 40px;
+  margin-right: 40px;
+  position: relative;
+}
+.fv-img p {
+  width: 540px;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 700;line-height: 2;
+  color: #000;
+  left: 450px;
+  bottom: 100px;
+}
+.fv-img h2 {
+  font-size: 64px;
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  padding: 13px 14px;
+  position: absolute;
+  bottom: 200px;
+  left: 450px;
+  width: 540px;
+}
+.hidden {
+  display: none;
+}
+.loading {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: #fff;
+  z-index: 2147483647;
+  display: grid;
+  place-content: center;
+  opacity: 0; /* 初期状態は透明にする */
+  transition: opacity 0.5s ease; /* アニメーションを適用 */
+  pointer-events: none; /* 背後のコンテンツにマウスイベントが影響しないようにする */
+}
+.loading.active {
+  display: grid;
+  opacity: 1;
+  transition: opacity 0.5s ease; /* アニメーションを適用 */
+}
+
+/* JS が無効なときのスタイル */
+@media (scripting: none) {
+  .loading {
+    display: none;
+  }
+  .hidden {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */
