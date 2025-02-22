@@ -25,14 +25,14 @@
     text-align: center;
   }
         
-  @keyframes loaderAnime {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-  }
+  // @keyframes loaderAnime {
+  //   0% {
+  //       transform: rotate(0deg);
+  //   }
+  //   100% {
+  //       transform: rotate(360deg);
+  //   }
+  // }
         
   .loadingNone {
     animation: loadingAnime 1s forwards;

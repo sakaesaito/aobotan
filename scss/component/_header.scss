@@ -1,4 +1,8 @@
-@media (min-width: 1440px) {
+    .content {
+        max-width: 1440px;
+        width: 100%;
+    }
+    
     .side-header {
         padding-left: 40px;
         padding-right: 40px;
@@ -9,9 +13,14 @@
         width: 280px;
         height: 100%;
     }
-}
-
-    .header-nav-item {
-        font-size: 20px;
-        font-weight: 700;
+    .side-inner {
+        width: 100%;
+        padding: 0 40px;        
     }
+    .side-header-logo {
+        margin-top: 75px;
+        width: 100%;
+        height: 121px;
+    }
+   
+    

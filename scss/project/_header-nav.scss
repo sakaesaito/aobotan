@@ -1,0 +1,26 @@
+.header-nav-list {
+    font-size: 20px;
+    font-weight: 700;
+}
+.header-nav-item {
+    font-size: 20px;
+    font-weight: 700;
+}
+.header-nav-main {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+.header-nav-drop {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 57px;
+}
+.header-nav-drop-link{
+        font-size: 14px;
+        font-weight: 700;
+        padding-left: 57px;
+    }
+
