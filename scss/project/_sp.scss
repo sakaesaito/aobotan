@@ -1,0 +1,134 @@
+/* 959px以下に適用されるCSS（タブレット用） */
+@media screen and (max-width: 959px) {
+    .header-nav {
+      display: none;
+    }
+    .sp_header {
+        display: block;
+    }
+    
+    .sp_header_main {
+        display: flex;
+        
+    }
+    .sp_menu {
+        background-color: #4282b8;
+        color: #fff;
+        width: 56px;
+        height: 56px;
+        cursor: pointer;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        transition: all 0.3s;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .sp_menu:hover {
+        opacity: 0.7;
+      }
+      
+      /* ハンバーガーの３本線 */
+      .sp_menu span {
+        display: block;
+        transition: all 0.3s;
+        top: 12px;
+        left: 25%;
+        width: 32px;
+        height: 1px;
+        background-color: #fff;
+        margin: 0 auto;
+      }
+      
+      .sp_menu_icon span:nth-of-type(2) {
+        margin-top: 12px;
+      }
+      
+      .sp_menu_icon span:nth-of-type(3) {
+        margin-top: 12px;
+      }
+      
+      /* menuクラスがactiveの時のコード*/
+      .sp_menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+      
+      .sp_menu.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .sp_menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -8px);
+      }
+      
+      /* ドロワーメニュー */
+      .drawer_nav {
+        display: block;
+        position: fixed;
+        top: 0px;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        transition: 0.3s;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+      }
+      
+      .drawer_nav.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+      }
+      
+      .drawer_nav a {
+        transition: 0.4s;
+        display: block;
+        height: inherit;
+        align-items: center;
+      }
+      
+      .drawer_list {
+        font-family: "Zen Kaku Gothic New";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+        text-align: center;
+        -webkit-text-decoration-skip-ink: none;
+                text-decoration-skip-ink: none;
+        color: #000;
+        align-items: center;
+        padding-top: 32px;
+        margin-top: 109px;
+      }
+      
+      .drawer_item {
+        list-style: none;
+        padding-top: 32px;
+        color: #FFF;
+      }
+      
+      .drawer_item:last-child {
+        margin-bottom: 0;
+        display: flex;
+      }
+      
+      .drawer_item img {
+        width: 24px;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .drawer_list span {
+        margin-right: 12px;
+        box-sizing: border-box;
+        width: 24px;
+      }
+    
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! destyle.css v4.0.1 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
@@ -184,7 +185,7 @@ svg, img, embed, object, iframe {
 /* ============================================ */
 /**
  * Reset form fields to make them styleable.
- * 1. Make form elements styleable across systems iOS especially.
+ * 1. Make form elements stylable across systems iOS especially.
  * 2. Inherit text-transform from parent.
  */
 button, input, optgroup, select, textarea {
@@ -364,6 +365,7 @@ th {
 }
 
 body {
+  color: #4282B8;
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -373,14 +375,16 @@ body {
 
 nav {
   list-style: none;
-  font-weight: 700;
 }
-
+.sp_header {
+  display: none;
+}
 .content {
   max-width: 1440px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+ 
 }
 
 .side {
@@ -388,10 +392,11 @@ nav {
 }
 
 .side-header {
+  position: fixed;
   padding-left: 40px;
   padding-right: 40px;
   flex-direction: column;
-  max-width: 280px;
+  width: 280px;
   height: 100%;
 }
 
@@ -405,14 +410,20 @@ nav {
   font-weight: 700;
 }
 
+.header_nav_box {
+  display: flex;
+  /* padding-top: 32px;
+  padding-bottom: 30px; */
+}
+
 .header-nav-item {
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .header-nav-main {
   padding-top: 32px;
   padding-bottom: 30px;
-  display: flex;
+  /* display: flex; */
   cursor: pointer;
   position: relative;
   border-bottom: 1px solid #B1C6DC;
@@ -420,23 +431,71 @@ nav {
 }
 
 .header-nav-drop {
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  font-size: 16px;
+  opacity: 0;
   display: inline-block;
   display: flex;
-  width: 200px;
   flex-direction: column;
-  padding-top: 24px;
+  padding-top: 8px;
   padding-left: 17px;
   line-height: 2;
   font-size: 14px;
-  border-bottom: 1px solid #B1C6DC;
 }
+
 .header-nav-drop:nth-child(3) {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
+
+.header-nav-drop-link {
+  display: inline-block;
+  padding-top: 24px;
+}
+
+.header-nav-drop-bar1 {
+  position: absolute;
+  width: 24px;
+  height: 1px;
+  top: 240px;
+  right: 55px;
+  transform: translateY(-50%);
+  background: #4282B8;
+}
+.header-nav-drop-bar2 {
+  position: absolute;
+  width: 1px;
+  height: 24px;
+  top: 228px;
+  right: 67px;
+  transform: translateX(-50%);
+  background: #4282B8;
+}
+.header-nav-drop-bar3 {
+  position: absolute;
+  width: 24px;
+  height: 1px;
+  top: 322px;
+  right: 55px;
+  transform: translateY(-50%);
+  background: #4282B8;
+}
+
+.header-nav-drop-bar4 {
+  position: absolute;
+  width: 1px;
+  height: 24px;
+  top: 310px;
+  left: 212px;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+  background: #4282B8;
 }
 .main {
-
+  max-width: 1120px;
+  width: 100%;
 }
-
 .fv {
   max-width: 100%;
   height: auto;
@@ -445,15 +504,18 @@ nav {
   margin-right: 40px;
   position: relative;
 }
+
 .fv-img p {
   width: 540px;
   position: absolute;
   font-size: 16px;
-  font-weight: 700;line-height: 2;
+  font-weight: 700;
+  line-height: 2;
   color: #000;
   left: 450px;
-  bottom: 80px;
+  bottom: 60px;
 }
+
 .fv-img h2 {
   font-size: 64px;
   font-weight: 700;
@@ -461,39 +523,65 @@ nav {
   background-color: #fff;
   padding: 13px 14px;
   position: absolute;
-  bottom: 170px;
+  bottom: 140px;
   left: 450px;
   width: 540px;
-}
-.hidden {
-  display: none;
-}
-.loading {
-  position: absolute;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: #fff;
-  z-index: 2147483647;
-  display: grid;
-  place-content: center;
-  opacity: 0; /* 初期状態は透明にする */
-  transition: opacity 0.5s ease; /* アニメーションを適用 */
-  pointer-events: none; /* 背後のコンテンツにマウスイベントが影響しないようにする */
-}
-.loading.active {
-  display: grid;
-  opacity: 1;
-  transition: opacity 0.5s ease; /* アニメーションを適用 */
+  border-radius: 10px;
 }
 
-/* JS が無効なときのスタイル */
-@media (scripting: none) {
-  .loading {
-    display: none;
-  }
-  .hidden {
-    display: block;
-  }
+.sp_menu {
+  background-color: #4282b8;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  transition: all 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp_menu:hover {
+  opacity: 0.7;
+}
+
+/* ハンバーガーの３本線 */
+.sp_menu span {
+  display: block;
+  transition: all 0.3s;
+  top: 12px;
+  left: 25%;
+  width: 32px;
+  height: 1px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.sp_menu_icon span:nth-of-type(2) {
+  margin-top: 12px;
+}
+
+.sp_menu_icon span:nth-of-type(3) {
+  margin-top: 12px;
+}
+
+/* menuクラスがactiveの時のコード*/
+.sp_menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+
+.sp_menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.sp_menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -8px);
 }
 
 /* ドロワーメニュー */
@@ -501,7 +589,7 @@ nav {
   display: none;
   display: block;
   position: fixed;
-  top: 64px;
+  top: 0px;
   right: 0;
   width: 100%;
   height: 100vh;
@@ -526,28 +614,34 @@ nav {
 }
 
 .drawer_list {
-  font-family: "Zen Kaku Gothic New" ;
+  font-family: "Zen Kaku Gothic New";
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
   text-align: center;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   color: #000;
   align-items: center;
   padding-top: 32px;
-}
-
-.drawer_list span {
-  width: 24px;
+  margin-top: 109px;
 }
 
 .drawer_item {
-  border-bottom: #fff 1px solid;
-  padding-left: 16px;
   list-style: none;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 32px;
   color: #FFF;
+}
+.drawer_item.--mail::before {
+  /* position: absolute; */
+  content: "";
+  top: 50%;
+  left: -28px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url(../img/header_icon-mail.png) no-repeat center center / contain;
 }
 
 .drawer_item:last-child {
@@ -566,4 +660,134 @@ nav {
   box-sizing: border-box;
   width: 24px;
 }
+
+/* 959px以下に適用されるCSS（タブレット用） */
+@media screen and (max-width: 959px) {
+  .sp_header_main {
+      display: flex;
+      justify-content: space-between;
+      
+  }
+  .sp_menu {
+      background-color: #4282b8;
+      color: #fff;
+      width: 56px;
+      height: 56px;
+      cursor: pointer;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      transition: all 0.3s;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .sp_menu:hover {
+      opacity: 0.7;
+    }
+    
+    /* ハンバーガーの３本線 */
+    .sp_menu span {
+      display: block;
+      transition: all 0.3s;
+      top: 12px;
+      left: 25%;
+      width: 32px;
+      height: 1px;
+      background-color: #fff;
+      margin: 0 auto;
+    }
+    
+    .sp_menu_icon span:nth-of-type(2) {
+      margin-top: 12px;
+    }
+    
+    .sp_menu_icon span:nth-of-type(3) {
+      margin-top: 12px;
+    }
+    
+    /* menuクラスがactiveの時のコード*/
+    .sp_menu.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 8px);
+    }
+    
+    .sp_menu.active span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .sp_menu.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -8px);
+    }
+    
+    /* ドロワーメニュー */
+    .drawer_nav {
+      display: block;
+      position: fixed;
+      top: 0px;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: #fff;
+      transition: 0.3s;
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .drawer_nav.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+    
+    .drawer_nav a {
+      transition: 0.4s;
+      display: block;
+      height: inherit;
+      align-items: center;
+    }
+    
+    .drawer_list {
+      font-family: "Zen Kaku Gothic New";
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 16px;
+      text-align: center;
+      -webkit-text-decoration-skip-ink: none;
+              text-decoration-skip-ink: none;
+      color: #000;
+      align-items: center;
+      padding-top: 32px;
+      margin-top: 109px;
+    }
+    
+    .drawer_item {
+      list-style: none;
+      padding-top: 32px;
+      color: #FFF;
+    }
+    
+    .drawer_item:last-child {
+      margin-bottom: 0;
+      display: flex;
+    }
+    
+    .drawer_item img {
+      width: 24px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .drawer_list span {
+      margin-right: 12px;
+      box-sizing: border-box;
+      width: 24px;
+    }
+  
+}
+
 /*# sourceMappingURL=style.css.map */
