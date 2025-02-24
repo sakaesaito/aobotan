@@ -1,31 +1,51 @@
 @media screen and (max-width: 1439px){
   .side-header {
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
+    max-width: 1439px;
     height: 102px;
+    background-color: #fff;
     display: flex;
     flex-direction: row;
-    z-index: 1001; 
+    justify-content: space-between;
+    align-items: start;
+    padding: 0 10px;
+    z-index: 1000;
   }
   .header-nav {
     display: none;
   }
-  .sp-menu {
+  .sp_header_menu {
     display: block;
   }
+  .sp_header_main {
+    display: flex;    
+}
+  
   .content {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
     display: block;
-    max-width: 1100px;
+  
   }
   .fv {
     margin-top: 102px;
+  }
+  .fv-bg img {
+    width: 100%;
+  
   }
  .fv-inner {
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
+  height: auto;
+
+  box-sizing: border-box;
+
  }
  .side-header-logo {
   margin-top: 10px;
@@ -35,40 +55,85 @@
   width: 98px;
   height: 59px;
 }
+.sp_header-menu {
+  display:block;
+  background-color: #4282b8;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  transition: all 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.sp_menu {
+  background-color: #4282b8;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  transition: all 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp_menu:hover {
+  opacity: 0.7;
+}
+/* ハンバーガーの３本線 */
+.sp_menu span {
+  display: block;
+  transition: all .3s;
+  top: 12px;
+  left: 25%;
+  width: 32px;
+  height: 1px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.sp_menu_icon span:nth-of-type(2) {
+  margin-top: 12px;
+}
+
+.sp_menu_icon span:nth-of-type(3) {
+  margin-top: 12px;
+}
+
+
+/* menuクラスがactiveの時のコード*/
+.sp_menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+
+.sp_menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.sp_menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -8px);
+}
 
 }
 
 
 /* 959px以下に適用されるCSS（タブレット用） */
-@media screen and (max-width: 959px) {
-    .header-nav {
-      display: none;
-    }
-    .side {
-      display: flex;
-      justify-content: space-between;
-    }
-    .side-header {
-      padding-left: 10px;
-      padding-right: 10px;
-      width: 100%;
-      height: 102px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .side-header {
-      position: fixed;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      height: 102px;
-      display: flex;
-      flex-direction: row;
-      background-color: #fff;
-      z-index: 1001;
-  }
-
+@media screen and (max-width: 1160px) {
     .side-header-logo {
       margin-top: 10px;
       margin-left: 10px;
@@ -77,32 +142,7 @@
       width: 98px;
       height: 59px;
     }
-    .sp_header_main {
-        display: flex;
-        
-    }
-    .sp_menu {
-        background-color: #4282b8;
-        color: #fff;
-        width: 56px;
-        height: 56px;
-        cursor: pointer;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border: none;
-        transition: all 0.3s;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      .sp_menu:hover {
-        opacity: 0.7;
-      }
-      
+  
       /* ハンバーガーの３本線 */
       .sp_menu span {
         display: block;
@@ -200,5 +240,4 @@
         box-sizing: border-box;
         width: 24px;
       }
-    
-}
+    }

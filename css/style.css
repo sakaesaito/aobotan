@@ -123,8 +123,7 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -191,8 +190,7 @@ svg, img, embed, object, iframe {
 button, input, optgroup, select, textarea {
   -webkit-appearance: none;
   /* 1 */
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   vertical-align: middle;
   color: inherit;
   font: inherit;
@@ -357,7 +355,68 @@ th {
   font-weight: bold;
 }
 
+/* ドロワーメニュー */
+.drawer_nav {
+  display: none;
+}
 
+@media screen and (max-width: 1439px) {
+  .drawer_nav {
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .drawer_nav.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  .drawer_nav a {
+    transition: 0.4s;
+    display: block;
+    height: inherit;
+    align-items: center;
+  }
+  .drawer_list {
+    font-family: "Zen Kaku Gothic New";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-decoration-skip-ink: none;
+    color: #000;
+    align-items: center;
+    padding-top: 32px;
+    margin-top: 109px;
+  }
+  .drawer_item {
+    list-style: none;
+    padding-top: 32px;
+    color: #FFF;
+  }
+  .drawer_item:last-child {
+    margin-bottom: 0;
+    display: flex;
+  }
+  .drawer_item img {
+    width: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  .drawer_list span {
+    margin-right: 12px;
+    box-sizing: border-box;
+    width: 24px;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -372,9 +431,11 @@ body {
   color: #000;
   overflow-x: hidden;
 }
+
 nav {
   list-style: none;
 }
+
 .sp_header_menu {
   display: none;
 }
@@ -383,11 +444,13 @@ nav {
   max-width: 1440px;
   width: 100%;
   display: flex;
-  
 }
+
 .side {
   width: 280px;
+  height: auto;
 }
+
 .side-header {
   position: fixed;
   display: flex;
@@ -397,31 +460,36 @@ nav {
   max-width: 280px;
   height: 100%;
 }
+
 .side-header-logo {
   width: 280px;
   margin-top: 75px;
+}
+
+.header-nav {
+  margin-top: 25px;
 }
 
 .header-nav-list {
   font-size: 20px;
   font-weight: 700;
 }
-.header-nav {
-  margin-top: 25px;
-}
+
 .header_nav_box {
   display: flex;
 }
+
 .header-nav-item {
   display: inline-block;
-}  
+}
+
 .header-nav-main {
-cursor: pointer;
-position: relative;
-border-bottom: 1px solid #B1C6DC;
-width: 200px;
-padding-top: 24px;
-padding-bottom: 24px;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #B1C6DC;
+  width: 200px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-nav-drop {
@@ -430,39 +498,31 @@ padding-bottom: 24px;
   background: #fff;
   font-size: 16px;
   opacity: 0;
-  display:inline-block;
-  display: flex;
-  flex-direction: column;
-  padding-top: 8px;
-  padding-left: 17px;
-  line-height: 2;
-  font-size: 14px;
 }
+
 .header-nav-drop a {
   padding-top: 32px;
   text-align: center;
   color: #000;
   font-weight: 700;
 }
+
 .header-nav-drop a:hover {
-  opacity: .4;
+  opacity: 0.4;
 }
+
 .header-nav-box:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .header-nav-drop:nth-child(3) {
   margin-bottom: 32px;
 }
+
 .header_nav_box {
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  position: relative;
 }
+
 .header-nav-drop-link {
   display: inline-block;
   padding-top: 24px;
@@ -472,8 +532,8 @@ padding-bottom: 24px;
   position: absolute;
   width: 24px;
   height: 1px;
-  top: 240px;
-  right: 55px;
+  top: 256px;
+  right: 40px;
   transform: translateY(-50%);
   background: #4282B8;
 }
@@ -482,18 +542,19 @@ padding-bottom: 24px;
   position: absolute;
   width: 1px;
   height: 24px;
-  top: 228px;
-  left: 67px;
+  top: 243px;
+  left: 228px;
   transform: translateX(-50%);
   transition: all 0.3s;
   background: #4282B8;
 }
+
 .header-nav-drop-bar3 {
   position: absolute;
   width: 24px;
   height: 1px;
-  top: 322px;
-  right: 55px;
+  top: 324px;
+  right: 40px;
   transform: translateY(-50%);
   background: #4282B8;
 }
@@ -502,31 +563,46 @@ padding-bottom: 24px;
   position: absolute;
   width: 1px;
   height: 24px;
-  top: 310px;
-  left: 212px;
+  top: 312px;
+  left: 228px;
   transform: translateX(-50%);
   transition: all 0.3s;
   background: #4282B8;
 }
+
 .main {
   max-width: 1120px;
   width: 100%;
 }
+
 .fv {
   width: 100%;
-  height: auto;
   vertical-align: middle;
   position: fixed;
   height: 727px;
   margin-bottom: 186px;
-  background: linear-gradient(to right, #fff 433px, #4282B8 433px);   
+  background: linear-gradient(to right, #fff 433px, #4282B8 433px);
 }
+
 .fv-inner {
   padding-top: 40px;
   padding-left: 0px;
-  width: 100%;
-  max-width: 1120px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
+
+.fv-bg {
+  max-width: 1120px;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.fv-bg img {
+  width: 100%;
+  margin: 0;
+}
+
 .fv-img p {
   width: 540px;
   position: absolute;
@@ -535,9 +611,10 @@ padding-bottom: 24px;
   line-height: 2;
   color: #000;
   left: 450px;
-  bottom: 140px;
-  position: relative;
+  top: 100%;
+  padding-top: 40px;
 }
+
 .fv-img h2 {
   font-size: 64px;
   font-weight: 700;
@@ -545,145 +622,15 @@ padding-bottom: 24px;
   background-color: #fff;
   padding: 13px 14px;
   position: absolute;
-  top: 650px;
+  top: 90%;
   left: 450px;
   width: 540px;
   border-radius: 10px;
-}
-
-
-
-
-/* ドロワーメニュー */
-.drawer_nav {
-  display: none;
-  display: block;
-  position: fixed;
-  top: 0px;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #fff;
-  transition: 0.3s;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.drawer_nav.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-
-.drawer_nav a {
-  transition: 0.4s;
-  display: block;
-  height: inherit;
-  align-items: center;
-}
-
-.drawer_list {
-  font-family: "Zen Kaku Gothic New";
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 16px;
-  text-align: center;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  color: #000;
-  align-items: center;
-  padding-top: 32px;
-  margin-top: 109px;
-}
-
-.drawer_item {
-  list-style: none;
-  padding-top: 32px;
-  color: #FFF;
-}
-
-.drawer_item::before {
-  content: "";
-  top: 50%;
-  left: -28px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background: url(../img/header_icon-mail.png) no-repeat center center/contain;
-}
-
-.drawer_item:last-child {
-  margin-bottom: 0;
-  display: flex;
-}
-
-.drawer_item img {
-  width: 24px;
-  margin: 0;
-  padding: 0;
-}
-
-.drawer_list span {
-  margin-right: 12px;
-  box-sizing: border-box;
-  width: 24px;
+  transition: opacity 0.5s ease;
 }
 
 .sp_menu {
   display: none;
-  background-color: #4282b8;
-  color: #fff;
-  width: 56px;
-  height: 56px;
-  cursor: pointer;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  transition: all 0.3s;
-  align-items: center;
-  justify-content: center;
-}
-
-.sp_menu:hover {
-  opacity: 0.7;
-}
-
-/* ハンバーガーの３本線 */
-.sp_menu span {
-  display: block;
-  transition: all 0.3s;
-  top: 12px;
-  left: 25%;
-  width: 32px;
-  height: 1px;
-  background-color: #fff;
-  margin: 0 auto;
-}
-
-.sp_menu_icon span:nth-of-type(2) {
-  margin-top: 12px;
-}
-
-.sp_menu_icon span:nth-of-type(3) {
-  margin-top: 12px;
-}
-
-/* menuクラスがactiveの時のコード*/
-.sp_menu.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 8px);
-}
-
-.sp_menu.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.sp_menu.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -8px);
 }
 
 .hidden {
@@ -711,7 +658,6 @@ padding-bottom: 24px;
   transition: opacity 0.5s ease; /* アニメーションを適用 */
 }
 
-
 /* JS が無効なときのスタイル */
 @media (scripting: none) {
   .loading {
@@ -721,83 +667,76 @@ padding-bottom: 24px;
     display: block;
   }
 }
-@media screen and (max-width: 1439px){
+@media screen and (max-width: 1439px) {
   .side-header {
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
+    max-width: 1439px;
     height: 102px;
+    background-color: #fff;
     display: flex;
     flex-direction: row;
-    z-index: 1001; 
+    justify-content: space-between;
+    align-items: start;
+    padding: 0 10px;
+    z-index: 1000;
   }
   .header-nav {
     display: none;
   }
-  .sp-menu {
+  .sp_header_menu {
     display: block;
+  }
+  .sp_header_main {
+    display: flex;
   }
   .content {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
     display: block;
-    max-width: 1100px;
   }
   .fv {
-  margin-top: 102px;
+    margin-top: 102px;
   }
- .fv-inner {
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 100%;
-  max-width: 1120px;
- }
- .fv-bg {
-  margin: 0 10px;
-  max-width: 80%;
- }
- .side-header-logo {
-  margin-top: 10px;
-}
-.side-header img {
-  width: 80%;
-  height: 80%;
-}
-.fv-img h2 {
-  font-size: 48px;
-  padding: 13px 14px;
-  position: absolute;
-  top: 640px;
-  left: 450px;
-  width: 420px;
-  border-radius: 10px;
-}
-
-}
-
-
-/* 959px以下に適用されるCSS（タブレット用） */
-@media screen and (max-width: 960px) {
-  .header-nav {
-    display: none;
-  }
-  .side {   
-    display: flex;
-    justify-content: space-between;
-  }
- 
-  .side-header {
-    position: fixed;
-    top: 0px;
-    left: 0px;
+  .fv-bg img {
     width: 100%;
-    height: 102px;
+  }
+  .fv-inner {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+  .side-header-logo {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .side-header img {
+    width: 98px;
+    height: 59px;
+  }
+  .sp_header-menu {
+    display: block;
+    background-color: #4282b8;
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    background-color: #fff;
-    z-index: 1001;
-}
-  
-  
+    flex-direction: column;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    transition: all 0.3s;
+    align-items: center;
+    justify-content: center;
+  }
   .sp_menu {
     background-color: #4282b8;
     color: #fff;
@@ -817,6 +756,44 @@ padding-bottom: 24px;
   }
   .sp_menu:hover {
     opacity: 0.7;
+  }
+  /* ハンバーガーの３本線 */
+  .sp_menu span {
+    display: block;
+    transition: all 0.3s;
+    top: 12px;
+    left: 25%;
+    width: 32px;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+  .sp_menu_icon span:nth-of-type(2) {
+    margin-top: 12px;
+  }
+  .sp_menu_icon span:nth-of-type(3) {
+    margin-top: 12px;
+  }
+  /* menuクラスがactiveの時のコード*/
+  .sp_menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 8px);
+  }
+  .sp_menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .sp_menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -8px);
+  }
+}
+/* 959px以下に適用されるCSS（タブレット用） */
+@media screen and (max-width: 1160px) {
+  .side-header-logo {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .side-header img {
+    width: 98px;
+    height: 59px;
   }
   /* ハンバーガーの３本線 */
   .sp_menu span {
@@ -902,83 +879,4 @@ padding-bottom: 24px;
     box-sizing: border-box;
     width: 24px;
   }
-
-
-/* ドロワーメニュー */
-.drawer_nav {
-  display: none;
-  display: block;
-  position: fixed;
-  top: 0px;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #fff;
-  transition: 0.3s;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.drawer_nav.active {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-
-.drawer_nav a {
-  transition: 0.4s;
-  display: block;
-  height: inherit;
-  align-items: center;
-}
-
-.drawer_list {
-  font-family: "Zen Kaku Gothic New";
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 16px;
-  text-align: center;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  color: #000;
-  align-items: center;
-  padding-top: 32px;
-  margin-top: 109px;
-}
-
-.drawer_item {
-  list-style: none;
-  padding-top: 32px;
-  color: #FFF;
-}
-
-.drawer_item::before {
-  content: "";
-  top: 50%;
-  left: -28px;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
-  background: url(../img/header_icon-mail.png) no-repeat center center/contain;
-}
-
-.drawer_item:last-child {
-  margin-bottom: 0;
-  display: flex;
-}
-
-.drawer_item img {
-  width: 24px;
-  margin: 0;
-  padding: 0;
-}
-
-.drawer_list span {
-  margin-right: 12px;
-  box-sizing: border-box;
-  width: 24px;
-}
-
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

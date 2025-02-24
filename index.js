@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
       // ローディング画面を非表示にする
       loadingElement.classList.remove('active');
       // コンテンツ要素を表示
-      const contentsElement = document.querySelector('.contents.hidden');
+      const contentsElement = document.querySelector('.content.hidden');
       contentsElement.classList.remove('hidden'); // hiddenクラスを取り除くことでコンテンツを表示
       // セッションストレージにフラグを保存
       sessionStorage.setItem('isFirstLoad', 'true');
@@ -25,7 +25,7 @@ window.addEventListener('load', function() {
   } else {
     // 2回目以降のアクセス時の処理を記述
     // コンテンツ要素を表示
-    const contentsElement = document.querySelector('.contents.hidden');
+    const contentsElement = document.querySelector('.content.hidden');
     contentsElement.classList.remove('hidden'); // hiddenクラスを取り除くことでコンテンツを表示
   }
 });

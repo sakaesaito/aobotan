@@ -27,6 +27,7 @@ nav {
 }
 .side {
     width: 280px;
+    height: auto;
 }
 .side-header {
     position: fixed;
@@ -94,66 +95,77 @@ nav {
     padding-top: 24px;
 }
 
+
 .header-nav-drop-bar1 {
     position: absolute;
     width: 24px;
     height: 1px;
-    top: 240px;
-    right: 55px;
+    top: 256px;
+    right: 40px;
     transform: translateY(-50%);
     background: #4282B8;
-}
-
-.header-nav-drop-bar2 {
+  }
+  
+  .header-nav-drop-bar2 {
     position: absolute;
     width: 1px;
     height: 24px;
-    top: 228px;
-    left: 67px;
+    top: 243px;
+    left: 228px;
     transform: translateX(-50%);
     transition: all 0.3s;
     background: #4282B8;
-}
-.header-nav-drop-bar3 {
+  }
+  
+  .header-nav-drop-bar3 {
     position: absolute;
     width: 24px;
     height: 1px;
-    top: 322px;
-    right: 55px;
+    top: 324px;
+    right: 40px;
     transform: translateY(-50%);
     background: #4282B8;
-}
-
-.header-nav-drop-bar4 {
+  }
+  
+  .header-nav-drop-bar4 {
     position: absolute;
     width: 1px;
     height: 24px;
-    top: 310px;
-    left: 212px;
+    top: 312px;
+    left: 228px;
     transform: translateX(-50%);
     transition: all 0.3s;
     background: #4282B8;
-}
+  }
 .main {
     max-width: 1120px;
     width: 100%;
 }
 .fv {
     width: 100%;
-    height: auto;
     vertical-align: middle;
     position: fixed;
     height: 727px;
     margin-bottom: 186px;
     background: linear-gradient(to right, #fff 433px, #4282B8 433px);
     }
+
 .fv-inner {
     padding-top: 40px;
     padding-left: 0px;
-    width: 100%;
-    max-width: 1120px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
-
+.fv-bg {
+    max-width: 1120px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+.fv-bg img {
+    width: 100%;
+    margin: 0;
+}
 .fv-img p {
     width: 540px;
     position: absolute;
@@ -162,8 +174,9 @@ nav {
     line-height: 2;
     color: #000;
     left: 450px;
-    bottom: 60px;
+    top: 100%;
     padding-top: 40px;
+
   }
   .fv-img h2 {
     font-size: 64px;
@@ -172,10 +185,14 @@ nav {
     background-color: #fff;
     padding: 13px 14px;
     position: absolute;
-    top: 640px;
+    top: 90%;
     left: 450px;
     width: 540px;
     border-radius: 10px;
+    transition: opacity 0.5s ease; 
+  }
+  .sp_menu {
+    display: none;
   }
   
-  
+ 

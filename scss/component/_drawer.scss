@@ -1,6 +1,13 @@
 /* ドロワーメニュー */
 .drawer_nav {
     display: none;
+}
+
+
+
+@media screen and (max-width: 1439px){
+
+.drawer_nav {
     display: block;
     position: fixed;
     top: 0px;
@@ -46,18 +53,7 @@
     color: #FFF;
   }
   
-  .drawer_item::before {
-    // position: absolute;
-    content: "";
-    top: 50%;
-    left: -28px;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background: url(../img/header_icon-mail.png) no-repeat center center / contain;
-  }
-
+ 
   .drawer_item:last-child {
     margin-bottom: 0;
     display: flex;
@@ -74,3 +70,4 @@
     box-sizing: border-box;
     width: 24px;
   }
+}
