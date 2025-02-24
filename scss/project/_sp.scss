@@ -3,10 +3,26 @@
     .header-nav {
       display: none;
     }
-    .sp_header {
-        display: block;
+    .side {
+      display: flex;
+      justify-content: space-between;
     }
-    
+    .side-header {
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100%;
+      height: 102px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .side-header-logo {
+      margin-top: 10px;
+      margin-left: 10px;
+    }
+    .side-header img {
+      width: 98px;
+      height: 59px;
+    }
     .sp_header_main {
         display: flex;
         

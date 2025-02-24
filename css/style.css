@@ -357,6 +357,7 @@ th {
   font-weight: bold;
 }
 
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -372,62 +373,54 @@ body {
   color: #000;
   overflow-x: hidden;
 }
-
 nav {
   list-style: none;
 }
-.sp_header {
+.sp_header_menu {
   display: none;
 }
+
 .content {
   max-width: 1440px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
- 
+  
 }
-
 .side {
   width: 280px;
 }
-
 .side-header {
   position: fixed;
+  justify-content: space-between;
   padding-left: 40px;
   padding-right: 40px;
   flex-direction: column;
-  width: 280px;
+  max-width: 280px;
   height: 100%;
 }
-
 .side-header-logo {
-  width: 100%;
+  width: 280px;
   margin-top: 75px;
+  margin-bottom: 57px;
 }
 
 .header-nav-list {
   font-size: 20px;
   font-weight: 700;
 }
-
 .header_nav_box {
   display: flex;
-  /* padding-top: 32px;
-  padding-bottom: 30px; */
 }
-
 .header-nav-item {
-  /* display: inline-block; */
-}
-
+  display: inline-block;
+}  
 .header-nav-main {
-  padding-top: 32px;
-  padding-bottom: 30px;
-  /* display: flex; */
-  cursor: pointer;
-  position: relative;
-  border-bottom: 1px solid #B1C6DC;
-  width: 200px;
+cursor: pointer;
+position: relative;
+border-bottom: 1px solid #B1C6DC;
+width: 200px;
+padding-top: 24px;
+padding-bottom: 24px;
 }
 
 .header-nav-drop {
@@ -436,7 +429,7 @@ nav {
   background: #fff;
   font-size: 16px;
   opacity: 0;
-  display: inline-block;
+  display:inline-block;
   display: flex;
   flex-direction: column;
   padding-top: 8px;
@@ -444,11 +437,31 @@ nav {
   line-height: 2;
   font-size: 14px;
 }
+.header-nav-drop a {
+  padding-top: 32px;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+}
+.header-nav-drop a:hover {
+  opacity: .4;
+}
+.header-nav-box:hover {
+  opacity: .5;
+}
 
 .header-nav-drop:nth-child(3) {
   margin-bottom: 32px;
 }
-
+.header_nav_box {
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
 .header-nav-drop-link {
   display: inline-block;
   padding-top: 24px;
@@ -463,13 +476,15 @@ nav {
   transform: translateY(-50%);
   background: #4282B8;
 }
+
 .header-nav-drop-bar2 {
   position: absolute;
   width: 1px;
   height: 24px;
   top: 228px;
-  right: 67px;
+  left: 67px;
   transform: translateX(-50%);
+  transition: all 0.3s;
   background: #4282B8;
 }
 .header-nav-drop-bar3 {
@@ -497,14 +512,20 @@ nav {
   width: 100%;
 }
 .fv {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   vertical-align: middle;
-  margin-top: 40px;
-  margin-right: 40px;
-  position: relative;
+  position: fixed;
+  height: 727px;
+  margin-bottom: 186px;
+  background: linear-gradient(to right, #fff 433px, #4282B8 433px);   
 }
-
+.fv-inner {
+  padding-top: 40px;
+  padding-left: 0px;
+  width: 100%;
+  max-width: 1120px;
+}
 .fv-img p {
   width: 540px;
   position: absolute;
@@ -513,9 +534,9 @@ nav {
   line-height: 2;
   color: #000;
   left: 450px;
-  bottom: 60px;
+  bottom: 140px;
+  position: relative;
 }
-
 .fv-img h2 {
   font-size: 64px;
   font-weight: 700;
@@ -523,13 +544,93 @@ nav {
   background-color: #fff;
   padding: 13px 14px;
   position: absolute;
-  bottom: 140px;
+  top: 650px;
   left: 450px;
   width: 540px;
   border-radius: 10px;
 }
 
+
+
+
+/* ドロワーメニュー */
+.drawer_nav {
+  display: none;
+  display: block;
+  position: fixed;
+  top: 0px;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.drawer_nav.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.drawer_nav a {
+  transition: 0.4s;
+  display: block;
+  height: inherit;
+  align-items: center;
+}
+
+.drawer_list {
+  font-family: "Zen Kaku Gothic New";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: center;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  color: #000;
+  align-items: center;
+  padding-top: 32px;
+  margin-top: 109px;
+}
+
+.drawer_item {
+  list-style: none;
+  padding-top: 32px;
+  color: #FFF;
+}
+
+.drawer_item::before {
+  content: "";
+  top: 50%;
+  left: -28px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url(../img/header_icon-mail.png) no-repeat center center/contain;
+}
+
+.drawer_item:last-child {
+  margin-bottom: 0;
+  display: flex;
+}
+
+.drawer_item img {
+  width: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.drawer_list span {
+  margin-right: 12px;
+  box-sizing: border-box;
+  width: 24px;
+}
+
 .sp_menu {
+  display: none;
   background-color: #4282b8;
   color: #fff;
   width: 56px;
@@ -584,6 +685,173 @@ nav {
   transform: rotate(-45deg) translate(5px, -8px);
 }
 
+.hidden {
+  display: none;
+}
+
+.loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 900;
+  display: grid;
+  place-content: center;
+  opacity: 0; /* 初期状態は透明にする */
+  transition: opacity 0.5s ease; /* アニメーションを適用 */
+  pointer-events: none; /* 背後のコンテンツにマウスイベントが影響しないようにする */
+}
+
+.loading.active {
+  display: grid;
+  opacity: 1;
+  transition: opacity 0.5s ease; /* アニメーションを適用 */
+}
+
+
+/* JS が無効なときのスタイル */
+@media (scripting: none) {
+  .loading {
+    display: none;
+  }
+  .hidden {
+    display: block;
+  }
+}
+/* 959px以下に適用されるCSS（タブレット用） */
+@media screen and (max-width: 959px) {
+  .header-nav {
+    display: none;
+  }
+  .side {   
+    display: flex;
+    justify-content: space-between;
+  }
+  .side-header {
+    padding-left: 10px;
+    width: 100%;
+    height: 102px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .side-header-logo {
+    margin-top: 10px;
+    margin-left: 10px;
+
+  }
+  .side-header img {
+    width: 98px;
+    height: 59px;
+  }
+  
+  .sp_menu {
+    background-color: #4282b8;
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    transition: all 0.3s;
+    align-items: center;
+    justify-content: center;
+  }
+  .sp_menu:hover {
+    opacity: 0.7;
+  }
+  /* ハンバーガーの３本線 */
+  .sp_menu span {
+    display: block;
+    transition: all 0.3s;
+    top: 12px;
+    left: 25%;
+    width: 32px;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+  .sp_menu_icon span:nth-of-type(2) {
+    margin-top: 12px;
+  }
+  .sp_menu_icon span:nth-of-type(3) {
+    margin-top: 12px;
+  }
+  /* menuクラスがactiveの時のコード*/
+  .sp_menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 8px);
+  }
+  .sp_menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .sp_menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -8px);
+  }
+  /* ドロワーメニュー */
+  .drawer_nav {
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .drawer_nav.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  .drawer_nav a {
+    transition: 0.4s;
+    display: block;
+    height: inherit;
+    align-items: center;
+  }
+  .drawer_list {
+    font-family: "Zen Kaku Gothic New";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    color: #000;
+    align-items: center;
+    padding-top: 32px;
+    margin-top: 109px;
+  }
+  .drawer_item {
+    list-style: none;
+    padding-top: 32px;
+    color: #FFF;
+  }
+  .drawer_item:last-child {
+    margin-bottom: 0;
+    display: flex;
+  }
+  .drawer_item img {
+    width: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  .drawer_list span {
+    margin-right: 12px;
+    box-sizing: border-box;
+    width: 24px;
+  }
+
+
 /* ドロワーメニュー */
 .drawer_nav {
   display: none;
@@ -632,16 +900,15 @@ nav {
   padding-top: 32px;
   color: #FFF;
 }
-.drawer_item.--mail::before {
-  /* position: absolute; */
+
+.drawer_item::before {
   content: "";
   top: 50%;
   left: -28px;
-  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  background: url(../img/header_icon-mail.png) no-repeat center center / contain;
+  background: url(../img/header_icon-mail.png) no-repeat center center/contain;
 }
 
 .drawer_item:last-child {
@@ -661,133 +928,5 @@ nav {
   width: 24px;
 }
 
-/* 959px以下に適用されるCSS（タブレット用） */
-@media screen and (max-width: 959px) {
-  .sp_header_main {
-      display: flex;
-      justify-content: space-between;
-      
-  }
-  .sp_menu {
-      background-color: #4282b8;
-      color: #fff;
-      width: 56px;
-      height: 56px;
-      cursor: pointer;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      border: none;
-      transition: all 0.3s;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .sp_menu:hover {
-      opacity: 0.7;
-    }
-    
-    /* ハンバーガーの３本線 */
-    .sp_menu span {
-      display: block;
-      transition: all 0.3s;
-      top: 12px;
-      left: 25%;
-      width: 32px;
-      height: 1px;
-      background-color: #fff;
-      margin: 0 auto;
-    }
-    
-    .sp_menu_icon span:nth-of-type(2) {
-      margin-top: 12px;
-    }
-    
-    .sp_menu_icon span:nth-of-type(3) {
-      margin-top: 12px;
-    }
-    
-    /* menuクラスがactiveの時のコード*/
-    .sp_menu.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 8px);
-    }
-    
-    .sp_menu.active span:nth-child(2) {
-      opacity: 0;
-    }
-    
-    .sp_menu.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px, -8px);
-    }
-    
-    /* ドロワーメニュー */
-    .drawer_nav {
-      display: block;
-      position: fixed;
-      top: 0px;
-      right: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: #fff;
-      transition: 0.3s;
-      visibility: hidden;
-      opacity: 0;
-      pointer-events: none;
-    }
-    
-    .drawer_nav.active {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
-    }
-    
-    .drawer_nav a {
-      transition: 0.4s;
-      display: block;
-      height: inherit;
-      align-items: center;
-    }
-    
-    .drawer_list {
-      font-family: "Zen Kaku Gothic New";
-      font-size: 16px;
-      font-weight: 700;
-      line-height: 16px;
-      text-align: center;
-      -webkit-text-decoration-skip-ink: none;
-              text-decoration-skip-ink: none;
-      color: #000;
-      align-items: center;
-      padding-top: 32px;
-      margin-top: 109px;
-    }
-    
-    .drawer_item {
-      list-style: none;
-      padding-top: 32px;
-      color: #FFF;
-    }
-    
-    .drawer_item:last-child {
-      margin-bottom: 0;
-      display: flex;
-    }
-    
-    .drawer_item img {
-      width: 24px;
-      margin: 0;
-      padding: 0;
-    }
-    
-    .drawer_list span {
-      margin-right: 12px;
-      box-sizing: border-box;
-      width: 24px;
-    }
-  
 }
-
 /*# sourceMappingURL=style.css.map */

@@ -16,7 +16,7 @@ body {
 nav {
     list-style: none;
   }
-.sp_header {
+.sp_header_menu {
     display: none;
 }
 
@@ -24,21 +24,23 @@ nav {
     max-width: 1440px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    
 }
 .side {
     width: 280px;
 }
 .side-header {
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     padding-left: 40px;
     padding-right: 40px;
     flex-direction: column;
-    width: 100%;
+    max-width: 280px;
     height: 100%;
 }
 .side-header-logo {
-    width: 100%;
+    width: 280px;
     margin-top: 75px;
 }
 
@@ -57,6 +59,8 @@ nav {
   position: relative;
   border-bottom: 1px solid #B1C6DC;
   width: 200px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header-nav-drop {
@@ -65,13 +69,6 @@ nav {
     background: #fff;
     font-size: 16px;
     opacity: 0;
-    // display:inline-block;
-    // display: flex;
-    // flex-direction: column;
-    // padding-top: 8px;
-    // padding-left: 17px;
-    // line-height: 2;
-    // font-size: 14px;
 }
 .header-nav-drop a {
     padding-top: 32px;
@@ -145,10 +142,18 @@ nav {
     width: 100%;
     height: auto;
     vertical-align: middle;
-    margin-top: 40px;
-    margin-right: 40px;
     position: fixed;
+    height: 727px;
+    margin-bottom: 186px;
+    background: linear-gradient(to right, #fff 433px, #4282B8 433px);
+    }
+.fv-inner {
+    padding-top: 40px;
+    padding-left: 0px;
+    width: 100%;
+    max-width: 1120px;
 }
+
 .fv-img p {
     width: 540px;
     position: absolute;
@@ -158,6 +163,7 @@ nav {
     color: #000;
     left: 450px;
     bottom: 60px;
+    padding-top: 40px;
   }
   .fv-img h2 {
     font-size: 64px;
@@ -166,7 +172,7 @@ nav {
     background-color: #fff;
     padding: 13px 14px;
     position: absolute;
-    bottom: 140px;
+    top: 640px;
     left: 450px;
     width: 540px;
     border-radius: 10px;
