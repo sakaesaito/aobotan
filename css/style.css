@@ -366,7 +366,6 @@ th {
 }
 
 body {
-  color: #4282B8;
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -391,7 +390,7 @@ nav {
 }
 .side-header {
   position: fixed;
-  justify-content: space-between;
+  display: flex;
   padding-left: 40px;
   padding-right: 40px;
   flex-direction: column;
@@ -401,12 +400,14 @@ nav {
 .side-header-logo {
   width: 280px;
   margin-top: 75px;
-  margin-bottom: 57px;
 }
 
 .header-nav-list {
   font-size: 20px;
   font-weight: 700;
+}
+.header-nav {
+  margin-top: 25px;
 }
 .header_nav_box {
   display: flex;
@@ -720,8 +721,62 @@ padding-bottom: 24px;
     display: block;
   }
 }
+@media screen and (max-width: 1439px){
+  .side-header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 102px;
+    display: flex;
+    flex-direction: row;
+    z-index: 1001; 
+  }
+  .header-nav {
+    display: none;
+  }
+  .sp-menu {
+    display: block;
+  }
+  .content {
+    display: block;
+    max-width: 1100px;
+  }
+  .fv {
+  margin-top: 102px;
+  }
+ .fv-inner {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  max-width: 1120px;
+ }
+ .fv-bg {
+  margin: 0 10px;
+  max-width: 80%;
+ }
+ .side-header-logo {
+  margin-top: 10px;
+}
+.side-header img {
+  width: 80%;
+  height: 80%;
+}
+.fv-img h2 {
+  font-size: 48px;
+  padding: 13px 14px;
+  position: absolute;
+  top: 640px;
+  left: 450px;
+  width: 420px;
+  border-radius: 10px;
+}
+
+}
+
+
 /* 959px以下に適用されるCSS（タブレット用） */
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 960px) {
   .header-nav {
     display: none;
   }
@@ -729,22 +784,19 @@ padding-bottom: 24px;
     display: flex;
     justify-content: space-between;
   }
+ 
   .side-header {
-    padding-left: 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 102px;
     display: flex;
-    justify-content: space-between;
-  }
-  .side-header-logo {
-    margin-top: 10px;
-    margin-left: 10px;
-
-  }
-  .side-header img {
-    width: 98px;
-    height: 59px;
-  }
+    flex-direction: row;
+    background-color: #fff;
+    z-index: 1001;
+}
+  
   
   .sp_menu {
     background-color: #4282b8;

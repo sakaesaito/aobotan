@@ -6,7 +6,6 @@
   }
 
 body {
-    color: #4282B8;
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-size: 16px;
     line-height: 1;
@@ -30,9 +29,8 @@ nav {
     width: 280px;
 }
 .side-header {
-    display: flex;
-    justify-content: space-between;
     position: fixed;
+    display: flex;
     padding-left: 40px;
     padding-right: 40px;
     flex-direction: column;
@@ -43,7 +41,9 @@ nav {
     width: 280px;
     margin-top: 75px;
 }
-
+.header-nav {
+    margin-top: 25px;
+}
 .header-nav-list {
     font-size: 20px;
     font-weight: 700;
