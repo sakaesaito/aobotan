@@ -21,6 +21,7 @@ $(function () {
 
 
 // レスポンシブの375px未満のviewport画面幅を固定
+
 !(function () {
   // viewport の内容を保留関数を定義
   const viewport = document.querySelector('meta[name="viewport"]');
@@ -46,3 +47,20 @@ $(function () {
 
 
 
+// ホバーでドロップダウン
+
+
+// jQueryの$(function() {})を使って、HTMLの読み込みが完了した後にスクリプトを実行
+$(function() {
+
+  // 「.header-nav-main」クラスを持つ要素にホバーイベントを設定
+  $('.header-nav-main').hover(function() {
+
+    // ホバーされた要素の子要素「.header-nav-drop」を取得し、
+    // アニメーションを停止してからslideToggle(500)でスライド表示/非表示を切り替える
+    $(this).children('.header-nav-drop').stop().slideToggle(500);
+    $(this).children('.header-nav-drop-bar2').stop().slideToggle(500);
+    $(this).children('.header-nav-drop-bar4').stop().slideToggle(500);
+  });
+
+});

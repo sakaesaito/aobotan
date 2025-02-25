@@ -416,6 +416,9 @@ nav {
 
 .header_nav_box {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-nav-item {
@@ -524,13 +527,21 @@ nav {
   cursor: pointer;
 }
 
-.header-nav-item:hover .header-nav-drop {
-  display: block;
+.header-nav-main:hover {
+  opacity: 1;
 }
 
-.header-nav-item:hover .header-nav—drop-bar2 {
-  transform: rotate(90deg);
+.header-nav-item:hover {
+  display: block;
   left: 11px;
+}
+
+.header-nav—drop-bar2:hover {
+  transform: rotate(90deg);
+}
+
+.header-nav-drop:hover {
+  opacity: 0.9;
 }
 
 .header-nav {
