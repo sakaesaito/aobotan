@@ -355,69 +355,6 @@ th {
   font-weight: bold;
 }
 
-/* ドロワーメニュー */
-.drawer_nav {
-  display: none;
-}
-
-@media screen and (max-width: 1439px) {
-  .drawer_nav {
-    display: block;
-    position: fixed;
-    top: 0px;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    transition: 0.3s;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    color: #000;
-  }
-  .drawer_nav.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-  }
-  .drawer_nav a {
-    transition: 0.4s;
-    display: block;
-    height: inherit;
-    align-items: center;
-  }
-  .drawer_list {
-    font-family: "Zen Kaku Gothic New";
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
-    text-align: center;
-    text-decoration-skip-ink: none;
-    color: #000;
-    align-items: center;
-    padding-top: 32px;
-    margin-top: 109px;
-  }
-  .drawer_item {
-    list-style: none;
-    padding-top: 32px;
-    color: #000;
-  }
-  .drawer_item:last-child {
-    margin-bottom: 0;
-    display: flex;
-  }
-  .drawer_item img {
-    width: 24px;
-    margin: 0;
-    padding: 0;
-  }
-  .drawer_list span {
-    margin-right: 12px;
-    box-sizing: border-box;
-    width: 24px;
-  }
-}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -469,6 +406,7 @@ nav {
 
 .header-nav {
   margin-top: 25px;
+  transition: all 0.3s ease 0s;
 }
 
 .header-nav-list {
@@ -482,6 +420,16 @@ nav {
 
 .header-nav-item {
   display: inline-block;
+}
+
+.header-nav-item:nth-child(4) {
+  display: inline-block;
+}
+
+.header-nav-item:nth-child(4)::before {
+  width: 24px;
+  height: 24px;
+  background-image: url(../../img/mail-icon.png);
 }
 
 .header-nav-main {
@@ -506,6 +454,7 @@ nav {
   text-align: center;
   color: #000;
   font-weight: 700;
+  opacity: 0.3;
 }
 
 .header-nav-drop a:hover {
@@ -537,6 +486,7 @@ nav {
   right: 40px;
   transform: translateY(-50%);
   background: #4282B8;
+  cursor: pointer;
 }
 
 .header-nav-drop-bar2 {
@@ -548,6 +498,7 @@ nav {
   transform: translateX(-50%);
   transition: all 0.3s;
   background: #4282B8;
+  cursor: pointer;
 }
 
 .header-nav-drop-bar3 {
@@ -558,6 +509,7 @@ nav {
   right: 40px;
   transform: translateY(-50%);
   background: #4282B8;
+  cursor: pointer;
 }
 
 .header-nav-drop-bar4 {
@@ -569,6 +521,21 @@ nav {
   transform: translateX(-50%);
   transition: all 0.3s;
   background: #4282B8;
+  cursor: pointer;
+}
+
+.header-nav-item:hover .header-nav-drop {
+  display: block;
+}
+
+.header-nav-item:hover .header-nav—drop-bar2 {
+  transform: rotate(90deg);
+  left: 11px;
+}
+
+.header-nav {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .main {
@@ -588,8 +555,11 @@ nav {
 .fv-inner {
   padding-top: 40px;
   padding-left: 0px;
-  margin: 0 auto;
   box-sizing: border-box;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 1120px;
+  height: 873px;
 }
 
 .fv-bg {
@@ -634,6 +604,64 @@ nav {
   display: none;
 }
 
+/* ドロワーメニュー */
+.drawer_nav {
+  display: none;
+}
+
+@media screen and (max-width: 1439px) {
+  .drawer_nav {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    transition: 0.3s;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    color: #000;
+  }
+  .drawer_nav.active {
+    transform: translateX(0%);
+    visibility: visible;
+    pointer-events: all;
+  }
+  .drawer_nav a {
+    transition: 0.4s;
+    display: block;
+    height: inherit;
+    align-items: center;
+  }
+  .drawer_list {
+    font-family: "Zen Kaku Gothic New";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-decoration-skip-ink: none;
+    color: #000;
+    align-items: center;
+    padding-top: 32px;
+    margin-top: 109px;
+  }
+  .drawer_item {
+    list-style: none;
+    padding-top: 32px;
+    color: #000;
+  }
+  .drawer_item img {
+    width: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  .drawer_list span {
+    margin-right: 12px;
+    box-sizing: border-box;
+    width: 24px;
+  }
+}
 .hidden {
   display: none;
 }
@@ -681,7 +709,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
-    padding: 0 10px;
+    padding: 0 0 0 10px;
     z-index: 1000;
   }
   .header-nav {
@@ -705,38 +733,44 @@ nav {
   .fv-bg img {
     width: 100%;
   }
+  .fv-img p {
+    width: 430px;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 2;
+    color: #000;
+    left: 40%;
+    top: 88%;
+    padding-top: 40px;
+  }
+  .fv-img h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+    background-color: #fff;
+    padding: 13px 14px;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    width: 430px;
+    border-radius: 10px;
+    transition: opacity 0.5s ease;
+  }
   .fv-inner {
     padding-left: 10px;
     padding-right: 10px;
     width: 100%;
     height: auto;
     box-sizing: border-box;
+    margin: 0 auto;
   }
   .side-header-logo {
     margin-top: 10px;
-    margin-left: 10px;
   }
   .side-header img {
     width: 98px;
     height: 59px;
-  }
-  .sp_header-menu {
-    display: block;
-    background-color: #4282b8;
-    color: #fff;
-    width: 56px;
-    height: 56px;
-    cursor: pointer;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    transition: all 0.3s;
-    align-items: center;
-    justify-content: center;
   }
   .sp_menu {
     background-color: #4282b8;
@@ -775,54 +809,6 @@ nav {
   .sp_menu_icon span:nth-of-type(3) {
     margin-top: 12px;
   }
-  /* menuクラスがactiveの時のコード*/
-  .sp_menu.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 8px);
-  }
-  .sp_menu.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .sp_menu.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -8px);
-  }
-}
-/* 959px以下に適用されるCSS（タブレット用） */
-@media screen and (max-width: 1160px) {
-  .side-header-logo {
-    margin-top: 10px;
-    margin-left: 10px;
-  }
-  .side-header img {
-    width: 98px;
-    height: 59px;
-  }
-  /* ハンバーガーの３本線 */
-  .sp_menu span {
-    display: block;
-    transition: all 0.3s;
-    top: 12px;
-    left: 25%;
-    width: 32px;
-    height: 1px;
-    background-color: #fff;
-    margin: 0 auto;
-  }
-  .sp_menu_icon span:nth-of-type(2) {
-    margin-top: 12px;
-  }
-  .sp_menu_icon span:nth-of-type(3) {
-    margin-top: 12px;
-  }
-  /* menuクラスがactiveの時のコード*/
-  .sp_menu.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 8px);
-  }
-  .sp_menu.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .sp_menu.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -8px);
-  }
   /* ドロワーメニュー */
   .drawer_nav {
     display: block;
@@ -837,11 +823,6 @@ nav {
     opacity: 0;
     pointer-events: none;
   }
-  .drawer_nav.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
-  }
   .drawer_nav a {
     transition: 0.4s;
     display: block;
@@ -854,8 +835,6 @@ nav {
     font-weight: 700;
     line-height: 16px;
     text-align: center;
-    -webkit-text-decoration-skip-ink: none;
-    text-decoration-skip-ink: none;
     color: #000;
     align-items: center;
     padding-top: 32px;
@@ -866,10 +845,6 @@ nav {
     padding-top: 32px;
     color: #FFF;
   }
-  .drawer_item:last-child {
-    margin-bottom: 0;
-    display: flex;
-  }
   .drawer_item img {
     width: 24px;
     margin: 0;
@@ -879,5 +854,52 @@ nav {
     margin-right: 12px;
     box-sizing: border-box;
     width: 24px;
+  }
+  /* menuクラスがactiveの時のコード*/
+  .sp_menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  .sp_menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .sp_menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+  .drawer_nav.active {
+    display: block;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1026px) {
+  .fv {
+    width: 100%;
+    vertical-align: middle;
+    position: fixed;
+    height: 727px;
+    margin-bottom: 186px;
+    background: #fff;
+  }
+  .fv-inner {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  .fv-img h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    background-color: #fff;
+    padding: 20px 10px;
+    /* position: absolute; */
+    top: 60%;
+    left: 9%;
+    width: 218px;
+    border-radius: 10px;
+    transition: opacity 0.5s;
   }
 }/*# sourceMappingURL=style.css.map */

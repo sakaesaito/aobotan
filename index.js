@@ -1,3 +1,5 @@
+//ローディングの設定（初回のみ）
+
 // セッションストレージからフラグを取得
 const isFirstLoad = sessionStorage.getItem('isFirstLoad');
 

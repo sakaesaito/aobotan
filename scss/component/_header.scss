@@ -44,6 +44,7 @@ nav {
 }
 .header-nav {
     margin-top: 25px;
+    transition: all 0.3s ease 0s;
 }
 .header-nav-list {
     font-size: 20px;
@@ -54,7 +55,16 @@ nav {
 }
 .header-nav-item {
     display: inline-block;
+}
+.header-nav-item:nth-child(4) {
+    display: inline-block; 
 }  
+.header-nav-item:nth-child(4)::before {
+    width: 24px;
+    height: 24px;
+    background-image: url(../../img/mail-icon.png);
+}
+
 .header-nav-main {
   cursor: pointer;
   position: relative;
@@ -62,6 +72,7 @@ nav {
   width: 200px;
   padding-top: 24px;
   padding-bottom: 24px;
+  
 }
 
 .header-nav-drop {
@@ -76,6 +87,7 @@ nav {
     text-align: center;
     color: #000;
     font-weight: 700;
+    opacity: .3;
 }
 .header-nav-drop a:hover {
     opacity: .4;
@@ -104,6 +116,7 @@ nav {
     right: 40px;
     transform: translateY(-50%);
     background: #4282B8;
+    cursor: pointer;
   }
   
   .header-nav-drop-bar2 {
@@ -115,6 +128,7 @@ nav {
     transform: translateX(-50%);
     transition: all 0.3s;
     background: #4282B8;
+    cursor: pointer;
   }
   
   .header-nav-drop-bar3 {
@@ -125,6 +139,7 @@ nav {
     right: 40px;
     transform: translateY(-50%);
     background: #4282B8;
+    cursor: pointer;
   }
   
   .header-nav-drop-bar4 {
@@ -136,7 +151,21 @@ nav {
     transform: translateX(-50%);
     transition: all 0.3s;
     background: #4282B8;
+    cursor: pointer;
   }
+  .header-nav-item:hover .header-nav-drop {
+    display: block;
+  }
+  .header-nav-item:hover .header-nav—drop-bar2  {
+    transform: rotate(90deg);
+    left: 11px;
+  }
+   
+
+    .header-nav {
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
 .main {
     max-width: 1120px;
     width: 100%;
@@ -153,8 +182,11 @@ nav {
 .fv-inner {
     padding-top: 40px;
     padding-left: 0px;
-    margin: 0 auto;
     box-sizing: border-box;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 1120px;
+    height: 873px;
 }
 .fv-bg {
     max-width: 1120px;
