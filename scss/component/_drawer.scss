@@ -5,7 +5,7 @@
 
 
 
-@media screen and (max-width: 1439px){
+ @media screen and (max-width: 1439px){
 
 .drawer_nav {
     position: fixed;
@@ -63,5 +63,12 @@
     margin-right: 12px;
     box-sizing: border-box;
     width: 24px;
+  }
+  small {
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 24px;
   }
 }

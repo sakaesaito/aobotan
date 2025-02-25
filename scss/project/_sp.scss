@@ -44,10 +44,9 @@
     font-weight: 700;
     line-height: 2;
     color: #000;
-    left: 40%;
-    top: 88%;
+    left: 35%;
+    top: 85%;
     padding-top: 40px;
-
   }
   .fv-img h2 {
     font-size: 50px;
@@ -56,44 +55,44 @@
     background-color: #fff;
     padding: 13px 14px;
     position: absolute;
-    top: 80%;
-    left: 40%;
+    top: 567px;
+    left: 375px;
     width: 430px;
     border-radius: 10px;
     transition: opacity 0.5s ease; 
   }
  .fv-inner {
-  padding-left: 10px;
-  padding-right: 10px;
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin: 0 auto;
  }
  .side-header-logo {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 .side-header img {
-  width: 98px;
-  height: 59px;
+    width: 98px;
+    height: 59px;
 }
 
 .sp_menu {
-  background-color: #4282b8;
-  color: #fff;
-  width: 56px;
-  height: 56px;
-  cursor: pointer;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  transition: all 0.3s;
-  align-items: center;
-  justify-content: center;
+    background-color: #4282b8;
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    transition: all 0.3s;
+    align-items: center;
+    justify-content: center;
 }
 
 .sp_menu:hover {
@@ -101,75 +100,24 @@
 }
 /* ハンバーガーの３本線 */
 .sp_menu span {
-  display: block;
-  transition: all .3s;
-  top: 12px;
-  left: 25%;
-  width: 32px;
-  height: 1px;
-  background-color: #fff;
-  margin: 0 auto;
+    display: block;
+    transition: all .3s;
+    top: 12px;
+    left: 25%;
+    width: 32px;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 auto;
 }
 
 .sp_menu_icon span:nth-of-type(2) {
-  margin-top: 12px;
+    margin-top: 12px;
 }
 
 .sp_menu_icon span:nth-of-type(3) {
-  margin-top: 12px;
+    margin-top: 12px;
 }
-  /* ドロワーメニュー */
-  .drawer_nav {
-    display: block;
-    position: fixed;
-    top: 0px;
-    right: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
-    transition: 0.3s;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  .drawer_nav a {
-    transition: 0.4s;
-    display: block;
-    height: inherit;
-    align-items: center;
-  }
-  
-  .drawer_list {
-    font-family: "Zen Kaku Gothic New";
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 16px;
-    text-align: center;
-    color: #000;
-    align-items: center;
-    padding-top: 32px;
-    margin-top: 109px;
-  }
-  
-  .drawer_item {
-    list-style: none;
-    padding-top: 32px;
-    color: #FFF;
-  }
-  
-  
-  .drawer_item img {
-    width: 24px;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .drawer_list span {
-    margin-right: 12px;
-    box-sizing: border-box;
-    width: 24px;
-  }
+ 
 
 
 
@@ -214,17 +162,55 @@
 
 }
 .fv-img h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  background-color: #fff;
+  padding: 20px 10px;
+  position: absolute;
+  top: 490px;
+  left: 360px;
+  width: 218px;
+  border-radius: 10px;
+  transition: opacity 0.5s;
+}
+.fv-img p {
+  width: 430px;
+  position: absolute;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 2;
+  color: #000;
+  left: 360px;
+  top: 530px;
+  padding-top: 40px;
+}
+
+}
+
+@media screen and (max-width: 767px){
+  .fv-img h2 {
     font-size: 24px;
     font-weight: 700;
     color: #000;
     background-color: #fff;
     padding: 20px 10px;
-    /* position: absolute; */
-    top: 60%;
-    left: 9%;
+    position: absolute;
+    left: 8vw;
+    top: 50vh;
     width: 218px;
     border-radius: 10px;
     transition: opacity 0.5s;
-}
-
+  }
+  .fv-img p {
+    width: 430px;
+    position: absolute;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 2;
+    color: #000;
+    left: 7vw;
+    top: 56vh;
+    padding-top: 22px;
+  }
 }
