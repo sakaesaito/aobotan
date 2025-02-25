@@ -19,6 +19,7 @@
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    color: #000;
   }
   
   .drawer_nav.active {
@@ -50,7 +51,7 @@
   .drawer_item {
     list-style: none;
     padding-top: 32px;
-    color: #FFF;
+    color: #000;
   }
   
  

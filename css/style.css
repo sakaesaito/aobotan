@@ -373,6 +373,7 @@ th {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
+    color: #000;
   }
   .drawer_nav.active {
     opacity: 1;
@@ -400,7 +401,7 @@ th {
   .drawer_item {
     list-style: none;
     padding-top: 32px;
-    color: #FFF;
+    color: #000;
   }
   .drawer_item:last-child {
     margin-bottom: 0;
