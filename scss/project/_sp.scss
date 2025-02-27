@@ -141,7 +141,7 @@
 }
 }
 
-@media screen and (max-width: 1026px){
+@media screen and (max-width: 1025px){
 .fv {
   width: 100%;
   vertical-align: middle;
@@ -162,7 +162,7 @@
 
 }
 .fv-img h2 {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 700;
   color: #000;
   background-color: #fff;
@@ -170,7 +170,7 @@
   position: absolute;
   top: 490px;
   left: 360px;
-  width: 218px;
+  width: 350px;
   border-radius: 10px;
   transition: opacity 0.5s;
 }
@@ -196,8 +196,8 @@
     background-color: #fff;
     padding: 20px 10px;
     position: absolute;
-    left: 8vw;
-    top: 50vh;
+    left: 10vw;
+    top: 30vh;
     width: 218px;
     border-radius: 10px;
     transition: opacity 0.5s;
@@ -209,8 +209,8 @@
     font-weight: 700;
     line-height: 2;
     color: #000;
-    left: 7vw;
-    top: 56vh;
+    left: 4vw;
+    top: 33vh;
     padding-top: 22px;
   }
 }

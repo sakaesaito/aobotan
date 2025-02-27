@@ -432,7 +432,7 @@ nav {
 .header-nav-item:nth-child(4)::before {
   width: 24px;
   height: 24px;
-  background-image: url(../../img/mail-icon.png);
+  image-rendering: url(../../img/mail-icon.png);
 }
 
 .header-nav-main {
@@ -549,6 +549,10 @@ nav {
   transition: all 0.3s ease 0s;
 }
 
+.header-nav-main:nth-child(4)::before {
+  background-image: url(../../img/mail-icon.png);
+}
+
 .main {
   max-width: 1120px;
   width: 100%;
@@ -604,7 +608,7 @@ nav {
   background-color: #fff;
   padding: 13px 14px;
   position: absolute;
-  top: 90%;
+  top: 650px;
   left: 450px;
   width: 540px;
   border-radius: 10px;
@@ -620,7 +624,7 @@ nav {
   display: none;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (min-width: 1439px) {
   .drawer_nav {
     position: fixed;
     top: 80px;
@@ -655,7 +659,6 @@ nav {
     color: #000;
     align-items: center;
     padding-top: 32px;
-    margin-top: 109px;
   }
   .drawer_item {
     list-style: none;
@@ -842,7 +845,7 @@ nav {
     opacity: 1;
   }
 }
-@media screen and (max-width: 1026px) {
+@media screen and (max-width: 1025px) {
   .fv {
     width: 100%;
     vertical-align: middle;
@@ -862,7 +865,7 @@ nav {
     width: 100%;
   }
   .fv-img h2 {
-    font-size: 24px;
+    font-size: 40px;
     font-weight: 700;
     color: #000;
     background-color: #fff;
@@ -870,7 +873,7 @@ nav {
     position: absolute;
     top: 490px;
     left: 360px;
-    width: 218px;
+    width: 350px;
     border-radius: 10px;
     transition: opacity 0.5s;
   }
@@ -894,8 +897,8 @@ nav {
     background-color: #fff;
     padding: 20px 10px;
     position: absolute;
-    left: 8vw;
-    top: 50vh;
+    left: 10vw;
+    top: 30vh;
     width: 218px;
     border-radius: 10px;
     transition: opacity 0.5s;
@@ -907,8 +910,8 @@ nav {
     font-weight: 700;
     line-height: 2;
     color: #000;
-    left: 7vw;
-    top: 56vh;
+    left: 4vw;
+    top: 33vh;
     padding-top: 22px;
   }
 }/*# sourceMappingURL=style.css.map */

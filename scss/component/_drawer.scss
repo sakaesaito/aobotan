@@ -5,7 +5,7 @@
 
 
 
- @media screen and (max-width: 1439px){
+ @media screen and (min-width: 1439px){
 
 .drawer_nav {
     position: fixed;
@@ -44,7 +44,6 @@
     color: #000;
     align-items: center;
     padding-top: 32px;
-    margin-top: 109px;
   }
   
   .drawer_item {
