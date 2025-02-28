@@ -1,25 +1,9 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
 
-body {
-    font-family: "Zen Kaku Gothic New", sans-serif;
-    font-size: 16px;
-    line-height: 1;
-    color: #000;
-    overflow-x: hidden;
-}
-nav {
-    list-style: none;
-  }
 .sp_header_menu {
     display: none;
 }
 
-.content {
+.contents .contents hidden{
     max-width: 1440px;
     width: 100%;
     display: flex;
@@ -58,14 +42,18 @@ nav {
 }
 .header-nav-item {
     display: inline-block;
-}
-.header-nav-item:nth-child(4) {
-    display: inline-block; 
-}  
-.header-nav-item:nth-child(4)::before {
-    width: 24px;
-    height: 24px;
-    image-rendering: url(../../img/mail-icon.png);
+    position: relative;
+
+    &.contact::before {
+      content: "";
+      display: block;
+      width: 24px;
+      height: 24px;
+      background-image: url(../../img/mail-icon.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
 }
 
 .header-nav-main {
@@ -178,10 +166,6 @@ nav {
   transition: all 0.3s ease 0s;
 }
 
-.header-nav-main:nth-child(4)::before {
-  background-image: url(../../img/mail-icon.png);
-}
-
 .main {
     max-width: 1120px;
     width: 100%;
@@ -192,20 +176,30 @@ nav {
     position: fixed;
     height: 727px;
     margin-bottom: 186px;
-    background: linear-gradient(to right, #fff 433px, #4282B8 433px);
+
+    & {
+      content: "";
+      display: block;
+      width: 70%;
+      height: 70%;
+      background-color: #4282B8;
+      position: absolute;
+      top:0px;
+      right: 0px;
+      z-index: -1;
+    }
     }
 
 .fv-inner {
     padding-top: 40px;
     padding-left: 0px;
+    padding-right: 40px;
     box-sizing: border-box;
     background-repeat: no-repeat;
     width: 100%;
-    max-width: 1120px;
     height: 873px;
 }
 .fv-bg {
-    max-width: 1120px;
     width: 100%;
     height: auto;
     margin: 0;
