@@ -374,11 +374,22 @@ nav {
   list-style: none;
 }
 
+main {
+  width: 80.5%;
+  margin-left: 19.55;
+}
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 .sp_header_menu {
   display: none;
 }
 
-.content {
+.contents .contents hidden {
   max-width: 1440px;
   width: 100%;
   display: flex;
@@ -397,6 +408,7 @@ nav {
   flex-direction: column;
   max-width: 280px;
   height: 100%;
+  z-index: 100;
 }
 
 .side-header-logo {
@@ -423,16 +435,17 @@ nav {
 
 .header-nav-item {
   display: inline-block;
+  position: relative;
 }
-
-.header-nav-item:nth-child(4) {
-  display: inline-block;
-}
-
-.header-nav-item:nth-child(4)::before {
+.header-nav-item.contact::before {
+  content: "";
+  display: block;
   width: 24px;
   height: 24px;
-  image-rendering: url(../../img/mail-icon.png);
+  background-image: url(../../img/mail-icon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 
 .header-nav-main {
@@ -549,10 +562,6 @@ nav {
   transition: all 0.3s ease 0s;
 }
 
-.header-nav-main:nth-child(4)::before {
-  background-image: url(../../img/mail-icon.png);
-}
-
 .main {
   max-width: 1120px;
   width: 100%;
@@ -561,24 +570,35 @@ nav {
 .fv {
   width: 100%;
   vertical-align: middle;
-  position: fixed;
+  position: absolute;
   height: 727px;
   margin-bottom: 186px;
-  background: linear-gradient(to right, #fff 433px, #4282B8 433px);
 }
 
 .fv-inner {
   padding-top: 40px;
-  padding-left: 0px;
+  padding-left: 280px;
+  padding-right: 40px;
   box-sizing: border-box;
   background-repeat: no-repeat;
   width: 100%;
-  max-width: 1120px;
   height: 873px;
+  position: relative;
+}
+
+.fv-inner::before {
+  content: "";
+  display: block;
+  width: 50.4861111111vw;
+  aspect-ratio: 1/1;
+  background: #4282B8;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  z-index: -10;
 }
 
 .fv-bg {
-  max-width: 1120px;
   width: 100%;
   height: auto;
   margin: 0;
@@ -624,7 +644,7 @@ nav {
   display: none;
 }
 
-@media screen and (min-width: 1439px) {
+@media screen and (max-width: 1440px) {
   .drawer_nav {
     position: fixed;
     top: 80px;
@@ -717,13 +737,13 @@ nav {
     display: block;
   }
 }
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1440px) {
   .side-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 1439px;
+    max-width: 1440px;
     height: 102px;
     background-color: #fff;
     display: flex;
@@ -845,7 +865,7 @@ nav {
     opacity: 1;
   }
 }
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1024px) {
   .fv {
     width: 100%;
     vertical-align: middle;

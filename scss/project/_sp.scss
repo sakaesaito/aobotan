@@ -1,17 +1,17 @@
-@media screen and (max-width: 1439px){
+@media screen and (max-width: 1440px){
   .side-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 1439px;
+    max-width: 1440px;
     height: 102px;
     background-color: #fff;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
-    padding: 0 0 0 10px ;
+    padding: 0px ;
     z-index: 1000;
   }
   .header-nav {
@@ -141,7 +141,7 @@
 }
 }
 
-@media screen and (max-width: 1025px){
+@media screen and (max-width: 1024px){
 .fv {
   width: 100%;
   vertical-align: middle;
