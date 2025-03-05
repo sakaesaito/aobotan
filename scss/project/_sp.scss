@@ -1,83 +1,21 @@
-@media screen and (max-width: 1440px){
-  .side-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 1440px;
-    height: 102px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-    padding: 0px ;
-    z-index: 1000;
-  }
-  .header-nav {
-    display: none;
-  }
-  .sp_header_menu {
-    display: block;
-  }
-  .sp_header_main {
-    display: flex;    
-}
-  
-  .content {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  
-  }
-  .fv {
-    margin-top: 102px;
-  }
-  .fv-bg img {
-    width: 100%;
-  }
-  .fv-img p {
-    width: 430px;
-    position: absolute;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 2;
-    color: #000;
-    left: 35%;
-    top: 85%;
-    padding-top: 40px;
-  }
-  .fv-img h2 {
-    font-size: 50px;
-    font-weight: 700;
-    color: #000;
-    background-color: #fff;
-    padding: 13px 14px;
-    position: absolute;
-    top: 567px;
-    left: 375px;
-    width: 430px;
-    border-radius: 10px;
-    transition: opacity 0.5s ease; 
-  }
- .fv-inner {
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    margin: 0 auto;
- }
- .side-header-logo {
-    margin-top: 10px;
-}
-.side-header img {
-    width: 98px;
-    height: 59px;
+.sp_header_menu {
+  display: none;
 }
 
 .sp_menu {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .sp_header_menu {
+    display: block;
+  }
+
+  .sp_header_main {
+    display: flex;
+  }
+  
+  .sp_menu {
     background-color: #4282b8;
     color: #fff;
     width: 56px;
@@ -93,13 +31,14 @@
     transition: all 0.3s;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.sp_menu:hover {
-  opacity: 0.7;
-}
-/* ハンバーガーの３本線 */
-.sp_menu span {
+  .sp_menu:hover {
+    opacity: 0.7;
+  }
+
+  /* ハンバーガーの３本線 */
+  .sp_menu span {
     display: block;
     transition: all .3s;
     top: 12px;
@@ -108,109 +47,29 @@
     height: 1px;
     background-color: #fff;
     margin: 0 auto;
-}
-
-.sp_menu_icon span:nth-of-type(2) {
-    margin-top: 12px;
-}
-
-.sp_menu_icon span:nth-of-type(3) {
-    margin-top: 12px;
-}
- 
-
-
-
-
-/* menuクラスがactiveの時のコード*/
-.sp_menu.active span:nth-child(1) {
-  transform: rotate(45deg) translate(10px, 10px);
-};
-
-
-.sp_menu.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.sp_menu.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(8px, -8px);
-}
-.drawer_nav.active {
-  display: block;
-  opacity: 1;
-}
-}
-
-@media screen and (max-width: 1024px){
-.fv {
-  width: 100%;
-  vertical-align: middle;
-  position: fixed;
-  height: 727px;
-  margin-bottom: 186px;
-  background:  #fff ;
-}
-.fv-inner {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 0px;
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  background-repeat: no-repeat;
-  width: 100%;
-
-}
-.fv-img h2 {
-  font-size: 40px;
-  font-weight: 700;
-  color: #000;
-  background-color: #fff;
-  padding: 20px 10px;
-  position: absolute;
-  top: 490px;
-  left: 360px;
-  width: 350px;
-  border-radius: 10px;
-  transition: opacity 0.5s;
-}
-.fv-img p {
-  width: 430px;
-  position: absolute;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 2;
-  color: #000;
-  left: 360px;
-  top: 530px;
-  padding-top: 40px;
-}
-
-}
-
-@media screen and (max-width: 767px){
-  .fv-img h2 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #000;
-    background-color: #fff;
-    padding: 20px 10px;
-    position: absolute;
-    left: 10vw;
-    top: 30vh;
-    width: 218px;
-    border-radius: 10px;
-    transition: opacity 0.5s;
   }
-  .fv-img p {
-    width: 430px;
-    position: absolute;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 2;
-    color: #000;
-    left: 4vw;
-    top: 33vh;
-    padding-top: 22px;
+
+  .sp_menu_icon span:nth-of-type(2) {
+    margin-top: 12px;
+  }
+
+  .sp_menu_icon span:nth-of-type(3) {
+    margin-top: 12px;
+  }
+
+  /* menuクラスがactiveの時のコード*/
+  .sp_menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  .sp_menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .sp_menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+
+  .drawer_nav.active {
+    display: block;
+    opacity: 1;
   }
 }

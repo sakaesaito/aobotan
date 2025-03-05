@@ -36,7 +36,7 @@ window.addEventListener('load', function() {
 
 
 
-
+// ハンバーガーメニューとドロワーメニューの設定
 
 $(function () {
   //メニューボタンをクリックしたら
@@ -86,19 +86,15 @@ $(function () {
 
 
 // ホバーでドロップダウン
-
-
-// jQueryの$(function() {})を使って、HTMLの読み込みが完了した後にスクリプトを実行
-$(function() {
-
-  // 「.header-nav-main」クラスを持つ要素にホバーイベントを設定
-  $('.header-nav-main').hover(function() {
-
-    // ホバーされた要素の子要素「.header-nav-drop」を取得し、
-    // アニメーションを停止してからslideToggle(500)でスライド表示/非表示を切り替える
-    $(this).children('.header-nav-drop').stop().slideToggle(500);
-    $(this).children('.header-nav-drop-bar2').stop().slideToggle(500);
-    $(this).children('.header-nav-drop-bar4').stop().slideToggle(500);
-  });
-
-});
+  
+    // アコーディオンのタイトルをホバーした時の処理  
+    $('.accodion .menu>li').hover(function () {  
+      var parentLi = $(this).closest('li'); // 現在のリストアイテム（li）を取得  
+      parentLi.children('.header-nav-drop').stop().slideDown(500); // サブメニューを500msかけて表示  
+      parentLi.addClass('open'); // 'open'クラスを追加  
+    }, function () {  
+      var parentLi = $(this).closest('li'); // 現在のリストアイテム（li）を取得  
+      parentLi.children('.header-nav-drop').stop().slideUp(500); // サブメニューを500msかけて非表示  
+      parentLi.removeClass('open'); // 'open'クラスを削除  
+    });  
+  
