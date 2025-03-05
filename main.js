@@ -98,3 +98,34 @@ $(function () {
       parentLi.removeClass('open'); // 'open'クラスを削除  
     });  
   
+
+    /* フェードインアニメ ------------------------------------------ */ 
+// 動きのきっかけとなるアニメーションの名前を定義 
+
+function fadeAnime() {
+  // フェードインのトリガーとなる要素を取得
+  $(".js-trigger-in").each(function () { var elemPos = $(this).offset().top; 
+ // 要素の位置を取得
+  var scroll = $(window).scrollTop();
+  // 現在のスクロール位置を取得
+  var windowHeight = $(window).height();
+  // ウィンドウの高さを取得
+  if (scroll >= elemPos - windowHeight) { 
+ // 要素が画面内に入ったか判定
+  $(this).addClass("fade-in"); 
+ // クラスを付与してアニメーションを適用 
+ } });
+  // 上方向にフェードインするトリガーとなる要素を取得 
+ $(".js-trigger-up").each(function () { var elemPos = $(this).offset().top + 100; 
+ // 要素の位置を調整（100px上に設定） 
+ var scroll = $(window).scrollTop(); 
+ // 現在のスクロール位置を取得
+  var windowHeight = $(window).height(); 
+ // ウィンドウの高さを取得
+  if (scroll >= elemPos - windowHeight) { 
+ // 要素が画面内に入ったか判定
+  $(this).addClass("fade-up"); 
+ // クラスを付与してアニメーションを適用
+  } 
+ }); 
+ }
