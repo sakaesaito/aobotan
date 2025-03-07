@@ -106,8 +106,8 @@
   opacity: 0;
 }
 .header-nav-drop open {
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
   position: absolute;
   
 }
@@ -145,9 +145,10 @@
 }
 .header-nav-main-bar2 {
   position: absolute;
-    width: 24px;
-    height: 1px;
-    top: 50%;
+    width: 1px;
+    height: 24px;
+    top: 0%;
+    right: 50%;
     transform: translateY(0%);
     background: #4282B8;
 }
@@ -161,9 +162,10 @@
 }
 .header-nav-main-bar4 {
   position: absolute;
-    width: 24px;
-    height: 1px;
-    top: 50%;
+    width: 1px;
+    height: 24px;
+    top: 0%;
+    right: 50%;
     transform: translateY(0%);
     background: #4282B8;
 }

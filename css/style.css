@@ -360,6 +360,7 @@ th {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-weight: 700;
 }
 
 body {
@@ -486,8 +487,6 @@ main {
 }
 
 .header-nav-drop open {
-  display: flex;
-  flex-direction: row;
   position: absolute;
 }
 
@@ -528,9 +527,10 @@ main {
 
 .header-nav-main-bar2 {
   position: absolute;
-  width: 24px;
-  height: 1px;
-  top: 50%;
+  width: 1px;
+  height: 24px;
+  top: 0%;
+  right: 50%;
   transform: translateY(0%);
   background: #4282B8;
 }
@@ -546,9 +546,10 @@ main {
 
 .header-nav-main-bar4 {
   position: absolute;
-  width: 24px;
-  height: 1px;
-  top: 50%;
+  width: 1px;
+  height: 24px;
+  top: 0%;
+  right: 50%;
   transform: translateY(0%);
   background: #4282B8;
 }
