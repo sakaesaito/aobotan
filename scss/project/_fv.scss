@@ -56,6 +56,7 @@
     margin: 0;
     object-fit: cover;
     object-position: center;
+    position: relative;
   }
   @media screen and (max-width:375) {
     .fv-bg {
@@ -69,6 +70,14 @@
     width: 100%;
     margin: 0;
   }
+  .fv-message {
+    width: 540px;
+    height: 100px;
+    position: absolute;
+    top: 70%;
+    left: 40%;
+  }
+
   
   .fv-img p {
     width: 540px;
@@ -76,7 +85,7 @@
     font-weight: 700;
     line-height: 2;
     color: #000;
-    margin-top: 40px;
+    margin-top: 20px;
     position: absolute;
   }
   
@@ -91,10 +100,44 @@
     transition: opacity 0.5s;
   }
   @media screen and (max-width:1024px) {
+    .fv-message {
+      width: 450px;
+      height: 100px;
+      position: absolute;
+      top: 70%;
+      left: 33%;
+    }
+
+    .fv-img p {
+      width: 450px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 2;
+      color: #000;
+      margin-top: 20px;
+      position: absolute;
+    }
+    
+    .fv-img h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #000;
+      background-color: #fff;
+      padding: 13px 14px;
+      border-radius: 10px;
+      transition: opacity 0.5s;
+    }
   
   }
   
   @media screen and (max-width: 767px) {
+    .fv-message {
+      width: 218px;
+      height: 100px;
+      position: absolute;
+      top: 70%;
+      left: 20%;
+    }
     .fv-img h2 {
       width: 218px;
       font-size: 24px;
@@ -104,6 +147,6 @@
     .fv-img p {
       width: 430px;
       font-size: 12px;
-      padding-top: 22px;
+      margin-top: 20px;
     }
   }
