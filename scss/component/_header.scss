@@ -91,6 +91,7 @@
   width: 200px;
   padding-top: 24px;
   padding-bottom: 24px;
+  transition:  0.4s;
 }
 
 .header-nav-main:hover {
@@ -104,21 +105,19 @@
   font-size: 16px;
   opacity: 0;
 }
-
+.header-nav-drop open {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  
+}
 .header-nav-drop a {
   padding-top: 32px;
   text-align: center;
   color: #000;
   font-weight: 700;
-  opacity: .4;
-}
-
-.header-nav-drop a:hover {
-  opacity: .4;
-}
-
-.header-nav-box:hover {
-  opacity: .4;
+  display: flex;
+  flex-direction: row;
 }
 
 .header-nav-drop:nth-child(3) {
@@ -128,29 +127,49 @@
 .header_nav_box {
   display: flex;
 }
-
+.header-nav-main-bar {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+}
+.header-nav-main-bar1 {
+  position: absolute;
+    width: 24px;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #4282B8;
+}
+.header-nav-main-bar2 {
+  position: absolute;
+    width: 24px;
+    height: 1px;
+    top: 50%;
+    transform: translateY(0%);
+    background: #4282B8;
+}
+.header-nav-main-bar3 {
+  position: absolute;
+    width: 24px;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #4282B8;
+}
+.header-nav-main-bar4 {
+  position: absolute;
+    width: 24px;
+    height: 1px;
+    top: 50%;
+    transform: translateY(0%);
+    background: #4282B8;
+}
 .header-nav-drop-link {
   display: inline-block;
   padding-top: 24px;
-}
-
-.header-nav-main::before,.header-nav-main::after {
-  position: absolute;
-  content: "";
-  width: 24px;
-  height: 1px;
-  background-color: #4282B8;
-}
-.header-nav-main::before {
-  top: 42px;
-  right: 0;
-  transform: rotate(0deg);
-}
-
-.header-nav-main::after {
-  top: 42px;
-  right: 0;
-  transform: rotate(90deg);
 }
 
 

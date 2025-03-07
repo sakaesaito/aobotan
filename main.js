@@ -88,7 +88,7 @@ $(function () {
 // ホバーでドロップダウン
   
     // アコーディオンのタイトルをホバーした時の処理  
-    $('.accodion .menu>li').hover(function () {  
+    $('.header-nav-main').hover(function () {  
       var parentLi = $(this).closest('li'); // 現在のリストアイテム（li）を取得  
       parentLi.children('.header-nav-drop').stop().slideDown(500); // サブメニューを500msかけて表示  
       parentLi.addClass('open'); // 'open'クラスを追加  
