@@ -377,7 +377,8 @@ nav {
 
 main {
   width: 80.5%;
-  margin-left: 19.55;
+  margin-left: 280px;
+  height: auto;
 }
 @media screen and (max-width: 1024px) {
   main {
@@ -400,6 +401,11 @@ main {
     display: block;
   }
 }
+.main {
+  max-width: 1120px;
+  width: 100%;
+}
+
 .side {
   width: 280px;
   height: auto;
@@ -591,11 +597,6 @@ main {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-}
-
-.main {
-  max-width: 1120px;
-  width: 100%;
 }
 
 /* ドロワーメニュー */
@@ -831,6 +832,28 @@ main {
   margin: 0;
 }
 
+.fv-scrolldown {
+  color: #4282B8;
+  font-size: 10px;
+  font-weight: 700;
+  position: absolute;
+  top: 92%;
+  left: 3%;
+}
+
+.fv-scrolldown::after {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: 12px;
+  width: 1px;
+  height: 51px;
+  opacity: 0;
+  z-index: 100;
+  background: #4282B8;
+  animation: 1.4s ease-in-out 0s infinite normal none running;
+}
+
 .fv-message {
   width: 540px;
   height: 100px;
@@ -905,4 +928,15 @@ main {
     font-size: 12px;
     margin-top: 20px;
   }
+}
+.slider {
+  width: 100%;
+  margin-top: 76px;
+}
+
+.slider-wrapper {
+  max-width: 1160px;
+  background-color: #f8f8f8;
+  width: 100%;
+  height: 486px;
 }/*# sourceMappingURL=style.css.map */

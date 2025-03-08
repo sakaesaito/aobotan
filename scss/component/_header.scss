@@ -11,8 +11,14 @@
     height: auto;
     margin: 0 auto;
     display: block;
+    
   }
 }
+.main {
+  max-width: 1120px;
+  width: 100%;
+}
+
 
 .side {
   width: 280px;
@@ -206,8 +212,4 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-}
-.main {
-  max-width: 1120px;
-  width: 100%;
 }
