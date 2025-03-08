@@ -474,10 +474,9 @@ main {
   cursor: pointer;
   position: relative;
   border-bottom: 1px solid #B1C6DC;
-  width: 200px;
+  width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
-  transition: 0.4s;
 }
 
 .header-nav-main:hover {
@@ -485,31 +484,21 @@ main {
 }
 
 .header-nav-drop {
+  display: none;
   width: 100%;
-  position: absolute;
   background: #fff;
-  font-size: 16px;
-  opacity: 0;
-}
-
-.header-nav-drop open {
+  font-size: 14px;
+  padding-left: 17px;
+  padding: 20px 0;
+  border-bottom: 1px solid #B1C6DC;
   position: absolute;
 }
 
 .header-nav-drop a {
-  padding-top: 32px;
-  text-align: center;
+  padding: 12px 0;
   color: #000;
+  font-size: 14px;
   font-weight: 700;
-  display: flex;
-  flex-direction: row;
-}
-
-.header-nav-drop:nth-child(3) {
-  margin-bottom: 32px;
-}
-
-.header_nav_box {
   display: flex;
 }
 
@@ -558,16 +547,6 @@ main {
   right: 50%;
   transform: translateY(0%);
   background: #4282B8;
-}
-
-.header-nav-drop-link {
-  display: inline-block;
-  padding-top: 24px;
-}
-
-.header-nav-main:hover {
-  display: block;
-  left: 11px;
 }
 
 .header-nav—main:hover {

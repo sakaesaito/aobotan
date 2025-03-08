@@ -89,13 +89,8 @@ $(function () {
   
     // アコーディオンのタイトルをホバーした時の処理  
     $('.header-nav-main').hover(function () {  
-      var parentLi = $(this).closest('li'); // 現在のリストアイテム（li）を取得  
-      parentLi.children('.header-nav-drop').stop().slideDown(500); // サブメニューを500msかけて表示  
-      parentLi.addClass('open'); // 'open'クラスを追加  
-    }, function () {  
-      var parentLi = $(this).closest('li'); // 現在のリストアイテム（li）を取得  
-      parentLi.children('.header-nav-drop').stop().slideUp(500); // サブメニューを500msかけて非表示  
-      parentLi.removeClass('open'); // 'open'クラスを削除  
+      $(this).children().stop().slideToggle(500); // サブメニューを500msかけて表示  
+      $(this).children().ToggleClass('open'); // 'open'クラスを追加    
     });  
   
 
