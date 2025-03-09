@@ -69,6 +69,10 @@
 
   .side-header-logo {
     margin-top: 10px;
+    transition: .3s;
+  }
+  .side-header-logo:hover {
+    opacity: .6;
   }
 
   .side-header img {
@@ -83,14 +87,7 @@
   font-weight: 700;
 }
 
-.header_nav_box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-nav-main {
+.header-nav-main , .header- nav s{
   cursor: pointer;
   position: relative;
   border-bottom: 1px solid #B1C6DC;
@@ -99,9 +96,6 @@
   padding-bottom: 24px;
 }
 
-.header-nav-main:hover {
-  opacity: 1;
-}
 
 .header-nav-drop {
   display: none;
@@ -165,12 +159,12 @@
     background: #4282B8;
 }
 
-.header-nav—main:hover {
-  transform: rotate(90deg);
-}
+// .header-nav—main:hover {
+//   transform: rotate(90deg);
+// }
 
 .header-nav-drop:hover {
-  opacity: .9;
+  opacity: .7;
 }
 
 .header-nav {

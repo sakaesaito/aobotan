@@ -452,6 +452,10 @@ main {
   }
   .side-header-logo {
     margin-top: 10px;
+    transition: 0.3s;
+  }
+  .side-header-logo:hover {
+    opacity: 0.6;
   }
   .side-header img {
     width: 98px;
@@ -463,24 +467,13 @@ main {
   font-weight: 700;
 }
 
-.header_nav_box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-nav-main {
+.header-nav-main, .header- nav s {
   cursor: pointer;
   position: relative;
   border-bottom: 1px solid #B1C6DC;
   width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
-}
-
-.header-nav-main:hover {
-  opacity: 1;
 }
 
 .header-nav-drop {
@@ -549,12 +542,8 @@ main {
   background: #4282B8;
 }
 
-.header-nav—main:hover {
-  transform: rotate(90deg);
-}
-
 .header-nav-drop:hover {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 .header-nav {
