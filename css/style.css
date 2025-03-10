@@ -437,7 +437,7 @@ main {
     justify-content: space-between;
     align-items: start;
     padding: 0px;
-    z-index: 1000;
+    z-index: 10;
     margin-top: 0;
   }
 }
@@ -446,16 +446,24 @@ main {
   transition: all 0.3s;
 }
 
+.side-header-logo {
+  transition: 0.4s;
+}
+
+.side-header-logo:hover {
+  opacity: 0.8;
+}
+
 @media screen and (max-width: 1024px) {
   .header-nav {
     display: none;
   }
   .side-header-logo {
     margin-top: 10px;
-    transition: 0.3s;
+    transition: 0.6s;
   }
   .side-header-logo:hover {
-    opacity: 0.6;
+    opacity: 0.9;
   }
   .side-header img {
     width: 98px;
@@ -467,13 +475,18 @@ main {
   font-weight: 700;
 }
 
-.header-nav-main, .header- nav s {
+.header-nav-main {
   cursor: pointer;
   position: relative;
   border-bottom: 1px solid #B1C6DC;
   width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
+  display: block;
+}
+
+.header-nav-main-box {
+  position: relative;
 }
 
 .header-nav-drop {
@@ -482,9 +495,8 @@ main {
   background: #fff;
   font-size: 14px;
   padding-left: 17px;
-  padding: 20px 0;
-  border-bottom: 1px solid #B1C6DC;
-  position: absolute;
+  padding: 20px 0 0;
+  border-top: #B1C6DC;
 }
 
 .header-nav-drop a {
@@ -493,6 +505,11 @@ main {
   font-size: 14px;
   font-weight: 700;
   display: flex;
+}
+
+.header-nav-drop-link:nth-child(1) {
+  border-top: 1px solid #B1C6DC;
+  padding-top: 24px;
 }
 
 .header-nav-main-bar {
@@ -519,7 +536,8 @@ main {
   height: 24px;
   top: 0%;
   right: 50%;
-  transform: translateY(0%);
+  transition: all 0.3s;
+  transform: translateX(-50%);
   background: #4282B8;
 }
 
@@ -542,17 +560,17 @@ main {
   background: #4282B8;
 }
 
+.header-nav-item:hover .header-nav—main-bar1 {
+  translate: 0.3s;
+  transform: rotate(90deg);
+}
+
 .header-nav-drop:hover {
   opacity: 0.7;
 }
 
-.header-nav {
-  transition: all 0.3s;
-}
-
 .contact {
   position: relative;
-  display: inline-block;
 }
 
 .contact::before {
@@ -823,26 +841,27 @@ main {
 }
 
 .fv-message {
-  width: 540px;
-  height: 100px;
+  width: 100%;
+  width: 37.5vw;
+  max-width: 540px;
   position: absolute;
   top: 70%;
   left: 40%;
 }
 
 .fv-img p {
-  width: 540px;
+  width: 100%;
   font-size: 16px;
+  font-size: 1.1111111111vw;
   font-weight: 700;
   line-height: 2;
   color: #000;
   margin-top: 20px;
-  position: absolute;
 }
 
 .fv-img h2 {
   display: inline-block;
-  font-size: 64px;
+  font-size: 4.4444444444vw;
   font-weight: 700;
   color: #000;
   background-color: #fff;
@@ -853,15 +872,11 @@ main {
 
 @media screen and (max-width: 1024px) {
   .fv-message {
-    width: 450px;
-    height: 100px;
     position: absolute;
     top: 70%;
     left: 33%;
   }
   .fv-img p {
-    width: 450px;
-    font-size: 14px;
     font-weight: 700;
     line-height: 2;
     color: #000;
@@ -869,8 +884,6 @@ main {
     position: absolute;
   }
   .fv-img h2 {
-    font-size: 40px;
-    font-weight: 700;
     color: #000;
     background-color: #fff;
     padding: 13px 14px;
@@ -880,19 +893,14 @@ main {
 }
 @media screen and (max-width: 767px) {
   .fv-message {
-    width: 218px;
-    height: 100px;
     position: absolute;
     top: 70%;
     left: 20%;
   }
   .fv-img h2 {
-    width: 218px;
-    font-size: 24px;
     padding: 20px 10px;
   }
   .fv-img p {
-    width: 430px;
     font-size: 12px;
     margin-top: 20px;
   }

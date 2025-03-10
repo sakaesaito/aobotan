@@ -88,9 +88,9 @@ $(function () {
 // ホバーでドロップダウン
   
     // アコーディオンのタイトルをホバーした時の処理  
-    $('.s').hover(function () {  
-      $(this).children().stop().slideToggle(500); // サブメニューを500msかけて表示  
-      $(this).children().ToggleClass('open'); // 'open'クラスを追加    
+    $('.header-nav-main').hover(function () {  
+      $(this).children(".header-nav-drop").stop().slideToggle(500); // サブメニューを500msかけて表示  
+      $(this).children(".header-nav-main-box").ToggleClass('open'); // 'open'クラスを追加    
     });  
   
 

@@ -51,7 +51,7 @@
     justify-content: space-between;
     align-items: start;
     padding: 0px;
-    z-index: 1000;
+    z-index: 10;
     margin-top: 0;
   }
 
@@ -61,7 +61,13 @@
   margin-top: 25px;
   transition: all 0.3s;
 }
+.side-header-logo {
+  transition: .4s;
+}
 
+.side-header-logo:hover {
+  opacity: .8;
+}
 @media screen and (max-width: 1024px) {
   .header-nav {
     display: none;
@@ -69,10 +75,10 @@
 
   .side-header-logo {
     margin-top: 10px;
-    transition: .3s;
+    transition: .6s;
   }
   .side-header-logo:hover {
-    opacity: .6;
+    opacity: .9;
   }
 
   .side-header img {
@@ -87,26 +93,28 @@
   font-weight: 700;
 }
 
-.header-nav-main , .header- nav s{
+.header-nav-main {
   cursor: pointer;
   position: relative;
   border-bottom: 1px solid #B1C6DC;
   width: 100%;
   padding-top: 24px;
   padding-bottom: 24px;
+  display: block;
 }
-
-
+.header-nav-main-box {
+  position: relative;
+}
 .header-nav-drop {
   display: none;
   width: 100%;
   background: #fff;
   font-size: 14px;
   padding-left: 17px;
-  padding: 20px 0;
-  border-bottom: 1px solid #B1C6DC;
-  position: absolute;
+  padding: 20px 0 0;
+  border-top:#B1C6DC ;
 }
+
 
 .header-nav-drop a {
   padding: 12px 0 ;
@@ -114,6 +122,10 @@
   font-size: 14px;
   font-weight: 700;
   display: flex;
+}
+.header-nav-drop-link:nth-child(1) {
+  border-top:1px solid #B1C6DC;
+  padding-top: 24px;
 }
 
 .header-nav-main-bar {
@@ -138,7 +150,8 @@
     height: 24px;
     top: 0%;
     right: 50%;
-    transform: translateY(0%);
+    transition:all 0.3s;
+    transform: translateX(-50%);
     background: #4282B8;
 }
 .header-nav-main-bar3 {
@@ -159,21 +172,17 @@
     background: #4282B8;
 }
 
-// .header-nav—main:hover {
-//   transform: rotate(90deg);
-// }
+.header-nav-item:hover .header-nav—main-bar1{
+  translate: .3s;
+  transform: rotate(90deg);
+}
 
 .header-nav-drop:hover {
   opacity: .7;
 }
 
-.header-nav {
-  transition: all 0.3s;
-}
-
 .contact {
   position: relative;
-  display: inline-block;
 }
 .contact::before {
   content: "";
