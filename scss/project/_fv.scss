@@ -60,8 +60,8 @@
   }
   @media screen and (max-width:375) {
     .fv-bg {
-       max-width: 375px;
-        width: 100%;
+      max-width: 375px;
+      width: 100%;
     }  
   }
   
@@ -94,8 +94,7 @@
   }
   .fv-message {
     width: 100%;
-    width: calc((540 / 1440) * 100vw);
-    max-width: 540px;
+    width: calc((600 / 1440) * 100vw);
     position: absolute;
     top: 70%;
     left: 40%;
@@ -123,16 +122,14 @@
   }
   @media screen and (max-width:1024px) {
     .fv-message {
-      // width: 450px;
-      // height: 100px;
+      width: 100%;
       position: absolute;
       top: 70%;
       left: 33%;
     }
 
     .fv-img p {
-      // width: 450px;
-      // font-size: 14px;
+      width: 100%;
       font-weight: 700;
       line-height: 2;
       color: #000;
@@ -141,8 +138,6 @@
     }
     
     .fv-img h2 {
-      // font-size: 40px;
-      // font-weight: 700;
       color: #000;
       background-color: #fff;
       padding: 13px 14px;
@@ -154,20 +149,17 @@
   
   @media screen and (max-width: 767px) {
     .fv-message {
-      // width: 218px;
-      // height: 100px;
+      width: 100%;
+      max-width: 500px;
       position: absolute;
       top: 70%;
       left: 20%;
     }
     .fv-img h2 {
-      // width: 218px;
-      // font-size: 24px;
       padding: 20px 10px;
     }
   
     .fv-img p {
-      // width: 430px;
       font-size: 12px;
       margin-top: 20px;
     }

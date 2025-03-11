@@ -842,8 +842,7 @@ main {
 
 .fv-message {
   width: 100%;
-  width: 37.5vw;
-  max-width: 540px;
+  width: 41.6666666667vw;
   position: absolute;
   top: 70%;
   left: 40%;
@@ -872,16 +871,19 @@ main {
 
 @media screen and (max-width: 1024px) {
   .fv-message {
+    width: 100%;
+    max-width: 500px;
     position: absolute;
     top: 70%;
     left: 33%;
   }
   .fv-img p {
+    width: 100%;
+    max-width: 400px;
     font-weight: 700;
     line-height: 2;
     color: #000;
     margin-top: 20px;
-    position: absolute;
   }
   .fv-img h2 {
     color: #000;
@@ -893,9 +895,11 @@ main {
 }
 @media screen and (max-width: 767px) {
   .fv-message {
+    width: 100%;
+    max-width: 348px;
     position: absolute;
     top: 70%;
-    left: 20%;
+    left: 2%;
   }
   .fv-img h2 {
     padding: 20px 10px;
@@ -905,6 +909,7 @@ main {
     margin-top: 20px;
   }
 }
+
 .slider {
   width: 100%;
   margin-top: 76px;
