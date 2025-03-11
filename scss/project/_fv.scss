@@ -2,9 +2,7 @@
 .fv {
     width: 100%;
     vertical-align: middle;
-    position: absolute;
     height: 727px;
-    margin-bottom: 186px;
   }
   
   @media screen and (max-width:1024px) {
@@ -83,12 +81,11 @@
   .fv-scrolldown::after {
     position: absolute;
     content: "";
-    top: 3px;
-    left: 12px;
+    top: 21px;
+    left: 23px;
     width: 1px;
     height: 51px;
-    opacity: 0;
-    z-index: 100;
+    opacity: 1;
     background: #4282B8;
     animation: 1.4s ease-in-out 0s infinite normal none running;
   }

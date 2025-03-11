@@ -1,6 +1,7 @@
 .slider {
     width: 100%;
     margin-top: 76px;
+    margin-left: 280px;
 }
 
 .slider-wrapper {
@@ -10,3 +11,18 @@
     height: 486px;
     
 }
+
+/* 会社ロゴ無限スライダー */
+.swiper {
+    overflow: hidden;
+  }
+  
+  .swiper-slide img {
+    width: 360px;
+    height: 360px;
+  }
+  
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+  

@@ -124,3 +124,31 @@ function fadeAnime() {
   } 
  }); 
  }
+
+
+ // 写真無限ループのjQuery
+const swiper = new Swiper('.swiper', {
+  speed: 8000,
+  loop: true, // プルーさせる
+  allowTouchMove: false,//スワイプ有効
+  centeredSliders: true,//中心を起点にする
+  autoplay: {
+    delay: 0, //途切れなくループ
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1, // 一度に表示するスライドの数
+      spaceBetween: 48, // 要素間の余白
+    },
+
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 48,
+    },
+
+    1200: {
+      slidesPerView: 3,
+      spaceBetween: 48,
+    },
+  }
+});

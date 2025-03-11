@@ -390,7 +390,6 @@ main {
 .contents .contents hidden {
   max-width: 1440px;
   width: 100%;
-  display: flex;
 }
 
 @media screen and (max-width: 1024px) {
@@ -753,9 +752,7 @@ main {
 .fv {
   width: 100%;
   vertical-align: middle;
-  position: absolute;
   height: 727px;
-  margin-bottom: 186px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -830,12 +827,11 @@ main {
 .fv-scrolldown::after {
   position: absolute;
   content: "";
-  top: 3px;
-  left: 12px;
+  top: 21px;
+  left: 23px;
   width: 1px;
   height: 51px;
-  opacity: 0;
-  z-index: 100;
+  opacity: 1;
   background: #4282B8;
   animation: 1.4s ease-in-out 0s infinite normal none running;
 }
@@ -872,18 +868,17 @@ main {
 @media screen and (max-width: 1024px) {
   .fv-message {
     width: 100%;
-    max-width: 500px;
     position: absolute;
     top: 70%;
     left: 33%;
   }
   .fv-img p {
     width: 100%;
-    max-width: 400px;
     font-weight: 700;
     line-height: 2;
     color: #000;
     margin-top: 20px;
+    position: absolute;
   }
   .fv-img h2 {
     color: #000;
@@ -896,10 +891,10 @@ main {
 @media screen and (max-width: 767px) {
   .fv-message {
     width: 100%;
-    max-width: 348px;
+    max-width: 500px;
     position: absolute;
     top: 70%;
-    left: 2%;
+    left: 20%;
   }
   .fv-img h2 {
     padding: 20px 10px;
@@ -909,10 +904,10 @@ main {
     margin-top: 20px;
   }
 }
-
 .slider {
   width: 100%;
   margin-top: 76px;
+  margin-left: 280px;
 }
 
 .slider-wrapper {
@@ -920,4 +915,18 @@ main {
   background-color: #f8f8f8;
   width: 100%;
   height: 486px;
+}
+
+/* 会社ロゴ無限スライダー */
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-slide img {
+  width: 360px;
+  height: 360px;
+}
+
+.swiper-wrapper {
+  transition-timing-function: linear;
 }/*# sourceMappingURL=style.css.map */
