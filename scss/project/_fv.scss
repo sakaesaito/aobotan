@@ -2,7 +2,7 @@
 .fv {
     width: 100%;
     vertical-align: middle;
-    height: 727px;
+    height: 100%;
   }
   
   @media screen and (max-width:1024px) {
@@ -18,7 +18,6 @@
     box-sizing: border-box;
     background-repeat: no-repeat;
     width: 100%;
-    height: 873px;
     position: relative;
   }
   
@@ -96,17 +95,7 @@
     top: 70%;
     left: 40%;
   }
-
-  .fv-img p {
-    width: 100%;
-    font-size: 16px;
-    font-size: calc((16 / 1440 ) * 100vw);
-    font-weight: 700;
-    line-height: 2;
-    color: #000;
-    margin-top: 20px;
-  }
-  
+ 
   .fv-img h2 {
     display: inline-block;
     font-size: calc((64 / 1440 ) * 100vw);
@@ -117,23 +106,25 @@
     border-radius: 10px;
     transition: opacity 0.5s;
   }
+  .fv-img p {
+    width: 100%;
+    font-size: 16px;
+    font-size: calc((16 / 1440 ) * 100vw);
+    font-weight: 700;
+    line-height: 2;
+    color: #000;
+    margin-top: 20px;
+  }
+ 
   @media screen and (max-width:1024px) {
     .fv-message {
       width: 100%;
+      width: calc((600 / 1024) * 100vw);
       position: absolute;
       top: 70%;
       left: 33%;
     }
 
-    .fv-img p {
-      width: 100%;
-      font-weight: 700;
-      line-height: 2;
-      color: #000;
-      margin-top: 20px;
-      position: absolute;
-    }
-    
     .fv-img h2 {
       color: #000;
       background-color: #fff;
@@ -141,16 +132,22 @@
       border-radius: 10px;
       transition: opacity 0.5s;
     }
-  
+
+    .fv-img p {
+      line-height: 2;
+      color: #000;
+      margin-top: 20px;
+      position: absolute;
+    }   
   }
   
   @media screen and (max-width: 767px) {
     .fv-message {
       width: 100%;
-      max-width: 500px;
+      width: calc((720 / 767) * 100vw);
       position: absolute;
       top: 70%;
-      left: 20%;
+      left: 3%;
     }
     .fv-img h2 {
       padding: 20px 10px;
@@ -159,5 +156,11 @@
     .fv-img p {
       font-size: 12px;
       margin-top: 20px;
+      width: 100%;
     }
+  }
+
+  .js-trigger-up .fade-up {
+    animation-fill-mode: forwards;
+    animation-name: fade-up;
   }

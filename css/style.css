@@ -401,7 +401,6 @@ main {
   }
 }
 .main {
-  max-width: 1120px;
   width: 100%;
 }
 
@@ -752,7 +751,7 @@ main {
 .fv {
   width: 100%;
   vertical-align: middle;
-  height: 727px;
+  height: 100%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -767,7 +766,6 @@ main {
   box-sizing: border-box;
   background-repeat: no-repeat;
   width: 100%;
-  height: 873px;
   position: relative;
 }
 
@@ -844,16 +842,6 @@ main {
   left: 40%;
 }
 
-.fv-img p {
-  width: 100%;
-  font-size: 16px;
-  font-size: 1.1111111111vw;
-  font-weight: 700;
-  line-height: 2;
-  color: #000;
-  margin-top: 20px;
-}
-
 .fv-img h2 {
   display: inline-block;
   font-size: 4.4444444444vw;
@@ -865,20 +853,23 @@ main {
   transition: opacity 0.5s;
 }
 
+.fv-img p {
+  width: 100%;
+  font-size: 16px;
+  font-size: 1.1111111111vw;
+  font-weight: 700;
+  line-height: 2;
+  color: #000;
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 1024px) {
   .fv-message {
     width: 100%;
+    width: 58.59375vw;
     position: absolute;
     top: 70%;
     left: 33%;
-  }
-  .fv-img p {
-    width: 100%;
-    font-weight: 700;
-    line-height: 2;
-    color: #000;
-    margin-top: 20px;
-    position: absolute;
   }
   .fv-img h2 {
     color: #000;
@@ -887,14 +878,20 @@ main {
     border-radius: 10px;
     transition: opacity 0.5s;
   }
+  .fv-img p {
+    line-height: 2;
+    color: #000;
+    margin-top: 20px;
+    position: absolute;
+  }
 }
 @media screen and (max-width: 767px) {
   .fv-message {
     width: 100%;
-    max-width: 500px;
+    width: 93.8722294654vw;
     position: absolute;
     top: 70%;
-    left: 20%;
+    left: 3%;
   }
   .fv-img h2 {
     padding: 20px 10px;
@@ -902,22 +899,32 @@ main {
   .fv-img p {
     font-size: 12px;
     margin-top: 20px;
+    width: 100%;
   }
 }
+.js-trigger-up .fade-up {
+  animation-fill-mode: forwards;
+  animation-name: fade-up;
+}
+
+/* 写真無限スライダー */
 .slider {
   width: 100%;
+  max-width: 1160px;
   margin-top: 76px;
   margin-left: 280px;
+  background-color: #f8f8f8;
+  height: 486px;
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-left: 48px;
 }
 
 .slider-wrapper {
-  max-width: 1160px;
-  background-color: #f8f8f8;
   width: 100%;
-  height: 486px;
+  height: 100%;
 }
 
-/* 会社ロゴ無限スライダー */
 .swiper {
   overflow: hidden;
 }
@@ -929,4 +936,10 @@ main {
 
 .swiper-wrapper {
   transition-timing-function: linear;
+}
+
+@media screen and (max-width: 1024px) {
+  .slider {
+    margin-left: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

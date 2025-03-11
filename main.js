@@ -98,19 +98,6 @@ $(function () {
 // 動きのきっかけとなるアニメーションの名前を定義 
 
 function fadeAnime() {
-  // フェードインのトリガーとなる要素を取得
-  $(".js-trigger-in").each(function () { var elemPos = $(this).offset().top; 
- // 要素の位置を取得
-  var scroll = $(window).scrollTop();
-  // 現在のスクロール位置を取得
-  var windowHeight = $(window).height();
-  // ウィンドウの高さを取得
-  if (scroll >= elemPos - windowHeight) { 
- // 要素が画面内に入ったか判定
-  $(this).addClass("fade-in"); 
- // クラスを付与してアニメーションを適用 
- } });
-  // 上方向にフェードインするトリガーとなる要素を取得 
  $(".js-trigger-up").each(function () { var elemPos = $(this).offset().top + 100; 
  // 要素の位置を調整（100px上に設定） 
  var scroll = $(window).scrollTop(); 
@@ -128,7 +115,7 @@ function fadeAnime() {
 
  // 写真無限ループのjQuery
 const swiper = new Swiper('.swiper', {
-  speed: 8000,
+  speed: 10000,
   loop: true, // プルーさせる
   allowTouchMove: false,//スワイプ有効
   centeredSliders: true,//中心を起点にする
@@ -138,12 +125,12 @@ const swiper = new Swiper('.swiper', {
   breakpoints: {
     0: {
       slidesPerView: 1, // 一度に表示するスライドの数
-      spaceBetween: 48, // 要素間の余白
+      spaceBetween: 20, // 要素間の余白
     },
 
     600: {
       slidesPerView: 2,
-      spaceBetween: 48,
+      spaceBetween: 30,
     },
 
     1200: {
