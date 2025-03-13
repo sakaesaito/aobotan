@@ -1,0 +1,113 @@
+// section共通パーツ
+
+.sec-main {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 71px;
+}
+.sec-main2 {   /*news sectionの見出し*/
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 208px;
+}
+.sec-main:nth-child(3) {
+    margin-top: 207px;
+}
+
+.sec-title {
+    color: #fff;
+    -webkit-text-stroke: 1px #4282B8;
+    text-stroke: 1px #4282B8;
+    font-family: kanit;
+    font-weight: 700;
+    font-size: 168px;
+    margin-top: 20px;
+}
+
+section {
+    max-width: 1160px;
+    width: 100%;
+    height: auto;
+}
+.sec-button {
+    display: inline-block;		
+    padding: 22px 82px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #000;
+    cursor: pointer;transition: all 0.3s ease 0s;
+    position: relative;
+    margin-top: 28px;
+    margin-left: 56px;
+}
+.sec-button::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+}
+.sec-button1 {
+    display: inline-block;		
+    padding: 22px 82px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #000;
+    cursor: pointer;transition: all 0.3s ease 0s;
+    position: relative;
+    margin-top: 40px;
+}
+.sec-button1::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+}
+.sec-button2 {
+    display: inline-block;		
+    padding: 22px 82px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #000;
+    cursor: pointer;transition: all 0.3s ease 0s;
+    position: relative;
+    margin-top: 40px;
+}
+.sec-button2::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #000;
+}
+

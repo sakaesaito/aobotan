@@ -998,4 +998,251 @@ nav {
   text-orientation: upright;
   padding-top: 24px;
   color: #000;
+}
+
+.sec-main {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 71px;
+}
+
+.sec-main2 { /*news sectionの見出し*/
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 208px;
+}
+
+.sec-main:nth-child(3) {
+  margin-top: 207px;
+}
+
+.sec-title {
+  color: #fff;
+  -webkit-text-stroke: 1px #4282B8;
+  text-stroke: 1px #4282B8;
+  font-family: kanit;
+  font-weight: 700;
+  font-size: 168px;
+  margin-top: 20px;
+}
+
+section {
+  max-width: 1160px;
+  width: 100%;
+  height: auto;
+}
+
+.sec-button {
+  display: inline-block;
+  padding: 22px 82px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  margin-top: 28px;
+  margin-left: 56px;
+}
+
+.sec-button::before {
+  position: absolute;
+  content: "";
+  top: 25px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.sec-button1 {
+  display: inline-block;
+  padding: 22px 82px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  margin-top: 40px;
+}
+
+.sec-button1::before {
+  position: absolute;
+  content: "";
+  top: 25px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.sec-button2 {
+  display: inline-block;
+  padding: 22px 82px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  margin-top: 40px;
+}
+
+.sec-button2::before {
+  position: absolute;
+  content: "";
+  top: 25px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.about-inner {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.top-about-text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 40px;
+  line-height: 1.8;
+  width: 57%;
+}
+
+.top-about-img img {
+  width: 161px;
+  height: 213px;
+  position: absolute;
+  margin-top: -3%;
+  right: 12%;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.top-service-inner {
+  margin-top: 134px;
+}
+
+.top-service-no {
+  font-family: kanit;
+  font-weight: 700;
+  font-size: 168px;
+  color: #B1C6DC;
+}
+
+.top-service-box, .top-service-box2, .top-service-box3 {
+  margin-top: 64px;
+  display: flex;
+}
+
+.top-service-img img {
+  width: 516px;
+  height: 464px;
+  z-index: 10;
+}
+
+.top-service-title {
+  font-weight: 700;
+  font-size: 24px;
+  padding: 10px 16px;
+  width: 100%;
+  line-height: 100%;
+  background-color: #fff;
+  margin-left: 56px;
+}
+
+.top-service-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  color: #000;
+  margin-top: 40px;
+  width: 64%;
+  margin-left: 56px;
+}
+
+.top-service-title2 {
+  margin-left: 0;
+  padding: 10px 16px;
+  width: 100%;
+  line-height: 100%;
+  background-color: #fff;
+}
+
+.top-service-text2 {
+  margin-left: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  color: #000;
+  margin-top: 40px;
+  width: 75%;
+}
+
+.top-news-inner {
+  width: 100%;
+  margin-left: 0;
+}
+
+.top-news-box {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+  line-height: 180%;
+  margin-top: 48px;
+}
+
+.top-news-menu {
+  color: #4282B8;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #4282B8;
+  width: 116px;
+  text-align: center;
+  margin-top: 32px;
+}
+
+.top-news-list {
+  border-top: 1px solid #4282B8;
+}
+
+.top-news-item {
+  margin-top: 24px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #4282B8;
+}
+
+.top-contact {
+  background-color: #f8f8f8;
 }/*# sourceMappingURL=style.css.map */
