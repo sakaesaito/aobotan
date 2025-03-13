@@ -375,15 +375,16 @@ nav {
   list-style: none;
 }
 
-main {
+.main {
   width: 80.5%;
   margin-left: 280px;
   height: auto;
 }
 @media screen and (max-width: 1024px) {
-  main {
+  .main {
     width: 100%;
     margin-left: 0;
+    padding-left: 10px;
   }
 }
 
@@ -761,7 +762,6 @@ main {
 }
 .fv-inner {
   padding-top: 40px;
-  padding-left: 280px;
   padding-right: 40px;
   box-sizing: border-box;
   background-repeat: no-repeat;
@@ -902,6 +902,16 @@ main {
     width: 100%;
   }
 }
+@keyframes fadeーup {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .js-trigger-up .fade-up {
   animation-fill-mode: forwards;
   animation-name: fade-up;
@@ -910,9 +920,7 @@ main {
 /* 写真無限スライダー */
 .slider {
   width: 100%;
-  max-width: 1160px;
   margin-top: 76px;
-  margin-left: 280px;
   background-color: #f8f8f8;
   height: 486px;
   padding-top: 63px;
@@ -923,6 +931,7 @@ main {
 .slider-wrapper {
   width: 100%;
   height: 100%;
+  max-width: 1160px;
 }
 
 .swiper {
@@ -942,4 +951,51 @@ main {
   .slider {
     margin-left: 10px;
   }
+}
+.slider {
+  position: relative;
+}
+
+.slide-ms {
+  width: 172px;
+  height: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #f8f8f8;
+  gap: 20px;
+  position: absolute;
+  top: 54%;
+  right: 15%;
+  padding-left: 40px;
+  padding-right: 40px;
+  z-index: 10;
+}
+
+.slide-ms-p {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: Zen Kaku Gothic New;
+  letter-spacing: 0.2em;
+  color: #4282B8;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin: 0;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.slide-color {
+  color: #000;
+  font-family: Zen Kaku Gothic New;
+}
+
+.slide-ms-p2 {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: Zen Kaku Gothic New;
+  letter-spacing: 0.2em;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  padding-top: 24px;
+  color: #000;
 }/*# sourceMappingURL=style.css.map */

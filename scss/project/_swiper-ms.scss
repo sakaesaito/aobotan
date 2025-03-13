@@ -1,12 +1,45 @@
-.slide-ms {
-    width: 100%;
-    height: auto;
+.slider {
+    position: relative;
 }
-.slide-ms p {
+
+.slide-ms {
+    width: 172px;
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #f8f8f8;
+    gap: 20px;
+    position: absolute;
+    top: 54%;
+    right: 15%;
+    padding-left: 40px;
+    padding-right: 40px;
+    z-index: 10;
+}
+
+.slide-ms-p {
     font-size: 40px;
     font-weight: 700;
     font-family: Zen Kaku Gothic New;
-    line-height: 150%;
+    letter-spacing: 0.2em;
+    color: #4282B8;
     writing-mode: vertical-rl;
     text-orientation: upright;
+    margin: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.slide-color {
+    color: #000;
+    font-family: Zen Kaku Gothic New;
+}
+.slide-ms-p2 {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Zen Kaku Gothic New;
+    letter-spacing: 0.2em;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-top: 24px;
+    color: #000;
 }

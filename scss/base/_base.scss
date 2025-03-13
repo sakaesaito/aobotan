@@ -17,13 +17,15 @@ nav {
     list-style: none;
   }
 
-  main {
-    width: 80.5%;
-    margin-left: 280px;
-    height: auto;
+.main {
+  width: 80.5%;
+  margin-left: 280px;
+  height: auto;
 
-    @media screen and (max-width: 1024px){
-      width: 100%;
-      margin-left: 0;      
-    }
+  @media screen and (max-width: 1024px){
+    width: 100%;
+    margin-left: 0;
+    padding-left: 10px;
+      
   }
+}

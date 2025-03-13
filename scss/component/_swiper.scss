@@ -2,9 +2,7 @@
 
 .slider {
     width: 100%;
-    max-width: 1160px;
     margin-top: 76px;
-    margin-left: 280px;
     background-color: #f8f8f8;
     height: 486px;
     padding-top: 63px;
@@ -14,7 +12,8 @@
 
 .slider-wrapper {
     width: 100%;
-    height: 100%;   
+    height: 100%;
+    max-width: 1160px;   
 }
 
 .swiper {
