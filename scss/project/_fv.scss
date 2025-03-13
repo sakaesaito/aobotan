@@ -160,6 +160,17 @@
     }
   }
 
+
+  @keyframes fadeーup {
+    0% {
+       opacity: 0;
+       transform: translateY(20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+  }
   .js-trigger-up .fade-up {
     animation-fill-mode: forwards;
     animation-name: fade-up;
