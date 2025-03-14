@@ -90,7 +90,7 @@ $(function () {
     // アコーディオンのタイトルをホバーした時の処理  
     $('.header-nav-main').hover(function () {  
       $(this).children(".header-nav-drop").stop().slideToggle(500); // サブメニューを500msかけて表示  
-      $(this).children(".header-nav-main-box").ToggleClass('open'); // 'open'クラスを追加    
+      $(this).children(".header-nav-main-box").toggleClass('open'); // 'open'クラスを追加    
     });  
   
 

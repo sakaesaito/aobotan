@@ -10,15 +10,9 @@
     width: 100%;
     height: auto;
     margin: 0 auto;
-    display: block;
-    
+    display: block; 
   }
 }
-.main {
-  width: 100%;
-}
-
-
 .side {
   width: 280px;
   height: auto;
@@ -80,7 +74,7 @@
     opacity: .9;
   }
 
-  .side-header img {
+  .side-header-logo img{
     width: 98px;
     height: 59px;
   }
@@ -95,25 +89,43 @@
 .header-nav-main {
   cursor: pointer;
   position: relative;
-  border-bottom: 1px solid #B1C6DC;
   width: 100%;
-  padding-top: 24px;
-  padding-bottom: 24px;
   display: block;
+
+  &.open {
+    .header-nav-main-bar2,.header-nav-main-bar4 {
+     transform: translateY(0%)
+     rotate(90deg);
+    }
+  }
 }
 .header-nav-main-box {
   position: relative;
+    a {
+      display: block;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #B1C6DC;
+    }
+
+    &.open {
+      .header-nav-main-bar2 ,.header-nav-main-bar4{
+       transform: translateY(0%)
+       rotate(90deg);
+      }
+    }
+  
 }
 .header-nav-drop {
   display: none;
   width: 100%;
   background: #fff;
   font-size: 14px;
-  padding-left: 17px;
-  padding: 20px 0 0;
-  border-top:#B1C6DC ;
+  padding: 20px 17px;
+  // border-top:#B1C6DC ;
+  border-bottom: 1px solid #B1C6DC;
+ 
 }
-
 
 .header-nav-drop a {
   padding: 12px 0 ;
@@ -122,11 +134,15 @@
   font-weight: 700;
   display: flex;
 }
-.header-nav-drop-link:nth-child(1) {
-  border-top:1px solid #B1C6DC;
-  padding-top: 24px;
-}
 
+.header-nav-main2 {
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #B1C6DC;
+  padding: 24px 0;
+  width: 100%;
+  display: block;
+}
 .header-nav-main-bar {
   position: absolute;
   width: 24px;
@@ -140,6 +156,7 @@
     width: 24px;
     height: 1px;
     top: 50%;
+    transition:.3s;
     transform: translateY(-50%);
     background: #4282B8;
 }
@@ -151,6 +168,7 @@
     right: 50%;
     transition:all 0.3s;
     transform: translateX(-50%);
+    transform-origin: center; 
     background: #4282B8;
 }
 .header-nav-main-bar3 {
@@ -169,19 +187,23 @@
     right: 50%;
     transform: translateY(0%);
     background: #4282B8;
+    transition: all .3s
 }
 
-.header-nav-item:hover .header-nav—main-bar1{
-  translate: .3s;
+.header-nav-main:hover .header-nav—main-bar1{
+  transition: .3s;
   transform: rotate(90deg);
 }
 
-.header-nav-drop:hover {
+.header-nav-drop a:hover {
   opacity: .7;
 }
 
 .contact {
   position: relative;
+}
+.contact a {
+  padding-left: 30px;
 }
 .contact::before {
   content: "";
@@ -189,8 +211,9 @@
   width: 20px;
   height: 20px;
   position: absolute;
-  background-image: url(../../img/mail-icon.png);
+  background-image: url(../img/mail-icon.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+  margin-top: 24px;
 }

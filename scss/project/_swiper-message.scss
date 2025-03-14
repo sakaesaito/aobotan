@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.slide-ms {
+.slide-message {
     width: 172px;
     height: auto;
     display: flex;
@@ -17,7 +17,7 @@
     z-index: 10;
 }
 
-.slide-ms-p {
+.slide-message-text {
     font-size: 40px;
     font-weight: 700;
     font-family: Zen Kaku Gothic New;
@@ -29,17 +29,17 @@
     padding-top: 24px;
     padding-bottom: 24px;
 }
-.slide-color {
+span {
     color: #000;
     font-family: Zen Kaku Gothic New;
 }
-.slide-ms-p2 {
-    font-size: 40px;
-    font-weight: 700;
-    font-family: Zen Kaku Gothic New;
-    letter-spacing: 0.2em;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    padding-top: 24px;
-    color: #000;
-}
+// .slide-message-text2 {
+//     font-size: 40px;
+//     font-weight: 700;
+//     font-family: Zen Kaku Gothic New;
+//     letter-spacing: 0.2em;
+//     writing-mode: vertical-rl;
+//     text-orientation: upright;
+//     padding-top: 24px;
+//     color: #000;
+// }
