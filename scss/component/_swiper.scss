@@ -19,10 +19,14 @@
 .swiper {
     overflow: hidden;
   }
-  
+.swiper-slide {
+  width: 360px;
+  height: 360px;
+
+}
   .swiper-slide img{
-    width: 360px;
-    height: 360px;
+    width: 100%;
+    height: auto;
   }
   
   .swiper-wrapper {

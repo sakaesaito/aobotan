@@ -56,11 +56,12 @@
 }
 .side-header-logo {
   transition: .4s;
+
+  &:hover {
+    opacity: .8;
+  }
 }
 
-.side-header-logo:hover {
-  opacity: .8;
-}
 @media screen and (max-width: 1024px) {
   .header-nav {
     display: none;
@@ -69,14 +70,18 @@
   .side-header-logo {
     margin-top: 10px;
     transition: .6s;
-  }
-  .side-header-logo:hover {
-    opacity: .9;
-  }
-
-  .side-header-logo img{
     width: 98px;
     height: 59px;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+  
+
+  .side-header-logo img{
+    width: 100%;
+    height: auto;
   }
 
 }
@@ -91,20 +96,13 @@
   position: relative;
   width: 100%;
   display: block;
-
-  &.open {
-    .header-nav-main-bar2,.header-nav-main-bar4 {
-     transform: translateY(0%)
-     rotate(90deg);
-    }
-  }
 }
 .header-nav-main-box {
   position: relative;
     a {
       display: block;
       padding-top: 24px;
-      padding-bottom: 24px;
+      padding-bottom: 30px;
       border-bottom: 1px solid #B1C6DC;
     }
 
@@ -122,11 +120,12 @@
   background: #fff;
   font-size: 14px;
   padding: 20px 17px;
-  // border-top:#B1C6DC ;
   border-bottom: 1px solid #B1C6DC;
  
 }
-
+.header-nav-item {
+  margin-top: 9px;
+}
 .header-nav-drop a {
   padding: 12px 0 ;
   color: #000;
@@ -139,7 +138,7 @@
   cursor: pointer;
   position: relative;
   border-bottom: 1px solid #B1C6DC;
-  padding: 24px 0;
+  padding: 26px 0;
   width: 100%;
   display: block;
 }
@@ -147,7 +146,7 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 50%;
+  top: 44%;
   right: 0px;
   transform: translateY(-50%);
 }
@@ -203,13 +202,13 @@
   position: relative;
 }
 .contact a {
-  padding-left: 30px;
+  padding-left: 40px;
 }
 .contact::before {
   content: "";
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   position: absolute;
   background-image: url(../img/mail-icon.png);
   background-repeat: no-repeat;

@@ -3,15 +3,14 @@
 }
 
 .slide-message {
-    width: 172px;
     height: auto;
     display: flex;
     flex-direction: row-reverse;
     background-color: #f8f8f8;
-    gap: 20px;
+    gap: 24px;
     position: absolute;
-    top: 54%;
-    right: 15%;
+    top: 52%;
+    right: 16%;
     padding-left: 40px;
     padding-right: 40px;
     z-index: 10;
@@ -21,13 +20,13 @@
     font-size: 40px;
     font-weight: 700;
     font-family: Zen Kaku Gothic New;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.456em;
     color: #4282B8;
     writing-mode: vertical-rl;
     text-orientation: upright;
     margin: 0;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 span {
     color: #000;

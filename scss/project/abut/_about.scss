@@ -1,7 +1,9 @@
 .about-inner {
     width: 100%;
     display: flex;
-    position: relative;
+}
+.top-about-box {
+    width: 100%;
 }
 
 .top-about-text {
@@ -9,14 +11,18 @@
     font-weight: 400;
     margin-top: 40px;
     line-height: 1.8;
-    width: 57%;
+    width: 68%;
+}
+.top-about-img {
+    width: 290px;
+    height: 213px;
+    margin-top: -3%;
+    margin-right: 32%;
+    z-index: 1;
 }
 .top-about-img img {
-    width: 161px;
-    height: 213px;
-    position: absolute;
-    margin-top: -3%;
-    right: 12%;
+    width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width: 1024px) {

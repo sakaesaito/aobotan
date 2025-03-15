@@ -22,7 +22,7 @@
     text-stroke: 1px #4282B8;
     font-family: kanit;
     font-weight: 700;
-    font-size: 168px;
+    font-size: 128px;
     margin-top: 20px;
 }
 
@@ -98,7 +98,8 @@ section {
     border: 1px solid #000;
     cursor: pointer;transition: all 0.3s ease 0s;
     position: relative;
-    margin-top: 40px;
+    margin-top: 28px;
+    margin-left: 5px;
 }
 .sec-button2::before {
     position: absolute;
