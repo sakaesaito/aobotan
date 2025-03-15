@@ -1174,7 +1174,35 @@ section {
   width: 100%;
 }
 
+.top-service-sec {
+  margin-left: 0;
+  display: flex;
+}
+
 .top-service-main {
+  width: 100%;
+}
+
+.top-service-box {
+  margin-top: 64px;
+  max-width: 1160px;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.top-service-box2 {
+  margin-top: 94px;
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.top-service-box3 {
+  margin-top: 90px;
+  display: flex;
+  max-width: 1000px;
   width: 100%;
 }
 
@@ -1208,60 +1236,12 @@ section {
   z-index: -1;
 }
 
-.top-service-box {
-  margin-top: 64px;
-  max-width: 1160px;
-  width: 100%;
-  height: auto;
-  display: flex;
-}
-
-.top-service-sec {
-  margin-left: 0;
-  display: flex;
-}
-
-.top-service-box2 {
-  margin-top: 94px;
-  display: flex;
-  flex-direction: row-reverse;
-  max-width: 1000px;
-  width: 100%;
-}
-
-.top-service-box3 {
-  margin-top: 90px;
-  display: flex;
-  max-width: 1000px;
-  width: 100%;
-}
-
-.top-service-img {
-  width: 81%;
-  object-fit: contain;
-}
-
-.top-service-img img {
-  width: 100%;
-}
-
 .top-service-title {
-  font-weight: 700;
   font-size: 24px;
   padding: 10px 16px;
   width: 70%;
   line-height: 100%;
   background-color: #fff;
-  margin-left: 56px;
-}
-
-.top-service-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 180%;
-  color: #000;
-  margin-top: 47px;
-  width: 64%;
   margin-left: 56px;
 }
 
@@ -1275,6 +1255,16 @@ section {
   margin-left: 6px;
 }
 
+.top-service-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 180%;
+  color: #000;
+  margin-top: 47px;
+  width: 64%;
+  margin-left: 56px;
+}
+
 .top-service-text2 {
   margin-left: 5px;
   font-weight: 400;
@@ -1285,23 +1275,6 @@ section {
   margin-top: 48px;
 }
 
-.top-service-img2 {
-  width: 105%;
-}
-
-.top-service-img2 img {
-  width: 100%;
-}
-
-.top-service-img3 {
-  width: 106%;
-  object-fit: contain;
-}
-
-.top-service-img3 img {
-  width: 100%;
-}
-
 .top-service-text3 {
   font-weight: 400;
   font-size: 16px;
@@ -1310,6 +1283,29 @@ section {
   margin-top: 47px;
   width: 87%;
   margin-left: 56px;
+}
+
+.top-service-img {
+  width: 81%;
+  object-fit: contain;
+}
+.top-service-img, .top-service-img img {
+  width: 100%;
+}
+
+.top-service-img2 {
+  width: 105%;
+}
+.top-service-img2, .top-service-img2 img {
+  width: 100%;
+}
+
+.top-service-img3 {
+  width: 106%;
+  object-fit: contain;
+}
+.top-service-img3, .top-service-img3 img {
+  width: 100%;
 }
 
 .top-news-inner {

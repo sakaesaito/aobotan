@@ -116,14 +116,14 @@
     width: 81%;
     object-fit: contain;
 
-    &.img {
+    &,img {
         width: 100%;
     }
 }
 .top-service-img2 { 
     width: 105%;
 
-    &.img {
+    &,img {
         width: 100%;
     }
 }
@@ -131,7 +131,7 @@
     width: 106%;
     object-fit: contain;
 
-    &.img {
+    &,img {
         width: 100%;
     }
 }
