@@ -12,8 +12,10 @@
     font-size: 24px;
     margin-top: 208px;
 }
-.sec-main:nth-child(3) {
-    margin-top: 207px;
+.sec-main3 {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
 }
 
 .sec-title {
@@ -45,8 +47,8 @@ section {
     border: 1px solid #000;
     cursor: pointer;transition: all 0.3s ease 0s;
     position: relative;
-    margin-top: 28px;
-    margin-left: 56px;
+    margin-top: 30px;
+    margin-left: 55px;
 }
 .sec-button::before {
     position: absolute;
