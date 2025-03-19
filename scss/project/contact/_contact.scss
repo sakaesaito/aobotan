@@ -1,15 +1,96 @@
 .top-contact {
     background-color: #f8f8f8;
+    border-radius: 50px;
 }
+
 .contact-inner {
     padding-left: 24px;
     padding-top: 34px;
     padding-bottom: 50px;
     margin-top: 134px;
-    
+
 }
+
 .contact-box {
     display: flex;
     justify-content: flex-start;
-    margin-top: 50px;
+    margin-top: 44px;
+    align-items: center;
 }
+
+.top-contact-text {
+    padding-right: 32px;
+}
+
+.top-contact-text-name {
+    font-size: 30px;
+    font-family: kanit;
+    font-weight: 400;
+}
+
+.top-contact-text-tel {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.top-contact-no {
+    padding-inline: 34px;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
+.top-contact-no-open {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.top-contact-no-tel {
+    font-size: 32px;
+    font-family: kanit;
+    font-weight: 400;
+}
+.top-contact-mail {
+    margin-left: 64px;
+    background-color: #fff;
+    padding-inline: 40px;
+    display: inline-block;		
+    padding: 0px 36px;
+    line-height: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;transition: all 0.3s ease 0s;
+    position: relative;
+
+
+    & a {
+        display: block;
+        height: 60px;
+        padding-left: 30px;
+        padding-top: 22px;
+        align-items: center
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-image: url(../img/mail-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin-top: 22px;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 25px;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+    }
+}
+

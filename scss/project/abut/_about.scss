@@ -19,10 +19,11 @@
     margin-top: -3%;
     margin-right: 32%;
     z-index: 1;
-}
-.top-about-img img {
-    width: 100%;
-    height: auto;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 1024px) {
