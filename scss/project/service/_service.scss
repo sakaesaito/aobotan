@@ -2,6 +2,24 @@
     margin-top: 134px;
     max-width: 1160px;
     width: 100%;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 1961px;
+        position: absolute;
+        background-color: #f8f8f8;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        border-radius: 50px 0 0 50px;
+        width: 968px;
+        height: 1961;
+        right: 0;
+        z-index: -1;
+    }
 }
 
 .top-service-sec {
@@ -69,7 +87,7 @@
 .top-service-title {
     font-size: 24px;
     padding: 10px 16px;
-    width: 70%;
+    width: 43%;
     line-height: 100%;
     background-color: #fff;
     margin-left: 56px;
@@ -78,13 +96,22 @@
 .top-service-title2 {
     margin-left: 0;
     padding: 10px 16px;
-    width: 60%;
+    width: 56%;
     line-height: 100%;
     background-color: #fff;
     font-size: 24px;
     margin-left: 5px;
     margin-top: -3;
 }
+.top-service-title3 {
+    font-size: 24px;
+    padding: 10px 16px;
+    width: 20%;
+    line-height: 100%;
+    background-color: #fff;
+    margin-left: 56px;
+}
+
 
 
 .top-service-text {

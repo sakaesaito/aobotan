@@ -839,7 +839,7 @@ nav {
   position: absolute;
   content: "";
   top: 21px;
-  left: 23px;
+  left: 27px;
   width: 1px;
   height: 108px;
   opacity: 1;
@@ -851,8 +851,8 @@ nav {
   width: 100%;
   width: 41.6666666667vw;
   position: absolute;
-  top: 70%;
-  left: 40%;
+  top: 73%;
+  left: 42%;
 }
 
 .fv-message-main {
@@ -979,12 +979,12 @@ nav {
   display: flex;
   flex-direction: row-reverse;
   background-color: #f8f8f8;
-  gap: 24px;
+  gap: 12px;
   position: absolute;
-  top: 52%;
-  right: 16%;
-  padding-left: 40px;
-  padding-right: 34px;
+  top: 53%;
+  right: 15%;
+  padding-left: 47px;
+  padding-right: 45px;
   z-index: 10;
 }
 
@@ -1170,6 +1170,23 @@ section {
   margin-top: 134px;
   max-width: 1160px;
   width: 100%;
+  position: relative;
+}
+.top-service-inner::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1961px;
+  position: absolute;
+  background-color: #f8f8f8;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border-radius: 50px 0 0 50px;
+  width: 968px;
+  height: 1961;
+  right: 0;
+  z-index: -1;
 }
 
 .top-service-sec {
@@ -1238,7 +1255,7 @@ section {
 .top-service-title {
   font-size: 24px;
   padding: 10px 16px;
-  width: 70%;
+  width: 43%;
   line-height: 100%;
   background-color: #fff;
   margin-left: 56px;
@@ -1247,12 +1264,21 @@ section {
 .top-service-title2 {
   margin-left: 0;
   padding: 10px 16px;
-  width: 60%;
+  width: 56%;
   line-height: 100%;
   background-color: #fff;
   font-size: 24px;
   margin-left: 5px;
   margin-top: -3;
+}
+
+.top-service-title3 {
+  font-size: 24px;
+  padding: 10px 16px;
+  width: 20%;
+  line-height: 100%;
+  background-color: #fff;
+  margin-left: 56px;
 }
 
 .top-service-text {
@@ -1337,6 +1363,19 @@ section {
 
 .top-news-list {
   border-top: 1px solid #4282B8;
+  position: relative;
+}
+.top-news-list::after {
+  content: "";
+  display: block;
+  width: 130%;
+  height: 20%;
+  position: absolute;
+  background-image: url(../img/arrow-icon-right.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-top: 22px;
 }
 
 .top-news-item {
