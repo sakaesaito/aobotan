@@ -47,7 +47,6 @@
     z-index: 10;
     margin-top: 0;
   }
-
 }
 
 .header-nav {
@@ -76,14 +75,12 @@
     &:hover {
       opacity: .9;
     }
-  }
-  
 
-  .side-header-logo img{
-    width: 100%;
-    height: auto;
+    & img {
+      width: 100%;
+      height: auto;
+    }
   }
-
 }
 
 .header-nav-list {
@@ -121,17 +118,19 @@
   font-size: 14px;
   padding: 20px 17px;
   border-bottom: 1px solid #B1C6DC;
+
+  & a {
+    padding: 12px 0 ;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+
+  }
  
 }
 .header-nav-item {
   margin-top: 9px;
-}
-.header-nav-drop a {
-  padding: 12px 0 ;
-  color: #000;
-  font-size: 14px;
-  font-weight: 700;
-  display: flex;
 }
 
 .header-nav-main2 {
@@ -200,19 +199,23 @@
 
 .contact {
   position: relative;
+
+  & a {
+    padding-left: 40px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background-image: url(../img/mail-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-top: 24px;
+  }
 }
-.contact a {
-  padding-left: 40px;
-}
-.contact::before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  background-image: url(../img/mail-icon.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  margin-top: 24px;
-}
+
+

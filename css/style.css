@@ -498,17 +498,16 @@ nav {
   padding: 20px 17px;
   border-bottom: 1px solid #B1C6DC;
 }
-
-.header-nav-item {
-  margin-top: 9px;
-}
-
 .header-nav-drop a {
   padding: 12px 0;
   color: #000;
   font-size: 14px;
   font-weight: 700;
   display: flex;
+}
+
+.header-nav-item {
+  margin-top: 9px;
 }
 
 .header-nav-main2 {
@@ -583,11 +582,9 @@ nav {
 .contact {
   position: relative;
 }
-
 .contact a {
   padding-left: 40px;
 }
-
 .contact::before {
   content: "";
   display: block;
@@ -1443,24 +1440,79 @@ section {
 }
 
 .footer {
-  margin-top: 120px;
+  margin-top: 124px;
 }
 
 .footer-inner {
-  max-width: 1120px;
+  max-width: 1160px;
   width: 100%;
   height: auto;
   display: flex;
 }
 
 .footer-left {
-  margin-top: 40px;
+  width: 60%;
+}
+
+.footer-left-img {
+  width: 222px;
+  height: 133px;
+}
+
+.footer-left-img img {
+  width: 100%;
+  height: 100%;
 }
 
 .footer-left-add {
-  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .footer-right {
-  width: 60%;
+  width: 66%;
+  margin-top: 7px;
+}
+
+.footer-menu {
+  line-height: 3.4;
+}
+.footer-menu span {
+  margin-left: 16px;
+}
+
+.footer-left-add-text {
+  margin-top: 31px;
+  margin-bottom: 47px;
+  line-height: 2;
+  font-weight: 400;
+}
+.footer-left-add-text span {
+  padding-left: 13px;
+}
+
+small {
+  margin-right: 61px;
+  font-size: 80%;
+  display: block;
+  margin-top: 92px;
+  text-align: right;
+}
+
+.footer-menu-contact {
+  position: relative;
+  display: inline-block;
+  padding-left: 34px;
+}
+.footer-menu-contact::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-image: url(../img/mail-icon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin-top: 20px;
+  margin-left: -24px;
 }/*# sourceMappingURL=style.css.map */
