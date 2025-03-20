@@ -1000,8 +1000,7 @@ nav {
   padding-top: 30px;
   padding-bottom: 20px;
 }
-
-span {
+.slide-message-text span {
   color: #000;
   font-family: Zen Kaku Gothic New;
 }
@@ -1351,6 +1350,11 @@ section {
   margin-top: 44px;
 }
 
+.top-news-name {
+  display: flex;
+  color: #4282B8;
+}
+
 .top-news-menu {
   color: #4282B8;
   font-size: 14px;
@@ -1368,14 +1372,24 @@ section {
 .top-news-list::after {
   content: "";
   display: block;
+  top: 45%;
+  left: 30%;
   width: 130%;
-  height: 20%;
+  height: 10%;
   position: absolute;
   background-image: url(../img/arrow-icon-right.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  margin-top: 22px;
+}
+
+.top-news-date {
+  color: #4282B8;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 20px;
+  display: inline;
+  margin-top: 30px;
 }
 
 .top-news-item {
