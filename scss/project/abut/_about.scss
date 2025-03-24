@@ -14,6 +14,50 @@
     width: 68%;
 }
 .top-about-img {
+    position: relative;
+    display: flex;
+}
+
+.top-about-message {
+    height: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #f8f8f8;
+    gap: 12px;
+    position: absolute;
+    top: -109%;
+    right: -126%;
+    padding-left: 47px;
+    padding-right: 45px;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(50px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.top-about-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.top-about-message-text {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Zen Kaku Gothic New;
+    letter-spacing: 0.5em;
+    color: #4282B8;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    & span {
+        color: #000;
+        font-family: Zen Kaku Gothic New;
+    }
+}
+
+.top-about-img {
     width: 290px;
     height: 213px;
     margin-top: -3%;

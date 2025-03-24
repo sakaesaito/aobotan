@@ -93,6 +93,14 @@
     position: absolute;
     top: 73%;
     left: 42%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+
+  .fv-message.show {
+    opacity: 1;
+    transform: translateY(0);
   }
  
   .fv-message-main {

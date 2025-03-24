@@ -97,20 +97,32 @@ $(function () {
     /* フェードインアニメ ------------------------------------------ */ 
 // 動きのきっかけとなるアニメーションの名前を定義 
 
-function fadeAnime() {
- $(".js-trigger-up").each(function () { var elemPos = $(this).offset().top + 100; 
- // 要素の位置を調整（100px上に設定） 
- var scroll = $(window).scrollTop(); 
- // 現在のスクロール位置を取得
-  var windowHeight = $(window).height(); 
- // ウィンドウの高さを取得
-  if (scroll >= elemPos - windowHeight) { 
- // 要素が画面内に入ったか判定
-  $(this).addClass("fade-up"); 
- // クラスを付与してアニメーションを適用
-  } 
- }); 
- }
+$(document).ready(function () {
+  $(window).on("scroll", function () {
+    var fvMessage = $(".fv-message");
+    var fvOffset = fvMessage.offset().top; // 要素の位置
+    var scrollPos = $(window).scrollTop(); // 現在のスクロール位置
+    var windowHeight = $(window).height(); // 画面の高さ
+
+    if (scrollPos > fvOffset - windowHeight + 100) {
+      fvMessage.addClass("show");
+    }
+  });
+});
+
+$(document).ready(function () {
+  $(window).on("scroll", function () {
+    var aboutMessage = $(".top-about-message");
+    var messageOffset = aboutMessage.offset().top; // 要素の位置
+    var scrollPos = $(window).scrollTop(); // 現在のスクロール位置
+    var windowHeight = $(window).height(); // 画面の高さ
+
+    if (scrollPos > messageOffset - windowHeight + 100) {
+      aboutMessage.addClass("show");
+    }
+  });
+});
+
 
 
  // 写真無限ループのjQuery

@@ -45,7 +45,7 @@ section {
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid #000;
-    cursor: pointer;transition: all 0.3s ease 0s;
+    cursor: pointer;transition: all 0.4s ease 0s;
     position: relative;
     margin-top: 30px;
     margin-left: 55px;
@@ -60,6 +60,24 @@ section {
     border-radius: 50%;
     background-color: #000;
 }
+
+.sec-button:hover {
+    background: #000;
+    color: #fff;
+}
+
+
+.sec-button:hover::before {
+    // position: absolute;
+    // content: "";
+    // top: 25px;
+    // right: 20px;
+    // width: 10px;
+    // height: 10px;
+    // border-radius: 50%;
+    background-color: #fff;
+}
+
 .sec-button1 {
     display: inline-block;		
     padding: 22px 82px;
@@ -72,10 +90,11 @@ section {
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid #000;
-    cursor: pointer;transition: all 0.3s ease 0s;
+    cursor: pointer;transition: all 0.6s ease 0s;
     position: relative;
     margin-top: 40px;
 }
+
 .sec-button1::before {
     position: absolute;
     content: "";
@@ -86,6 +105,15 @@ section {
     border-radius: 50%;
     background-color: #000;
 }
+.sec-button1:hover {
+    background: #000;
+    color: #fff;
+}
+
+.sec-button:hover::before {
+    background-color: #fff;
+}
+
 .sec-button2 {
     display: inline-block;		
     padding: 22px 82px;
@@ -98,11 +126,13 @@ section {
     background-color: #fff;
     border-radius: 10px;
     border: 1px solid #000;
-    cursor: pointer;transition: all 0.3s ease 0s;
+    cursor: pointer;transition: all 0.6s ease 0s;
     position: relative;
     margin-top: 28px;
     margin-left: 5px;
 }
+
+
 .sec-button2::before {
     position: absolute;
     content: "";
@@ -113,4 +143,14 @@ section {
     border-radius: 50%;
     background-color: #000;
 }
+
+.sec-button2:hover {
+    background: #000;
+    color: #fff;
+}
+
+.sec-button2:hover::before {
+    background-color: #fff;
+}
+
 

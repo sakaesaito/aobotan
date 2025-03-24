@@ -12,12 +12,19 @@
 }
 .footer-left-img { 
     width: 222px;
-    height: 133px;   
+    height: 133px;
+    transition: 0.4s;  
+    
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover {
+        opacity: 0.6;
+    }
 }
-.footer-left-img img {
-    width: 100%;
-    height: 100%;
-}
+
 .footer-left-add {
     margin-top: 20px;
 }
@@ -30,6 +37,13 @@
 
     & span {
         margin-left: 16px;
+    }
+}
+.footer-menu-list {
+    transition: .6s;
+
+    &:hover {
+        opacity: .5;
     }
 }
 
@@ -56,6 +70,7 @@ small {
     position: relative;
     display: inline-block;
     padding-left: 34px;
+    transition: .6s;
 
     &::before {
         content: "";
@@ -69,5 +84,9 @@ small {
         background-size: contain;
         margin-top: 20px;
         margin-left: -24px;
+    }
+
+    &:hover {
+        opacity: .5;
     }
 }

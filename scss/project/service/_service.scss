@@ -7,24 +7,32 @@
     &::before {
         content: "";
         display: block;
-        width: 20px;
-        height: 1961px;
         position: absolute;
         background-color: #f8f8f8;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
         border-radius: 50px 0 0 50px;
         width: 968px;
-        height: 1961;
+        height: 136vh;
         right: 0;
+        top: -46px;
         z-index: -1;
     }
 }
 
-.top-service-sec {
+.top-service-group {
     margin-left: 0;
     display: flex;
+}
+.top-service-icon {
+    width: 124px;
+    height: 174px;
+    position: absolute;
+    top: 6%;
+    left: 74%;
+
+    & img {
+        width: 100%;
+        align-self: 100%;
+    }
 }
 
 .top-service-main {
