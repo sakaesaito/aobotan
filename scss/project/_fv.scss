@@ -37,14 +37,13 @@
       padding-top: 40px;
       padding-left: 10px;
       padding-right: 10px;
-    }
-  }
- 
-  @media screen and (max-width:1024px) {
-    .fv-inner::before {
+
+    &::before {
       display: none;
     }
   }
+}
+
   
   .fv-bg {
     width: 100%;
@@ -53,14 +52,16 @@
     object-fit: cover;
     object-position: center;
     position: relative;
+    background-image: url(../img/first-view1.svg);
   }
-  @media screen and (max-width:375) {
+  @media screen and (max-width:375px) {
     .fv-bg {
+      background-image: url(../img/first-view-sp1.svg);
       max-width: 375px;
       width: 100%;
+      height: auto;
     }  
   }
-  
 
   .fv-bg img {
     width: 100%;
@@ -87,6 +88,8 @@
     background: #4282B8;
     animation:fv-scrolldown 1.4s ease-in-out 0s infinite normal none running;
   }
+
+  
   .fv-message {
     width: 100%;
     width: calc((600 / 1440) * 100vw);
