@@ -1160,9 +1160,9 @@ section {
   background-color: #f8f8f8;
   gap: 12px;
   position: absolute;
-  top: -109%;
+  top: -92%;
   right: -126%;
-  padding-left: 47px;
+  padding-left: 45px;
   padding-right: 45px;
   z-index: 10;
   opacity: 0;
@@ -1211,7 +1211,7 @@ section {
   }
 }
 .top-service-inner {
-  margin-top: 134px;
+  margin-top: 62px;
   max-width: 1160px;
   width: 100%;
   position: relative;
@@ -1225,7 +1225,7 @@ section {
   width: 968px;
   height: 136vh;
   right: 0;
-  top: -46px;
+  top: 20px;
   z-index: -1;
 }
 
@@ -1307,7 +1307,7 @@ section {
 .top-service-title {
   font-size: 24px;
   padding: 10px 16px;
-  width: 43%;
+  width: 45%;
   line-height: 100%;
   background-color: #fff;
   margin-left: 56px;
@@ -1416,6 +1416,7 @@ section {
   width: 116px;
   text-align: center;
   margin-top: 32px;
+  height: 26px;
 }
 
 .top-news-list {
@@ -1433,7 +1434,7 @@ section {
   top: 51%;
   left: 96%;
   width: 2%;
-  height: 11%;
+  height: 16%;
   position: absolute;
   background-image: url(../img/arrow-icon-right.png);
   background-repeat: no-repeat;
@@ -1456,7 +1457,7 @@ section {
 
 .top-news-item {
   margin-top: 14px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .top-contact {
