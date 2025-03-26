@@ -149,5 +149,10 @@ const swiper = new Swiper('.swiper', {
       slidesPerView: 3,
       spaceBetween: 48,
     },
+    1500: {
+      slidesPerView: 4,
+      spaceBetween: 48,
+
+    }
   }
 });

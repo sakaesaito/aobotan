@@ -1,23 +1,46 @@
 // section共通パーツ
 
-.sec-main {
+.sec-main {  /*about,service sectionの見出し*/
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 700;
     font-size: 24px;
     margin-top: 71px;
 }
+
 .sec-main2 {   /*news sectionの見出し*/
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 700;
     font-size: 24px;
     margin-top: 208px;
 }
-.sec-main3 {
+.sec-main3 {  /*contact sectionの見出し*/
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 700;
     font-size: 24px;
 }
 
+// @media screen and (max-width: 1024px){
+//     .sec-main3 {
+//         /*contact sectionの見出し*/
+//         font-size: 20px;
+//       }
+//       .sec-main {
+//         /*about,service sectionの見出し*/
+//         font-size: 20px;
+//         margin-top: 71px;
+//       }
+    
+//       .sec-main2 {
+//         /*news sectionの見出し*/
+//         font-size: 20px;
+//         margin-top: 100px;
+//       }
+//       .sec-title {
+//         font-size: 72px;
+//         margin-top: 16px;
+//       }
+    
+// }
 .sec-title {
     color: #fff;
     -webkit-text-stroke: 1px #4282B8;
@@ -29,7 +52,6 @@
 }
 
 section {
-    max-width: 1160px;
     width: 100%;
     height: auto;
 }
@@ -49,8 +71,14 @@ section {
     position: relative;
     margin-top: 30px;
     margin-left: 55px;
-}
-.sec-button::before {
+
+    &:hover {
+        background: #000;
+        color: #fff;
+
+    }
+
+    &::before {
     position: absolute;
     content: "";
     top: 25px;
@@ -59,14 +87,9 @@ section {
     height: 10px;
     border-radius: 50%;
     background-color: #000;
+    }
+
 }
-
-.sec-button:hover {
-    background: #000;
-    color: #fff;
-}
-
-
 .sec-button:hover::before {
     background-color: #fff;
 }
@@ -86,21 +109,23 @@ section {
     cursor: pointer;transition: all 0.6s ease 0s;
     position: relative;
     margin-top: 40px;
-}
 
-.sec-button1::before {
-    position: absolute;
-    content: "";
-    top: 25px;
-    right: 20px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #000;
-}
-.sec-button1:hover {
-    background: #000;
-    color: #fff;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 25px;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+    }
+
+    &:hover {
+        background: #000;
+        color: #fff;
+
+    }
 }
 
 .sec-button:hover::before {
@@ -123,23 +148,23 @@ section {
     position: relative;
     margin-top: 28px;
     margin-left: 5px;
-}
 
+    &::before {
+        position: absolute;
+        content: "";
+        top: 25px;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
 
-.sec-button2::before {
-    position: absolute;
-    content: "";
-    top: 25px;
-    right: 20px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #000;
-}
+    }
+    &:hover {
+        background: #000;
+        color: #fff;
 
-.sec-button2:hover {
-    background: #000;
-    color: #fff;
+    }
 }
 
 .sec-button2:hover::before {

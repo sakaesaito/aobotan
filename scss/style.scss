@@ -3,7 +3,6 @@
 @use './component/header';
 @use './component/drawer';
 @use './component/loading';
-@use './project/sp';
 @use './project/fv';
 @use './component/swiper';
 @use './project/swiper-message';
@@ -13,3 +12,4 @@
 @use './project/news/news';
 @use './project/contact/contact';
 @use './component/footer';
+@use './project/sp';

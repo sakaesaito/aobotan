@@ -1,6 +1,5 @@
 .top-service-inner {
     margin-top: 62px;
-    max-width: 1160px;
     width: 100%;
     position: relative;
 
@@ -10,8 +9,8 @@
         position: absolute;
         background-color: #f8f8f8;
         border-radius: 50px 0 0 50px;
-        width: 968px;
-        height: 136vh;
+        width: 83%;
+        height: 102%;
         right: 0;
         top: 20px;
         z-index: -1;
@@ -41,7 +40,6 @@
 
 .top-service-box {
     margin-top: 64px;
-    max-width: 1160px;
     width: 100%;
     height: auto;
     display: flex;
@@ -51,14 +49,12 @@
     margin-top: 90px;
     display: flex;
     flex-direction:row-reverse;
-    max-width: 1160px;
     width: 100%;
     padding-right: 153px;
 }
 .top-service-box3 {
     margin-top: 90px;
     display: flex;
-    max-width: 1160px;
     width: 100%;
 }
 
@@ -69,8 +65,7 @@
     color: #B1C6DC;
     margin-left: -24px;
     position: relative;
-    z-index: -1; 
-   
+    z-index: -1;   
 }
 .top-service-no2 {
     font-family: kanit;
@@ -97,7 +92,6 @@
     padding: 10px 16px;
     width: 45%;
     line-height: 100%;
-    background-color: #fff;
     margin-left: 56px;
 }
 
@@ -106,7 +100,6 @@
     padding: 10px 16px;
     width: 56%;
     line-height: 100%;
-    background-color: #fff;
     font-size: 24px;
     margin-left: 5px;
     margin-top: -3;
@@ -116,7 +109,6 @@
     padding: 10px 16px;
     width: 20%;
     line-height: 100%;
-    background-color: #fff;
     margin-left: 56px;
 }
 
@@ -127,6 +119,7 @@
     color: #000;
     margin-top: 47px;
     width: 64%;
+    max-width: 100%;
     margin-left: 56px;
 }
 .top-service-text2 {
@@ -150,6 +143,7 @@
 
 .top-service-img{
     width: 81%;
+    max-width: 100%;
     object-fit: contain;
 
  & img {

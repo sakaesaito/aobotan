@@ -15,7 +15,7 @@
   .sp_header_main {
     display: flex;
   }
-  
+
   .sp_menu {
     background-color: #4282b8;
     color: #fff;
@@ -62,9 +62,11 @@
   .sp_menu.active span:nth-child(1) {
     transform: rotate(45deg) translate(10px, 10px);
   }
+
   .sp_menu.active span:nth-child(2) {
     opacity: 0;
   }
+
   .sp_menu.active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
   }
@@ -73,4 +75,97 @@
     display: block;
     opacity: 1;
   }
+
+
+
+  /*section共通のレスポンシブ*/
+
+     /*about,service sectionの見出し*/
+  .sec-main {
+    font-size: 20px;
+    margin-top: 71px;
+  }
+     /*news sectionの見出し*/
+  .sec-main2 {
+    font-size: 20px;
+    margin-top: 100px;
+  }
+    /*contact sectionの見出し*/
+  .sec-main3 {
+    font-size: 20px;
+  }
+
+  .sec-title {
+    font-size: 72px;
+    margin-top: 16px;
+  }
+
+
+ /*service section　のレスポンシブ*/
+  .top-service-box {
+    margin-top: 24px;
+    display: block;
+  }
+  .top-service-box2 {
+    margin-top: 50px;
+    display: block;
+    width: 100%;
+  }
+.top-service-box3 {
+    margin-top: 50px;
+    display: block;
+    width: 100%;
+  }
+  .top-service-no {  
+    font-size: 48px;
+    margin-left: -24px;
+    position: relative;
+    z-index: -1;   
+  }
+  .top-service-no2 {
+    font-size: 48px;
+    position: relative;
+    left: -20%;
+    z-index: -1;
+}
+.top-service-no3 {
+    font-size: 48px;
+    margin-left: -20px;
+    position: relative;
+    z-index: -1;  
+}
+
+
+  
+
+  /*contact section　のレスポンシブ*/
+  .top-contact {
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .top-contact-inner {
+    padding: 20px 10px 30px 10px;
+    margin-top: 40px;
+  }
+  .top-contact-group {
+    display: block;
+    position: relative;
+  }
+  .contact-box {
+    display: block;
+    margin-top: 27px;
+  }
+  .top-contact-img {
+    width: 12%;
+    height: auto;
+    position: absolute;
+    margin-top: -0.5%;
+    margin-left: 81%;
+
+    & img {
+        width: 100%;
+        height: auto;
+    }
+}
 }
