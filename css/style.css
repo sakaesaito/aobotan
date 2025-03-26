@@ -696,6 +696,7 @@ nav {
     display: block;
   }
 }
+/*header*/
 .sp_header_menu {
   display: none;
 }
@@ -811,12 +812,10 @@ nav {
   object-fit: cover;
   object-position: center;
   position: relative;
-  background-image: url(../img/first-view1.svg);
 }
 
 @media screen and (max-width: 375px) {
   .fv-bg {
-    background-image: url(../img/first-view-sp1.svg);
     max-width: 375px;
     width: 100%;
     height: auto;
@@ -908,6 +907,10 @@ nav {
   }
 }
 @media screen and (max-width: 767px) {
+  .fv_image {
+    background: url(../../img/first-view-sp1.svg);
+    background-repeat: no-repeat;
+  }
   .fv-message {
     width: 100%;
     width: 93.8722294654vw;
@@ -924,21 +927,6 @@ nav {
     width: 100%;
   }
 }
-@keyframes fadeーup {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.js-trigger-up .fade-up {
-  animation-fill-mode: forwards;
-  animation-name: fade-up;
-}
-
 /* 写真無限スライダー */
 .slider {
   width: 100%;
@@ -1368,7 +1356,6 @@ section {
   width: 81%;
   object-fit: contain;
 }
-
 .top-service-img img {
   width: 100%;
 }
@@ -1376,7 +1363,6 @@ section {
 .top-service-img2 {
   width: 105%;
 }
-
 .top-service-img2 img {
   width: 100%;
 }
@@ -1385,7 +1371,6 @@ section {
   width: 80%;
   object-fit: contain;
 }
-
 .top-service-img3 img {
   width: 100%;
 }

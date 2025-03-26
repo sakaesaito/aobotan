@@ -151,23 +151,27 @@
 .top-service-img{
     width: 81%;
     object-fit: contain;
-}
-.top-service-img img {
+
+ & img {
     width: 100%;
-    }
+ }
+}
 
 .top-service-img2 { 
     width: 105%;
+
+    & img {
+        width: 100%;
+    }
 }
-.top-service-img2 img {
-    width: 100%;
-}
+
 .top-service-img3{
     width: 80%;
     object-fit: contain;
-}
-.top-service-img3 img {
-    width: 100%;
+
+    & img {
+        width: 100%;
+    }
 }
 
 

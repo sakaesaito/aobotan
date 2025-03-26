@@ -52,11 +52,9 @@
     object-fit: cover;
     object-position: center;
     position: relative;
-    background-image: url(../img/first-view1.svg);
   }
   @media screen and (max-width:375px) {
     .fv-bg {
-      background-image: url(../img/first-view-sp1.svg);
       max-width: 375px;
       width: 100%;
       height: auto;
@@ -152,6 +150,15 @@
   }
   
   @media screen and (max-width: 767px) {
+    .fv_image {
+      background: url(../../img/first-view-sp1.svg);
+      background-repeat: no-repeat;
+
+      & img {
+        // display: none;
+      }
+    }
+   
     .fv-message {
       width: 100%;
       width: calc((720 / 767) * 100vw);
@@ -170,18 +177,3 @@
     }
   }
 
-
-  @keyframes fadeーup {
-    0% {
-       opacity: 0;
-       transform: translateY(20px);
-    }
-    100% {
-       opacity: 1;
-       transform: translateY(0);
-    }
-  }
-  .js-trigger-up .fade-up {
-    animation-fill-mode: forwards;
-    animation-name: fade-up;
-  }
