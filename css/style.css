@@ -508,12 +508,17 @@ nav {
 .header-nav-item {
   margin-top: 9px;
 }
+.header-nav-item a {
+  padding-top: 25px;
+  padding-bottom: 30px;
+  display: inline-block;
+  width: 200px;
+}
 
 .header-nav-main2 {
   cursor: pointer;
   position: relative;
   border-bottom: 1px solid #B1C6DC;
-  padding: 26px 0;
   width: 100%;
   display: block;
 }
@@ -722,7 +727,7 @@ nav {
   background: #4282B8;
   position: absolute;
   top: -40px;
-  right: -40px;
+  right: 0px;
   z-index: -1;
 }
 
@@ -932,7 +937,8 @@ section {
   height: auto;
 }
 
-.sec-button {
+/*ボタン共通化：*/
+.top-sec-button1 {
   display: inline-block;
   padding: 22px 82px;
   color: #000;
@@ -941,44 +947,6 @@ section {
   text-align: center;
   text-decoration: none;
   line-height: 1;
-  background-color: #fff;
-  border-radius: 10px;
-  border: 1px solid #000;
-  cursor: pointer;
-  transition: all 0.4s ease 0s;
-  position: relative;
-  margin-top: 30px;
-  margin-left: 55px;
-}
-.sec-button:hover {
-  background: #000;
-  color: #fff;
-}
-.sec-button::before {
-  position: absolute;
-  content: "";
-  top: 25px;
-  right: 20px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #000;
-}
-
-.sec-button:hover::before {
-  background-color: #fff;
-}
-
-.sec-button1 {
-  display: inline-block;
-  padding: 22px 82px;
-  color: #000;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  line-height: 1;
-  background-color: #fff;
   border-radius: 10px;
   border: 1px solid #000;
   cursor: pointer;
@@ -986,7 +954,7 @@ section {
   position: relative;
   margin-top: 40px;
 }
-.sec-button1::before {
+.top-sec-button1::before {
   position: absolute;
   content: "";
   top: 25px;
@@ -996,7 +964,7 @@ section {
   border-radius: 50%;
   background-color: #000;
 }
-.sec-button1:hover {
+.top-sec-button1:hover {
   background: #000;
   color: #fff;
 }
@@ -1005,41 +973,22 @@ section {
   background-color: #fff;
 }
 
-.sec-button2 {
-  display: inline-block;
-  padding: 22px 82px;
-  color: #000;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  line-height: 1;
+.sec-button2:hover::before {
   background-color: #fff;
-  border-radius: 10px;
-  border: 1px solid #000;
-  cursor: pointer;
-  transition: all 0.6s ease 0s;
-  position: relative;
+}
+
+.top-service-link1 {
+  margin-top: 40px;
+}
+
+.top-service-link2 {
   margin-top: 28px;
   margin-left: 5px;
 }
-.sec-button2::before {
-  position: absolute;
-  content: "";
-  top: 25px;
-  right: 20px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #000;
-}
-.sec-button2:hover {
-  background: #000;
-  color: #fff;
-}
 
-.sec-button2:hover::before {
-  background-color: #fff;
+.top-service-link3 {
+  margin-top: 28px;
+  margin-left: 5px;
 }
 
 .about-inner {
@@ -1127,7 +1076,7 @@ section {
   background-color: #f8f8f8;
   border-radius: 50px 0 0 50px;
   width: 83%;
-  height: 102%;
+  height: 104%;
   right: 0;
   top: 20px;
   z-index: -1;
@@ -1211,6 +1160,7 @@ section {
   width: 45%;
   line-height: 100%;
   margin-left: 56px;
+  background-color: #fff;
 }
 
 .top-service-title2 {
@@ -1221,6 +1171,7 @@ section {
   font-size: 24px;
   margin-left: 5px;
   margin-top: -3;
+  background-color: #fff;
 }
 
 .top-service-title3 {
@@ -1229,6 +1180,7 @@ section {
   width: 20%;
   line-height: 100%;
   margin-left: 56px;
+  background-color: #fff;
 }
 
 .top-service-text {
@@ -1327,8 +1279,8 @@ section {
 .top-news-list::after {
   content: "";
   display: block;
-  top: 51%;
-  left: 96%;
+  top: 55%;
+  left: 92%;
   width: 2%;
   height: 16%;
   position: absolute;
@@ -1487,7 +1439,6 @@ section {
 
 .footer {
   margin-top: 124px;
-  max-width: 1160px;
   width: 100%;
 }
 
@@ -1497,8 +1448,36 @@ section {
   display: flex;
 }
 
+@media screen and (max-width: 1024px) {
+  .footer-inner {
+    display: block;
+  }
+}
 .footer-left {
-  width: 60%;
+  width: 51%;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer-left {
+    width: 100%;
+    text-align: center;
+  }
+}
+.footer-left-box {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  font-weight: 400;
+}
+
+.footer-left-add-menu {
+  width: 30%;
+  margin-top: 20px;
+}
+
+.footer-left-add-item {
+  width: 70%;
+  margin-top: 20px;
 }
 
 .footer-left-img {
@@ -1514,17 +1493,29 @@ section {
   opacity: 0.6;
 }
 
+@media screen and (max-width: 1024px) {
+  .footer-left-img {
+    width: 100%;
+    text-align: center;
+  }
+}
 .footer-left-add {
-  margin-top: 20px;
+  margin-top: 36px;
+  font-weight: 400;
 }
 
 .footer-right {
-  width: 66%;
-  margin-top: 7px;
+  width: 45%;
 }
 
+@media screen and (max-width: 1024px) {
+  .footer-right {
+    width: 100%;
+    text-align: center;
+  }
+}
 .footer-menu {
-  line-height: 3.4;
+  margin-top: -5px;
 }
 .footer-menu span {
   margin-left: 16px;
@@ -1532,29 +1523,25 @@ section {
 
 .footer-menu-list {
   transition: 0.6s;
+  display: inline-block;
+  margin-top: 20px;
+  line-height: 2;
 }
 .footer-menu-list:hover {
   opacity: 0.5;
 }
 
-.footer-left-add-text {
-  margin-top: 31px;
-  margin-bottom: 47px;
-  line-height: 2;
-  font-weight: 400;
+@media screen and (max-width: 1024px) {
+  .footer-menu-list {
+    width: 100%;
+    display: block;
+    margin-top: 16px;
+  }
+  .footer-menu-list span {
+    margin: 0;
+    display: none;
+  }
 }
-.footer-left-add-text span {
-  padding-left: 13px;
-}
-
-small {
-  margin-right: 61px;
-  font-size: 80%;
-  display: block;
-  margin-top: 92px;
-  text-align: right;
-}
-
 .footer-menu-contact {
   position: relative;
   display: inline-block;
@@ -1564,20 +1551,33 @@ small {
 .footer-menu-contact::before {
   content: "";
   display: block;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   background-image: url(../img/mail-icon.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  margin-top: 20px;
-  margin-left: -24px;
+  margin-top: 5px;
+  margin-left: -27px;
 }
 .footer-menu-contact:hover {
   opacity: 0.5;
 }
 
+small {
+  margin-right: 10px;
+  font-size: 80%;
+  display: block;
+  margin-top: 22%;
+  text-align: right;
+}
+
+@media screen and (max-width: 1024px) {
+  small {
+    text-align: center;
+  }
+}
 /*header*/
 .sp_header_menu {
   display: none;

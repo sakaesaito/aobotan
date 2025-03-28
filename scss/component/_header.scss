@@ -131,13 +131,18 @@
 }
 .header-nav-item {
   margin-top: 9px;
+  a {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    display: inline-block;
+    width: 200px;
+  }
 }
 
 .header-nav-main2 {
   cursor: pointer;
   position: relative;
   border-bottom: 1px solid #B1C6DC;
-  padding: 26px 0;
   width: 100%;
   display: block;
 }

@@ -19,28 +19,6 @@
     font-size: 24px;
 }
 
-// @media screen and (max-width: 1024px){
-//     .sec-main3 {
-//         /*contact sectionの見出し*/
-//         font-size: 20px;
-//       }
-//       .sec-main {
-//         /*about,service sectionの見出し*/
-//         font-size: 20px;
-//         margin-top: 71px;
-//       }
-    
-//       .sec-main2 {
-//         /*news sectionの見出し*/
-//         font-size: 20px;
-//         margin-top: 100px;
-//       }
-//       .sec-title {
-//         font-size: 72px;
-//         margin-top: 16px;
-//       }
-    
-// }
 .sec-title {
     color: #fff;
     -webkit-text-stroke: 1px #4282B8;
@@ -55,6 +33,9 @@ section {
     width: 100%;
     height: auto;
 }
+
+
+/*ボタン共通化：*/
 .sec-button {
     display: inline-block;		
     padding: 22px 82px;
@@ -64,51 +45,10 @@ section {
     text-align: center;
     text-decoration: none;
     line-height: 1;
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #000;
-    cursor: pointer;transition: all 0.4s ease 0s;
-    position: relative;
-    margin-top: 30px;
-    margin-left: 55px;
-
-    &:hover {
-        background: #000;
-        color: #fff;
-
-    }
-
-    &::before {
-    position: absolute;
-    content: "";
-    top: 25px;
-    right: 20px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #000;
-    }
-
-}
-.sec-button:hover::before {
-    background-color: #fff;
-}
-
-.sec-button1 {
-    display: inline-block;		
-    padding: 22px 82px;
-    color: #000;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    line-height: 1;
-    background-color: #fff;
     border-radius: 10px;
     border: 1px solid #000;
     cursor: pointer;transition: all 0.6s ease 0s;
     position: relative;
-    margin-top: 40px;
 
     &::before {
         position: absolute;
@@ -124,51 +64,60 @@ section {
     &:hover {
         background: #000;
         color: #fff;
-
     }
 }
 
 .sec-button:hover::before {
     background-color: #fff;
 }
+// .sec-button2 {
+//     display: inline-block;		
+//     padding: 22px 82px;
+//     color: #000;
+//     font-size: 16px;
+//     font-weight: 700;
+//     text-align: center;
+//     text-decoration: none;
+//     line-height: 1;
+//     border-radius: 10px;
+//     border: 1px solid #000;
+//     cursor: pointer;transition: all 0.6s ease 0s;
+//     position: relative;
+//     margin-top: 28px;
+//     margin-left: 5px;
 
-.sec-button2 {
-    display: inline-block;		
-    padding: 22px 82px;
-    color: #000;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    line-height: 1;
+//     &::before {
+//         position: absolute;
+//         content: "";
+//         top: 25px;
+//         right: 20px;
+//         width: 10px;
+//         height: 10px;
+//         border-radius: 50%;
+//         background-color: #000;
+
+//     }
+//     &:hover {
+//         background: #000;
+//         color: #fff;
+
+//     }
+// }
+
+.sec-button:hover::before {
     background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #000;
-    cursor: pointer;transition: all 0.6s ease 0s;
-    position: relative;
+}
+.top-service-link1 {
+    margin-top: 40px;
+}
+
+.top-service-link2 {
     margin-top: 28px;
     margin-left: 5px;
-
-    &::before {
-        position: absolute;
-        content: "";
-        top: 25px;
-        right: 20px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #000;
-
-    }
-    &:hover {
-        background: #000;
-        color: #fff;
-
-    }
 }
 
-.sec-button2:hover::before {
-    background-color: #fff;
+.top-service-link3 {
+    margin-top: 28px;
+    margin-left: 5px;
 }
-
 
