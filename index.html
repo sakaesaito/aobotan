@@ -34,7 +34,7 @@
         <div class="side">
             <header class="side-header">
                 <h1 class="side-header-logo">
-                    <a href="#">
+                    <a href="/">
                         <img src="img/logo-pc.svg" alt="青牡丹工務店">
                     </a>
                 </h1>
@@ -109,16 +109,16 @@
                 <!-- ドロワーメニュ -->
                 <nav class="drawer_nav">
                     <ul class="drawer_list">
-                        <li class="drawer_item"><a href="#">トップページ</a></li>
+                        <li class="drawer_item"><a href="/">トップページ</a></li>
                         <li class="drawer_item"><a href="#top-about">私達について</a></li>
-                        <li class="drawer_item"><a href="./about/#">会社概要</a></li>
+                        <li class="drawer_item"><a href="./about/">会社概要</a></li>
                         <li class="drawer_item"><a href="./about/#">代表者あいさつ</a></li>
                         <li class="drawer_item"><a href="./about/#">安全への取り組み</a></li>
                         <li class="drawer_item"><a href="#top-service">事業内容</a></li>
                         <li class="drawer_item"><a href="./service/#">住宅建築・リフォーム</a></li>
                         <li class="drawer_item"><a href="./service/#">法人新築・リフォーム</a></li>
                         <li class="drawer_item"><a href="./service/#">公共事業</a></li>
-                        <li class="drawer_item"><a href="#">お知らせ</a></li>
+                        <li class="drawer_item"><a href="#top-news">お知らせ</a></li>
                         <li class="drawer_item"><a href="./contact/#">お問い合わせ</a></li>
                     </ul>
                     <P class="drawer_list_coppyright">
@@ -136,11 +136,11 @@
                             <picture class="fv_image">
                                 <img src="./img/first-view1.svg">
                             </picture>
-                            <div class="fv-message">
-                                <div class="fv-message-main">理想を、カタチに</div>
-                                <div class="fv-message-sub">住宅購入は一生に一度あるかないかの、大きな買い物です。<br>青牡丹工務店は、最高の家造りを行うスペシャリスト集団です。
-                                </div>
-                            </div>
+                            <h2 class="fv-message">
+                                <span class="fv-message-main">理想を、カタチに</span>
+                                <span class="fv-message-sub">住宅購入は一生に一度あるかないかの、大きな買い物です。<br>青牡丹工務店は、最高の家造りを行うスペシャリスト集団です。
+                                </span>
+                            </h2>
                             <div class="fv-scrolldown">
                                 <div>scroll down</div>
                             </div>
@@ -164,21 +164,21 @@
             </div>
 
             <section class="section top-about" id="top-about">
-                <div class="about-inner">
+                <div class="top-about-inner">
                     <div class="top-about-box">
                         <h2 class="sec-main">私達について</h2>
                         <p class="sec-title">ABOUT</p>
-                        <p class="top-about-text">
+                        <h3 class="top-about-text">
                             「丁寧な家造りで、理想を現実に」。これは私たちの約束です。青牡丹工務店が手がける家は、ただの建物ではありません。それは、お客様の暮らしや夢を支える、信頼と品質に満ちた温かな空間です。
-                        </p>
+                        </h3>
                         <div class="sec-button top-about-button"><a href="">Read More</a></div>
                     </div>
                     <div class="top-about-img">
                         <img src="./img/interview_01 1.png" alt="">
-                        <div class="top-about-message">
+                        <h2 class="top-about-message">
                             <p class="top-about-message-text">丁寧な家造り<span>で</span></p>
                             <p class="top-about-message-text"><span>理想を現実に</span></p>
-                        </div>
+                        </h2>
                     </div>
                 </div>
             </section>
@@ -198,8 +198,10 @@
                             <img src="./img/house01 1.jpg" alt="">
                         </div>
                         <div class="top-service-main">
-                            <p class="top-service-no">01</p>
-                            <h3 class="top-service-title">住宅建築・リフォーム</h3>
+                            <div>
+                                <p class="top-service-no">01</p>
+                                <h3 class="top-service-title">住宅建築・リフォーム</h3>
+                            </div>
                             <p class="top-service-text">注文住宅では、お客様のニーズや希望に合わせて、オー
                                 ダーメイドの家を提供します。私たちは、建物の設計から完成までのプロセスで、お客様と緊密に連携し、理想の暮らしを実現するための最適な解決策を提案します。</p>
                             <div class="sec-button top-service-link1"><a href="">Read More</a></div>  
@@ -210,8 +212,10 @@
                             <img src="./img/house02 1.jpg" alt="">
                         </div>
                         <div class="top-service-main">
-                            <p class="top-service-no2">02</p>
-                            <h3 class="top-service-title2">法人新築・リフォーム</h3>
+                            <div class="top-service-titile">
+                                <p class="top-service-no2">02</p>
+                                <h3 class="top-service-title2">法人新築・リフォーム</h3>
+                            </div>
                             <p class="top-service-text2">
                                 法人新築では、商業施設やオフィスビル、工場など、さまざまなニーズに応じた建物の新築を手がけています。お客様のビジネスの要件やイメージに合わせて、効率的で機能的な建物を設計・施工します。
                             </p>
@@ -223,8 +227,10 @@
                             <img src="./img/house03 1.jpg" alt="">
                         </div>
                         <div class="top-service-main">
-                            <p class="top-service-no3">03</p>
-                            <h3 class="top-service-title3">公共工事</h3>
+                            <div class="top-service-titile">
+                                <p class="top-service-no3">03</p>
+                                <h3 class="top-service-title3">公共工事</h3>
+                            </div>
                             <p class="top-service-text3">
                                 公共工事では、道路や橋梁、公共施設など、地域社会に欠かせないインフラや施設の建設・改修を行います。私たちは、公共の福祉と安全を考慮しながら、厳格な規制や基準に適合した施工を行います。
                             </p>
@@ -237,27 +243,27 @@
                 <div class="top-news-inner">
                     <h2 class="sec-main2">お知らせ</h2>
                     <p class="sec-title">NEWS</p>
-                    <div class="top-news-box">
-                        <a href="" class="top-news-list">
+                    <div class="top-news-list">
+                        <a href="" class="top-news-item">
                             <div class="top-news-name">
-                                <p class="top-news-menu">イベント情報</p>
-                                <p class="top-news-date">2024.06.03</p>
+                                <div class="top-news-menu">イベント情報</div>
+                                <time class="top-news-date" datetime="2024.06.03">2024.06.03</time>
                             </div>
-                            <p class="top-news-item">住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？</p>
+                            <h3 class="top-news-item-title">住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？</h3>
                         </a>
-                        <a href="" class="top-news-list">
+                        <a href="" class="top-news-item">
                             <div class="top-news-name">
-                                <p class="top-news-menu">イベント情報</p>
-                                <p class="top-news-date">2024.05.23</p>
+                                <div class="top-news-menu">イベント情報</div>
+                                <time class="top-news-date" datetime="2024.05.23">2024.05.23</time>
                             </div>
-                            <p class="top-news-item">安全管理研修を行いました。</p>
+                            <h3 class="top-news-item-title">安全管理研修を行いました。</h3>
                         </a>
-                        <a href="" class="top-news-list">
+                        <a href="" class="top-news-item">
                             <div class="top-news-name">
-                                <p class="top-news-menu">更新情報</p>
-                                <p class="top-news-date">2024.05.01</p>
+                                <div class="top-news-menu">更新情報</div>
+                                <time class="top-news-date" datetime="2024.05.01">2024.05.01</time>
                             </div>
-                            <p class="top-news-item">ホームページをリニューアルしました！！</p>
+                            <h3 class="top-news-item-title">ホームページをリニューアルしました！！</h3>
                         </a>
                     </div>
                 </div>
@@ -268,7 +274,7 @@
                         <div class="top-contact-sec">
                             <h2 class="sec-main3">お問い合わせ</h2>
                             <p class="sec-title">CONTACT</p>
-                            <div class="contact-box">
+                            <div class="top-contact-box">
                                 <div class="top-contact-text">
                                     <p class="top-contact-text-name">Tel</p>
                                     <p class="top-contact-text-tel">お電話</p>
@@ -318,8 +324,8 @@
                     </div>
                     <div class="footer-right">
                         <div class="footer-menu">
-                            <a href="" class="footer-menu-list">トップページ</a><span></span>
-                            <a href="./about/about.html" class="footer-menu-list">私たちについて</a><span></span>
+                            <a href="/" class="footer-menu-list">トップページ</a><span></span>
+                            <a href="./about/" class="footer-menu-list">私たちについて</a><span></span>
                             <a href="" class="footer-menu-list">経営理念</a><br>
                             <a href="" class="footer-menu-list">会社概要</a><span></span>
                             <a href="" class="footer-menu-list">安全への取り組み</a><span></span>
@@ -327,7 +333,7 @@
                             <a href="" class="footer-menu-list">住宅建築・リフォーム</a><br>
                             <a href="" class="footer-menu-list">法人新築・リフォーム</a><span></span>
                             <a href="" class="footer-menu-list">公共工事</a><span></span>
-                            <a href="" class="footer-menu-list">お知らせ</a><span></span>
+                            <a href="#top-news" class="footer-menu-list">お知らせ</a><span></span>
                             <p class="footer-menu-contact"><a href="">お問い合わせ</a></p>
                             <a href=""></a>
                         </div>

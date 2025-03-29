@@ -21,6 +21,7 @@
     margin-left: 0;
     display: flex;
 }
+
 .top-service-icon {
     width: 124px;
     height: 174px;
@@ -28,7 +29,7 @@
     top: 6%;
     left: 74%;
 
-    & img {
+    img {
         width: 100%;
         align-self: 100%;
     }
@@ -48,10 +49,11 @@
 .top-service-box2 {
     margin-top: 90px;
     display: flex;
-    flex-direction:row-reverse;
+    flex-direction: row-reverse;
     width: 100%;
     padding-right: 153px;
 }
+
 .top-service-box3 {
     margin-top: 90px;
     display: flex;
@@ -60,13 +62,14 @@
 
 .top-service-no {
     font-family: kanit;
-    font-weight: 700;   
+    font-weight: 700;
     font-size: 168px;
     color: #B1C6DC;
     margin-left: -24px;
     position: relative;
-    z-index: -1;   
+    z-index: -1;
 }
+
 .top-service-no2 {
     font-family: kanit;
     font-weight: 700;
@@ -76,21 +79,22 @@
     left: 63%;
     z-index: -1;
 }
+
 .top-service-no3 {
     font-family: kanit;
-    font-weight: 700;   
+    font-weight: 700;
     font-size: 168px;
     color: #B1C6DC;
     margin-left: -20px;
     position: relative;
-    z-index: -1;  
+    z-index: -1;
 }
 
 
 .top-service-title {
     font-size: 24px;
     padding: 10px 16px;
-    width: 45%;
+    display: inline-block;
     line-height: 100%;
     margin-left: 56px;
     background-color: #fff;
@@ -99,17 +103,18 @@
 .top-service-title2 {
     margin-left: 0;
     padding: 10px 16px;
-    width: 56%;
+    display:inline-block;
     line-height: 100%;
     font-size: 24px;
     margin-left: 5px;
     margin-top: -3;
     background-color: #fff;
 }
+
 .top-service-title3 {
     font-size: 24px;
     padding: 10px 16px;
-    width: 20%;
+    display: inline-block;
     line-height: 100%;
     margin-left: 56px;
     background-color: #fff;
@@ -125,6 +130,7 @@
     max-width: 100%;
     margin-left: 56px;
 }
+
 .top-service-text2 {
     margin-left: 5px;
     font-weight: 400;
@@ -134,6 +140,7 @@
     width: 86%;
     margin-top: 48px;
 }
+
 .top-service-text3 {
     font-weight: 400;
     font-size: 16px;
@@ -144,32 +151,44 @@
     margin-left: 56px;
 }
 
-.top-service-img{
+.top-service-img {
     width: 81%;
     max-width: 100%;
     object-fit: contain;
 
- & img {
-    width: 100%;
- }
-}
-
-.top-service-img2 { 
-    width: 105%;
-
-    & img {
+    img {
         width: 100%;
     }
 }
 
-.top-service-img3{
+.top-service-img2 {
+    width: 105%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.top-service-img3 {
     width: 80%;
     object-fit: contain;
 
-    & img {
+    img {
         width: 100%;
     }
 }
 
+.top-service-link1 {
+    margin-top: 30px;
+    margin-left: 56px;
+}
 
+.top-service-link2 {
+    margin-top: 28px;
+    margin-left: 5px;
+}
 
+.top-service-link3 {
+    margin-top: 30px;
+    margin-left: 60px;
+}

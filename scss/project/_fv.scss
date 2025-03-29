@@ -3,13 +3,13 @@
     width: 100%;
     vertical-align: middle;
     height: 100%;
-  }
-  
-  @media screen and (max-width:1024px) {
-    .fv {
-      margin-top: 102px;
+
+    @media screen and (max-width:1024px) {
+        margin-top: 102px;  
     }
-  }
+  
+ }
+
   
   .fv-inner {
     padding-top: 40px;
@@ -58,6 +58,8 @@
       max-width: 375px;
       width: 100%;
       height: auto;
+      background-image: url(../img/first-view-sp1.svg);
+      background-repeat: no-repeat;
     }  
   }
 
@@ -84,9 +86,9 @@
     height: 108px;
     opacity: 1;
     background: #4282B8;
-    animation:fv-scrolldown 1.4s ease-in-out 0s infinite normal none running;
+    animation:fv-scrolldown 1.4s, ease-in-out 0s ,infinite, normal none running;
   }
-
+ 
   
   .fv-message {
     width: 100%;
@@ -105,7 +107,7 @@
   }
  
   .fv-message-main {
-    display: inline-block;
+    display: block;
     font-size: calc((64 / 1440 ) * 100vw);
     font-weight: 700;
     color: #000;
@@ -122,6 +124,7 @@
     line-height: 2;
     color: #000;
     margin-top: 20px;
+    display: block;
   }
  
   @media screen and (max-width:1024px) {
@@ -146,6 +149,7 @@
       color: #000;
       margin-top: 20px;
       position: absolute;
+      display: block;
     }   
   }
   

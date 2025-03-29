@@ -705,12 +705,12 @@ nav {
   vertical-align: middle;
   height: 100%;
 }
-
 @media screen and (max-width: 1024px) {
   .fv {
     margin-top: 102px;
   }
 }
+
 .fv-inner {
   padding-top: 40px;
   padding-right: 40px;
@@ -755,6 +755,8 @@ nav {
     max-width: 375px;
     width: 100%;
     height: auto;
+    background-image: url(../img/first-view-sp1.svg);
+    background-repeat: no-repeat;
   }
 }
 .fv-bg img {
@@ -780,7 +782,7 @@ nav {
   height: 108px;
   opacity: 1;
   background: #4282B8;
-  animation: fv-scrolldown 1.4s ease-in-out 0s infinite normal none running;
+  animation: fv-scrolldown 1.4s, ease-in-out 0s, infinite, normal none running;
 }
 
 .fv-message {
@@ -800,7 +802,7 @@ nav {
 }
 
 .fv-message-main {
-  display: inline-block;
+  display: block;
   font-size: 4.4444444444vw;
   font-weight: 700;
   color: #000;
@@ -818,6 +820,7 @@ nav {
   line-height: 2;
   color: #000;
   margin-top: 20px;
+  display: block;
 }
 
 @media screen and (max-width: 1024px) {
@@ -840,6 +843,7 @@ nav {
     color: #000;
     margin-top: 20px;
     position: absolute;
+    display: block;
   }
 }
 @media screen and (max-width: 767px) {
@@ -938,7 +942,7 @@ section {
 }
 
 /*ボタン共通化：*/
-.top-sec-button1 {
+.sec-button {
   display: inline-block;
   padding: 22px 82px;
   color: #000;
@@ -952,9 +956,8 @@ section {
   cursor: pointer;
   transition: all 0.6s ease 0s;
   position: relative;
-  margin-top: 40px;
 }
-.top-sec-button1::before {
+.sec-button::before {
   position: absolute;
   content: "";
   top: 25px;
@@ -964,7 +967,7 @@ section {
   border-radius: 50%;
   background-color: #000;
 }
-.top-sec-button1:hover {
+.sec-button:hover {
   background: #000;
   color: #fff;
 }
@@ -973,25 +976,11 @@ section {
   background-color: #fff;
 }
 
-.sec-button2:hover::before {
+.sec-button:hover::before {
   background-color: #fff;
 }
 
-.top-service-link1 {
-  margin-top: 40px;
-}
-
-.top-service-link2 {
-  margin-top: 28px;
-  margin-left: 5px;
-}
-
-.top-service-link3 {
-  margin-top: 28px;
-  margin-left: 5px;
-}
-
-.about-inner {
+.top-about-inner {
   width: 100%;
   display: flex;
 }
@@ -1006,6 +995,10 @@ section {
   margin-top: 40px;
   line-height: 1.8;
   width: 68%;
+}
+
+.top-about-button {
+  margin-top: 40px;
 }
 
 .top-about-img {
@@ -1157,7 +1150,7 @@ section {
 .top-service-title {
   font-size: 24px;
   padding: 10px 16px;
-  width: 45%;
+  display: inline-block;
   line-height: 100%;
   margin-left: 56px;
   background-color: #fff;
@@ -1166,7 +1159,7 @@ section {
 .top-service-title2 {
   margin-left: 0;
   padding: 10px 16px;
-  width: 56%;
+  display: inline-block;
   line-height: 100%;
   font-size: 24px;
   margin-left: 5px;
@@ -1177,7 +1170,7 @@ section {
 .top-service-title3 {
   font-size: 24px;
   padding: 10px 16px;
-  width: 20%;
+  display: inline-block;
   line-height: 100%;
   margin-left: 56px;
   background-color: #fff;
@@ -1238,17 +1231,32 @@ section {
   width: 100%;
 }
 
-.top-news-inner {
-  width: 100%;
-  margin-left: 0;
+.top-service-link1 {
+  margin-top: 30px;
+  margin-left: 56px;
 }
 
-.top-news-box {
+.top-service-link2 {
+  margin-top: 28px;
+  margin-left: 5px;
+}
+
+.top-service-link3 {
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+.top-news-inner {
+  margin-left: 0;
+  margin-right: 40px;
+}
+
+.top-news-list {
   font-weight: 700;
   font-size: 16px;
   color: #000;
   line-height: 180%;
-  margin-top: 44px;
+  margin-top: 48px;
 }
 
 .top-news-name {
@@ -1263,26 +1271,25 @@ section {
   border: 1px solid #4282B8;
   width: 116px;
   text-align: center;
-  margin-top: 32px;
-  height: 26px;
 }
 
-.top-news-list {
+.top-news-item {
   display: block;
   border-top: 1px solid #4282B8;
   position: relative;
   transition: 0.6s;
+  padding-top: 28px;
 }
-.top-news-list:hover {
+.top-news-item:hover {
   opacity: 0.6;
 }
-.top-news-list::after {
+.top-news-item::after {
   content: "";
   display: block;
-  top: 55%;
-  left: 92%;
-  width: 2%;
-  height: 16%;
+  top: 45%;
+  left: 96%;
+  width: 16px;
+  height: 16px;
   position: absolute;
   background-image: url(../img/arrow-icon-right.png);
   background-repeat: no-repeat;
@@ -1295,17 +1302,15 @@ section {
   font-size: 14px;
   font-weight: 700;
   margin-left: 20px;
-  display: inline;
-  margin-top: 30px;
 }
 
-.top-news-list:nth-last-child(1) {
+.top-news-item:nth-last-child(1) {
   border-bottom: 1px solid #4282B8;
 }
 
-.top-news-item {
+.top-news-item-title {
   margin-top: 14px;
-  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .top-contact {
@@ -1328,7 +1333,7 @@ section {
   position: relative;
 }
 
-.contact-box {
+.top-contact-box {
   display: flex;
   justify-content: flex-start;
   margin-top: 44px;

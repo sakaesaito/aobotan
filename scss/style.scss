@@ -5,11 +5,10 @@
 @use './component/loading';
 @use './project/fv';
 @use './component/swiper';
-@use './project/swiper-message';
 @use './project/section/section';
-@use './project/about/about';
-@use './project/service/service';
-@use './project/news/news';
-@use './project/contact/contact';
+@use './project/about/top-about';
+@use './project/service/top-service';
+@use './project/news/top-news';
+@use './project/contact/top-contact';
 @use './component/footer';
 @use './project/sp';

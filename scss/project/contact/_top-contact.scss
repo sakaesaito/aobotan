@@ -17,7 +17,8 @@
     justify-content: space-between;
     position: relative;
 }
-.contact-box {
+
+.top-contact-box {
     display: flex;
     justify-content: flex-start;
     margin-top: 44px;
@@ -44,6 +45,7 @@
     border-right: 1px solid #000;
     border-left: 1px solid #000;
 }
+
 .top-contact-no-open {
     font-size: 12px;
     margin-top: 10px;
@@ -54,20 +56,22 @@
     font-family: kanit;
     font-weight: 400;
 }
+
 .top-contact-mail {
     margin-left: 64px;
     background-color: #fff;
     padding-inline: 40px;
-    display: inline-block;		
+    display: inline-block;
     padding: 0px 36px;
     line-height: 1;
     background-color: #fff;
     border-radius: 10px;
-    cursor: pointer;transition: all 0.6s ease 0s;
+    cursor: pointer;
+    transition: all 0.6s ease 0s;
     position: relative;
 
 
-    & a {
+    a {
         display: block;
         height: 60px;
         padding-left: 30px;
@@ -125,9 +129,8 @@
     margin-top: -0.5%;
     margin-left: 81%;
 
-    & img {
+    img {
         width: 100%;
         height: auto;
     }
 }
-
