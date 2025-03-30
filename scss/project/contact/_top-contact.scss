@@ -9,7 +9,7 @@
     padding-left: 24px;
     padding-top: 34px;
     padding-bottom: 50px;
-    margin-top: 134px;
+    margin-top: 128px;
 }
 
 .top-contact-group {
@@ -55,7 +55,15 @@
     font-size: 32px;
     font-family: kanit;
     font-weight: 400;
+    @media (min-width: 1440px) {
+        a[href*="tel:"] {
+        pointer-events: none;
+        cursor: default;
+        text-decoration: none;
+        }
+        }
 }
+
 
 .top-contact-mail {
     margin-left: 64px;
@@ -113,7 +121,7 @@
     }
 
     &:hover::before {
-        background-image: url(../img/mailblack.png);
+        // background-image: url(../img/mailblack.png);
         width: 30px;
         height: 30px;
         position: absolute;

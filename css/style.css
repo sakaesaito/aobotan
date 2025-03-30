@@ -1324,7 +1324,7 @@ section {
   padding-left: 24px;
   padding-top: 34px;
   padding-bottom: 50px;
-  margin-top: 134px;
+  margin-top: 128px;
 }
 
 .top-contact-group {
@@ -1370,6 +1370,13 @@ section {
   font-size: 32px;
   font-family: kanit;
   font-weight: 400;
+}
+@media (min-width: 1440px) {
+  .top-contact-no-tel a[href*="tel:"] {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+  }
 }
 
 .top-contact-mail {
@@ -1422,7 +1429,6 @@ section {
   background-color: #fff;
 }
 .top-contact-mail:hover::before {
-  background-image: url(../img/mailblack.png);
   width: 30px;
   height: 30px;
   position: absolute;
@@ -1469,7 +1475,6 @@ section {
   }
 }
 .footer-left-box {
-  display: flex;
   width: 100%;
   gap: 10px;
   font-weight: 400;
