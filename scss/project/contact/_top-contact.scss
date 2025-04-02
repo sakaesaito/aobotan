@@ -88,7 +88,7 @@
 
     &::before {
         content: "";
-        display: block;
+        display: inline-block;
         width: 20px;
         height: 20px;
         position: absolute;
@@ -99,10 +99,11 @@
         mask-image: url(../img/mail-icon.svg);
         background: #000;
         margin-top: 22px;
-        &:hover {
+    }
+     &:hover {
             background: #fff;
         }
-    }
+    
 
 
     &::after {
