@@ -1243,7 +1243,7 @@ section {
 
 .top-service-link3 {
   margin-top: 30px;
-  margin-left: 60px;
+  margin-left: 55px;
 }
 
 .top-news-inner {
@@ -1301,7 +1301,7 @@ section {
   color: #4282B8;
   font-size: 14px;
   font-weight: 700;
-  margin-left: 20px;
+  margin-left: 16px;
 }
 
 .top-news-item:nth-last-child(1) {
@@ -1371,7 +1371,7 @@ section {
   font-family: kanit;
   font-weight: 400;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .top-contact-no-tel a[href*="tel:"] {
     pointer-events: none;
     cursor: default;
@@ -1405,11 +1405,15 @@ section {
   width: 20px;
   height: 20px;
   position: absolute;
-  background-image: url(../img/mail-icon.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+  mask-position: center center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-image: url(../img/mail-icon.svg);
+  background: #000;
   margin-top: 22px;
+}
+.top-contact-mail::before:hover {
+  background: #fff;
 }
 .top-contact-mail::after {
   position: absolute;
@@ -1428,13 +1432,6 @@ section {
 .top-contact-mail:hover::after {
   background-color: #fff;
 }
-.top-contact-mail:hover::before {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: -5px;
-  left: 30px;
-}
 
 .top-contact-img {
   width: 178px;
@@ -1450,7 +1447,9 @@ section {
 
 .footer {
   margin-top: 124px;
+  margin-bottom: 30px;
   width: 100%;
+  max-width: 1120px;
 }
 
 .footer-inner {
@@ -1465,7 +1464,7 @@ section {
   }
 }
 .footer-left {
-  width: 51%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1474,20 +1473,25 @@ section {
     text-align: center;
   }
 }
+.footer-left-add {
+  margin-top: 18px;
+  font-weight: 400;
+}
+
 .footer-left-box {
+  display: flex;
   width: 100%;
-  gap: 10px;
+  gap: 15px;
   font-weight: 400;
 }
 
 .footer-left-add-menu {
-  width: 30%;
-  margin-top: 20px;
+  margin-top: 18px;
+  font-weight: 400;
 }
 
 .footer-left-add-item {
-  width: 70%;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 .footer-left-img {
@@ -1502,20 +1506,15 @@ section {
 .footer-left-img:hover {
   opacity: 0.6;
 }
-
 @media screen and (max-width: 1024px) {
   .footer-left-img {
     width: 100%;
     text-align: center;
   }
 }
-.footer-left-add {
-  margin-top: 36px;
-  font-weight: 400;
-}
 
 .footer-right {
-  width: 45%;
+  margin-left: 110px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1525,37 +1524,27 @@ section {
   }
 }
 .footer-menu {
-  margin-top: -5px;
-}
-.footer-menu span {
-  margin-left: 16px;
+  width: 100%;
+  margin-top: 30px;
 }
 
-.footer-menu-list {
-  transition: 0.6s;
-  display: inline-block;
-  margin-top: 20px;
-  line-height: 2;
+.footer-right-list {
+  display: flex;
+  margin-top: 33px;
 }
-.footer-menu-list:hover {
+
+.footer-menu-item {
+  transition: 0.6s;
+  padding-right: 24px;
+}
+.footer-menu-item:hover {
   opacity: 0.5;
 }
 
-@media screen and (max-width: 1024px) {
-  .footer-menu-list {
-    width: 100%;
-    display: block;
-    margin-top: 16px;
-  }
-  .footer-menu-list span {
-    margin: 0;
-    display: none;
-  }
-}
 .footer-menu-contact {
   position: relative;
   display: inline-block;
-  padding-left: 34px;
+  padding-left: 30px;
   transition: 0.6s;
 }
 .footer-menu-contact::before {
@@ -1568,24 +1557,23 @@ section {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  margin-top: 5px;
-  margin-left: -27px;
+  margin-left: -32px;
 }
 .footer-menu-contact:hover {
   opacity: 0.5;
 }
 
 small {
-  margin-right: 10px;
-  font-size: 80%;
+  margin-right: 20px;
   display: block;
-  margin-top: 22%;
+  font-weight: 400;
   text-align: right;
 }
 
 @media screen and (max-width: 1024px) {
   small {
     text-align: center;
+    font-weight: 400;
   }
 }
 /*header*/
