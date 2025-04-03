@@ -26,7 +26,7 @@
 }
 
 .top-contact-text {
-    padding-right: 32px;
+    padding-right: 34px;
 }
 
 .top-contact-text-name {
@@ -44,6 +44,9 @@
     padding-inline: 34px;
     border-right: 1px solid #000;
     border-left: 1px solid #000;
+    display: inline-block;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 
 .top-contact-no-open {
@@ -83,10 +86,7 @@
         padding-top: 22px;
         align-items: center
     }
-    &:hover {
-        background: #fff;
-    }
-
+  
     &::before {
         content: "";
         display: inline-block;
@@ -104,11 +104,11 @@
         mask-image: url(../img/mail-icon.svg);
         background: #000;
         margin-top: 22px;
+        transition: all 0.6s ease 0s;
     }
     &:hover::before {
         background-color: #fff;
     }
-
 
     &::after {
         position: absolute;
