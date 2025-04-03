@@ -1410,8 +1410,6 @@ section {
 
 .top-contact-mail {
   margin-left: 64px;
-  background-color: #fff;
-  padding-inline: 40px;
   display: inline-block;
   padding: 0px 36px;
   line-height: 1;
@@ -1428,21 +1426,28 @@ section {
   padding-top: 22px;
   align-items: center;
 }
+.top-contact-mail:hover {
+  background: #fff;
+}
 .top-contact-mail::before {
   content: "";
   display: inline-block;
   width: 20px;
   height: 20px;
   position: absolute;
+  -webkit-mask-position: center;
   mask-position: center center;
+  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
   mask-size: contain;
+  -webkit-mask-image: url(../img/mail-icon.svg);
   mask-image: url(../img/mail-icon.svg);
   background: #000;
   margin-top: 22px;
 }
-.top-contact-mail:hover {
-  background: #fff;
+.top-contact-mail:hover::before {
+  background-color: #fff;
 }
 .top-contact-mail::after {
   position: absolute;
@@ -1486,7 +1491,7 @@ section {
   display: flex;
 }
 
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1380px) {
   .footer-inner {
     display: block;
   }
@@ -1494,7 +1499,7 @@ section {
 .footer-left {
   width: 41%;
 }
-@media screen and (max-width: 1360px) {
+@media screen and (max-width: 1380px) {
   .footer-left {
     width: 100%;
   }
