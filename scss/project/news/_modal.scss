@@ -1,0 +1,41 @@
+/* モーダルウィンドウ */
+.modal-window {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 860px;
+    height: 791px;
+    background-color: #dfdddd;
+    border-radius: 5px;
+    z-index: 11;
+    padding: 2rem;
+  }
+  /* 閉じるボタン */
+  .modal-button-close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 240px;
+    padding: 1em;
+    background-color:#fff;
+    color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: color #000;;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+ 

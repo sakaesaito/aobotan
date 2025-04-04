@@ -240,16 +240,33 @@
             </section>
             <section class="top-news" id="top-news">
                 <div class="top-news-inner">
-                    <h2 class="sec-main2">お知らせ</h2>
+                    <h2 class="sec-main sec-main-news">お知らせ</h2>
                     <p class="sec-title">NEWS</p>
                     <div class="top-news-list">
-                        <a href="" class="top-news-item">
+                        <a href="" class="top-news-item js-open" id="open-modal">
                             <div class="top-news-name">
                                 <div class="top-news-menu">イベント情報</div>
                                 <time class="top-news-date" datetime="2024.06.03">2024.06.03</time>
                             </div>
                             <h3 class="top-news-item-title">住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？</h3>
                         </a>
+                        <div class="top-news-modal">
+                            <!-- オーバーレイ -->
+                            <div id="overlay" class="overlay"></div>
+                            <!-- モーダルウィンドウ -->
+                            <div class="modal-window">
+                                <div class="top-news-name">
+                                    <div class="top-news-menu">イベント情報</div>
+                                    <time class="top-news-date" datetime="2024.06.03">2024.06.03</time>
+                                </div>
+                                <h3 class="top-news-item-title">住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？</h3>
+                                <div><img src="./img/news01 1.jpg" alt=""></div>
+                                <p>みなさま、こんにちは！弊社では、住宅設計相談会を開催することになりました！将来の家造りを真剣に考える皆様、ぜひご参加ください。
+                                    〜〜〜〜〜〜</p>
+                                <!-- 閉じるボタン -->
+                                <button class="js-close modal-button-close">閉じる</button>
+                            </div>
+                        </div>
                         <a href="" class="top-news-item">
                             <div class="top-news-name">
                                 <div class="top-news-menu">イベント情報</div>
@@ -271,7 +288,7 @@
                 <div class="top-contact-inner">
                     <div class="top-contact-group">
                         <div class="top-contact-sec">
-                            <h2 class="sec-main3">お問い合わせ</h2>
+                            <h2 class="sec-main .sec-main-contact">お問い合わせ</h2>
                             <p class="sec-title">CONTACT</p>
                             <div class="top-contact-box">
                                 <div class="top-contact-text">
