@@ -173,3 +173,14 @@ close.on('click', function () { //×ボタンをクリックしたら
   modal.removeClass("open"); // overlayクラスからopenクラスを外す
   overlay.removeClass("open"); // overlayクラスからopenクラスを外す
 });
+
+// $(function () {
+//   $('#js-open').click(function () {
+//     var id = $(this).data('id'); // 何番目のキャプション（モーダルウィンドウ）か認識
+//     $('#js-overlay, .modal[data-id="modal' + id + '"]').fadeIn();
+//   });
+//   // オーバーレイクリックでもモーダルを閉じるように
+//   $('#js-close , #overlay').click(function () {
+//     $('#overlay, .modal').fadeOut();
+//   });
+// });

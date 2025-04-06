@@ -947,7 +947,7 @@ nav {
 }
 
 .sec-main-contact { /*contact sectionの見出し*/
-  font-size: 24px;
+  font-size: 0px;
 }
 
 .sec-title {
@@ -1347,6 +1347,14 @@ section {
   padding-bottom: 50px;
   margin-top: 128px;
 }
+@media (max-width: 1024px) {
+  .top-contact-inner {
+    padding-top: 27px;
+    padding-left: 20px;
+    padding-bottom: 41px;
+    margin-top: 64px;
+  }
+}
 
 .top-contact-group {
   display: flex;
@@ -1360,15 +1368,32 @@ section {
   margin-top: 44px;
   align-items: center;
 }
+@media (max-width: 1024px) {
+  .top-contact-box {
+    display: block;
+    margin-top: 47px;
+  }
+}
 
 .top-contact-text {
   padding-right: 34px;
 }
+@media (max-width: 1024px) {
+  .top-contact-text {
+    margin-top: 47px;
+    display: flex;
+  }
+}
 
 .top-contact-text-name {
-  font-size: 30px;
+  font-size: 32px;
   font-family: kanit;
   font-weight: 400;
+}
+@media (max-width: 1024px) {
+  .top-contact-text-name {
+    padding-right: 5px;
+  }
 }
 
 .top-contact-text-tel {
@@ -1384,10 +1409,28 @@ section {
   padding-top: 6px;
   padding-bottom: 6px;
 }
+@media (max-width: 1024px) {
+  .top-contact-no {
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 24px;
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid #000;
+    padding-top: 24px;
+  }
+}
 
 .top-contact-no-open {
   font-size: 12px;
   margin-top: 10px;
+  font-weight: 700;
+}
+@media (max-width: 1024px) {
+  .top-contact-no-open {
+    margin-top: 8px;
+  }
 }
 
 .top-contact-no-tel {
@@ -1459,17 +1502,32 @@ section {
 .top-contact-mail:hover::after {
   background-color: #fff;
 }
+@media (max-width: 1024px) {
+  .top-contact-mail {
+    margin-top: 36px;
+    margin-left: 0;
+  }
+}
 
 .top-contact-img {
-  width: 178px;
+  width: 11vw;
   height: auto;
   position: absolute;
   margin-top: -0.5%;
-  margin-left: 81%;
+  margin-left: 82%;
 }
 .top-contact-img img {
   width: 100%;
   height: auto;
+}
+@media (max-width: 1024px) {
+  .top-contact-img {
+    top: -14.5%;
+    left: 0%;
+    width: 12%;
+    height: auto;
+    position: absolute;
+  }
 }
 
 .footer {
@@ -1710,16 +1768,16 @@ small {
   /*about,service sectionの見出し*/
   .sec-main {
     font-size: 20px;
-    margin-top: 71px;
+    margin-top: 0;
   }
   /*news sectionの見出し*/
-  .sec-main2 {
-    font-size: 20px;
-    margin-top: 100px;
+  .sec-main-news {
+    margin-top: 32px;
   }
   /*contact sectionの見出し*/
-  .sec-main3 {
+  .sec-main .sec-main-contact {
     font-size: 20px;
+    margin-top: 0;
   }
   .sec-title {
     font-size: 72px;
@@ -1758,34 +1816,6 @@ small {
     position: relative;
     z-index: -1;
   }
-  /*contact section　のレスポンシブ*/
-  .top-contact {
-    border-radius: 0;
-    width: 100%;
-  }
-  .top-contact-inner {
-    padding: 20px 10px 30px 10px;
-    margin-top: 40px;
-  }
-  .top-contact-group {
-    display: block;
-    position: relative;
-  }
-  .contact-box {
-    display: block;
-    margin-top: 27px;
-  }
-  .top-contact-img {
-    width: 12%;
-    height: auto;
-    position: absolute;
-    margin-top: -0.5%;
-    margin-left: 81%;
-  }
-  .top-contact-img img {
-    width: 100%;
-    height: auto;
-  }
 }
 /* モーダルウィンドウ */
 .modal {
@@ -1805,7 +1835,7 @@ small {
 /* 閉じるボタン */
 .modal-close {
   position: absolute;
-  top: 140%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: inline-block;
@@ -1842,9 +1872,8 @@ small {
 }
 
 .modal-item {
-  position: absolute;
-  top: -32%;
-  left: 21%;
+  margin-top: 1%;
+  margin-left: 9%;
 }
 
 .overlay {
@@ -1875,11 +1904,11 @@ small {
   top: 20px;
 }
 
-.overlay.open {
+.overlay .open {
   display: block;
 }
 
-.modal.open {
+.modal .open {
   display: block;
 }
 

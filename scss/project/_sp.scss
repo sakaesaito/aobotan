@@ -83,16 +83,16 @@
      /*about,service sectionの見出し*/
   .sec-main {
     font-size: 20px;
-    margin-top: 71px;
+    margin-top: 0;
   }
      /*news sectionの見出し*/
-  .sec-main2 {
-    font-size: 20px;
-    margin-top: 100px;
+  .sec-main-news {
+    margin-top: 32px;
   }
     /*contact sectionの見出し*/
-  .sec-main3 {
+  .sec-main .sec-main-contact {
     font-size: 20px;
+    margin-top: 0;
   }
 
   .sec-title {
@@ -133,39 +133,5 @@
     margin-left: -20px;
     position: relative;
     z-index: -1;  
-}
-
-
-  
-
-  /*contact section　のレスポンシブ*/
-  .top-contact {
-    border-radius: 0;
-    width: 100%;
-  }
-
-  .top-contact-inner {
-    padding: 20px 10px 30px 10px;
-    margin-top: 40px;
-  }
-  .top-contact-group {
-    display: block;
-    position: relative;
-  }
-  .contact-box {
-    display: block;
-    margin-top: 27px;
-  }
-  .top-contact-img {
-    width: 12%;
-    height: auto;
-    position: absolute;
-    margin-top: -0.5%;
-    margin-left: 81%;
-
-    & img {
-        width: 100%;
-        height: auto;
-    }
 }
 }
