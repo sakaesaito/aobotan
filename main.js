@@ -160,15 +160,16 @@ const swiper = new Swiper('.swiper', {
 
 
 // モーダルの設定
-$(function () {
-  $('.js-open').click(function () {
-    $("body").addClass("no_scroll"); // 背景固定させるクラス付与
-    var id = $(this).data('id'); // 何番目のキャプション（モーダルウィンドウ）か認識
-    $('#overlay, .modal-window[data-id="modal' + id + '"]').fadeIn(); //#overlayと.modal-windowをフェードインさせます。
-  });
-  // オーバーレイクリックでもモーダルを閉じるように
-  $('.js-close , #overlay').click(function () {
-    $("body").removeClass("no_scroll"); // 背景固定させるクラス削除
-    $('#overlay, .modal-window').fadeOut();
-  });
+const modal = $("#js-modal");
+const overlay = $("#js-overlay");
+const close = $("#js-close");
+const open = $("#js-open");
+
+open.on('click', function () { //ボタンをクリックしたら
+  modal.addClass("open"); // modalクラスにopenクラス付与
+  overlay.addClass("open"); // overlayクラスにopenクラス付与
+});
+close.on('click', function () { //×ボタンをクリックしたら
+  modal.removeClass("open"); // overlayクラスからopenクラスを外す
+  overlay.removeClass("open"); // overlayクラスからopenクラスを外す
 });

@@ -10,7 +10,7 @@
     <meta name="description"
         content="大阪府大阪市に拠点をおく青牡丹工務店は、丁寧な家造りで理想を現実にします。住宅建築からリフォームまで、高品質なサービスと経験豊富なスタッフがお客様のニーズに応えます。お気軽にご相談ください。">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="icon" href="img/favicon-aobotan 1.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
@@ -243,30 +244,31 @@
                     <h2 class="sec-main sec-main-news">お知らせ</h2>
                     <p class="sec-title">NEWS</p>
                     <div class="top-news-list">
-                        <a href="" class="top-news-item js-open" id="open-modal">
+                            <div id="js-overlay" class="overlay"></div>
+                                <button class="modal-close" id="js-close">閉じる</button>
+                            <div class="modal-box">
+                                <div class="modal-close-bar">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="top-news-name modal-item">
+                                    <div class="top-news-menu">イベント情報</div>
+                                    <time class="top-news-date" datetime="2024.06.03">2024.06.03</time>
+                                </div>
+                                <div class="top-news-name-box">
+                                    <h3 class="top-news-item-title modal-news">住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？</h3>
+                                    <div><img src="./img/news01 1.jpg" alt="" width="656px" height="366px"></div>
+                                    <p class="top-news-item-message modal-message">みなさま、こんにちは！弊社では、住宅設計相談会を開催することになりました！将来の家造りを真剣に考える皆様、ぜひご参加ください。
+                                        〜〜〜〜〜〜</p>
+                                </div>
+                            </div>
+                        <a href="" class="top-news-item" id="js-open">
                             <div class="top-news-name">
                                 <div class="top-news-menu">イベント情報</div>
                                 <time class="top-news-date" datetime="2024.06.03">2024.06.03</time>
                             </div>
                             <h3 class="top-news-item-title">住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？</h3>
                         </a>
-                        <div class="top-news-modal">
-                            <!-- オーバーレイ -->
-                            <div id="overlay" class="overlay"></div>
-                            <!-- モーダルウィンドウ -->
-                            <div class="modal-window">
-                                <div class="top-news-name">
-                                    <div class="top-news-menu">イベント情報</div>
-                                    <time class="top-news-date" datetime="2024.06.03">2024.06.03</time>
-                                </div>
-                                <h3 class="top-news-item-title">住宅設計相談会を実施します。弊社建築士と将来の家造りを真剣に考えませんか？</h3>
-                                <div><img src="./img/news01 1.jpg" alt=""></div>
-                                <p>みなさま、こんにちは！弊社では、住宅設計相談会を開催することになりました！将来の家造りを真剣に考える皆様、ぜひご参加ください。
-                                    〜〜〜〜〜〜</p>
-                                <!-- 閉じるボタン -->
-                                <button class="js-close modal-button-close">閉じる</button>
-                            </div>
-                        </div>
                         <a href="" class="top-news-item">
                             <div class="top-news-name">
                                 <div class="top-news-menu">イベント情報</div>
@@ -360,5 +362,4 @@
         <script src="main.js"></script>
 
 </body>
-
 </html>
