@@ -135,8 +135,9 @@
                     <div class="fv-bg">
                         <div class="fv-img">
                             <picture class="fv_image">
-                                <img src="./img/first-view1.svg">
-                            </picture>
+                                <source srcset="./img/first-view1.svg" media="(min-width: 768px)"/> 
+                                 <img src="./img/first-view-sp1.svg" alt="省略"> 
+                            <picture>
                             <h2 class="fv-message">
                                 <span class="fv-message-main">理想を、カタチに</span>
                                 <span
@@ -190,7 +191,7 @@
                             <p class="sec-title">SERVICE</p>
                         </div>
                         <div class="top-service-icon">
-                            <img src="./img/contract_02.png" alt="">
+                            <!-- <img src="./img/contract_02.png" alt=""> -->
                         </div>
                     </div>
                     <div class="top-service-box">
@@ -198,7 +199,7 @@
                             <img src="./img/house01 1.jpg" alt="">
                         </div>
                         <div class="top-service-main">
-                            <div>
+                            <div class="top-service-list">
                                 <p class="top-service-no">01</p>
                                 <h3 class="top-service-title">住宅建築・リフォーム</h3>
                             </div>
@@ -212,7 +213,7 @@
                             <img src="./img/house02 1.jpg" alt="">
                         </div>
                         <div class="top-service-main">
-                            <div class="top-service-titile">
+                            <div class="top-service-list">
                                 <p class="top-service-no2">02</p>
                                 <h3 class="top-service-title2">法人新築・リフォーム</h3>
                             </div>
@@ -227,7 +228,7 @@
                             <img src="./img/house03 1.jpg" alt="">
                         </div>
                         <div class="top-service-main">
-                            <div class="top-service-titile">
+                            <div class="top-service-list">
                                 <p class="top-service-no3">03</p>
                                 <h3 class="top-service-title3">公共工事</h3>
                             </div>
@@ -241,7 +242,7 @@
             </section>
             <section class="top-news" id="top-news">
                 <div class="top-news-inner">
-                    <h2 class="sec-main sec-main-news">お知らせ</h2>
+                    <h2 class="sec-main-news">お知らせ</h2>
                     <p class="sec-title">NEWS</p>
                     <div class="top-news-list">
                         <div class="modal">
@@ -292,7 +293,7 @@
                 <div class="top-contact-inner">
                     <div class="top-contact-group">
                         <div class="top-contact-sec">
-                            <h2 class="sec-main .sec-main-contact">お問い合わせ</h2>
+                            <h2 class="sec-main-contact">お問い合わせ</h2>
                             <p class="sec-title">CONTACT</p>
                             <div class="top-contact-box">
                                 <div class="top-contact-text">
@@ -321,12 +322,12 @@
                     <div class="footer-left">
                         <div class="footer-left-img"><a href="/"><img src="./img/logo-pc.svg" alt="会社ロゴ"></a></div>
                         <div class="footer-left-add">
-                            <dl class="footer-left-box">
-                                <dt class="footer-left-add-menu"> 〒000-0000 </dt>
+                            <dl class="footer-left-box footer-left-box-first">
+                                <dt class="footer-left-add-menu footer-left-time"> 〒000-0000 </dt>
                                 <dd class="footer-left-add-item">大阪府大阪市中央区北区南町5-6-7</dd>
                             </dl>
-                            <dl class="footer-left-box">
-                                <dt class="footer-left-add-menu ">営業時間</dt>
+                            <dl class="footer-left-box ">
+                                <dt class="footer-left-add-menu">営業時間</dt>
                                 <dd class="footer-left-add-item">10:00~20:00</dd>
                             </dl>
                             <dl class="footer-left-box">

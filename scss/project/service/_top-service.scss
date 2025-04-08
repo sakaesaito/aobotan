@@ -98,6 +98,10 @@
     line-height: 100%;
     margin-left: 56px;
     background-color: #fff;
+
+    @media screen and (max-width: 1024px){
+        margin-top: 26px;
+    }
 }
 
 .top-service-title2 {

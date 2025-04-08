@@ -36,6 +36,7 @@
     opacity: 0;
     transform: translateY(50px); 
     transition: opacity 1s ease-out, transform 1s ease-out;
+    // width: calc((800/ 1024) * 100vw);
 }
 .top-about-message.show {
     opacity: 1;

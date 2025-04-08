@@ -30,19 +30,18 @@
       right: 0px;
       z-index: -1;
     }
-  }
-  
-  @media screen and (max-width:1024px) {
-    .fv-inner {
-      padding-top: 40px;
-      padding-left: 10px;
-      padding-right: 10px;
 
-    &::before {
-      display: none;
-    }
+    @media screen and (max-width:768px) {
+        padding-top: 40px;
+        padding-left: 10px;
+        padding-right: 0;
+  
+      &::before {
+        display: none;
+      }
+    } 
   }
-}
+
 
   
   .fv-bg {
@@ -52,15 +51,13 @@
     object-fit: cover;
     object-position: center;
     position: relative;
-  }
-  @media screen and (max-width:375px) {
-    .fv-bg {
-      max-width: 375px;
-      width: 100%;
-      height: auto;
-      background-image: url(../img/first-view-sp1.svg);
-      background-repeat: no-repeat;
-    }  
+
+    @media screen and (max-width:768px) {
+        width: 100%;
+        height: auto;
+        background-image: url(../img/first-view-sp1.svg);
+        background-repeat: no-repeat;
+      } 
   }
 
   .fv-bg img {
@@ -123,13 +120,21 @@
   
   .fv-message {
     width: 100%;
-    width: calc((600 / 1440) * 100vw);
+    width: calc((800 / 1440) * 100vw);
     position: absolute;
     top: 73%;
     left: 42%;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
+
+    @media screen and (max-width:1024px) {
+        width: 100%;
+        // width: calc((700 / 1024) * 100vw);
+        position: absolute;
+        top: 70%;
+        left: 33%;
+      }
   }
 
   .fv-message.show {
@@ -139,13 +144,21 @@
  
   .fv-message-main {
     display: block;
-    font-size: calc((64 / 1440 ) * 100vw);
+    font-size: calc((70 / 1440 ) * 100vw);
     font-weight: 700;
     color: #000;
     background-color: #fff;
     padding: 13px 14px;
     border-radius: 10px;
     transition: opacity 0.5s;
+    @media screen and (max-width:1024px) {
+        color: #000;
+        background-color: #fff;
+        padding: 13px 14px;
+        border-radius: 10px;
+        transition: opacity 0.5s;
+        display: inline-block;
+      }
   }
   .fv-message-sub{
     width: 100%;
@@ -159,14 +172,6 @@
   }
  
   @media screen and (max-width:1024px) {
-    .fv-message {
-      width: 100%;
-      width: calc((600 / 1024) * 100vw);
-      position: absolute;
-      top: 70%;
-      left: 33%;
-    }
-
     .fv-message-main {
       color: #000;
       background-color: #fff;

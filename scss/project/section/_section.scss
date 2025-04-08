@@ -9,9 +9,14 @@
 
 .sec-main-news {   /*news sectionの見出し*/
     margin-top: 208px;
+    font-size: 24px;
 }
 .sec-main-contact {  /*contact sectionの見出し*/
-    font-size: 0px;
+    font-size: 24px;
+    margin-top: 38px;
+    @media screen and (max-width:1024px) {
+        margin-top: 0;
+    }
 }
 
 .sec-title {

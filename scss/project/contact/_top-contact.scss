@@ -3,20 +3,27 @@
     height: auto;
     background-color: #f8f8f8;
     border-radius: 50px 0 0 50px;
+
+    @media screen and (max-width:768px) {
+        border-radius: 0;
+    }
 }
 
 .top-contact-inner {
     padding-left: 24px;
-    padding-top: 34px;
     padding-bottom: 50px;
     margin-top: 128px;
    
 
-    @media (max-width: 1024px) {
+    @media screen and (max-width:1024px) {
         padding-top: 27px;
         padding-left: 20px;
         padding-bottom: 41px;
         margin-top: 64px;
+    }
+
+    @media screen and (max-width:768px) {
+        margin-left: 0;
     }
 }
 
@@ -31,7 +38,8 @@
     justify-content: flex-start;
     margin-top: 44px;
     align-items: center;
-    @media (max-width: 1024px) {
+    width: calc((800/ 1024) * 100vw);
+    @media screen and (max-width:1024px) {
         display: block;
         margin-top: 47px;
     }
@@ -40,9 +48,10 @@
 .top-contact-text {
     padding-right: 34px;
 
-    @media (max-width: 1024px) {
+    @media screen and (max-width:1024px) {
         margin-top: 47px;
         display: flex;
+        align-items: flex-end;
     }
     
 }
@@ -51,7 +60,7 @@
     font-size: 32px;
     font-family: kanit;
     font-weight: 400;
-    @media (max-width: 1024px) {
+    @media screen and (max-width:1024px) {
         padding-right: 5px;
     }
 }
@@ -62,14 +71,14 @@
 }
 
 .top-contact-no {
-    padding-inline: 34px;
+    padding-inline: 31px;
     border-right: 1px solid #000;
     border-left: 1px solid #000;
     display: inline-block;
     padding-top: 6px;
     padding-bottom: 6px;
-
-    @media (max-width: 1024px) {
+   
+    @media screen and (max-width:1024px) {
         display: block;
         padding-left: 0;
         padding-right: 0;
@@ -78,6 +87,8 @@
         border-left: none;
         border-top: 1px solid #000;
         padding-top: 24px;
+        width: 85vw;
+
 
     }
 }
@@ -87,7 +98,7 @@
     margin-top: 10px;
     font-weight: 700;
 
-    @media (max-width: 1024px) {
+    @media screen and (max-width:1024px) {
         margin-top: 8px;
     }
 }
@@ -97,7 +108,7 @@
     font-family: kanit;
     font-weight: 400;
 
-    @media (min-width: 1024px) {
+    @media screen and (max-width:1024px) {
         a[href*="tel:"] {
             pointer-events: none;
             cursor: default;
@@ -169,7 +180,7 @@
         background-color: #fff;
     }
 
-    @media (max-width: 1024px) {
+    @media screen and (max-width:1024px) {
         margin-top: 36px;
         margin-left: 0;
     }
@@ -180,7 +191,7 @@
     width: 11vw;
     height: auto;
     position: absolute;
-    margin-top: -0.5%;
+    margin-top: 3.5%;
     margin-left: 82%;
 
     img {
@@ -189,10 +200,10 @@
     }
 
 
-    @media (max-width: 1024px) {
+    @media screen and (max-width:1024px) {
         top: -14.5%;
-        left: 0%;
-        width: 12%;
+        left: -8%;
+        width: 16%;
         height: auto;
         position: absolute;
     }

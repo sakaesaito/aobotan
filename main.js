@@ -127,17 +127,17 @@ $(document).ready(function () {
 
  // 写真無限ループのjQuery
 const swiper = new Swiper('.swiper', {
-  speed: 10000,
+  speed: 15000,
   loop: true, // プルーさせる
   allowTouchMove: false,//スワイプ有効
-  centeredSliders: true,//中心を起点にする
+  centeredSlides: true,//中心を起点にする
   autoplay: {
     delay: 0, //途切れなくループ
   },
   breakpoints: {
     0: {
       slidesPerView: 1, // 一度に表示するスライドの数
-      spaceBetween: 20, // 要素間の余白
+      spaceBetween: 30, // 要素間の余白
     },
 
     600: {

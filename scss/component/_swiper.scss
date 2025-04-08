@@ -19,8 +19,11 @@
   height: 100%;
   }
 .swiper-slide {
-  width: 360px;
+  width: 360px !important;
   height: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   & img {
     width: 100%;
@@ -30,6 +33,7 @@
 }
  
   .swiper-wrapper {
+    display: flex;
     transition-timing-function: linear;
   }
   
