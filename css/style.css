@@ -831,7 +831,6 @@ nav {
 }
 @media screen and (max-width: 1024px) {
   .fv-message {
-    width: 100%;
     position: absolute;
     top: 70%;
     left: 33%;
@@ -844,7 +843,7 @@ nav {
 }
 
 .fv-message-main {
-  display: block;
+  display: inline-block;
   font-size: 4.8611111111vw;
   font-weight: 700;
   color: #000;
@@ -861,6 +860,11 @@ nav {
     border-radius: 10px;
     transition: opacity 0.5s;
     display: inline-block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fv-message-main {
+    font-size: 32px;
   }
 }
 
@@ -1030,10 +1034,23 @@ section {
 .top-about-inner {
   width: 100%;
   display: flex;
+  padding-left: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .top-about-inner {
+    margin-top: 185px;
+    display: block;
+    padding-right: 20px;
+  }
 }
 
 .top-about-box {
   width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .top-about-box {
+    margin-top: 185px;
+  }
 }
 
 .top-about-text {
@@ -1043,6 +1060,11 @@ section {
   line-height: 1.8;
   width: 68%;
 }
+@media screen and (max-width: 768px) {
+  .top-about-text {
+    width: 100%;
+  }
+}
 
 .top-about-button {
   margin-top: 40px;
@@ -1051,6 +1073,15 @@ section {
 .top-about-img {
   position: relative;
   display: flex;
+  width: 21vw;
+  height: 100%;
+  margin-top: -3%;
+  margin-right: 32%;
+  z-index: 1;
+}
+.top-about-img img {
+  width: 100%;
+  height: auto;
 }
 
 .top-about-message {
@@ -1092,18 +1123,6 @@ section {
   font-family: Zen Kaku Gothic New;
 }
 
-.top-about-img {
-  width: 290px;
-  height: 213px;
-  margin-top: -3%;
-  margin-right: 32%;
-  z-index: 1;
-}
-.top-about-img img {
-  width: 100%;
-  height: auto;
-}
-
 .top-service-inner {
   margin-top: 62px;
   width: 100%;
@@ -1120,6 +1139,12 @@ section {
   right: 0;
   top: 20px;
   z-index: -1;
+}
+@media screen and (max-width: 1024px) {
+  .top-service-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .top-service-group {

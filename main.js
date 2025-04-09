@@ -166,13 +166,16 @@ const close = $("#js-close");
 const open = $("#js-open");
 
 open.on('click', function () { //ボタンをクリックしたら
-  modal.addClass("open"); // modalクラスにopenクラス付与
+  modal.toggleClass("open"); // modalクラスにopenクラス付与
   overlay.addClass("open"); // overlayクラスにopenクラス付与
 });
 close.on('click', function () { //×ボタンをクリックしたら
   modal.removeClass("open"); // overlayクラスからopenクラスを外す
   overlay.removeClass("open"); // overlayクラスからopenクラスを外す
 });
+$('body').css('overflow', 'hidden'); // モーダル表示時
+$('body').css('overflow', 'auto');   // モーダル非表示時
+
 
 // $(function () {
 //   $('#js-open').click(function () {
