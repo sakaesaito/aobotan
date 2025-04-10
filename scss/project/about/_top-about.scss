@@ -6,6 +6,7 @@
         margin-top: 185px;
         display: block;
         padding-right: 20px;
+        position: relative;
     }
 }
 .top-about-box {
@@ -21,7 +22,7 @@
     font-weight: 400;
     margin-top: 40px;
     line-height: 1.8;
-    width: 68%;
+    width: 73%;
     @media screen and (max-width: 768px) {
         width: 100%;
     }
@@ -30,17 +31,22 @@
     margin-top: 40px;
 }
 .top-about-img {
-    position: relative;
     display: flex;
-    width: 21vw;
-    height: 100%;
-    margin-top: -3%;
-    margin-right: 32%;
+    width: 100%;
+}
+.top-about-viw {
+    display: flex;
+    height: 15vw;
+    margin-top: -6%;
+    right: -9%;
     z-index: 1;
     
     & img {
         width: 100%;
         height: auto;
+    }
+    @media screen and (max-width: 768px) {
+        position: absolute;
     }
 }
 
@@ -51,16 +57,14 @@
     flex-direction: row-reverse;
     background-color: #f8f8f8;
     gap: 12px;
-    position: absolute;
-    top: -92%;
-    right: -126%;
+    top: 120%;
+    right:11%;
     padding-left: 45px;
     padding-right: 45px;
     z-index: 10;
     opacity: 0;
     transform: translateY(50px); 
     transition: opacity 1s ease-out, transform 1s ease-out;
-    // width: calc((800/ 1024) * 100vw);
 }
 .top-about-message.show {
     opacity: 1;

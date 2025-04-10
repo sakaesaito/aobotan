@@ -137,7 +137,7 @@ const swiper = new Swiper('.swiper', {
   breakpoints: {
     0: {
       slidesPerView: 1, // 一度に表示するスライドの数
-      spaceBetween: 30, // 要素間の余白
+      spaceBetween: 15, // 要素間の余白
     },
 
     600: {
