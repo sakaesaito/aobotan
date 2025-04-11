@@ -76,6 +76,11 @@
   transform: translateX(-50%);
   font-size: 10px;
   line-height: 1;
+  @media screen and (max-width:375px) {
+    top: 97%;
+    left: 11%;
+  }
+
 }
 
 .scroll::before,
@@ -121,7 +126,6 @@
 
 
 .fv-message {
-  width: 100%;
   width: calc((800 / 1440) * 100vw);
   position: absolute;
   top: 73%;
@@ -140,11 +144,12 @@
 .fv-message.show {
   opacity: 1;
   transform: translateY(0);
+  display: inline-block;
 }
 
 .fv-message-main {
   display: inline-block;
-  font-size: calc((70 / 1440) * 100vw);
+  font-size: calc((64 / 1440) * 100vw);
   font-weight: 700;
   color: #000;
   background-color: #fff;
@@ -167,14 +172,13 @@
 }
 
 .fv-message-sub {
-  width: 100%;
   font-size: 16px;
   font-size: calc((16 / 1440) * 100vw);
   font-weight: 700;
   line-height: 2;
   color: #000;
   margin-top: 20px;
-  display: block;
+  display: inline-block;
 }
 
 @media screen and (max-width:1024px) {
