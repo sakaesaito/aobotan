@@ -1,20 +1,20 @@
 .top-about-inner {
     width: 100%;
     display: flex;
-    @media screen and (max-width: 1200px) {
+    position: relative;
+    @media screen and (max-width: 1280px) {
         margin-top: 185px;
         display: block;
         position: relative;
     }
     @media screen and (max-width: 768px) {
-        margin-left: 20px;
-        margin-right: 20px;
+        padding: 0 20px;
     }
 }
 .top-about-box {
     width: 100%;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1280px) {
         margin-top: 185px;
     }
 }
@@ -25,6 +25,7 @@
     margin-top: 40px;
     line-height: 1.8;
     width: 68%;
+    max-width: 450px;
     @media screen and (max-width: 768px) {
         width: 100%;
     }
@@ -34,24 +35,28 @@
 }
 .top-about-img {
     display: flex;
-    width: 86%;
-    gap: 15px;
-    position: relative;
+    position:absolute;
+    bottom: 48%;
+    right: 15%;
+    gap: 16px;
+    @media screen and (max-width: 1280px) {
+        bottom: 83%;
+        right: 15%;
+    }
 }
 .top-about-viw {
     display: flex;
-    height: 15vw;
-    margin-top: -7%;
-    right: -9%;
     z-index: 11;
+    max-width: 161px;
+    height: 100%;
+    margin-top: 55%;
+    
     
     & img {
         width: 100%;
         height: auto;
     }
-    @media screen and (max-width: 768px) {
-        position: absolute;
-    }
+   
 }
 
 
@@ -61,20 +66,14 @@
     flex-direction: row-reverse;
     background-color: #f8f8f8;
     gap: 12px;
-    top: -47%;
-    right:33%;
     padding-left: 45px;
     padding-right: 45px;
     z-index: 10;
     opacity: 0;
     transform: translateY(50px); 
     transition: opacity 1s ease-out, transform 1s ease-out;
-    position: absolute;
-
-    @media screen and (max-width: 1200px) {
-        margin-top: -100%;
-        margin-right: -30%;
-
+    @media screen and (max-width: 1280px) {
+        font-size: 24px;
     }
 
 }
@@ -98,6 +97,9 @@
     & span {
         color: #000;
         font-family: Zen Kaku Gothic New;
+    }
+    @media screen and (max-width: 1280px) {
+        font-size: 24px;
     }
 }
 

@@ -458,7 +458,7 @@ nav {
   }
   .side-header-logo {
     margin-top: 10px;
-    transition: 0.6s;
+    transition: 0.3s;
     width: 98px;
     height: 59px;
   }
@@ -511,11 +511,8 @@ nav {
   display: flex;
 }
 
-.header-nav-item {
-  margin-top: 9px;
-}
 .header-nav-item a {
-  padding-top: 25px;
+  padding-top: 30px;
   padding-bottom: 30px;
   display: inline-block;
   width: 200px;
@@ -826,7 +823,6 @@ nav {
   }
 }
 .fv-message {
-  width: 55.5555555556vw;
   position: absolute;
   top: 73%;
   left: 42%;
@@ -1034,8 +1030,9 @@ section {
 .top-about-inner {
   width: 100%;
   display: flex;
+  position: relative;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   .top-about-inner {
     margin-top: 185px;
     display: block;
@@ -1044,15 +1041,14 @@ section {
 }
 @media screen and (max-width: 768px) {
   .top-about-inner {
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 0 20px;
   }
 }
 
 .top-about-box {
   width: 100%;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1280px) {
   .top-about-box {
     margin-top: 185px;
   }
@@ -1064,6 +1060,7 @@ section {
   margin-top: 40px;
   line-height: 1.8;
   width: 68%;
+  max-width: 450px;
 }
 @media screen and (max-width: 768px) {
   .top-about-text {
@@ -1077,51 +1074,42 @@ section {
 
 .top-about-img {
   display: flex;
-  width: 86%;
-  gap: 15px;
-  position: relative;
+  position: absolute;
+  bottom: 48%;
+  right: 15%;
+  gap: 16px;
+}
+@media screen and (max-width: 1280px) {
+  .top-about-img {
+    bottom: 83%;
+    right: 15%;
+  }
 }
 
 .top-about-viw {
   display: flex;
-  height: 15vw;
-  margin-top: -7%;
-  right: -9%;
   z-index: 11;
+  max-width: 161px;
+  height: 100%;
+  margin-top: 55%;
 }
 .top-about-viw img {
   width: 100%;
   height: auto;
 }
-@media screen and (max-width: 768px) {
-  .top-about-viw {
-    position: absolute;
-  }
-}
-
 .top-about-message {
   height: auto;
   display: flex;
   flex-direction: row-reverse;
   background-color: #f8f8f8;
   gap: 12px;
-  top: -47%;
-  right: 33%;
   padding-left: 45px;
   padding-right: 45px;
   z-index: 10;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
-  position: absolute;
 }
-@media screen and (max-width: 1200px) {
-  .top-about-message {
-    margin-top: -100%;
-    margin-right: -30%;
-  }
-}
-
 .top-about-message.show {
   opacity: 1;
   transform: translateY(0);
@@ -1454,7 +1442,7 @@ section {
   padding-bottom: 50px;
   margin-top: 128px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .top-contact-inner {
     padding-top: 27px;
     padding-left: 20px;
@@ -1479,9 +1467,9 @@ section {
   justify-content: flex-start;
   margin-top: 44px;
   align-items: center;
-  width: 78.125vw;
+  width: 71.2890625vw;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .top-contact-box {
     display: block;
     margin-top: 47px;
@@ -1491,7 +1479,7 @@ section {
 .top-contact-text {
   padding-right: 34px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .top-contact-text {
     margin-top: 47px;
     display: flex;
@@ -1504,7 +1492,7 @@ section {
   font-family: kanit;
   font-weight: 400;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .top-contact-text-name {
     padding-right: 5px;
   }
@@ -1523,7 +1511,7 @@ section {
   padding-top: 6px;
   padding-bottom: 6px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .top-contact-no {
     display: block;
     padding-left: 0;
@@ -1533,7 +1521,7 @@ section {
     border-left: none;
     border-top: 1px solid #000;
     padding-top: 24px;
-    width: 85vw;
+    width: 350px;
   }
 }
 
@@ -1542,7 +1530,7 @@ section {
   margin-top: 10px;
   font-weight: 700;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .top-contact-no-open {
     margin-top: 8px;
   }
@@ -1553,10 +1541,15 @@ section {
   font-family: kanit;
   font-weight: 400;
 }
-@media screen and (max-width: 1024px) {
+.top-contact-no-tel a[href*="tel:"] {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+}
+@media screen and (max-width: 1280px) {
   .top-contact-no-tel a[href*="tel:"] {
-    pointer-events: none;
-    cursor: default;
+    pointer-events: auto;
+    cursor: pointer;
     text-decoration: none;
   }
 }
@@ -1564,19 +1557,18 @@ section {
 .top-contact-mail {
   margin-left: 64px;
   display: inline-block;
-  padding: 0px 36px;
+  padding: 0px 40px;
   line-height: 1;
   background-color: #fff;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.6s ease 0s;
+  transition: all 0.3s ease 0s;
   position: relative;
 }
 .top-contact-mail a {
-  display: block;
+  display: flex;
   height: 60px;
-  padding-left: 30px;
-  padding-top: 22px;
+  padding-left: 28px;
   align-items: center;
 }
 .top-contact-mail::before {
@@ -1594,8 +1586,9 @@ section {
   -webkit-mask-image: url(../img/mail-icon.svg);
   mask-image: url(../img/mail-icon.svg);
   background: #000;
-  margin-top: 22px;
-  transition: all 0.6s ease 0s;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease 0s;
 }
 .top-contact-mail:hover::before {
   background-color: #fff;
@@ -1617,7 +1610,7 @@ section {
 .top-contact-mail:hover::after {
   background-color: #fff;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .top-contact-mail {
     margin-top: 36px;
     margin-left: 0;
@@ -1635,7 +1628,7 @@ section {
   width: 100%;
   height: auto;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
   .top-contact-img {
     top: -14.5%;
     left: -8%;
@@ -2063,4 +2056,57 @@ small {
   font-weight: 400;
   margin-top: 35px;
   text-align: left;
+}
+
+/* モーダルウィンドウ */
+.modal-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: #dfdddd;
+  border-radius: 5px;
+  z-index: 11;
+  padding: 2rem;
+}
+
+/* 閉じるボタン */
+.button-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  padding: 1em;
+  background-color: #c96931;
+  color: #eaeaea;
+  border-radius: 20rem;
+  cursor: pointer;
+}
+
+.modal-window {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: #dfdddd;
+  border-radius: 5px;
+  z-index: 11;
+  padding: 2rem;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }/*# sourceMappingURL=style.css.map */

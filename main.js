@@ -160,30 +160,13 @@ const swiper = new Swiper('.swiper', {
 
 
 // モーダルの設定
-const modal = $("#js-modal");
-const overlay = $("#js-overlay");
-const close = $("#js-close");
-const open = $("#js-open");
-
-open.on('click', function () { //ボタンをクリックしたら
-  modal.toggleClass("open"); // modalクラスにopenクラス付与
-  overlay.addClass("open"); // overlayクラスにopenクラス付与
+$(function () {
+  $('.js-open').click(function () {
+    var id = $(this).data('id'); // 何番目のキャプション（モーダルウィンドウ）か認識
+    $('#overlay, .modal-window[data-id="modal' + id + '"]').fadeIn();
+  });
+  // オーバーレイクリックでもモーダルを閉じるように
+  $('.js-close , #overlay').click(function () {
+    $('#overlay, .modal-window').fadeOut();
+  });
 });
-close.on('click', function () { //×ボタンをクリックしたら
-  modal.removeClass("open"); // overlayクラスからopenクラスを外す
-  overlay.removeClass("open"); // overlayクラスからopenクラスを外す
-});
-$('body').css('overflow', 'hidden'); // モーダル表示時
-$('body').css('overflow', 'auto');   // モーダル非表示時
-
-
-// $(function () {
-//   $('#js-open').click(function () {
-//     var id = $(this).data('id'); // 何番目のキャプション（モーダルウィンドウ）か認識
-//     $('#js-overlay, .modal[data-id="modal' + id + '"]').fadeIn();
-//   });
-//   // オーバーレイクリックでもモーダルを閉じるように
-//   $('#js-close , #overlay').click(function () {
-//     $('#overlay, .modal').fadeOut();
-//   });
-// });
