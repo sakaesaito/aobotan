@@ -32,6 +32,7 @@
     position: absolute;
     top: 6%;
     left: 74%;
+    display: none;
 
     img {
         width: 100%;
@@ -50,15 +51,11 @@
     display: flex;
 }
 
-.top-service-box2 {
-    margin-top: 90px;
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    padding-right: 153px;
+.box-second {
+    flex-direction: row-reverse;  
 }
 
-.top-service-box3 {
+.box-third {
     margin-top: 90px;
     display: flex;
     width: 100%;

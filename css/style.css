@@ -1050,7 +1050,7 @@ section {
 }
 @media screen and (max-width: 1280px) {
   .top-about-box {
-    margin-top: 185px;
+    margin-top: 126px;
   }
 }
 
@@ -1065,6 +1065,7 @@ section {
 @media screen and (max-width: 768px) {
   .top-about-text {
     width: 100%;
+    font-size: 14px;
   }
 }
 
@@ -1085,6 +1086,12 @@ section {
     right: 15%;
   }
 }
+@media screen and (max-width: 764px) {
+  .top-about-img {
+    bottom: 110%;
+    right: 6%;
+  }
+}
 
 .top-about-viw {
   display: flex;
@@ -1097,6 +1104,14 @@ section {
   width: 100%;
   height: auto;
 }
+@media screen and (max-width: 764px) {
+  .top-about-viw {
+    max-width: 60px;
+    height: 100%;
+    margin-top: 80%;
+  }
+}
+
 .top-about-message {
   height: auto;
   display: flex;
@@ -1110,6 +1125,14 @@ section {
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
+@media screen and (max-width: 764px) {
+  .top-about-message {
+    font-size: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .top-about-message.show {
   opacity: 1;
   transform: translateY(0);
@@ -1130,6 +1153,11 @@ section {
 .top-about-message-text span {
   color: #000;
   font-family: Zen Kaku Gothic New;
+}
+@media screen and (max-width: 764px) {
+  .top-about-message-text {
+    font-size: 24px;
+  }
 }
 
 .top-service-inner {
@@ -1167,6 +1195,7 @@ section {
   position: absolute;
   top: 6%;
   left: 74%;
+  display: none;
 }
 .top-service-icon img {
   width: 100%;
@@ -1184,15 +1213,11 @@ section {
   display: flex;
 }
 
-.top-service-box2 {
-  margin-top: 90px;
-  display: flex;
+.box-second {
   flex-direction: row-reverse;
-  width: 100%;
-  padding-right: 153px;
 }
 
-.top-service-box3 {
+.box-third {
   margin-top: 90px;
   display: flex;
   width: 100%;
@@ -1548,7 +1573,7 @@ section {
 }
 @media screen and (max-width: 1280px) {
   .top-contact-no-tel a[href*="tel:"] {
-    pointer-events: auto;
+    pointer-events: all;
     cursor: pointer;
     text-decoration: none;
   }
@@ -1557,7 +1582,14 @@ section {
 .top-contact-mail {
   margin-left: 64px;
   display: inline-block;
-  padding: 0px 40px;
+}
+.top-contact-mail a {
+  display: flex;
+  height: 60px;
+  padding-left: 68px;
+  padding-right: 40px;
+  align-items: center;
+  font-size: 16px;
   line-height: 1;
   background-color: #fff;
   border-radius: 10px;
@@ -1565,13 +1597,14 @@ section {
   transition: all 0.3s ease 0s;
   position: relative;
 }
-.top-contact-mail a {
-  display: flex;
-  height: 60px;
-  padding-left: 28px;
-  align-items: center;
+.top-contact-mail a:hover {
+  background-color: #000;
+  color: #fff;
 }
-.top-contact-mail::before {
+.top-contact-mail a:hover::before, .top-contact-mail a:hover::after {
+  background-color: #fff;
+}
+.top-contact-mail a::before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -1586,14 +1619,12 @@ section {
   -webkit-mask-image: url(../img/mail-icon.svg);
   mask-image: url(../img/mail-icon.svg);
   background: #000;
+  left: 13%;
   top: 50%;
   transform: translateY(-50%);
-  transition: all 0.3s ease 0s;
+  background-color: #000;
 }
-.top-contact-mail:hover::before {
-  background-color: #fff;
-}
-.top-contact-mail::after {
+.top-contact-mail a::after {
   position: absolute;
   content: "";
   top: 25px;
@@ -1603,17 +1634,16 @@ section {
   border-radius: 50%;
   background-color: #000;
 }
-.top-contact-mail:hover {
-  background-color: #000;
-  color: #fff;
-}
-.top-contact-mail:hover::after {
-  background-color: #fff;
-}
 @media screen and (max-width: 1280px) {
   .top-contact-mail {
-    margin-top: 36px;
     margin-left: 0;
+    margin-top: 36px;
+  }
+  .top-contact-mail a {
+    padding-left: 40px;
+  }
+  .top-contact-mail a::before {
+    left: 5%;
   }
 }
 

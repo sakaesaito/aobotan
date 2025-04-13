@@ -13,7 +13,7 @@
     padding-left: 24px;
     padding-bottom: 50px;
     margin-top: 128px;
-   
+
 
     @media screen and (max-width:1280px) {
         padding-top: 27px;
@@ -39,7 +39,7 @@
     margin-top: 44px;
     align-items: center;
     width: calc((730/ 1024) * 100vw);
- 
+
     @media screen and (max-width:1280px) {
         display: block;
         margin-top: 47px;
@@ -54,13 +54,14 @@
         display: flex;
         align-items: flex-end;
     }
-    
+
 }
 
 .top-contact-text-name {
     font-size: 32px;
     font-family: kanit;
     font-weight: 400;
+
     @media screen and (max-width:1280px) {
         padding-right: 5px;
     }
@@ -78,7 +79,7 @@
     display: inline-block;
     padding-top: 6px;
     padding-bottom: 6px;
-   
+
     @media screen and (max-width:1280px) {
         display: block;
         padding-left: 0;
@@ -115,7 +116,7 @@
 
     @media screen and (max-width:1280px) {
         a[href*="tel:"] {
-           pointer-events: auto;
+            pointer-events: all;
             cursor: pointer;
             text-decoration: none;
         }
@@ -126,95 +127,81 @@
 .top-contact-mail {
     margin-left: 64px;
     display: inline-block;
-    padding: 0px 40px;
-    line-height: 1;
-    background-color: #fff;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    position: relative;
-
+    
     a {
         display: flex;
         height: 60px;
-        padding-left: 28px;
+        padding-left: 68px;
+        padding-right: 40px;
         align-items: center;
-        font-size: 12px;
-
+        font-size: 16px;
+        line-height: 1;
+        background-color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        position: relative;
+       
 
         &:hover {
-            background-color: #fff;
+            background-color: #000;
+            color: #fff;
 
+            &::before,
+            &::after {
+                background-color: #fff;
+            }
         }
+
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            // mask関連の指定
+            -webkit-mask-position: center;
+            mask-position: center center;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            -webkit-mask-image: url(../img/mail-icon.svg);
+            mask-image: url(../img/mail-icon.svg);
+            background: #000;
+            left: 13%;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #000;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 25px;
+            right: 20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #000;
+        }
+    }
+    @media screen and (max-width:1280px) {
+        margin-left: 0;
+        margin-top: 36px;
+        a {
+            padding-left: 40px;
+
             &::before {
-                content: "";
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                position: absolute;
-                // mask関連の指定
-                -webkit-mask-position: center;
-                mask-position: center center;
-                -webkit-mask-repeat: no-repeat;
-                mask-repeat: no-repeat;
-                -webkit-mask-size: contain;
-                mask-size: contain;
-                -webkit-mask-image: url(../img/mail-icon.svg);
-                mask-image: url(../img/mail-icon.svg);
-                background: #000;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: all 0.3s ease 0s;
+                left: 5%;
+            }
+
         }
+        
     }
-         
+
 }
-  
-    &::before {
-        content: "";
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        // mask関連の指定
-        -webkit-mask-position: center;
-        mask-position: center center;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-size: contain;
-        mask-size: contain;
-        -webkit-mask-image: url(../img/mail-icon.svg);
-        mask-image: url(../img/mail-icon.svg);
-        background: #000;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: all 0.3s ease 0s;
-    }
-    &:hover::before {
-        background-color: #fff;
-    }
-
-    &::after {
-        position: absolute;
-        content: "";
-        top: 25px;
-        right: 20px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #000;
-    }
-
-    &:hover {
-        background-color: #000;
-        color: #fff;
-    }
-
-    &:hover::after {
-        background-color: #fff;
-    }
-
-
 
 .top-contact-img {
     width: 11vw;
