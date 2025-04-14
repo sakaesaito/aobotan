@@ -73,7 +73,7 @@
   left: 4%;
   width: 54px;
   opacity: 1;
-  transform: translateX(-50%);
+  margin-left: 2%;
   font-size: 10px;
   line-height: 1;
   @media screen and (max-width:375px) {
@@ -126,7 +126,6 @@
 
 
 .fv-message {
-  // width: calc((800 / 1440) * 100vw);
   position: absolute;
   top: 73%;
   left: 42%;
@@ -138,6 +137,12 @@
     position: absolute;
     top: 70%;
     left: 33%;
+  }
+
+  @media screen and (max-width:768px) {
+    position: absolute;
+    top: 70%;
+    left: 3%;
   }
 }
 
@@ -158,6 +163,7 @@
   transition: opacity 0.5s;
 
   @media screen and (max-width:1024px) {
+    font-size: 32px;
     color: #000;
     background-color: #fff;
     padding: 13px 14px;
@@ -167,63 +173,30 @@
   }
 
   @media screen and (max-width:768px) {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
 .fv-message-sub {
-  font-size: 16px;
   font-size: calc((16 / 1440) * 100vw);
+  // width: calc(600 / 1440 ) * 100vw;
   font-weight: 700;
   line-height: 2;
   color: #000;
   margin-top: 20px;
   display: inline-block;
-}
 
-@media screen and (max-width:1024px) {
-  .fv-message-main {
-    color: #000;
-    background-color: #fff;
-    padding: 13px 14px;
-    border-radius: 10px;
-    transition: opacity 0.5s;
-  }
-
-  .fv-message-sub {
-    line-height: 2;
-    color: #000;
-    margin-top: 20px;
-    position: absolute;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .fv_image {
-    background: url(../../img/first-view-sp1.svg);
-    background-repeat: no-repeat;
-
-    & img {
-      // display: none;
+    @media screen and (max-width:1024px) {
+      line-height: 2;
+      color: #000;
+      margin-top: 20px;
+      position: absolute;
+      display: block;
     }
-  }
+    @media screen and (max-width:768px) {
+      font-size: 12px;
+      width: 100%;
+      
 
-  .fv-message {
-    width: 100%;
-    width: calc((720 / 767) * 100vw);
-    position: absolute;
-    top: 70%;
-    left: 3%;
-  }
-
-  .fv-message-main {
-    padding: 20px 10px;
-  }
-
-  .fv-message-sub {
-    font-size: 12px;
-    margin-top: 20px;
-    width: 100%;
   }
 }

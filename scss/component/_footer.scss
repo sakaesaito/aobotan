@@ -127,7 +127,7 @@
 }
 
 .footer-menu-item {
-    transition: .6s;
+    transition: .3s;
     padding-right: 24px;
     display: inline-block;
 
@@ -143,9 +143,9 @@
 
 .footer-menu-contact {
     position: relative;
-    display: inline-block;
+    display: flex;
     padding-left: 30px;
-    transition: .6s;
+    transition: .3s;
     
     &::before {
         content: "";
@@ -157,19 +157,33 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
-        margin-left: -32px;
+        left: -4px;
+        top: 15%;
     }
 
     &:hover {
         opacity: .5;
     }
+
     @media screen and (max-width: 1024px) {
-        display: inline-block;
         margin: 33px auto 0;
+        justify-content: center;
+        max-width: 150px;
+        &::before {
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-image: url(../img/mail-icon.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain; 
+            left: -4px;
+            top: -10%;
+        }
     }
 
 }
-
 small {
     margin-right: 20px;
     display: block;

@@ -491,7 +491,8 @@ nav {
   padding-bottom: 30px;
   border-bottom: 1px solid #B1C6DC;
 }
-.header-nav-main-box.open .header-nav-main-bar2, .header-nav-main-box.open .header-nav-main-bar4 {
+.header-nav-main-box.open .header-nav-main-bar2,
+.header-nav-main-box.open .header-nav-main-bar4 {
   transform: translateY(0%) rotate(90deg);
 }
 
@@ -591,8 +592,9 @@ nav {
 }
 .contact a {
   padding-left: 40px;
+  display: flex;
 }
-.contact::before {
+.contact a::before {
   content: "";
   display: block;
   width: 24px;
@@ -602,7 +604,7 @@ nav {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  margin-top: 24px;
+  left: 2%;
 }
 
 /* ドロワーメニュー */
@@ -774,7 +776,7 @@ nav {
   left: 4%;
   width: 54px;
   opacity: 1;
-  transform: translateX(-50%);
+  margin-left: 2%;
   font-size: 10px;
   line-height: 1;
 }
@@ -837,6 +839,13 @@ nav {
     left: 33%;
   }
 }
+@media screen and (max-width: 768px) {
+  .fv-message {
+    position: absolute;
+    top: 70%;
+    left: 3%;
+  }
+}
 
 .fv-message.show {
   opacity: 1;
@@ -856,6 +865,7 @@ nav {
 }
 @media screen and (max-width: 1024px) {
   .fv-message-main {
+    font-size: 32px;
     color: #000;
     background-color: #fff;
     padding: 13px 14px;
@@ -866,12 +876,11 @@ nav {
 }
 @media screen and (max-width: 768px) {
   .fv-message-main {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
 .fv-message-sub {
-  font-size: 16px;
   font-size: 1.1111111111vw;
   font-weight: 700;
   line-height: 2;
@@ -879,15 +888,7 @@ nav {
   margin-top: 20px;
   display: inline-block;
 }
-
 @media screen and (max-width: 1024px) {
-  .fv-message-main {
-    color: #000;
-    background-color: #fff;
-    padding: 13px 14px;
-    border-radius: 10px;
-    transition: opacity 0.5s;
-  }
   .fv-message-sub {
     line-height: 2;
     color: #000;
@@ -896,27 +897,13 @@ nav {
     display: block;
   }
 }
-@media screen and (max-width: 767px) {
-  .fv_image {
-    background: url(../../img/first-view-sp1.svg);
-    background-repeat: no-repeat;
-  }
-  .fv-message {
-    width: 100%;
-    width: 93.8722294654vw;
-    position: absolute;
-    top: 70%;
-    left: 3%;
-  }
-  .fv-message-main {
-    padding: 20px 10px;
-  }
+@media screen and (max-width: 768px) {
   .fv-message-sub {
     font-size: 12px;
-    margin-top: 20px;
     width: 100%;
   }
 }
+
 /* 写真無限スライダー */
 .slider {
   width: 100%;
@@ -1328,7 +1315,7 @@ section {
 }
 
 .top-service-img2 {
-  width: 105%;
+  width: 100%;
 }
 .top-service-img2 img {
   width: 100%;
@@ -1506,9 +1493,8 @@ section {
 }
 @media screen and (max-width: 1280px) {
   .top-contact-text {
-    margin-top: 47px;
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
   }
 }
 
@@ -1804,7 +1790,7 @@ section {
 }
 
 .footer-menu-item {
-  transition: 0.6s;
+  transition: 0.3s;
   padding-right: 24px;
   display: inline-block;
 }
@@ -1820,9 +1806,9 @@ section {
 
 .footer-menu-contact {
   position: relative;
-  display: inline-block;
+  display: flex;
   padding-left: 30px;
-  transition: 0.6s;
+  transition: 0.3s;
 }
 .footer-menu-contact::before {
   content: "";
@@ -1834,15 +1820,29 @@ section {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  margin-left: -32px;
+  left: -4px;
+  top: 15%;
 }
 .footer-menu-contact:hover {
   opacity: 0.5;
 }
 @media screen and (max-width: 1024px) {
   .footer-menu-contact {
-    display: inline-block;
     margin: 33px auto 0;
+    justify-content: center;
+    max-width: 150px;
+  }
+  .footer-menu-contact::before {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(../img/mail-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    left: -4px;
+    top: -10%;
   }
 }
 
@@ -1880,7 +1880,7 @@ small {
     background-color: #4282b8;
     color: #fff;
     width: 56px;
-    height: 56px;
+    height: 48px;
     cursor: pointer;
     margin: 0 auto;
     display: flex;
@@ -2130,6 +2130,59 @@ small {
   padding: 2rem;
 }
 
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+/* 開くボタン */
+.button-open {
+  display: block;
+  margin: 0 auto;
+  width: 20rem;
+  padding: 1em;
+  background-color: #3140c9;
+  color: #eaeaea;
+  border-radius: 20rem;
+  cursor: pointer;
+}
+
+/* モーダルウィンドウ */
+.modal-window {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background-color: #dfdddd;
+  border-radius: 5px;
+  z-index: 11;
+  padding: 2rem;
+}
+
+/* 閉じるボタン */
+.button-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  padding: 1em;
+  background-color: #c96931;
+  color: #eaeaea;
+  border-radius: 20rem;
+  cursor: pointer;
+}
+
+/* オーバーレイ */
 .overlay {
   display: none;
   position: fixed;
