@@ -14,10 +14,19 @@
         right: 0;
         top: 20px;
         z-index: -1;
+
+        @media screen and (max-width: 768px) {
+            width: 74%;
+            height: 105%;
+            right: 0;
+            top: -24px;
+        }
     }
+
     @media screen and (max-width: 1024px) {
         padding-left: 20px;
         padding-right: 20px;
+        margin-top: 76px;
     }
 }
 
@@ -27,12 +36,25 @@
 }
 
 .top-service-icon {
-    width: 124px;
-    height: 174px;
+    max-width: 124px;
+    height: auto;
     position: absolute;
     top: 6%;
     left: 74%;
-    display: none;
+
+    @media screen and (max-width: 1024px) {
+        width: 20%;
+        height: auto;
+        top: -3%;
+        left: 77%;
+    }
+
+    @media screen and (max-width: 375px) {
+        width: 68px;
+        height: 156px;
+        top: -3%;
+        left: 77%;
+    }
 
     img {
         width: 100%;
@@ -49,48 +71,74 @@
     width: 100%;
     height: auto;
     display: flex;
+
+    @media screen and (max-width: 1024px) {
+        margin-top: 24px;
+        display: block;
+    }
 }
 
-.box-second {
-    flex-direction: row-reverse;  
-}
-
-.box-third {
+.top-service-box2 {
+    flex-direction: row-reverse;
     margin-top: 90px;
-    display: flex;
+
+    @media screen and (max-width: 1024px) {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+}
+
+.top-service-box3 {
+    margin-top: 90px;
+
+    @media screen and (max-width: 375px) {
+        margin-top: 50px;
+        width: 100%;
+    }
+}
+
+.top-service-second {
+    max-width: 645px;
     width: 100%;
 }
+
+
 
 .top-service-no {
     font-family: kanit;
     font-weight: 700;
     font-size: 168px;
     color: #B1C6DC;
-    margin-left: -24px;
+    margin-left: -16px;
     position: relative;
     z-index: -1;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 20px;
+        font-size: 48px;
+        margin-left: -24px;
+        position: relative;
+        z-index: -1;
+        }
 }
+
 
 .top-service-no2 {
-    font-family: kanit;
-    font-weight: 700;
-    font-size: 168px;
-    color: #B1C6DC;
-    position: relative;
-    left: 63%;
+    left: 52%;
     z-index: -1;
-}
 
-.top-service-no3 {
-    font-family: kanit;
-    font-weight: 700;
-    font-size: 168px;
-    color: #B1C6DC;
-    margin-left: -20px;
-    position: relative;
-    z-index: -1;
-}
+    @media screen and (max-width: 1024px) {
+        margin-left: -24px;
+        position: relative;
+        left: 0;
+    }
 
+    @media screen and (max-width: 768px) {
+        font-size: 48px;
+        left: 0;
+    }
+
+}
 
 .top-service-title {
     font-size: 24px;
@@ -100,30 +148,21 @@
     margin-left: 56px;
     background-color: #fff;
 
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1024px) {
         margin-top: 26px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-left: 0;
     }
 }
 
 .top-service-title2 {
     margin-left: 0;
-    padding: 10px 16px;
-    display:inline-block;
-    line-height: 100%;
-    font-size: 24px;
-    margin-left: 5px;
     margin-top: -3;
     background-color: #fff;
 }
 
-.top-service-title3 {
-    font-size: 24px;
-    padding: 10px 16px;
-    display: inline-block;
-    line-height: 100%;
-    margin-left: 56px;
-    background-color: #fff;
-}
 
 .top-service-text {
     font-weight: 400;
@@ -134,66 +173,115 @@
     width: 64%;
     max-width: 100%;
     margin-left: 56px;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 14px;
+    }
 }
 
 .top-service-text2 {
     margin-left: 5px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 180%;
-    color: #000;
-    width: 86%;
+    width: 67%;
     margin-top: 48px;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 14px;
+    }
 }
 
 .top-service-text3 {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 180%;
-    color: #000;
     margin-top: 47px;
     width: 65%;
-    margin-left: 56px;
-}
 
-.top-service-img {
-    width: 81%;
-    max-width: 100%;
-    object-fit: contain;
-
-    img {
+    @media screen and (max-width: 768px) {
         width: 100%;
+        margin-left: 0;
+        margin-top: 14px;
     }
 }
 
+.top-service-img,
 .top-service-img2 {
-    width: 100%;
-
-    img {
-        width: 100%;
-    }
-}
-
-.top-service-img3 {
     width: 80%;
     object-fit: contain;
 
     img {
         width: 100%;
     }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.top-service-img3 {
+    width: 80%;
+    max-width: 516px;
 }
 
 .top-service-link1 {
     margin-top: 30px;
     margin-left: 56px;
+
+    @media screen and (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 27px;
+    }
 }
 
 .top-service-link2 {
     margin-top: 28px;
     margin-left: 5px;
+
+    @media screen and (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 27px;
+    }
 }
 
 .top-service-link3 {
     margin-top: 30px;
     margin-left: 55px;
+
+    @media screen and (max-width: 768px) {
+        margin-left: 0;
+        margin-top: 27px;
+    }
+}
+
+.top-service-list {
+    display: block;
+
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-left: 0;
+        font-size: 24px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+}
+
+
+.top-service-img2 {
+    left: -158px;
+    position: relative;
+    width: 88%;
+
+    @media screen and (max-width: 1024px)  {
+        left: 0px;
+        position: relative;
+    }
+}
+
+/*service section　のレスポンシブ*/
+@media screen and (max-width: 1024px) {
+    .top-service-no3 {
+        margin-left: -20px;
+    }
 }
