@@ -76,15 +76,15 @@
         margin-top: 24px;
         display: block;
     }
-}
 
-.top-service-box2 {
-    flex-direction: row-reverse;
-    margin-top: 90px;
+    &--reverse {
+        flex-direction: row-reverse;
+        margin-top: 90px;
 
-    @media screen and (max-width: 1024px) {
-        margin-top: 50px;
-        margin-left: 0;
+        @media screen and (max-width: 1024px) {
+            margin-top: 50px;
+            margin-left: 0;
+        }
     }
 }
 
@@ -119,7 +119,7 @@
         margin-left: -24px;
         position: relative;
         z-index: -1;
-        }
+    }
 }
 
 
@@ -179,49 +179,31 @@
         margin-left: 0;
         margin-top: 14px;
     }
-}
 
-.top-service-text2 {
-    margin-left: 5px;
-    width: 67%;
-    margin-top: 48px;
+    &.--text2 {
+        margin-left: 5px;
+        width: 67%;
+        margin-top: 48px;
 
-    @media screen and (max-width: 768px) {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 14px;
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 14px;
+        }
+    }
+    &.--text3 {
+        margin-top: 47px;
+        width: 65%;
+    
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 14px;
+        }
     }
 }
 
-.top-service-text3 {
-    margin-top: 47px;
-    width: 65%;
 
-    @media screen and (max-width: 768px) {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 14px;
-    }
-}
-
-.top-service-img,
-.top-service-img2 {
-    width: 80%;
-    object-fit: contain;
-
-    img {
-        width: 100%;
-    }
-
-    @media screen and (max-width: 768px) {
-        width: 100%;
-    }
-}
-
-.top-service-img3 {
-    width: 80%;
-    max-width: 516px;
-}
 
 .top-service-link1 {
     margin-top: 30px;
@@ -264,24 +246,35 @@
         width: 100%;
         justify-content: space-between;
     }
-
 }
 
 
-.top-service-img2 {
-    left: -158px;
-    position: relative;
-    width: 88%;
+.top-service-img {
+    max-width: 516px;
+    width: 100%;
+    object-fit: contain;
 
-    @media screen and (max-width: 1024px)  {
-        left: 0px;
-        position: relative;
+    img {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
     }
 }
+.img2 {
+    max-width: 516px;
+    width: 100%;
+    left: -158px;
+    position: relative;
 
-/*service section　のレスポンシブ*/
-@media screen and (max-width: 1024px) {
-    .top-service-no3 {
-        margin-left: -20px;
+    img {
+       width: 100%
+    }
+    
+
+    @media screen and (max-width: 1024px) {
+        left: 0px;
+        position: relative;
     }
 }

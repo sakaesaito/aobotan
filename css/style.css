@@ -426,7 +426,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 98%;
+    width: 100%;
     max-width: 1024px;
     height: 102px;
     background-color: #fff;
@@ -799,7 +799,7 @@ nav {
 .scroll::after {
   content: "";
   position: absolute;
-  left: 50%;
+  left: 38%;
   width: 1px;
   height: 114px;
   bottom: -120px;
@@ -928,14 +928,12 @@ nav {
   width: 100%;
   margin-top: 80px;
   background-color: #f8f8f8;
-  height: 486px;
   padding-top: 63px;
   padding-bottom: 63px;
 }
 
 .slider-wrapper {
   width: 100%;
-  height: 100%;
 }
 
 .swiper {
@@ -944,8 +942,7 @@ nav {
 }
 
 .swiper-slide {
-  width: 360px !important;
-  height: 360px;
+  max-width: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -958,7 +955,7 @@ nav {
 
 .swiper-wrapper {
   display: flex;
-  transition-timing-function: linear;
+  transition-timing-function: linear !important;
 }
 
 .sec-main { /*about,service sectionの見出し*/
@@ -1255,13 +1252,12 @@ section {
     display: block;
   }
 }
-
-.top-service-box2 {
+.top-service-box--reverse {
   flex-direction: row-reverse;
   margin-top: 90px;
 }
 @media screen and (max-width: 1024px) {
-  .top-service-box2 {
+  .top-service-box--reverse {
     margin-top: 50px;
     margin-left: 0;
   }
@@ -1361,51 +1357,28 @@ section {
     margin-top: 14px;
   }
 }
-
-.top-service-text2 {
+.top-service-text.--text2 {
   margin-left: 5px;
   width: 67%;
   margin-top: 48px;
 }
 @media screen and (max-width: 768px) {
-  .top-service-text2 {
+  .top-service-text.--text2 {
     width: 100%;
     margin-left: 0;
     margin-top: 14px;
   }
 }
-
-.top-service-text3 {
+.top-service-text.--text3 {
   margin-top: 47px;
   width: 65%;
 }
 @media screen and (max-width: 768px) {
-  .top-service-text3 {
+  .top-service-text.--text3 {
     width: 100%;
     margin-left: 0;
     margin-top: 14px;
   }
-}
-
-.top-service-img,
-.top-service-img2 {
-  width: 80%;
-  object-fit: contain;
-}
-.top-service-img img,
-.top-service-img2 img {
-  width: 100%;
-}
-@media screen and (max-width: 768px) {
-  .top-service-img,
-  .top-service-img2 {
-    width: 100%;
-  }
-}
-
-.top-service-img3 {
-  width: 80%;
-  max-width: 516px;
 }
 
 .top-service-link1 {
@@ -1455,24 +1428,36 @@ section {
   }
 }
 
-.top-service-img2 {
+.top-service-img {
+  max-width: 516px;
+  width: 100%;
+  object-fit: contain;
+}
+.top-service-img img {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .top-service-img {
+    width: 100%;
+  }
+}
+
+.img2 {
+  max-width: 516px;
+  width: 100%;
   left: -158px;
   position: relative;
-  width: 88%;
+}
+.img2 img {
+  width: 100%;
 }
 @media screen and (max-width: 1024px) {
-  .top-service-img2 {
+  .img2 {
     left: 0px;
     position: relative;
   }
 }
 
-/*service section　のレスポンシブ*/
-@media screen and (max-width: 1024px) {
-  .top-service-no3 {
-    margin-left: -20px;
-  }
-}
 .top-news-inner {
   margin-left: 0;
   padding-right: 40px;
@@ -2182,34 +2167,6 @@ small {
   font-weight: 400;
   margin-top: 35px;
   text-align: left;
-}
-
-/* モーダルウィンドウ */
-.modal-window {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-  background-color: #dfdddd;
-  border-radius: 5px;
-  z-index: 11;
-  padding: 2rem;
-}
-
-/* 閉じるボタン */
-.button-close {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  padding: 1em;
-  background-color: #c96931;
-  color: #eaeaea;
-  border-radius: 20rem;
-  cursor: pointer;
 }
 
 .modal-window {
