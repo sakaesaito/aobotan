@@ -166,3 +166,15 @@ $(function () {
     $('#overlay, .modal-window').fadeOut();
   });
 });
+
+
+// モーダルの設定
+$(function () {
+  $('.js-open').click(function () {
+    $('#overlay, .modal-window').fadeIn();
+  });
+  // オーバーレイクリックでもモーダルを閉じるように
+  $('.js-close , #overlay').click(function () {
+    $('#overlay, .modal-window').fadeOut();
+  });
+});
