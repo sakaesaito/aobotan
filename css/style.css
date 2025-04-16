@@ -2021,6 +2021,7 @@ small {
   height: 2px;
   background: black;
   display: block;
+  margin-left: 0;
 }
 
 .modal-close-bar span:nth-child(1) {
@@ -2032,18 +2033,23 @@ small {
 }
 
 .modal-item {
-  margin-top: 1%;
-  margin-left: 9%;
+  display: flex;
+  gap: 16px;
+  color: #4282B8;
+  font-size: 14px;
 }
 
-.top-news-name-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  font-size: 14px;
+.modal-menu {
+  border: #4282B8 1px solid;
+  padding-inline: 16px;
+}
+
+.modal-inner {
+  width: 100%;
+  height: auto;
+  padding-inline: 11.8%;
+  padding-top: 16px;
+  padding-bottom: 18.3%;
 }
 
 .modal-close__wrap {
@@ -2064,6 +2070,7 @@ small {
   font-size: 24px;
   text-align: left;
   line-height: 1.8;
+  margin-top: 16px;
 }
 
 .modal-message {
@@ -2071,6 +2078,10 @@ small {
   font-weight: 400;
   margin-top: 35px;
   text-align: left;
+}
+
+.modal-photo {
+  margin-top: 16px;
 }
 
 /* 開くボタン */
@@ -2091,27 +2102,28 @@ small {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  max-width: 860px;
   width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: 0.3;
-  border-radius: 5px;
+  height: 90%;
+  background-color: #fff;
   z-index: 11;
-  padding: 2rem;
 }
 
 /* 閉じるボタン */
 .button-close {
   position: absolute;
-  top: 50%;
+  bottom: 2%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 240px;
+  height: auto;
+  padding: 20px 30px;
   background-color: #fff;
   color: #000;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
+  text-align: center;
 }
 
 /* オーバーレイ */
@@ -2120,7 +2132,8 @@ small {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #000;
+  opacity: 0.3;
   width: 100%;
   height: 100%;
   z-index: 10;
