@@ -136,13 +136,13 @@ const swiper = new Swiper('.swiper', {
   },
   breakpoints: {
     0: {
-      slidesPerView: 1, // 一度に表示するスライドの数
+      slidesPerView: 1.8, // 一度に表示するスライドの数
       spaceBetween: 15, // 要素間の余白
     },
 
     600: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 35,
     },
 
     1200: {
@@ -158,15 +158,11 @@ const swiper = new Swiper('.swiper', {
 });
 
 
-
-// モーダルの設定
 $(function () {
   $('.js-open').click(function () {
-    var id = $(this).data('id'); // 何番目のキャプション（モーダルウィンドウ）か認識
-    $('#overlay, .modal-window[data-id="modal' + id + '"]').fadeIn();
+    $('#overlay, .modal-window').fadeIn();
   });
-  // オーバーレイクリックでもモーダルを閉じるように
-  $('.js-close , #overlay').click(function () {
+  $('.js-close').click(function () {
     $('#overlay, .modal-window').fadeOut();
   });
 });

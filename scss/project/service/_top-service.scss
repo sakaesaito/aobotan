@@ -2,6 +2,7 @@
     margin-top: 62px;
     width: 100%;
     position: relative;
+    padding: 0 20px 0 0;
 
     &::before {
         content: "";
@@ -64,44 +65,54 @@
 
 .top-service-main {
     width: 100%;
+
+    &--left {
+        max-width: 490px;
+        width: 100%;
+    }
+    @media screen and (max-width: 1024px) {
+        max-width: 490px;
+        width: 100%;
+    }
+    
 }
 
+
+
+// serviceーbox共通の指示
 .top-service-box {
-    margin-top: 64px;
+    margin-top: 68px;
     width: 100%;
     height: auto;
     display: flex;
+    align-items: center;
+    gap: 56px;
+    position: relative;
 
     @media screen and (max-width: 1024px) {
         margin-top: 24px;
-        display: block;
+        flex-direction: column;
+        gap: 24px;
+        position: static;
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: 24px;
+        gap: 0;
     }
 
     &--reverse {
         flex-direction: row-reverse;
         margin-top: 90px;
+        justify-content: flex-end;
+        gap: 0;
 
         @media screen and (max-width: 1024px) {
+            flex-direction: column;
             margin-top: 50px;
             margin-left: 0;
         }
     }
 }
-
-.top-service-box3 {
-    margin-top: 90px;
-
-    @media screen and (max-width: 375px) {
-        margin-top: 50px;
-        width: 100%;
-    }
-}
-
-.top-service-second {
-    max-width: 645px;
-    width: 100%;
-}
-
 
 
 .top-service-no {
@@ -110,43 +121,37 @@
     font-size: 168px;
     color: #B1C6DC;
     margin-left: -16px;
-    position: relative;
+    position: absolute;
     z-index: -1;
+    top: 0;
+    left: 45%;
+
+    &--second {
+        top: 0;
+        left: 28%;
+    }
+
+    @media screen and (max-width: 1024px) {
+        font-size: 60px;
+        margin-left: -20px;
+        position: static;
+    }
 
     @media screen and (max-width: 768px) {
         margin-top: 20px;
         font-size: 48px;
         margin-left: -24px;
-        position: relative;
-        z-index: -1;
     }
 }
 
-
-.top-service-no2 {
-    left: 52%;
-    z-index: -1;
-
-    @media screen and (max-width: 1024px) {
-        margin-left: -24px;
-        position: relative;
-        left: 0;
-    }
-
-    @media screen and (max-width: 768px) {
-        font-size: 48px;
-        left: 0;
-    }
-
-}
 
 .top-service-title {
     font-size: 24px;
     padding: 10px 16px;
     display: inline-block;
     line-height: 100%;
-    margin-left: 56px;
     background-color: #fff;
+    margin-top: 164px;
 
     @media screen and (max-width: 1024px) {
         margin-top: 26px;
@@ -157,77 +162,28 @@
     }
 }
 
-.top-service-title2 {
-    margin-left: 0;
-    margin-top: -3;
-    background-color: #fff;
-}
-
-
 .top-service-text {
     font-weight: 400;
     font-size: 16px;
     line-height: 180%;
     color: #000;
     margin-top: 47px;
-    width: 64%;
-    max-width: 100%;
-    margin-left: 56px;
+    width: 100%;
+    max-width: 430px;
 
     @media screen and (max-width: 768px) {
         width: 100%;
         margin-left: 0;
         margin-top: 14px;
     }
-
-    &.--text2 {
-        margin-left: 5px;
-        width: 67%;
-        margin-top: 48px;
-
-        @media screen and (max-width: 768px) {
-            width: 100%;
-            margin-left: 0;
-            margin-top: 14px;
-        }
-    }
-    &.--text3 {
-        margin-top: 47px;
-        width: 65%;
-    
-        @media screen and (max-width: 768px) {
-            width: 100%;
-            margin-left: 0;
-            margin-top: 14px;
-        }
+    &--text2 {
+        margin-right: 10px;
     }
 }
 
 
-
-.top-service-link1 {
+.top-service-link {
     margin-top: 30px;
-    margin-left: 56px;
-
-    @media screen and (max-width: 768px) {
-        margin-left: 0;
-        margin-top: 27px;
-    }
-}
-
-.top-service-link2 {
-    margin-top: 28px;
-    margin-left: 5px;
-
-    @media screen and (max-width: 768px) {
-        margin-left: 0;
-        margin-top: 27px;
-    }
-}
-
-.top-service-link3 {
-    margin-top: 30px;
-    margin-left: 55px;
 
     @media screen and (max-width: 768px) {
         margin-left: 0;
@@ -254,6 +210,10 @@
     width: 100%;
     object-fit: contain;
 
+    &--img2 {
+        margin-left: 10px;
+    }
+
     img {
         width: 100%;
     }
@@ -262,19 +222,14 @@
         width: 100%;
     }
 }
-.img2 {
-    max-width: 516px;
-    width: 100%;
-    left: -158px;
-    position: relative;
 
-    img {
-       width: 100%
-    }
-    
+// service-box3の個別指示
 
-    @media screen and (max-width: 1024px) {
-        left: 0px;
-        position: relative;
+.top-service-box3 {
+    margin-top: 90px;
+
+    @media screen and (max-width: 375px) {
+        margin-top: 50px;
+        width: 100%;
     }
 }

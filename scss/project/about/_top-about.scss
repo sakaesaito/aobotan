@@ -10,6 +10,7 @@
     }
 
     @media screen and (max-width: 768px) {
+        margin-top: 126px;
         padding: 0 20px;
     }
 }
@@ -47,7 +48,7 @@
 .top-about-img {
     display: flex;
     position: absolute;
-    bottom: 48%;
+    bottom: 52%;
     right: 15%;
     gap: 16px;
 
