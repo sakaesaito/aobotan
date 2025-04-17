@@ -1,20 +1,25 @@
 
   .modal-close-bar {
     position: absolute;
+    top: 2%;
+    right: -5%;
     
   }
   .modal-close-bar span {
     position: relative;
     width: 32px;
-    height: 2px;
-    background: black;
+    height: 4px;
+    background: #fff;
     display: block;
     margin-left: 0;
   }
   
   .modal-close-bar span:nth-child(1) {
-    transform: rotate(45deg);
+    transform: rotate(43deg);
+    top: 3px;
+    right: -3%;
   }
+  
   
   .modal-close-bar span:nth-child(2) {
     transform: rotate(-45deg);
@@ -36,15 +41,7 @@
     padding-top: 16px;
     padding-bottom:18.3%;
 }
-  // .top-news-box {
-  //   position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   text-align: center;
-  //   transform: translate(-50%, -50%);
-  //   z-index: 10;
-  //   font-size: 14px;
-  // }
+ 
   
   .modal-close__wrap {
     position: absolute;
@@ -52,10 +49,10 @@
     top: 20px;
   }
 
-  .overlay .open {
+  .overlay.open {
     display: block;
   }
-  .modal .open {
+  .modal-window.open {
     display: block;
   }
   .modal-news {
@@ -97,7 +94,7 @@
   width: 100%;
   height: 90%;
   background-color: #fff;
-  z-index: 11;
+  z-index: 100;
   
 }
 /* 閉じるボタン */
@@ -108,13 +105,25 @@
   transform: translate(-50%, -50%);
   width: 240px;
   height:auto;
-  padding: 20px 30px;
+  padding: 16px 30px;
   background-color:#fff;
   color: #000;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
   text-align: center;
+
+  &::after {
+    position: absolute;
+        content: "";
+        top:50%;
+        transform:translateY(-50%);
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #000;
+  }
  
 }
 /* オーバーレイ */
@@ -127,6 +136,10 @@
   opacity: 0.3;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 15;
 }
 
+/* 表示領域外へはスクロールさせない */
+.no_scroll {
+  overflow: hidden;
+}

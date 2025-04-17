@@ -158,23 +158,13 @@ const swiper = new Swiper('.swiper', {
 });
 
 
-$(function () {
-  $('.js-open').click(function () {
-    $('#overlay, .modal-window').fadeIn();
-  });
-  $('.js-close').click(function () {
-    $('#overlay, .modal-window').fadeOut();
-  });
-});
-
-
 // モーダルの設定
 $(function () {
   $('.js-open').click(function () {
-    $('#overlay, .modal-window').fadeIn();
+    $('.overlay, .modal-window').fadeIn();
   });
   // オーバーレイクリックでもモーダルを閉じるように
   $('.js-close , #overlay').click(function () {
-    $('#overlay, .modal-window').fadeOut();
+    $('.overlay, .modal-window').fadeOut();
   });
 });
