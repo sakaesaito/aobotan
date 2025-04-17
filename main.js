@@ -158,13 +158,17 @@ const swiper = new Swiper('.swiper', {
 });
 
 
+
 // モーダルの設定
 $(function () {
   $('.js-open').click(function () {
     $('.overlay, .modal-window').fadeIn();
+    $('body').addClass('no-scroll'); // ←スクロール禁止
   });
+
   // オーバーレイクリックでもモーダルを閉じるように
-  $('.js-close , #overlay').click(function () {
-    $('.overlay, .modal-window').fadeOut();
+  $('.js-close , .overlay , .modal-close-bar').click(function () {
+    $('.overlay, .modal-window ').fadeOut();
+    $('body').removeClass('no-scroll'); // ← スクロール許可
   });
 });

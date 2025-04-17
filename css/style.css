@@ -2107,8 +2107,7 @@ small {
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 860px;
-  width: 100%;
-  height: 90%;
+  width: 90%;
   background-color: #fff;
   z-index: 100;
 }
@@ -2151,10 +2150,11 @@ small {
   opacity: 0.3;
   width: 100%;
   height: 100%;
-  z-index: 15;
+  z-index: 100;
 }
 
 /* 表示領域外へはスクロールさせない */
-.no_scroll {
+.no-scroll {
   overflow: hidden;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
