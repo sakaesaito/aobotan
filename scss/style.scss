@@ -3,13 +3,18 @@
 @use './component/header';
 @use './component/drawer';
 @use './component/loading';
-@use './project/fv';
+@use './project/top/fv';
 @use './component/swiper';
-@use './project/section/section';
-@use './project/about/top-about';
-@use './project/service/top-service';
-@use './project/news/top-news';
-@use './project/contact/top-contact';
+@use './project/top/section/section';
+@use './project/top/about/top-about';
+@use './project/top/service/top-service';
+@use './project/top/news/top-news';
+@use './project/top/contact/top-contact';
 @use './component/footer';
-@use './project/sp';
-@use './project/news/modal'
+@use './project/top/sp';
+@use './project/top/news/modal';
+@use './project/sub/about/sub-about';
+@use './project/sub/contact/sub-contact';
+@use './project/sub/contact/sub-thanks';
+
+
