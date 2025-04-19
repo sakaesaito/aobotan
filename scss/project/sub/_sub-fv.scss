@@ -1,0 +1,61 @@
+.fv {
+    width: 100%;
+    vertical-align: middle;
+    height: 100%;
+  
+    @media screen and (max-width:1024px) {
+      margin-top: 102px;
+    }
+  }
+  
+  .fv-inner {
+    padding-top: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+  
+    &::before {
+      content: "";
+      display: block;
+      width: 62.5%;
+      height: 84%;
+      aspect-ratio: 1 / 1;
+      background: #4282B8;
+      position: absolute;
+      top: -40px;
+      right: 0px;
+      z-index: -1;
+    }
+  
+    @media screen and (max-width:768px) {
+      padding-top: 0;
+      padding-left: 10px;
+      padding-right: 0;
+  
+      &::before {
+        display: none;
+      }
+    }
+  }
+  
+  .fv_image {
+    max-width: 1024px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+  
+  .fv-img img {
+    width: 100%;
+    margin: 0;
+  }
+  

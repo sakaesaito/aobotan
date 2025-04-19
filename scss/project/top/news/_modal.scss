@@ -1,9 +1,9 @@
 
   .modal-close-bar {
     position: absolute;
-    top: 2%;
-    right: 5%;
-    z-index: 200;
+    top: 6%;
+    right: 20%;
+    opacity: 1;
   }
   .modal-close-bar span {
     position: absolute;
@@ -12,17 +12,20 @@
     background: #fff;
     display: block;
     margin-left: 0;
-    z-index: 200;
   }
   
   .modal-close-bar span:nth-child(1) {
-    transform: rotate(43deg);
-    top: 3px;
-    right: -3%;
+    transform: rotate(44deg);
+    top: 5px;
+    right: -5px;
+    position: absolute;
   }
   
   .modal-close-bar span:nth-child(2) {
-    transform: rotate(-45deg);
+    transform: rotate(-50deg);
+    position: absolute;
+    right: -5px;
+    top: 5px;
   }
   .modal-item {
     display: flex;
@@ -57,8 +60,11 @@
   .modal-message {
     font-size: 16px;
     font-weight: 400;
-    margin-top: 35px;
+    margin-top: 90px;
     text-align: left;
+    @media screen and (max-width: 1024px) {
+      margin-top: 35px;
+    }
   }
   .modal-photo {
     margin-top: 16px;

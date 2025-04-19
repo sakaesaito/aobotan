@@ -60,7 +60,7 @@ $(function () {
 
 // レスポンシブの375px未満のviewport画面幅を固定
 
-!(function () {
+$(function () {
   // viewport の内容を保留関数を定義
   const viewport = document.querySelector('meta[name="viewport"]');
   //画面幅が 375px より広い場合は大丈夫設定、それ以外は幅を 375px に固定
