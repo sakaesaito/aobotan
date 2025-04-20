@@ -5,15 +5,17 @@
 @use './component/loading';
 @use './project/top/fv';
 @use './component/swiper';
-@use './project/top/section/section';
-@use './project/top/about/top-about';
-@use './project/top/service/top-service';
-@use './project/top/news/top-news';
-@use './project/top/contact/top-contact';
+@use './project/top/section';
+@use './project/top/top-about';
+@use './project/top/top-service';
+@use './project/top/top-news';
+@use './project/top/top-contact';
 @use './component/footer';
 @use './project/top/sp';
-@use './project/top/news/modal';
+@use './project/top/modal';
 
 
+// about-pageの読み込み
+@use './project/about/sub-about';
 
 
