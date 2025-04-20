@@ -392,223 +392,70 @@ nav {
   }
 }
 
-.sub-contact {
-  width: 100%;
-  height: auto;
-  background-color: #f8f8f8;
-  border-radius: 50px 0 0 50px;
+/* ドロワーメニュー */
+.drawer_nav {
+  display: none;
 }
-@media screen and (max-width: 768px) {
-  .sub-contact {
-    border-radius: 0;
+
+@media screen and (max-width: 1024px) {
+  .drawer_nav {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    transition: 0.3s;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    color: #000;
   }
-}
-
-.sub-contact-inner {
-  padding-left: 24px;
-  padding-bottom: 50px;
-  margin-top: 128px;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-inner {
-    padding-top: 27px;
-    padding-left: 20px;
-    padding-bottom: 41px;
-    margin-top: 64px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .sub-contact-inner {
-    margin-left: 0;
-  }
-}
-
-.sub-contact-group {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.sub-contact-box {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 44px;
-  align-items: center;
-  width: 71.2890625vw;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-box {
-    display: block;
-    margin-top: 47px;
-  }
-}
-
-.sub-contact-text {
-  padding-right: 34px;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-text {
-    display: flex;
-    align-items: baseline;
-  }
-}
-
-.sub-contact-text-name {
-  font-size: 32px;
-  font-family: kanit;
-  font-weight: 400;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-text-name {
-    padding-right: 5px;
-  }
-}
-
-.sub-contact-text-tel {
-  font-size: 12px;
-  margin-top: 10px;
-}
-
-.sub-contact-no {
-  padding-inline: 31px;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  display: inline-block;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-no {
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 24px;
-    border-right: none;
-    border-left: none;
-    border-top: 1px solid #000;
-    padding-top: 24px;
-    width: 350px;
-  }
-}
-
-.sub-contact-no-open {
-  font-size: 12px;
-  margin-top: 10px;
-  font-weight: 700;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-no-open {
-    margin-top: 8px;
-  }
-}
-
-.sub-contact-no-tel {
-  font-size: 32px;
-  font-family: kanit;
-  font-weight: 400;
-}
-.sub-contact-no-tel a[href*="tel:"] {
-  pointer-events: none;
-  cursor: default;
-  text-decoration: none;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-no-tel a[href*="tel:"] {
+  .drawer_nav.active {
+    transform: translateX(0%);
+    visibility: visible;
     pointer-events: all;
-    cursor: pointer;
-    text-decoration: none;
+  }
+  .drawer_nav a {
+    transition: 0.4s;
+    display: block;
+    height: inherit;
+    align-items: center;
+  }
+  .drawer_list {
+    font-family: "Zen Kaku Gothic New";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-decoration-skip-ink: none;
+    color: #000;
+    align-items: center;
+    padding-top: 32px;
+  }
+  .drawer_item {
+    list-style: none;
+    padding-top: 32px;
+    color: #000;
+  }
+  .drawer_item img {
+    width: 24px;
+    margin: 0;
+    padding: 0;
+  }
+  .drawer_list span {
+    margin-right: 12px;
+    box-sizing: border-box;
+    width: 24px;
+  }
+  small {
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 24px;
   }
 }
-
-.sub-contact-mail {
-  margin-left: 64px;
-  display: inline-block;
-}
-.sub-contact-mail a {
-  display: flex;
-  height: 60px;
-  padding-left: 68px;
-  padding-right: 40px;
-  align-items: center;
-  font-size: 16px;
-  line-height: 1;
-  background-color: #fff;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  position: relative;
-}
-.sub-contact-mail a:hover {
-  background-color: #000;
-  color: #fff;
-}
-.sub-contact-mail a:hover::before, .sub-contact-mail a:hover::after {
-  background-color: #fff;
-}
-.sub-contact-mail a::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  -webkit-mask-position: center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-image: url(../img/mail-icon.svg);
-  mask-image: url(../img/mail-icon.svg);
-  background: #000;
-  left: 13%;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #000;
-}
-.sub-contact-mail a::after {
-  position: absolute;
-  content: "";
-  top: 25px;
-  right: 20px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #000;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-mail {
-    margin-left: 0;
-    margin-top: 36px;
-  }
-  .sub-contact-mail a {
-    padding-left: 40px;
-  }
-  .sub-contact-mail a::before {
-    left: 5%;
-  }
-}
-
-.sub-contact-img {
-  width: 11vw;
-  height: auto;
-  position: absolute;
-  margin-top: 3.5%;
-  margin-left: 82%;
-}
-.sub-contact-img img {
-  width: 100%;
-  height: auto;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-img {
-    top: -14.5%;
-    left: -8%;
-    width: 16%;
-    height: auto;
-    position: absolute;
-  }
-}
-
 .contents .contents hidden {
   max-width: 1440px;
   width: 100%;
@@ -812,321 +659,86 @@ nav {
   opacity: 0.7;
 }
 
-.sub-contact {
+.contact {
   position: relative;
 }
-.sub-contact a {
+.contact a {
   padding-left: 40px;
   display: flex;
 }
-.sub-contact a::before {
+.contact a::before {
   content: "";
   display: block;
   width: 24px;
   height: 24px;
   position: absolute;
-  background-image: url(/img/mail-icon.png);
+  background-image: url(../img/mail-icon.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   left: 2%;
 }
 
-/*header*/
-.sp_header_menu {
-  display: none;
+.fv {
+  width: 100%;
+  vertical-align: middle;
+  height: 100%;
 }
-
-.sp_menu {
-  display: none;
-}
-
 @media screen and (max-width: 1024px) {
-  .sp_header_menu {
-    display: block;
-  }
-  .sp_header_main {
-    display: flex;
-  }
-  .sp_menu {
-    background-color: #4282b8;
-    color: #fff;
-    width: 56px;
-    height: 48px;
-    cursor: pointer;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    transition: all 0.3s;
-    align-items: center;
-    justify-content: center;
-  }
-  .sp_menu:hover {
-    opacity: 0.7;
-  }
-  /* ハンバーガーの３本線 */
-  .sp_menu span {
-    display: block;
-    transition: all 0.3s;
-    top: 12px;
-    left: 25%;
-    width: 32px;
-    height: 1px;
-    background-color: #fff;
-    margin: 0 auto;
-  }
-  .sp_menu_icon span:nth-of-type(2) {
-    margin-top: 12px;
-  }
-  .sp_menu_icon span:nth-of-type(3) {
-    margin-top: 12px;
-  }
-  /* menuクラスがactiveの時のコード*/
-  .sp_menu.active span:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 10px);
-  }
-  .sp_menu.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .sp_menu.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(8px, -8px);
-  }
-  .drawer_nav.active {
-    display: block;
-    opacity: 1;
-  }
-  /*aboutの見出し*/
-  .sec-main {
-    font-size: 20px;
-    margin-top: 0;
-  }
-}
-.sub-contact {
-  width: 100%;
-  height: auto;
-  background-color: #f8f8f8;
-  border-radius: 50px 0 0 50px;
-}
-@media screen and (max-width: 768px) {
-  .sub-contact {
-    border-radius: 0;
+  .fv {
+    margin-top: 102px;
   }
 }
 
-.sub-contact-inner {
-  padding-left: 24px;
-  padding-bottom: 50px;
-  margin-top: 128px;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-inner {
-    padding-top: 27px;
-    padding-left: 20px;
-    padding-bottom: 41px;
-    margin-top: 64px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .sub-contact-inner {
-    margin-left: 0;
-  }
-}
-
-.sub-contact-group {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.sub-contact-box {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 44px;
-  align-items: center;
-  width: 71.2890625vw;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-box {
-    display: block;
-    margin-top: 47px;
-  }
-}
-
-.sub-contact-text {
-  padding-right: 34px;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-text {
-    display: flex;
-    align-items: baseline;
-  }
-}
-
-.sub-contact-text-name {
-  font-size: 32px;
-  font-family: kanit;
-  font-weight: 400;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-text-name {
-    padding-right: 5px;
-  }
-}
-
-.sub-contact-text-tel {
-  font-size: 12px;
-  margin-top: 10px;
-}
-
-.sub-contact-no {
-  padding-inline: 31px;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  display: inline-block;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-no {
-    display: block;
-    padding-left: 0;
-    padding-right: 0;
-    margin-top: 24px;
-    border-right: none;
-    border-left: none;
-    border-top: 1px solid #000;
-    padding-top: 24px;
-    width: 350px;
-  }
-}
-
-.sub-contact-no-open {
-  font-size: 12px;
-  margin-top: 10px;
-  font-weight: 700;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-no-open {
-    margin-top: 8px;
-  }
-}
-
-.sub-contact-no-tel {
-  font-size: 32px;
-  font-family: kanit;
-  font-weight: 400;
-}
-.sub-contact-no-tel a[href*="tel:"] {
-  pointer-events: none;
-  cursor: default;
-  text-decoration: none;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-no-tel a[href*="tel:"] {
-    pointer-events: all;
-    cursor: pointer;
-    text-decoration: none;
-  }
-}
-
-.sub-contact-mail {
-  margin-left: 64px;
-  display: inline-block;
-}
-.sub-contact-mail a {
-  display: flex;
-  height: 60px;
-  padding-left: 68px;
+.fv-inner {
+  padding-top: 40px;
   padding-right: 40px;
-  align-items: center;
-  font-size: 16px;
-  line-height: 1;
-  background-color: #fff;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  width: 100%;
   position: relative;
 }
-.sub-contact-mail a:hover {
-  background-color: #000;
-  color: #fff;
-}
-.sub-contact-mail a:hover::before, .sub-contact-mail a:hover::after {
-  background-color: #fff;
-}
-.sub-contact-mail a::before {
+.fv-inner::before {
   content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
+  display: block;
+  width: 62.5%;
+  height: 84%;
+  aspect-ratio: 1/1;
+  background: #4282B8;
   position: absolute;
-  -webkit-mask-position: center;
-  mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-image: url(../img/mail-icon.svg);
-  mask-image: url(../img/mail-icon.svg);
-  background: #000;
-  left: 13%;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #000;
+  top: -40px;
+  right: 0px;
+  z-index: -1;
 }
-.sub-contact-mail a::after {
-  position: absolute;
-  content: "";
-  top: 25px;
-  right: 20px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #000;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-mail {
-    margin-left: 0;
-    margin-top: 36px;
+@media screen and (max-width: 768px) {
+  .fv-inner {
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 0;
   }
-  .sub-contact-mail a {
-    padding-left: 40px;
-  }
-  .sub-contact-mail a::before {
-    left: 5%;
+  .fv-inner::before {
+    display: none;
   }
 }
 
-.sub-contact-img {
-  width: 11vw;
+.fv-bg {
+  max-width: 1024px;
   height: auto;
-  position: absolute;
-  margin-top: 3.5%;
-  margin-left: 82%;
+  margin: 0;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
 }
-.sub-contact-img img {
+
+.fv-bg img {
   width: 100%;
-  height: auto;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-img {
-    top: -14.5%;
-    left: -8%;
-    width: 16%;
-    height: auto;
-    position: absolute;
-  }
+  margin: 0;
 }
 
 .footer {
   margin-top: 120px;
   margin-bottom: 30px;
   width: 100%;
-  max-width: 1120px;
 }
 
 .footer-inner {

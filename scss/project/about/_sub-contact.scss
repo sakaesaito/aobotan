@@ -1,4 +1,4 @@
-.top-contact {
+.sub-contact {
     width: 100%;
     height: auto;
     background-color: #f8f8f8;
@@ -9,7 +9,7 @@
     }
 }
 
-.top-contact-inner {
+.sub-contact-inner {
     padding-left: 24px;
     padding-bottom: 50px;
     margin-top: 128px;
@@ -27,13 +27,13 @@
     }
 }
 
-.top-contact-group {
+.sub-contact-group {
     display: flex;
     justify-content: space-between;
     position: relative;
 }
 
-.top-contact-box {
+.sub-contact-box {
     display: flex;
     justify-content: flex-start;
     margin-top: 44px;
@@ -46,7 +46,7 @@
     }
 }
 
-.top-contact-text {
+.sub-contact-text {
     padding-right: 34px;
 
     @media screen and (max-width:1280px) {
@@ -56,7 +56,7 @@
 
 }
 
-.top-contact-text-name {
+.sub-contact-text-name {
     font-size: 32px;
     font-family: kanit;
     font-weight: 400;
@@ -66,12 +66,12 @@
     }
 }
 
-.top-contact-text-tel {
+.sub-contact-text-tel {
     font-size: 12px;
     margin-top: 10px;
 }
 
-.top-contact-no {
+.sub-contact-no {
     padding-inline: 31px;
     border-right: 1px solid #000;
     border-left: 1px solid #000;
@@ -92,7 +92,7 @@
     }
 }
 
-.top-contact-no-open {
+.sub-contact-no-open {
     font-size: 12px;
     margin-top: 10px;
     font-weight: 700;
@@ -102,7 +102,7 @@
     }
 }
 
-.top-contact-no-tel {
+.sub-contact-no-tel {
     font-size: 32px;
     font-family: kanit;
     font-weight: 400;
@@ -123,7 +123,7 @@
 }
 
 
-.top-contact-mail {
+.sub-contact-mail {
     margin-left: 64px;
     display: inline-block;
     
@@ -202,7 +202,7 @@
 
 }
 
-.top-contact-img {
+.sub-contact-img {
     width: 11vw;
     height: auto;
     position: absolute;

@@ -1,3 +1,5 @@
+// sub-about header
+
 .contents .contents hidden {
     max-width: 1440px;
     width: 100%;
@@ -85,10 +87,7 @@
       opacity: .8;
     }
   }
-  
-  @media screen and (max-width: 1024px) {
-  
-  }
+ 
   
   .header-nav-list {
     font-size: 20px;
@@ -218,22 +217,20 @@
     opacity: .7;
   }
   
-  .contact {
+  .sub-contact {
     position: relative;
   
     a {
       padding-left: 40px;
       display: flex;
     
-  
-  
       &::before {
         content: "";
         display: block;
         width: 24px;
         height: 24px;
         position: absolute;
-        background-image: url(../img/mail-icon.png);
+        background-image: url(/img/mail-icon.png);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
@@ -327,4 +324,233 @@
     margin-top: 0;
   }
  
+}
+
+
+
+.sub-contact {
+  width: 100%;
+  height: auto;
+  background-color: #f8f8f8;
+  border-radius: 50px 0 0 50px;
+
+  @media screen and (max-width:768px) {
+      border-radius: 0;
+  }
+}
+
+.sub-contact-inner {
+  padding-left: 24px;
+  padding-bottom: 50px;
+  margin-top: 128px;
+
+
+  @media screen and (max-width:1280px) {
+      padding-top: 27px;
+      padding-left: 20px;
+      padding-bottom: 41px;
+      margin-top: 64px;
+  }
+
+  @media screen and (max-width:768px) {
+      margin-left: 0;
+  }
+}
+
+
+.sub-contact-group {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.sub-contact-box {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 44px;
+  align-items: center;
+  width: calc((730/ 1024) * 100vw);
+
+  @media screen and (max-width:1280px) {
+      display: block;
+      margin-top: 47px;
+  }
+}
+
+.sub-contact-text {
+  padding-right: 34px;
+
+  @media screen and (max-width:1280px) {
+      display: flex;
+      align-items: baseline;
+  }
+
+}
+
+.sub-contact-text-name {
+  font-size: 32px;
+  font-family: kanit;
+  font-weight: 400;
+
+  @media screen and (max-width:1280px) {
+      padding-right: 5px;
+  }
+}
+
+.sub-contact-text-tel {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.sub-contact-no {
+  padding-inline: 31px;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  display: inline-block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+
+  @media screen and (max-width:1280px) {
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+      margin-top: 24px;
+      border-right: none;
+      border-left: none;
+      border-top: 1px solid #000;
+      padding-top: 24px;
+      width: 350px;
+  }
+}
+
+.sub-contact-no-open {
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: 700;
+
+  @media screen and (max-width:1280px) {
+      margin-top: 8px;
+  }
+}
+
+.sub-contact-no-tel {
+  font-size: 32px;
+  font-family: kanit;
+  font-weight: 400;
+
+  a[href*="tel:"] {
+      pointer-events: none;
+      cursor: default;
+      text-decoration: none;
+  }
+
+  @media screen and (max-width:1280px) {
+      a[href*="tel:"] {
+          pointer-events: all;
+          cursor: pointer;
+          text-decoration: none;
+      }
+  }
+}
+
+
+.sub-contact-mail {
+  margin-left: 64px;
+  display: inline-block;
+  
+  a {
+      display: flex;
+      height: 60px;
+      padding-left: 68px;
+      padding-right: 40px;
+      align-items: center;
+      font-size: 16px;
+      line-height: 1;
+      background-color: #fff;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      position: relative;
+     
+
+      &:hover {
+          background-color: #000;
+          color: #fff;
+
+          &::before,
+          &::after {
+              background-color: #fff;
+          }
+      }
+
+
+      &::before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          // mask関連の指定
+          -webkit-mask-position: center;
+          mask-position: center center;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          -webkit-mask-image: url(../img/mail-icon.svg);
+          mask-image: url(../img/mail-icon.svg);
+          background: #000;
+          left: 13%;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #000;
+      }
+
+      &::after {
+          position: absolute;
+          content: "";
+          top: 25px;
+          right: 20px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: #000;
+      }
+  }
+  @media screen and (max-width:1280px) {
+      margin-left: 0;
+      margin-top: 36px;
+      a {
+          padding-left: 40px;
+
+          &::before {
+              left: 5%;
+          }
+
+      }
+      
+  }
+
+}
+
+.sub-contact-img {
+  width: 11vw;
+  height: auto;
+  position: absolute;
+  margin-top: 3.5%;
+  margin-left: 82%;
+
+  img {
+      width: 100%;
+      height: auto;
+  }
+
+
+  @media screen and (max-width:1280px) {
+      top: -14.5%;
+      left: -8%;
+      width: 16%;
+      height: auto;
+      position: absolute;
+  }
 }
