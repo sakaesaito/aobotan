@@ -1,5 +1,6 @@
 .fv_image {
   width: 80%;
+
   img {
     border-radius: 50px;
     max-width: 1120px;
@@ -7,35 +8,79 @@
   }
 }
 
+.sub-about-main {
+  @media screen and (max-width:768px) {
+    padding-inline: 20px;
+  }
+
+}
+
 #sub-about {
   max-width: 1120px;
   width: 100%;
 }
+
 .sub-about-us {
   width: 100%;
   margin-top: 64px;
 }
-.sub-about-message-box {
+
+.sub-message-box {
   display: flex;
   align-items: end;
-  gap: 40px;
+  gap: 12.6%;
   margin-top: -41px;
 
   img {
     max-width: 156px;
     width: 100%;
+
+    @media screen and (max-width:768px) {
+      display: block;
+      margin: 20px auto;
+      align-items: center;
+      max-width: 200px;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    display: block;
+    margin-top: 40px;
   }
 }
-.sub-about-title {
+
+.sub-title {
   font-size: 40px;
 }
-.sub-about-message {
+
+.sub-message {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
+
+  @media screen and (max-width:768px) {
+    font-size: 20px;
+    text-align: center;
+  }
+
 }
-.sub-about-button {
+
+.sp-only-br {
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: inline;
+  }
+}
+
+.sub-button {
   margin-top: 64px;
+
+  @media screen and (max-width: 1024px) {
+    text-align: center;
+  }
+
   button {
     padding-top: 11px;
     padding-bottom: 34px;
@@ -44,9 +89,51 @@
     border: 1px solid #4282B8;
     display: inline-block;
     width: 208px;
-    margin-right: 24px;
+    margin-right: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 15%;
+      right: 50%;
+      width: 10px;
+      height: 10px;
+       // mask関連の指定
+       -webkit-mask-position: center;
+       mask-position: center center;
+       -webkit-mask-repeat: no-repeat;
+       mask-repeat: no-repeat;
+       -webkit-mask-size: contain;
+       mask-size: contain;
+       -webkit-mask-image: url('../../../img/sub-buttom-arrow.svg');
+      mask-image: url('../../../img/sub-buttom-arrow.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: #4282B8;
+    }
+
+    &:hover {
+      background: #4282B8;
+      color: #fff;
+
+      &::before {
+        background-image: url('../../../img/sub-buttom-arrow.svg');
+        background: #fff;
+      }  
+    }
+
+      @media screen and (max-width: 768px) {
+        display: block;
+        margin: 30px auto 0;
+      }
+    }
   }
-}
+
+
 .sub-about-works {
   font-size: 32px;
   font-weight: 700;
@@ -55,27 +142,55 @@
   &__works2 {
     margin-top: 51px;
     font-size: 32px;
+
+    @media screen and (max-width:768px) {
+      margin-top: 30px;
+    }
   }
+
   &__works3 {
     margin-top: 56px;
     font-size: 32px;
-  }
 
+    @media screen and (max-width:768px) {
+      margin-top: 100px;
+    }
+  }
 }
+
 .sub-about-vision {
   margin-top: 64px;
   max-width: 923px;
   width: 100%;
+
+  @media screen and (max-width:768px) {
+    margin-top: 40px;
+  }
+
   img {
     max-width: 923px;
     width: 100%;
   }
 }
+
+.sub-about-history {
+  margin-right: 20px;
+
+  @media screen and (max-width:768px) {
+    margin-right: 0;
+  }
+}
+
 .sub-about-history-box {
   display: flex;
-  gap: 10%;
+  gap: 14%;
   margin-top: 64px;
+
+  @media screen and (max-width:768px) {
+    display: block;
+  }
 }
+
 .sub-about-history-left {
   font-size: 16px;
   font-weight: 400;
@@ -83,78 +198,165 @@
   max-width: 465px;
   width: 100%;
 
-}
-.sub-about-ceo {
-  max-width: 331px;
-  width: 100%;
-  img {
+  @media screen and (max-width:768px) {
+    max-width: 750px;
     width: 100%;
   }
 }
+
+.sub-about-ceo {
+  max-width: 331px;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+
+  @media screen and (max-width:768px) {
+    margin-top: 30px;
+    max-width: 750px;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+}
+
 .ceo {
   font-size: 16px;
   font-weight: 400;
   margin-top: 16px;
+
+  @media screen and (max-width:768px) {
+    text-align: center;
+  }
 }
+
 .ceo-name {
   font-size: 32px;
   font-weight: 700;
   margin-top: 24px;
   color: #4282B8;
+
+  @media screen and (max-width:768px) {
+    text-align: center;
+  }
 }
+
 .sub-about-list {
-  margin-top: 52px;
+  margin-top: 58px;
   max-width: 953px;
   width: 100%;
   margin-right: 20px;
+
 }
+
 .sub-about-index {
   display: flex;
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 29px;
   border-bottom: 1px solid #B1C6DC;
+
+  @media screen and (max-width:768px) {
+    display: block;
+  }
 }
+
 .sub-about-works-main {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.8;
   margin-top: 86px;
+
+  @media screen and (max-width:768px) {
+    margin-top: 60px;
+  }
+
   &.works-main2 {
-    margin-top: 31px;
+    margin-top: 25px;
+
+    @media screen and (max-width:768px) {
+      margin-top: 32px;
+    }
   }
 }
+
 .sub-about-works-item {
-  margin-top: 31px;
   font-size: 16px;
   font-weight: 400;
 }
+
 .index-item {
   display: inline-block;
   width: 20%;
+
+  @media screen and (max-width:768px) {
+    width: 30%;
+  }
 }
+
 .index-name {
   font-weight: 400;
   text-align: left;
-  margin-left: 40px;
+  margin-left: 50px;
+
+  @media screen and (max-width:768px) {
+    margin-left: 0px;
+    margin-top: 16px;
+  }
+
+  br {
+    display: none;
+  }
 }
+
 .sub-about-works-box {
   display: flex;
   justify-content: space-between;
   max-width: 953px;
+  margin-top: 31px;
+  gap: 20px;
+
+  @media screen and (max-width:768px) {
+    display: block;
+    height: 100%;
+  }
 }
+
 .sub-about-works-img {
   max-width: 267px;
-  max-height:208px;
+  max-height: 208px;
   object-fit: cover;
   width: 100%;
+  height: auto;
+
   img {
     width: 100%;
   }
+
+  @media screen and (max-width:768px) {
+    max-width: 728px;
+    max-height: 100%;
+  }
 }
+
 .sub-about-works-item {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
   max-width: 642px;
   width: 100%;
+
+  @media screen and (max-width:768px) {
+    max-width: 768px;
+    width: 100%;
+  }
+}
+
+.sub-about-contact-inner {
+  @media screen and (max-width:768px) {
+    margin-top: 36px;
+  }
 }
