@@ -1,0 +1,75 @@
+
+.sub-service-box {
+    margin-top: 54px;
+}
+.sub-service-img {
+    // max-width: 1120px;
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+.sub-message-box {
+    display: flex;
+    max-width: 1120px;
+    width: 100%;
+    gap: 15%;   
+}
+.sub-sevice-message {
+    max-width: 422px;
+    width: 100%;
+}
+.sub-message-img {
+    max-width: 165px;
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+.sub-service-button button{
+    margin-right: 24px;
+}
+.sub-service-sec {
+    margin-top: 75px;
+}
+.sub-service-title {
+    margin-top: 56px;
+    font-size: 24px;
+    margin-bottom: 39px;
+}
+.sub-service-read {
+    display: flex;
+    padding-top: 20px;
+    border-top: 1px solid #B1C6DC;
+    gap: 40px;
+}
+.sub-service-read-left {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.8;
+    max-width: 374px;
+    width: 100%;
+}
+.sub-service-read-right {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 446px;
+    width: 100%;
+}
+.sub-service-jirei-box {
+    display: flex;
+    max-width: 1120px;
+}
+.sub-service-jirei {
+    margin-top: 88px;
+}
+.sub-service-jirei-img {
+    display: inline-block;
+    margin-top: 20px;
+    max-width: 352px;
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}

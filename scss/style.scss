@@ -18,4 +18,13 @@
 // about-pageの読み込み
 @use './project/about/sub-about';
 
+// service-pageの読み込み
+@use './project/service/sub-service';
+
+// contact-pageの読み込み
+@use './project/contact/sub-contact';
+
+// thanks-pageの読み込み
+@use './project/thanks/sub-thanks';
+
 

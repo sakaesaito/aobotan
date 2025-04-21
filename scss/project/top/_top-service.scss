@@ -173,8 +173,9 @@
         margin-left: 0;
         margin-top: 14px;
     }
-    &--text2 {
-        margin-right: 10px;
+    
+    &-text2 {
+        margin-top: 10px;
     }
 }
 
@@ -206,10 +207,6 @@
     max-width: 516px;
     width: 100%;
     object-fit: contain;
-
-    &--img2 {
-        margin-left: 10px;
-    }
 
     img {
         width: 100%;

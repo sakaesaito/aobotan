@@ -6,14 +6,13 @@
 
     @media screen and (max-width:768px) {
         border-radius: 0;
+        }
     }
-}
-
-.sub-about-contact {
-    padding-left: 24px;
-    padding-bottom: 50px;
-    margin-top: 184px;
-
+.top-contact-inner {
+    padding-top: 27px;
+    padding-left: 20px;
+    padding-bottom: 41px;
+    margin-top: 96px;
 
     @media screen and (max-width:1280px) {
         padding-top: 27px;
@@ -126,7 +125,7 @@
 .top-contact-mail {
     margin-left: 64px;
     display: inline-block;
-    
+
     a {
         display: flex;
         height: 60px;
@@ -140,7 +139,7 @@
         cursor: pointer;
         transition: all 0.3s ease 0s;
         position: relative;
-       
+
 
         &:hover {
             background-color: #000;
@@ -195,11 +194,8 @@
             &::before {
                 left: 5%;
             }
-
         }
-        
     }
-
 }
 
 .top-contact-img {

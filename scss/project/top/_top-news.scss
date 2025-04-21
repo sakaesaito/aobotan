@@ -75,8 +75,9 @@
 }
 
 .top-news-item-title {
-    margin-top: 14px;
+    margin-top: 24px;
     margin-bottom: 24px;
+    line-height: 1.8;
 
     @media screen and (max-width:1024px) {
         margin-top: 16px;
