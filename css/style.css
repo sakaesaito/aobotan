@@ -2644,6 +2644,11 @@ small {
   max-width: 422px;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .sub-sevice-message {
+    text-align: left;
+  }
+}
 
 .sub-message-img {
   max-width: 165px;
@@ -2840,4 +2845,83 @@ small {
   .br-sp-none {
     display: none;
   }
+}
+
+#sub-contact {
+  margin-top: 65px;
+}
+
+.sub-contact-message {
+  max-width: 422px;
+  width: 100%;
+}
+
+.sub-contact-box {
+  margin-top: 62px;
+  max-width: 1120px;
+}
+
+.sub-contact-button {
+  display: flex;
+}
+
+.chart-box {
+  display: flex;
+}
+
+.chart {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  background-color: #4282B8;
+  padding-top: 29px;
+  padding-bottom: 13px;
+  color: #fff;
+  width: 209px;
+  text-align: center;
+}
+
+.chart2 {
+  background-color: #fff;
+  color: #4282B8;
+  border: #4282B8 1px solid;
+  margin-right: 52px;
+}
+
+.sub-contact-note {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.sub-contact-tel {
+  font-family: Kanit;
+  font-weight: 400;
+  font-size: 32px;
+  margin-top: 29px;
+}
+
+.sub-contact-time {
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.form-aria {
+  margin-top: 75px;
+}
+
+.thanks-button {
+  background-color: #4282B8;
+  color: #fff;
+  border-color: #4282B8;
+}
+.thanks-button:before {
+  background-color: #fff;
+}
+
+#sub-thanks {
+  margin-top: 64px;
+}
+
+.sub-contact-box {
+  margin-top: 65px;
 }/*# sourceMappingURL=style.css.map */

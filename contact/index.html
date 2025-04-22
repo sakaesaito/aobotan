@@ -139,35 +139,45 @@
                         </p>
                         <img src="../img/contact/sub-contact_01.png" alt="">
                     </div>
-                    <div class="sub-contact-box2">
+                    <div class="sub-contact-box">
                         <div class="sub-contact-button">
-                            <button>入力</button>
-                            <button>送信完了</button>   
+                            <p class="chart">入力</p>
+                            <p class="chart chart2">送信完了</p>   
                         </div>
-                        <div >
+                        <div class="sub-contact-info">
                             <p class="sub-contact-note">お電話も受け付けています。</p>
                             <p class="sub-contact-tel"><a href="tel:0000-000-0000">0000-000-0000</a></p>
                             <p class="sub-contact-time">営業時間10:00-20:00</p>
                         </div>
                     </div>
                 </div>
-                <form action="" method="">
-                    <p>お問い合わせの種類</p>
-                    <p>
-                        <label><input type="radio" name="attend" value="注文住宅の種類" checked> 注文住宅の相談</label><br>
+                <div class="form-aria">
+                    <form action="" method="">
+                        <p>お問い合わせの種類</p>
+                        <label for="list">注文住宅の相談</label>
+                        <input type="radio" name="list" value="注文住宅の種類" checked>
                         <label><input type="radio" name="attend" value="法人建築の相談"> 法人建築の相談</label><br>
                         <label><input type="radio" name="attend" value="リフォームの相談"> リフォームの相談</label><br>
                         <label><input type="radio" name="attend" value="公共工事の相談"> 公共工事の相談</label><br>
                         <label><input type="radio" name="attend" value="その他"> その他</label>
-                    </p>
-                    <p>お名前<input type="text" name="user_name" ></p>
-                    <p>メールアドレス<input type="email" name="use_mail" value="AOBOTAN@mil.co.jp"></p>
-                    <p>電話番号<input type="tel" name="attend" value="000-000-0000"></p>
-                    <p>住所<input type="text" name="attend" value="〇〇区町名◯丁目○番地"></p>
-                    <p><input type="checkbox"></p>
-                    <p><input type="submit" value="送信する"></p>
 
-                </form>
+                        <div class="contact_name_sec">
+                            <div class="contact_name">
+                                <label for="name">お名前<span>必須</span></label>
+                                <input type="text" placeholder="青牡丹" required autocomplete=”family-name”>
+                                <input type="text" placeholder="幸太郎" required autocomplete=”given-name”>
+                            </div>  
+                        </div>
+                        <label for="email">メールアドレス<span>必須</span></label>
+                        <input type="email" name="email" placeholder="aobotan@gmail.com" required>
+                        <label for="tel">電話番号</label>
+                        <input type="tel" name="tel" placeholder="000-0000-0000" required>
+                        <label for="address"> ご住所<span>必須</span></label>
+                        <input type="text" name="address" value="大阪府大阪市中央区北区南町5-6-7">
+                        <label for=""></label><input type="checkbox" name="" value="入力内容に間違いないことを確認しました">入力内容に間違いないことを確認しました
+                        <input type="submit" id="js-submit" value="送信する" disabled>
+                    </form>
+                </div>
 
                     
             </section>        

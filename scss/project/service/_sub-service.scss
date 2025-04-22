@@ -25,6 +25,9 @@
 .sub-sevice-message {
     max-width: 422px;
     width: 100%;
+    @media screen and (max-width: 768px) {
+        text-align: left;
+    }
 }
 .sub-message-img {
     max-width: 165px;
