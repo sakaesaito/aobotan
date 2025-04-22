@@ -60,9 +60,14 @@
 .sub-service-jirei-box {
     display: flex;
     max-width: 1120px;
+    width: 100%;
+    gap: 6%;
 }
 .sub-service-jirei {
     margin-top: 88px;
+    max-width: 352px;
+    width: 100%;
+    display: inline-block;
 }
 .sub-service-jirei-img {
     display: inline-block;
@@ -72,4 +77,10 @@
     img {
         width: 100%;
     }
+}
+.sub-service-date {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 20px;
 }
