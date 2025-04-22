@@ -1,6 +1,10 @@
 
 .sub-service-box {
     margin-top: 54px;
+    margin-right: 20px;
+    @media screen and (max-width: 768px) {
+        margin-left: 20px;
+    }
 }
 .sub-service-img {
     // max-width: 1120px;
@@ -13,7 +17,10 @@
     display: flex;
     max-width: 1120px;
     width: 100%;
-    gap: 15%;   
+    gap: 11%;  
+    @media screen and (max-width: 768px) {
+        display: block;
+    } 
 }
 .sub-sevice-message {
     max-width: 422px;
@@ -22,15 +29,45 @@
 .sub-message-img {
     max-width: 165px;
     width: 100%;
+    @media screen and (max-width: 768px) {
+        margin: 0 auto;
+    }
     img {
         width: 100%;
+       
     }
 }
 .sub-service-button button{
     margin-right: 24px;
 }
 .sub-service-sec {
-    margin-top: 75px;
+    margin-top: 74px;
+    @media screen and (max-width: 768px) {
+        margin-top: 100px;
+    }
+}
+.sub-service-img {
+    max-width: 960px;
+    width: 100%;
+    img {
+        width: 100%;
+        @media screen and (max-width: 768px) {
+            height: 450px;
+            object-fit: cover;
+        }
+    }
+}
+.sub-service-inner {
+    margin-left: 50px;
+    @media screen and (max-width: 1024px) {
+        margin-left: 0;
+    }
+    @media screen and (max-width: 768px) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
 }
 .sub-service-title {
     margin-top: 56px;
@@ -42,6 +79,9 @@
     padding-top: 20px;
     border-top: 1px solid #B1C6DC;
     gap: 40px;
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
 }
 .sub-service-read-left {
     font-size: 20px;
@@ -49,6 +89,17 @@
     line-height: 1.8;
     max-width: 374px;
     width: 100%;
+    @media screen and (max-width: 1024px) {
+        max-width: 352px;
+        width: 100%;
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: 30px;
+        max-width: 600px;
+        width: 100%;
+        font-size: 18px;
+       
+    }
 }
 .sub-service-read-right {
     font-size: 16px;
@@ -56,18 +107,51 @@
     line-height: 1.8;
     max-width: 446px;
     width: 100%;
+    @media screen and (max-width: 1024px) {
+        max-width: 352px;
+        width: 100%;
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: 30px;
+        max-width: 600px;
+        width: 100%;
+       
+    }
 }
 .sub-service-jirei-box {
     display: flex;
     max-width: 1120px;
     width: 100%;
-    gap: 6%;
+    gap: 5.5%;
+    @media screen and (max-width: 1024px) {
+        justify-content: center;
+    }
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
 }
 .sub-service-jirei {
-    margin-top: 88px;
+    margin-top: 85px;
     max-width: 352px;
     width: 100%;
     display: inline-block;
+    &.jirei2 {
+        margin-top: 143px;
+        @media screen and (max-width: 768px) {
+            margin-top: 30px;
+        }
+    }
+    &.jirei3{
+        margin-top: 140px;
+        @media screen and (max-width: 768px) {
+            margin-top: 30px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        max-width: 500px;
+        width: 100%;
+        margin-top: 30px;
+    }
 }
 .sub-service-jirei-img {
     display: inline-block;
@@ -77,10 +161,23 @@
     img {
         width: 100%;
     }
+    @media screen and (max-width: 768px) {
+        max-width: 500px;
+        width: 100%;
+    }
 }
 .sub-service-date {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.8;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+.sub-sevice-contact-inner {
+    margin-top: 40px;
+}
+.br-sp-none {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
 }

@@ -1884,7 +1884,7 @@ section {
 .footer-right-list {
   display: flex;
   margin-top: 22px;
-  line-height: 1.8;
+  line-height: 2.1;
   gap: 25px;
 }
 @media screen and (max-width: 1024px) {
@@ -2226,6 +2226,13 @@ small {
   border-radius: 50px;
   max-width: 1120px;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .fv_image img {
+    border-radius: 0px;
+    height: 450px;
+    object-fit: cover;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2606,6 +2613,12 @@ small {
 
 .sub-service-box {
   margin-top: 54px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 768px) {
+  .sub-service-box {
+    margin-left: 20px;
+  }
 }
 
 .sub-service-img {
@@ -2619,7 +2632,12 @@ small {
   display: flex;
   max-width: 1120px;
   width: 100%;
-  gap: 15%;
+  gap: 11%;
+}
+@media screen and (max-width: 768px) {
+  .sub-message-box {
+    display: block;
+  }
 }
 
 .sub-sevice-message {
@@ -2631,6 +2649,11 @@ small {
   max-width: 165px;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .sub-message-img {
+    margin: 0 auto;
+  }
+}
 .sub-message-img img {
   width: 100%;
 }
@@ -2640,7 +2663,42 @@ small {
 }
 
 .sub-service-sec {
-  margin-top: 75px;
+  margin-top: 74px;
+}
+@media screen and (max-width: 768px) {
+  .sub-service-sec {
+    margin-top: 100px;
+  }
+}
+
+.sub-service-img {
+  max-width: 960px;
+  width: 100%;
+}
+.sub-service-img img {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .sub-service-img img {
+    height: 450px;
+    object-fit: cover;
+  }
+}
+
+.sub-service-inner {
+  margin-left: 50px;
+}
+@media screen and (max-width: 1024px) {
+  .sub-service-inner {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sub-service-inner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .sub-service-title {
@@ -2655,6 +2713,11 @@ small {
   border-top: 1px solid #B1C6DC;
   gap: 40px;
 }
+@media screen and (max-width: 768px) {
+  .sub-service-read {
+    display: block;
+  }
+}
 
 .sub-service-read-left {
   font-size: 20px;
@@ -2662,6 +2725,20 @@ small {
   line-height: 1.8;
   max-width: 374px;
   width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .sub-service-read-left {
+    max-width: 352px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sub-service-read-left {
+    margin-top: 30px;
+    max-width: 600px;
+    width: 100%;
+    font-size: 18px;
+  }
 }
 
 .sub-service-read-right {
@@ -2671,19 +2748,65 @@ small {
   max-width: 446px;
   width: 100%;
 }
+@media screen and (max-width: 1024px) {
+  .sub-service-read-right {
+    max-width: 352px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sub-service-read-right {
+    margin-top: 30px;
+    max-width: 600px;
+    width: 100%;
+  }
+}
 
 .sub-service-jirei-box {
   display: flex;
   max-width: 1120px;
   width: 100%;
-  gap: 6%;
+  gap: 5.5%;
+}
+@media screen and (max-width: 1024px) {
+  .sub-service-jirei-box {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sub-service-jirei-box {
+    display: block;
+  }
 }
 
 .sub-service-jirei {
-  margin-top: 88px;
+  margin-top: 85px;
   max-width: 352px;
   width: 100%;
   display: inline-block;
+}
+.sub-service-jirei.jirei2 {
+  margin-top: 143px;
+}
+@media screen and (max-width: 768px) {
+  .sub-service-jirei.jirei2 {
+    margin-top: 30px;
+  }
+}
+.sub-service-jirei.jirei3 {
+  margin-top: 140px;
+}
+@media screen and (max-width: 768px) {
+  .sub-service-jirei.jirei3 {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sub-service-jirei {
+    max-width: 500px;
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 
 .sub-service-jirei-img {
@@ -2695,10 +2818,26 @@ small {
 .sub-service-jirei-img img {
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .sub-service-jirei-img {
+    max-width: 500px;
+    width: 100%;
+  }
+}
 
 .sub-service-date {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.8;
-  margin-top: 20px;
+  margin-top: 10px;
+}
+
+.sub-sevice-contact-inner {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .br-sp-none {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

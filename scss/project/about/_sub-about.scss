@@ -5,6 +5,11 @@
     border-radius: 50px;
     max-width: 1120px;
     width: 100%;
+    @media screen and (max-width:768px) {
+      border-radius: 0px;
+      height: 450px;
+      object-fit: cover;
+    }
   }
 }
 
