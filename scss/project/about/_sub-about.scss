@@ -5,6 +5,7 @@
     border-radius: 50px;
     max-width: 1120px;
     width: 100%;
+
     @media screen and (max-width:768px) {
       border-radius: 0px;
       height: 450px;
@@ -107,14 +108,14 @@
       right: 50%;
       width: 10px;
       height: 10px;
-       // mask関連の指定
-       -webkit-mask-position: center;
-       mask-position: center center;
-       -webkit-mask-repeat: no-repeat;
-       mask-repeat: no-repeat;
-       -webkit-mask-size: contain;
-       mask-size: contain;
-       -webkit-mask-image: url('../../../img/sub-buttom-arrow.svg');
+      // mask関連の指定
+      -webkit-mask-position: center;
+      mask-position: center center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      -webkit-mask-image: url('../../../img/sub-buttom-arrow.svg');
       mask-image: url('../../../img/sub-buttom-arrow.svg');
       background-size: contain;
       background-repeat: no-repeat;
@@ -128,15 +129,15 @@
       &::before {
         background-image: url('../../../img/sub-buttom-arrow.svg');
         background: #fff;
-      }  
-    }
-
-      @media screen and (max-width: 768px) {
-        display: block;
-        margin: 30px auto 0;
       }
     }
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      margin: 30px auto 0;
+    }
   }
+}
 
 
 .sub-about-works {
@@ -372,13 +373,13 @@
   margin-top: 184px;
 
   @media screen and (max-width:1280px) {
-      padding-top: 27px;
-      padding-left: 20px;
-      padding-bottom: 41px;
-      margin-top: 64px;
+    padding-top: 27px;
+    padding-left: 20px;
+    padding-bottom: 41px;
+    margin-top: 64px;
   }
 
   @media screen and (max-width:768px) {
-      margin-left: 0;
+    margin-left: 0;
   }
 }
