@@ -2851,6 +2851,10 @@ small {
   margin-top: 65px;
 }
 
+.sub-title {
+  margin-top: 56px;
+}
+
 .sub-contact-message {
   max-width: 422px;
   width: 100%;
@@ -2859,6 +2863,17 @@ small {
 .sub-contact-box {
   margin-top: 62px;
   max-width: 1120px;
+}
+
+.sub-contact-box {
+  display: flex;
+  gap: 10%;
+}
+
+.sub-contact-box-inner {
+  max-width: 422px;
+  width: 100%;
+  text-align: center;
 }
 
 .sub-contact-button {
@@ -2910,12 +2925,17 @@ small {
 }
 
 .thanks-button {
+  margin-top: 50px;
   background-color: #4282B8;
   color: #fff;
   border-color: #4282B8;
 }
-.thanks-button:before {
+.thanks-button::before {
   background-color: #fff;
+}
+.thanks-button:hover {
+  background: #fff;
+  color: #4282B8;
 }
 
 #sub-thanks {
