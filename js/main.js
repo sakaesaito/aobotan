@@ -6,7 +6,7 @@
 const isFirstLoad = sessionStorage.getItem('isFirstLoad');
 
 // ページの読み込みが完了したときに実行される関数
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   // フラグが 'true' でない場合（初回アクセス時またはフラグが削除された場合）
   if (isFirstLoad !== 'true') {
     // ローディング画面を表示
@@ -14,7 +14,7 @@ window.addEventListener('load', function() {
     loadingElement.classList.add('active');
 
     // 2秒後にローディング画面を非表示にする
-    setTimeout(function() {
+    setTimeout(function () {
       // ローディング画面を非表示にする
       loadingElement.classList.remove('active');
       // コンテンツ要素を表示
@@ -23,7 +23,7 @@ window.addEventListener('load', function() {
       // セッションストレージにフラグを保存
       sessionStorage.setItem('isFirstLoad', 'true');
     }, 2000);
-    setTimeout(function() {
+    setTimeout(function () {
       loadingElement.style.display = 'none'; // 非表示にする
     }, 2500);
   } else {
@@ -86,15 +86,15 @@ $(function () {
 
 
 // ホバーでドロップダウン
-  
-    // アコーディオンのタイトルをホバーした時の処理  
-    $('.header-nav-main').hover(function () {  
-      $(this).children(".header-nav-drop").stop().slideToggle(500); // サブメニューを500msかけて表示  
-      $(this).children(".header-nav-main-box").toggleClass('open'); // 'open'クラスを追加    
-    });  
-  
 
-    /* フェードインアニメ ------------------------------------------ */ 
+// アコーディオンのタイトルをホバーした時の処理  
+$('.header-nav-main').hover(function () {
+  $(this).children(".header-nav-drop").stop().slideToggle(500); // サブメニューを500msかけて表示  
+  $(this).children(".header-nav-main-box").toggleClass('open'); // 'open'クラスを追加    
+});
+
+
+/* フェードインアニメ ------------------------------------------ */
 // 動きのきっかけとなるアニメーションの名前を定義 
 
 $(document).ready(function () {
@@ -125,7 +125,7 @@ $(document).ready(function () {
 
 
 
- // 写真無限ループのjQuery
+// 写真無限ループのjQuery
 const swiper = new Swiper('.swiper', {
   speed: 5000,
   loop: true, // プルーさせる
@@ -205,9 +205,9 @@ $(document).ready(function () {
   $('.form input,.form textarea').on('change', function () {
     // 入力フィールドがすべて空でないか確認する
     if (
-      $('.form input[type="name"]').val() !== "" && // テキスト入力フィールドが空でないか確認
+      $('.form input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
       $('.form input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
-      $('.form input[type="address"]').val() !== "" // 電話番号入力フィールドが空でないか確認
+      $('.form input[type="address"]').val() !== ""// 住所入力フィールドが空でないか確認
     ) {
       // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
       $submitBtn.prop('disabled', false);

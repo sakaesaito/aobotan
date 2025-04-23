@@ -1,10 +1,11 @@
 /* ドロワーメニュー */
 .drawer_nav {
-    display: none;
+  display: none;
 }
- @media screen and (max-width: 1024px){
 
-.drawer_nav {
+@media screen and (max-width: 1024px) {
+
+  .drawer_nav {
     position: fixed;
     top: 80px;
     right: 0;
@@ -17,22 +18,22 @@
     pointer-events: none;
     color: #000;
   }
-  
+
   .drawer_nav.active {
     transform: translateX(0%);
     visibility: visible;
     pointer-events: all;
   }
-  
+
   .drawer_nav a {
     transition: 0.4s;
     display: block;
     height: inherit;
     align-items: center;
   }
-  
+
   .drawer_list {
-    font-family: "Zen Kaku Gothic New" ;
+    font-family: "Zen Kaku Gothic New";
     font-size: 16px;
     font-weight: 700;
     line-height: 16px;
@@ -42,24 +43,25 @@
     align-items: center;
     padding-top: 32px;
   }
-  
+
   .drawer_item {
     list-style: none;
     padding-top: 32px;
     color: #000;
   }
-  
+
   .drawer_item img {
     width: 24px;
     margin: 0;
     padding: 0;
   }
-  
+
   .drawer_list span {
     margin-right: 12px;
     box-sizing: border-box;
     width: 24px;
   }
+
   small {
     font-size: 12px;
     display: block;

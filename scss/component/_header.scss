@@ -45,10 +45,11 @@
     z-index: 10;
     margin-top: 0;
   }
+
   @media screen and (max-width:375px) {
     width: 100%;
     max-width: 375px;
- 
+
   }
 }
 
@@ -65,6 +66,7 @@
 
 .side-header-logo {
   transition: .4s;
+
   @media screen and (max-width: 1024px) {
     margin-top: 10px;
     transition: .3s;
@@ -86,9 +88,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
-
-}
+@media screen and (max-width: 1024px) {}
 
 .header-nav-list {
   font-size: 20px;
@@ -224,7 +224,7 @@
   a {
     padding-left: 40px;
     display: flex;
-  
+
 
 
     &::before {

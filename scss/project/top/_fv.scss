@@ -76,6 +76,7 @@
   margin-left: 2%;
   font-size: 10px;
   line-height: 1;
+
   @media screen and (max-width:375px) {
     top: 92%;
     left: 1%;
@@ -187,24 +188,25 @@
 
 .fv-message-sub {
   font-size: calc((16 / 1440) * 100vw);
-  width: calc(600 / 1440 ) * 100vw;
+  width: calc(600 / 1440) * 100vw;
   font-weight: 700;
   line-height: 2;
   color: #000;
   margin-top: 20px;
   display: inline-block;
 
-    @media screen and (max-width:1024px) {
-      line-height: 2;
-      color: #000;
-      margin-top: 20px;
-      position: absolute;
-      display: block;
-      width: calc(500 / 1024 ) * 100vw;
-    
-    }
-    @media screen and (max-width:768px) {
-      font-size: 12px;
-      width: calc( 720/ 768 ) * 100vw;
+  @media screen and (max-width:1024px) {
+    line-height: 2;
+    color: #000;
+    margin-top: 20px;
+    position: absolute;
+    display: block;
+    width: calc(500 / 1024) * 100vw;
+
+  }
+
+  @media screen and (max-width:768px) {
+    font-size: 12px;
+    width: calc(720/ 768) * 100vw;
   }
 }

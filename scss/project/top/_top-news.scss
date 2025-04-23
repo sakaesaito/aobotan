@@ -21,10 +21,12 @@
 
     }
 }
+
 .top-news-name {
     display: flex;
     color: #4282B8;
 }
+
 .top-news-menu {
     color: #4282B8;
     font-size: 14px;
@@ -33,6 +35,7 @@
     width: 116px;
     text-align: center;
 }
+
 .top-news-item {
     display: block;
     border: 1px solid #4282B8;
@@ -58,15 +61,17 @@
         background-position: center center;
         background-size: contain;
     }
+
     @media screen and (max-width:1024px) {
         padding-top: 16px;
     }
 }
+
 .top-news-date {
     color: #4282B8;
     font-size: 14px;
     font-weight: 700;
-    margin-left: 16px;   
+    margin-left: 16px;
 }
 
 

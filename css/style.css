@@ -693,15 +693,19 @@ nav {
   z-index: 900;
   display: grid;
   place-content: center;
-  opacity: 0; /* 初期状態は透明にする */
-  transition: opacity 0.5s ease; /* アニメーションを適用 */
-  pointer-events: none; /* 背後のコンテンツにマウスイベントが影響しないようにする */
+  opacity: 0;
+  /* 初期状態は透明にする */
+  transition: opacity 0.5s ease;
+  /* アニメーションを適用 */
+  pointer-events: none;
+  /* 背後のコンテンツにマウスイベントが影響しないようにする */
 }
 
 .loading.active {
   display: grid;
   opacity: 1;
-  transition: opacity 0.5s ease; /* アニメーションを適用 */
+  transition: opacity 0.5s ease;
+  /* アニメーションを適用 */
 }
 
 /* JS が無効なときのスタイル */
@@ -958,14 +962,16 @@ nav {
   transition-timing-function: linear !important;
 }
 
-.sec-main { /*about,service sectionの見出し*/
+.sec-main {
+  /*about,service sectionの見出し*/
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 700;
   font-size: 24px;
   margin-top: 72px;
 }
 
-.sec-main-news { /*news sectionの見出し*/
+.sec-main-news {
+  /*news sectionの見出し*/
   margin-top: 208px;
   font-size: 24px;
 }
@@ -975,7 +981,8 @@ nav {
   }
 }
 
-.sec-main-contact { /*contact sectionの見出し*/
+.sec-main-contact {
+  /*contact sectionの見出し*/
   font-size: 24px;
   margin-top: 38px;
 }
@@ -2944,4 +2951,8 @@ small {
 
 .sub-contact-box {
   margin-top: 65px;
+}
+
+.sub-thanks-box-inner {
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */

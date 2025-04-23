@@ -107,7 +107,7 @@
                     <li class="drawer_item"><a href="/about/#sub-about">会社概要</a></li>
                     <li class="drawer_item"><a href="/about/#about-history">代表者あいさつ</a></li>
                     <li class="drawer_item"><a href="/about/#about-safty">安全への取り組み</a></li>
-                    <li class="drawer_item"><a href="/service/#sub-service">事業内容</a></li>
+                    <li class="drawer_item"><a href="/service/">事業内容</a></li>
                     <li class="drawer_item"><a href="/service/#sub-service1">住宅建築・リフォーム</a></li>
                     <li class="drawer_item"><a href="/service/#sub-service2">法人新築・リフォーム</a></li>
                     <li class="drawer_item"><a href="/service/#sub-service3">公共事業</a></li>
@@ -142,9 +142,40 @@
                         <img src="../img/contact/sub-contact_01.png" alt="">
                     </div>
                     <div class="sub-contact-box">
-                        <div class="sub-contact-button">
-                            <p class="chart">入力</p>
-                            <p class="chart chart2">送信完了</p>
+                        <div class="sub-contact-box-inner">
+                            <div class="sub-contact-button">
+                                <p class="chart">入力</p>
+                                <p class="chart chart2">送信完了</p>
+                            </div>
+                            <div class="form-aria">
+                                <form action="" method="">
+                                    <p>お問い合わせの種類</p>
+                                    <label for="list">注文住宅の相談</label>
+                                    <input type="radio" name="list" value="注文住宅の種類" checked>
+                                    <label><input type="radio" name="attend" value="法人建築の相談"> 法人建築の相談</label><br>
+                                    <label><input type="radio" name="attend" value="リフォームの相談"> リフォームの相談</label><br>
+                                    <label><input type="radio" name="attend" value="公共工事の相談"> 公共工事の相談</label><br>
+                                    <label><input type="radio" name="attend" value="その他"> その他</label>
+
+                                    <div class="contact_name_sec">
+                                        <div class="contact_name">
+                                            <label for="name">お名前<span>必須</span></label>
+                                            <input type="text" name="name" placeholder="青牡丹" required
+                                                autocomplete=”family-name”>
+                                            <input type="text" placeholder="幸太郎" required autocomplete=”given-name”>
+                                        </div>
+                                    </div>
+                                    <label for="email">メールアドレス<span>必須</span></label>
+                                    <input type="email" name="email" placeholder="aobotan@gmail.com" required>
+                                    <label for="tel">電話番号</label>
+                                    <input type="tel" name="tel" placeholder="000-0000-0000" required>
+                                    <label for="address"> ご住所<span>必須</span></label>
+                                    <input type="text" name="address" value="大阪府大阪市中央区北区南町5-6-7">
+                                    <label for=""></label><input type="checkbox" name=""
+                                        value="入力内容に間違いないことを確認しました">入力内容に間違いないことを確認しました
+                                    <input type="submit" id="js-submit" value="送信する" disabled>
+                                </form>
+                            </div>
                         </div>
                         <div class="sub-contact-info">
                             <p class="sub-contact-note">お電話も受け付けています。</p>
@@ -153,34 +184,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-aria">
-                    <form action="" method="">
-                        <p>お問い合わせの種類</p>
-                        <label for="list">注文住宅の相談</label>
-                        <input type="radio" name="list" value="注文住宅の種類" checked>
-                        <label><input type="radio" name="attend" value="法人建築の相談"> 法人建築の相談</label><br>
-                        <label><input type="radio" name="attend" value="リフォームの相談"> リフォームの相談</label><br>
-                        <label><input type="radio" name="attend" value="公共工事の相談"> 公共工事の相談</label><br>
-                        <label><input type="radio" name="attend" value="その他"> その他</label>
 
-                        <div class="contact_name_sec">
-                            <div class="contact_name">
-                                <label for="name">お名前<span>必須</span></label>
-                                <input type="text" placeholder="青牡丹" required autocomplete=”family-name”>
-                                <input type="text" placeholder="幸太郎" required autocomplete=”given-name”>
-                            </div>
-                        </div>
-                        <label for="email">メールアドレス<span>必須</span></label>
-                        <input type="email" name="email" placeholder="aobotan@gmail.com" required>
-                        <label for="tel">電話番号</label>
-                        <input type="tel" name="tel" placeholder="000-0000-0000" required>
-                        <label for="address"> ご住所<span>必須</span></label>
-                        <input type="text" name="address" value="大阪府大阪市中央区北区南町5-6-7">
-                        <label for=""></label><input type="checkbox" name=""
-                            value="入力内容に間違いないことを確認しました">入力内容に間違いないことを確認しました
-                        <input type="submit" id="js-submit" value="送信する" disabled>
-                    </form>
-                </div>
 
 
             </section>
