@@ -2179,11 +2179,10 @@ small {
 
 /* 閉じるボタン */
 .button-close {
-  position: static;
+  display: inline-block;
+  position: relative;
   bottom: 2%;
-  left: 50%;
-  display: flex;
-  justify-content: center;
+  left: 30%;
   width: 240px;
   padding: 16px 30px;
   background-color: #fff;
@@ -2194,17 +2193,21 @@ small {
   text-align: center;
   border: 0.5px solid #000;
   margin: 20px auto 0;
+  transition: all 0.3s ease 0s;
 }
-.button-close::after {
+.button-close::before {
   position: absolute;
   content: "";
-  top: 50%;
-  transform: translateY(-50%);
+  top: 25px;
   right: 20px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: #000 0.5px;
+  background-color: #000;
+}
+.button-close:hover {
+  background: #000;
+  color: #fff;
 }
 
 /* オーバーレイ */
@@ -2292,6 +2295,7 @@ small {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
+  max-width: 420px;
 }
 @media screen and (max-width: 768px) {
   .sub-message {
@@ -2647,12 +2651,12 @@ small {
   }
 }
 
-.sub-sevice-message {
+.sub-service-message {
   max-width: 422px;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  .sub-sevice-message {
+  .sub-service-message {
     text-align: left;
   }
 }
@@ -2858,33 +2862,42 @@ small {
   margin-top: 65px;
 }
 
-.sub-title {
-  margin-top: 56px;
-}
-
-.sub-contact-message {
-  max-width: 422px;
+.sub-title-box {
+  max-width: 1120px;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .sub-title-box {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
 
-.sub-contact-box {
-  margin-top: 62px;
-  max-width: 1120px;
+.sub-title {
+  display: inline-block;
 }
 
 .sub-contact-box {
+  margin-top: 90px;
+  max-width: 1120px;
   display: flex;
   gap: 10%;
 }
+@media screen and (max-width: 768px) {
+  .sub-contact-box {
+    display: block;
+    max-width: 700px;
+    width: 100%;
+  }
+}
 
 .sub-contact-box-inner {
-  max-width: 422px;
-  width: 100%;
   text-align: center;
 }
 
 .sub-contact-button {
   display: flex;
+  width: 100%;
 }
 
 .chart-box {
@@ -2901,13 +2914,23 @@ small {
   color: #fff;
   width: 209px;
   text-align: center;
+  margin-right: 50px;
 }
 
 .chart2 {
   background-color: #fff;
   color: #4282B8;
   border: #4282B8 1px solid;
-  margin-right: 52px;
+}
+
+.sub-contact-info {
+  max-width: 300px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .sub-contact-info {
+    margin-top: 80px;
+  }
 }
 
 .sub-contact-note {
@@ -2928,7 +2951,8 @@ small {
 }
 
 .form-aria {
-  margin-top: 75px;
+  margin-top: 60px;
+  text-align: left;
 }
 
 .thanks-button {
@@ -2945,11 +2969,15 @@ small {
   color: #4282B8;
 }
 
+.contact-name {
+  display: flex;
+}
+
 #sub-thanks {
   margin-top: 64px;
 }
 
-.sub-contact-box {
+.sub-thanks-box {
   margin-top: 65px;
 }
 

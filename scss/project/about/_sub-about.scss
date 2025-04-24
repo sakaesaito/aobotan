@@ -64,12 +64,12 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
+  max-width: 420px;
 
   @media screen and (max-width:768px) {
     font-size: 20px;
     text-align: center;
   }
-
 }
 
 .sp-only-br {
