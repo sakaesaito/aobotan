@@ -88,8 +88,6 @@
   }
 }
 
-@media screen and (max-width: 1024px) {}
-
 .header-nav-list {
   font-size: 20px;
   font-weight: 700;
@@ -141,13 +139,17 @@
 
 }
 
-.header-nav-item {
+.header-nav-main-box {
   a {
     padding-top: 30px;
     padding-bottom: 30px;
     display: inline-block;
     width: 200px;
   }
+}
+.header-nav-drop-link a {
+  padding-top: 6px;
+  margin-bottom: 6px;
 }
 
 .header-nav-main2 {
@@ -156,6 +158,13 @@
   border-bottom: 1px solid #B1C6DC;
   width: 100%;
   display: block;
+  a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: inline-block;
+    width: 200px;
+
+  }
 }
 
 .header-nav-main-bar {

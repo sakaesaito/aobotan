@@ -124,7 +124,7 @@
         <div class="sub-contact-main">
             <div class="fv">
                 <div class="fv-inner">
-                    <picture class="fv_image">
+                    <picture class="fv_image sub-fv-image">
                         <img src="../img/contact/sub-contact-FV.jpg" alt="ファーストビュー画像">
                     </picture>
                 </div>
@@ -149,16 +149,17 @@
                             </div>
                             <div class="form-aria">
                                 <form>
-                                    <p>お問い合わせの種類</p><span>必須</span>
-                                    <label for="list">注文住宅の相談</label>
-                                    <input type="radio" name="list" value="注文住宅の種類" checked>
-                                    <label><input type="radio" name="attend" value="法人建築の相談"> 法人建築の相談</label><br>
-                                    <label><input type="radio" name="attend" value="リフォームの相談"> リフォームの相談</label><br>
-                                    <label><input type="radio" name="attend" value="公共工事の相談"> 公共工事の相談</label><br>
-                                    <label><input type="radio" name="attend" value="その他"> その他</label>
+                                    <div class="form-radio">
+                                        <p>お問い合わせの種類<span>★必須</span></p><br>
+                                        <label><input type="radio" name="attend" value="注文住宅の相談" checked>注文住宅の相談</label> <br> 
+                                        <label><input type="radio" name="attend" value="法人建築の相談"> 法人建築の相談</label><br>
+                                        <label><input type="radio" name="attend" value="リフォームの相談"> リフォームの相談</label><br>
+                                        <label><input type="radio" name="attend" value="公共工事の相談"> 公共工事の相談</label><br>
+                                        <label><input type="radio" name="attend" value="その他"> その他</label>
+                                    </div>
 
                                     <div class="contact_name_sec">
-                                        <label for="name">お名前<span>必須</span></label>
+                                        <label for="name">お名前<span>★必須</span></label>
                                         <div class="contact_name">
                                             <input type="text" name="name" placeholder="青牡丹" required
                                             autocomplete=”family-name”>
@@ -166,7 +167,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <label for="email">メールアドレス<span>必須</span></label>
+                                        <label for="email">メールアドレス<span>★必須</span></label>
                                         <input type="email" name="email" placeholder="aobotan@gmail.com" required>
                                     </div>
                                     <div >
@@ -174,7 +175,7 @@
                                         <input type="tel" name="tel" placeholder="000-0000-0000" required>
                                     </div>
                                     <div>
-                                        <label for="address"> ご住所<span>必須</span></label>
+                                        <label for="address"> ご住所<span>★必須</span></label>
                                         <input type="text" name="address" value="大阪府大阪市中央区北区南町5-6-7"><br>
                                     </div>
                                     <label for=""></label><input type="checkbox" name=""

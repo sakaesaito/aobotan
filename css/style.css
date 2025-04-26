@@ -520,11 +520,16 @@ nav {
   display: flex;
 }
 
-.header-nav-item a {
+.header-nav-main-box a {
   padding-top: 30px;
   padding-bottom: 30px;
   display: inline-block;
   width: 200px;
+}
+
+.header-nav-drop-link a {
+  padding-top: 6px;
+  margin-bottom: 6px;
 }
 
 .header-nav-main2 {
@@ -533,6 +538,12 @@ nav {
   border-bottom: 1px solid #B1C6DC;
   width: 100%;
   display: block;
+}
+.header-nav-main2 a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: inline-block;
+  width: 200px;
 }
 
 .header-nav-main-bar {
@@ -746,7 +757,6 @@ nav {
   position: absolute;
   top: -40px;
   right: 0px;
-  z-index: -1;
 }
 @media screen and (max-width: 768px) {
   .fv-inner {
@@ -983,7 +993,7 @@ nav {
 
 .sec-main-contact {
   /*contact sectionの見出し*/
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 38px;
 }
 @media screen and (max-width: 1024px) {
@@ -1540,11 +1550,11 @@ section {
 }
 @media screen and (max-width: 1024px) {
   .top-news-item-title {
-    margin-top: 16px;
+    margin-top: 11px;
     font-size: 14px;
     line-height: 1.8;
     width: 90%;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 }
 
@@ -1558,6 +1568,11 @@ section {
   .top-contact {
     border-radius: 0;
   }
+}
+
+.sub-contact-main {
+  max-width: 768px;
+  width: 100%;
 }
 
 .top-contact-inner {
@@ -1599,6 +1614,11 @@ section {
     margin-top: 47px;
   }
 }
+@media screen and (max-width: 768px) {
+  .top-contact-box {
+    width: 350px;
+  }
+}
 
 .top-contact-text {
   padding-right: 34px;
@@ -1624,6 +1644,14 @@ section {
 .top-contact-text-tel {
   font-size: 12px;
   margin-top: 10px;
+  margin-left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .top-contact-text-tel {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 11px;
+  }
 }
 
 .top-contact-no {
@@ -1644,7 +1672,7 @@ section {
     border-left: none;
     border-top: 1px solid #000;
     padding-top: 24px;
-    width: 350px;
+    width: 335px;
   }
 }
 
@@ -1744,6 +1772,19 @@ section {
     left: 5%;
   }
 }
+@media screen and (max-width: 1280px) and (max-width: 768px) {
+  .top-contact-mail a {
+    padding-left: 68px;
+  }
+  .top-contact-mail a::before {
+    left: 14.5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top-contact-mail {
+    margin-top: 30px;
+  }
+}
 
 .top-contact-img {
   width: 12vw;
@@ -1767,7 +1808,6 @@ section {
 }
 
 .footer {
-  margin-top: 120px;
   margin-bottom: 30px;
   width: 100%;
 }
@@ -1777,12 +1817,12 @@ section {
   height: auto;
   display: flex;
 }
-
 @media screen and (max-width: 1380px) {
   .footer-inner {
     display: block;
   }
 }
+
 .footer-left {
   width: 41%;
 }
@@ -1796,6 +1836,11 @@ section {
     text-align: center;
     width: 100%;
     margin-top: 36px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-left {
+    margin-top: 28px;
   }
 }
 
@@ -2083,7 +2128,7 @@ small {
 }
 
 .modal-close-bar span:nth-child(2) {
-  transform: rotate(-50deg);
+  transform: rotate(-46deg);
   position: absolute;
   right: -5px;
   top: 5px;
@@ -2115,6 +2160,10 @@ small {
 
 .modal-window.open {
   display: block;
+}
+
+.modal-button {
+  text-align: center;
 }
 
 .modal-news {
@@ -2180,9 +2229,6 @@ small {
 /* 閉じるボタン */
 .button-close {
   display: inline-block;
-  position: relative;
-  bottom: 2%;
-  left: 30%;
   width: 240px;
   padding: 16px 30px;
   background-color: #fff;
@@ -2209,6 +2255,9 @@ small {
   background: #000;
   color: #fff;
 }
+.button-close:hover::before {
+  background-color: #fff;
+}
 
 /* オーバーレイ */
 .overlay {
@@ -2229,31 +2278,29 @@ small {
   height: 100%;
 }
 
-.fv_image {
+.sub-fv-image {
   width: 80%;
 }
-.fv_image img {
+.sub-fv-image img {
   border-radius: 50px;
   max-width: 1120px;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  .fv_image img {
-    border-radius: 0px;
-    height: 450px;
-    object-fit: cover;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .sub-about-main {
-    padding-inline: 20px;
+  .sub-fv-image img {
+    border-radius: 10px;
+    height: auto;
   }
 }
 
 #sub-about {
   max-width: 1120px;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  #sub-about {
+    padding-inline: 20px;
+  }
 }
 
 .sub-about-us {
@@ -2288,7 +2335,7 @@ small {
 }
 
 .sub-title {
-  font-size: 40px;
+  font-size: 24px;
 }
 
 .sub-message {
@@ -2299,8 +2346,7 @@ small {
 }
 @media screen and (max-width: 768px) {
   .sub-message {
-    font-size: 20px;
-    text-align: center;
+    font-size: 16px;
   }
 }
 
@@ -2370,22 +2416,21 @@ small {
 }
 
 .sub-about-works {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 700;
   margin-top: 80px;
 }
 .sub-about-works__works2 {
   margin-top: 51px;
-  font-size: 32px;
 }
 @media screen and (max-width: 768px) {
   .sub-about-works__works2 {
     margin-top: 30px;
+    font-size: 20px;
   }
 }
 .sub-about-works__works3 {
   margin-top: 56px;
-  font-size: 32px;
 }
 @media screen and (max-width: 768px) {
   .sub-about-works__works3 {
@@ -2546,6 +2591,7 @@ small {
   .index-name {
     margin-left: 0px;
     margin-top: 16px;
+    line-height: 1.5;
   }
 }
 .index-name br {
@@ -2694,12 +2740,6 @@ small {
 .sub-service-img img {
   width: 100%;
 }
-@media screen and (max-width: 768px) {
-  .sub-service-img img {
-    height: 450px;
-    object-fit: cover;
-  }
-}
 
 .sub-service-inner {
   margin-left: 50px;
@@ -2732,6 +2772,7 @@ small {
 @media screen and (max-width: 768px) {
   .sub-service-read {
     display: block;
+    padding-top: 15px;
   }
 }
 
@@ -2750,7 +2791,7 @@ small {
 }
 @media screen and (max-width: 768px) {
   .sub-service-read-left {
-    margin-top: 30px;
+    margin-top: 0px;
     max-width: 600px;
     width: 100%;
     font-size: 18px;
@@ -2909,8 +2950,8 @@ small {
   font-weight: 700;
   line-height: 1;
   background-color: #4282B8;
-  padding-top: 29px;
-  padding-bottom: 13px;
+  padding-top: 26px;
+  padding-bottom: 11px;
   color: #fff;
   width: 209px;
   text-align: center;
@@ -2920,7 +2961,7 @@ small {
 .chart2 {
   background-color: #fff;
   color: #4282B8;
-  border: #4282B8 1px solid;
+  border: #4282B8 3px solid;
 }
 
 .sub-contact-info {
@@ -2971,6 +3012,10 @@ small {
 
 .contact-name {
   display: flex;
+}
+
+.form-radio {
+  display: block;
 }
 
 #sub-thanks {

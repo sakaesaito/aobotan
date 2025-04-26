@@ -22,7 +22,7 @@
 }
 
 .modal-close-bar span:nth-child(2) {
-  transform: rotate(-50deg);
+  transform: rotate(-46deg);
   position: absolute;
   right: -5px;
   top: 5px;
@@ -55,7 +55,9 @@
 .modal-window.open {
   display: block;
 }
-
+.modal-button {
+  text-align: center;
+}
 .modal-news {
   font-size: 24px;
   text-align: left;
@@ -89,7 +91,6 @@
 }
 
 
-
 /* 開くボタン */
 .button-open {
   display: block;
@@ -121,9 +122,9 @@
 /* 閉じるボタン */
 .button-close {
   display: inline-block;
-  position: relative;
-  bottom: 2%;
-  left: 30%;
+  // position: relative;
+  // bottom: 2%;
+  // left: 30%;
   width: 240px;
   padding: 16px 30px;
   background-color: #fff;
@@ -150,6 +151,9 @@
   &:hover {
     background: #000;
     color: #fff;
+  }
+  &:hover::before {
+    background-color: #fff;
   }
 }
 

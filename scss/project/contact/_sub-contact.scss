@@ -47,8 +47,8 @@
     font-weight: 700;
     line-height: 1;
     background-color: #4282B8;
-    padding-top: 29px;
-    padding-bottom: 13px;
+    padding-top: 26px;
+    padding-bottom: 11px;
     color: #fff;
     width: 209px;
     text-align: center;
@@ -58,7 +58,7 @@
 .chart2 {
     background-color: #fff;
     color: #4282B8;
-    border: #4282B8 1px solid;
+    border: #4282B8 3px solid;
 }
 
 .sub-contact-info {
@@ -110,4 +110,7 @@
 
 .contact-name {
     display: flex;
+}
+.form-radio {
+    display: block;
 }
