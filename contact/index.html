@@ -143,44 +143,49 @@
                     </div>
                     <div class="sub-contact-box">
                         <div class="sub-contact-box-inner">
-                            <div class="sub-contact-button">
-                                <p class="chart">入力</p>
-                                <p class="chart chart2">送信完了</p>
-                            </div>
+                            <ol class="sub-contact-button">
+                                <div class="chart-box">
+                                    <li class="chart-no">01</li>
+                                    <li class="chart-text">入力</li>
+                                </div>
+                                <div class="chart-box2">
+                                    <li class="chart2 chart-no">02</li>
+                                    <li class="chart2 chart-text">送信完了</li>
+                                </div>
+                            </ol>
                             <div class="form-aria">
                                 <form>
-                                    <div class="form-radio">
+                                    <form class="form-radio" action="./submit.html">
                                         <p>お問い合わせの種類<span>★必須</span></p><br>
-                                        <label><input type="radio" name="attend" value="注文住宅の相談" checked>注文住宅の相談</label> <br> 
-                                        <label><input type="radio" name="attend" value="法人建築の相談"> 法人建築の相談</label><br>
-                                        <label><input type="radio" name="attend" value="リフォームの相談"> リフォームの相談</label><br>
-                                        <label><input type="radio" name="attend" value="公共工事の相談"> 公共工事の相談</label><br>
-                                        <label><input type="radio" name="attend" value="その他"> その他</label>
-                                    </div>
+                                        <label class="check-label"><input class="check-test" type="radio" name="check-name"><span class="check-label-span">注文住宅の相談</span></label><br>
+                                        <label class="check-label"><input class="check-test" type="radio" name="check-name"><span class="check-label-span">法人建築の相談</span></label><br>
+                                        <label class="check-label"><input class="check-test" type="radio" name="check-name"><span class="check-label-span">リフォームの相談</span></label><br>
+                                        <label class="check-label"><input class="check-test" type="radio" name="check-name"><span class="check-label-span">公共工事の相談</span></label><br>
+                                        <label class="check-label"><input class="check-test" type="radio" name="check-name"><span class="check-label-span">その他</span></label>
+                                    </form>
 
-                                    <div class="contact_name_sec">
-                                        <label for="name">お名前<span>★必須</span></label>
-                                        <div class="contact_name">
-                                            <input type="text" name="name" placeholder="青牡丹" required
+                                    <div class="contact-name-sec">
+                                        <label class="label"  for="name">お名前<span>★</span><span>必須</span></label>
+                                        <div class="contact-name">
+                                            <input class="input-name" type="text" name="name" placeholder="青牡丹" required
                                             autocomplete=”family-name”>
-                                            <input type="text" placeholder="幸太郎" required autocomplete=”given-name”>
+                                            <input class="input-name" type="text" placeholder="幸太郎" required autocomplete=”given-name”>
                                         </div>
                                     </div>
                                     <div>
-                                        <label for="email">メールアドレス<span>★必須</span></label>
-                                        <input type="email" name="email" placeholder="aobotan@gmail.com" required>
+                                        <label class="label" for="email">メールアドレス<span>★必須</span></label><br>
+                                        <input class="input" type="email" name="email" placeholder="aobotan@gmail.com" required>
                                     </div>
                                     <div >
-                                        <label for="tel">電話番号</label>
-                                        <input type="tel" name="tel" placeholder="000-0000-0000" required>
+                                        <label class="label" for="tel">電話番号</label><br>
+                                        <input class="input" type="tel" name="tel" placeholder="000-0000-0000" required>
                                     </div>
                                     <div>
-                                        <label for="address"> ご住所<span>★必須</span></label>
-                                        <input type="text" name="address" value="大阪府大阪市中央区北区南町5-6-7"><br>
+                                        <label class="label" for="address"> ご住所<span>★必須</span></label><br>
+                                        <input class="input" type="text" name="address" value="大阪府大阪市中央区北区南町5-6-7"><br>
                                     </div>
-                                    <label for=""></label><input type="checkbox" name=""
-                                        value="入力内容に間違いないことを確認しました">入力内容に間違いないことを確認しました<br>
-                                    <input type="submit" id="js-submit" value="送信する" disabled>
+                                    <label class="check-label"><input class="check-box" type="check-" name="check-name"><span class="check-label-span">入力内容に間違いないことを確認しました</span></label>
+                                    <input class="input" type="submit" id="js-submit" value="送信する" disabled>
                                 </form>
                             </div>
                         </div>
@@ -192,6 +197,8 @@
                     </div>
                 </div>
             </section>
+
+
             <!-- contact -->
             <section class="top-contact" id="top-contact">
                 <div class="top-contact-inner sub-about-contact-inner">

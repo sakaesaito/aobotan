@@ -121,10 +121,8 @@
 
 /* 閉じるボタン */
 .button-close {
-  display: inline-block;
-  // position: relative;
-  // bottom: 2%;
-  // left: 30%;
+  display: block;
+  position: relative;
   width: 240px;
   padding: 16px 30px;
   background-color: #fff;
@@ -140,8 +138,8 @@
   &::before {
     position: absolute;
     content: "";
-    top: 25px;
-    right: 20px;
+    top: 24px;
+    right: 17px;
     width: 10px;
     height: 10px;
     border-radius: 50%;

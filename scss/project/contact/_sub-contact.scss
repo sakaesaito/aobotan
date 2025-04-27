@@ -31,15 +31,13 @@
 
 .sub-contact-box-inner {
     text-align: center;
+    max-width: 470px;
+    width: 100%;
 }
 
 .sub-contact-button {
     display: flex;
     width: 100%;
-}
-
-.chart-box {
-    display: flex;
 }
 
 .chart {
@@ -52,17 +50,33 @@
     color: #fff;
     width: 209px;
     text-align: center;
-    margin-right: 50px;
 }
-
-.chart2 {
+.chart-box {
+    display: block;
+    border: #4282B8 3px solid;
+    background-color: #4282B8;
+    color: #fff;
+    width: 209px;
+}
+.chart-box2 {
+    display: block;
+    border: #4282B8 3px solid;
     background-color: #fff;
     color: #4282B8;
-    border: #4282B8 3px solid;
+    width: 209px;
+}
+
+.chart-no {
+    font-size: 12px;
+    padding-top: 7px;   
+}
+.chart-text {
+    margin-top: 10px;
+    padding-bottom: 13px;
 }
 
 .sub-contact-info {
-    max-width: 300px;
+    max-width: 260px;
     width: 100%;
 
     @media screen and (max-width: 768px) {
@@ -110,7 +124,112 @@
 
 .contact-name {
     display: flex;
+    gap: 40px;
+    max-width: 470px;
+    width: 100%;
 }
 .form-radio {
     display: block;
 }
+
+.label {
+    display: block;
+    margin-top: 26px;
+}
+.input {
+   margin-top: 27px;
+   padding: 20px 30px;
+   border: #B1C6DC solid 1px;
+   background-color: #F8F8F8;
+   width: 470px;
+}
+.input-name {
+   margin-top: 27px;
+   padding: 20px 30px;
+   border: #B1C6DC solid 1px;
+   width: 209px;
+}
+
+.input-text, .input-email, .input-radio, .input-submit {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* リセットじゃない部分 */
+    border: 1px solid #000(0, 0, 0, 0.16);
+  }
+  .input-text:focus,
+  .input-email:focus {
+    outline: 2px solid #3498db;
+    /* 自由な色に変更可能 */
+    outline-offset: 0;
+  }
+
+  .check-test {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .check-label {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;  /* カスタムチェックボックスにスペースを確保 */
+    margin-top: 12px;
+    cursor: pointer;
+  }
+  
+  /* Custom Checkbox Design */
+  .check-label-span::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4282B8; /* Border color */
+    border-radius: 10px; /* Optional: for rounded corners */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+//   /* Custom Checkbox Checked State */
+//   .check-test:checked + .check-label-span::before {
+//     border-color: #3498db; /* Border color when checked */
+//   }
+  
+  .check-test:checked + .check-label-span::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #4282B8;
+    border: solid #4282B8;
+    position: absolute;
+    top: 20%;
+    left: 5px;  /* Adjusted position */
+  }
+  
+  .check-box:checked + .check-label-span::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    position: absolute;
+    top: 50%;
+    left: 8px;  /* Adjusted position */
+    transform: translateY(-50%) rotate(45deg);
+  }
+  
+//   /* Focus State */
+//   .check-test:focus + .check-label-span::before {
+//     outline: 2px solid #3498db; /* Outline color when focused */
+//   }

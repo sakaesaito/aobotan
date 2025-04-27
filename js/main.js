@@ -217,3 +217,33 @@ $(document).ready(function () {
     }
   });
 });
+
+
+// スムーススクロール
+// ページの読み込みが完了したら実行
+$(function () {
+  
+  // id属性（#で始まるリンク）がクリックされた時に処理を実行
+  $('a[href^="#"]').click(function () {
+    
+    // クリックされたリンクのhref属性の値を取得
+    var href = $(this).attr("href");
+    
+    // hrefが"#"または空文字ならhtml要素、それ以外ならそのhref先の要素を取得
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    
+    // 対象要素の縦位置（画面上からの距離）を取得
+    var position = target.offset().top;
+    
+    // スクロールの速さ（500ミリ秒）を設定
+    var speed = 500;
+    
+    // ページを対象位置までアニメーションしながらスクロール
+    $("html, body").animate({
+      scrollTop: position
+    }, speed, "swing");
+    
+    // リンク本来の動作をキャンセル（ページジャンプを防ぐ）
+    return false;
+  });
+});
