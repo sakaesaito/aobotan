@@ -20,11 +20,12 @@
 
 .sec-main-contact {
     /*contact sectionの見出し*/
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 38px;
 
     @media screen and (max-width:1024px) {
         margin-top: 0;
+        font-size: 20px;
     }
 }
 

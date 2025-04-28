@@ -14,15 +14,17 @@
 .sub-title {
     display: inline-block;
 }
-
+.sub-contact-message {
+    margin-bottom: -20px;
+}
 
 .sub-contact-box {
     margin-top: 90px;
     max-width: 1120px;
     display: flex;
-    gap: 10%;
+    gap: 13.5%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1280px) {
         display: block;
         max-width: 700px;
         width: 100%;
@@ -38,6 +40,7 @@
 .sub-contact-button {
     display: flex;
     width: 100%;
+    gap: 12%;
 }
 
 .chart {
@@ -68,34 +71,56 @@
 
 .chart-no {
     font-size: 12px;
-    padding-top: 7px;   
+    padding-top: 2px;   
 }
 .chart-text {
-    margin-top: 10px;
-    padding-bottom: 13px;
+    margin-top: 12px;
+    padding-bottom: 9px;
 }
 
 .sub-contact-info {
     max-width: 260px;
     width: 100%;
-
-    @media screen and (max-width: 768px) {
-        margin-top: 80px;
+    @media screen and (max-width: 1280px) {
+        margin-top: 50px;
     }
 }
-
+.sub-contact-inner {
+    margin-top: 68px;
+    padding-left: 24px;
+    padding-top: 0px;
+}
 .sub-contact-note {
     font-size: 16px;
     line-height: 1;
 }
-
+.sub-contact-access {
+    margin-top: 43px;
+}
 .sub-contact-tel {
     font-family: Kanit;
     font-weight: 400;
     font-size: 32px;
     margin-top: 29px;
-}
 
+    a[href*="tel:"] {
+        pointer-events: none;
+        cursor: default;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width:1280px) {
+        a[href*="tel:"] {
+            pointer-events: all;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+
+}
+.sub-contact-text {
+    padding-right: 32px;
+}
 .sub-contact-time {
     font-size: 12px;
     margin-top: 14px;
@@ -137,17 +162,55 @@
     margin-top: 26px;
 }
 .input {
+    margin-top: 8px;
+    padding: 18px 30px 18px 18px;
+    border: #B1C6DC solid 1px;
+    background-color: #F8F8F8;
+    max-width: 470px;
+    width: 100%;
+    color: #000;
+}
+.input-submit {
    margin-top: 27px;
    padding: 20px 30px;
    border: #B1C6DC solid 1px;
    background-color: #F8F8F8;
-   width: 470px;
+   max-width: 209px;
+   width: 100%;
 }
+
 .input-name {
-   margin-top: 27px;
-   padding: 20px 30px;
+   margin-top: 29px;
+   padding: 18px 40px 18px 18px;
    border: #B1C6DC solid 1px;
-   width: 209px;
+   width: 216px;
+}
+#js-submit {
+    display: block;
+    margin-top: 70px;
+    padding: 20px 30px;
+    border: #B1C6DC solid 1px;
+    background-color: #4282B8;
+    max-width: 284px;
+    width: 100%;
+    color: #fff;
+    border-radius: 10px;
+    margin-inline: auto;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 25px;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
 }
 
 .input-text, .input-email, .input-radio, .input-submit {
@@ -179,17 +242,52 @@
   .check-label {
     position: relative;
     display: inline-block;
-    padding-left: 30px;  /* カスタムチェックボックスにスペースを確保 */
-    margin-top: 12px;
+    padding-left: 26px;  /* カスタムチェックボックスにスペースを確保 */
+    cursor: pointer;
+    margin-top: 14px;
+  }
+  .check-label2 {
+    margin-top: 40px;
+    padding-left: 0;
+    margin-left: 68px;
+  }
+  .check-box {
+    position: relative;
+    display: inline-block;
+    padding-left: 3px;  /* カスタムチェックボックスにスペースを確保 */
+   
     cursor: pointer;
   }
-  
+  .check-label-span2::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #4282B8; /* Border color */
+    border-radius: 2px; /* Optional: for rounded corners */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    
+  }
+  .star {
+    color: #FE0000;
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .required {
+    color: #000;
+    font-size: 12px;
+  }
+
   /* Custom Checkbox Design */
   .check-label-span::before {
     content: "";
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border: 2px solid #4282B8; /* Border color */
     border-radius: 10px; /* Optional: for rounded corners */
     position: absolute;
@@ -203,6 +301,7 @@
 //     border-color: #3498db; /* Border color when checked */
 //   }
   
+// ラジオボタンの内側の丸印
   .check-test:checked + .check-label-span::after {
     content: "";
     display: block;
@@ -212,11 +311,11 @@
     background-color: #4282B8;
     border: solid #4282B8;
     position: absolute;
-    top: 20%;
-    left: 5px;  /* Adjusted position */
+    top: 3px;
+    left: 4px;  /* Adjusted position */
   }
   
-  .check-box:checked + .check-label-span::after {
+  .check-box:checked + .check-label-span2::after {
     content: "";
     display: block;
     width: 5px;

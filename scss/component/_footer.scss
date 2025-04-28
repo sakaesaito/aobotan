@@ -1,4 +1,5 @@
 .footer {
+    margin-top: 128px;
     margin-bottom: 30px;
     width: 100%;
 }
@@ -190,7 +191,8 @@
 }
 
 small {
-    margin-right: 20px;
+    margin-top: 5px;
+    margin-right: 68px;
     display: block;
     font-weight: 400;
     text-align: right;
@@ -199,5 +201,6 @@ small {
         text-align: center;
         font-weight: 400;
         margin-top: 58px;
+        margin-right: 0;
     }
 }
