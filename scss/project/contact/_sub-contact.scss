@@ -103,6 +103,10 @@
     margin-top: 68px;
     padding-left: 24px;
     padding-top: 25px;
+    @media screen and (max-width: 768px) {
+        padding-bottom: 20px;
+    }
+
 }
 .sub-contact-note {
     font-size: 16px;
@@ -189,14 +193,8 @@
     width: 100%;
     color: #000;
 }
-.input-submit {
-   margin-top: 27px;
-   padding: 20px 30px;
-   border: #B1C6DC solid 1px;
-   background-color: #F8F8F8;
-   max-width: 209px;
-   width: 100%;
-}
+
+
 
 .input-name {
    margin-top: 29px;
@@ -232,34 +230,7 @@
         background-color: #fff;
     }
 }
-/* Style for the submit button */
-.input-submit {
-    padding: 10px 20px; /* Set padding */
-    border: none; /* Remove border */
-    border-radius: 4px; /* Optional: for rounded corners */
-    background-color: #4282B8; /* Set background color */
-    color: #fff; /* Set text color */
-    font-size: 16px; /* Set font size */
-    cursor: pointer; /* Set cursor to pointer */
-    transition: background-color 0.3s; /* Optional: for smooth color transition */
-    text-align: center;
-  }
-  
-  /* Hover State */
-  .input-submit:hover {
-    background-color: #4282B8; /* Darken background color when hovered */
-  }
-  
-  /* Active State */
-  .input-submit:active {
-    background-color: #1c598a; /* Darken background color when active */
-  }
-  
-  /* Focus State */
-  .input-submit:focus {
-    outline: none; /* Remove outline */
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
-  }
+
 
 .input-text, .input-email, .input-radio, .input-submit {
     padding: 0;
@@ -272,12 +243,11 @@
     -moz-appearance: none;
     appearance: none;
     /* リセットじゃない部分 */
-    border: 1px solid #000(0, 0, 0, 0.16);
+    // border: 1px solid #000(0, 0, 0, 0.16);
   }
   .input-text:focus,
   .input-email:focus {
     outline: 2px solid #3498db;
-    /* 自由な色に変更可能 */
     outline-offset: 0;
   }
 
@@ -383,3 +353,63 @@
 //   .check-test:focus + .check-label-span::before {
 //     outline: 2px solid #3498db; /* Outline color when focused */
 //   }
+
+
+// button
+/* Style for the submit button */
+.input-submit {
+    margin-top: 27px;
+    padding: 20px 30px; /* Set padding */
+    border:  #B1C6DC solid 1px; /* Remove border */
+    border-radius: 4px; /* Optional: for rounded corners */
+    background-color: #3498db; /* Set background color */
+    color: #fff; /* Set text color */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Set cursor to pointer */
+    transition: background-color 0.3s; /* Optional: for smooth color transition */
+    text-align: center;
+    max-width: 209px;
+   width: 100%;
+  }
+  
+  /* Hover State */
+  .input-submit:hover {
+    background-color: #2980b9; /* Darken background color when hovered */
+  }
+  
+  /* Active State */
+  .input-submit:active {
+    background-color: #1c598a; /* Darken background color when active */
+  }
+  
+  /* Focus State */
+  .input-submit:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
+  }
+  .custom-file-upload {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .input-file {
+    display: none;
+  }
+  
+  .custom-file-upload button {
+    padding: 10px;
+    border: 2px solid #000;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #000;
+  }
+  
+  .custom-file-upload button:hover {
+    background-color: #d0d0d0;
+  }
+  
+  .custom-file-upload button:focus {
+    border-color: #3498db; /* Border color when focused */
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
+  }
