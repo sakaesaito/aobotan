@@ -6,8 +6,8 @@
     max-width: 1120px;
     width: 100%;
     @media screen and (max-width: 768px) {
-    margin-right: 10px;
-    margin-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
     }
 }
 
@@ -23,6 +23,7 @@
     max-width: 1120px;
     display: flex;
     gap: 13.5%;
+    padding-top: 24px;
 
     @media screen and (max-width: 1280px) {
         display: block;
@@ -50,8 +51,8 @@
     background-color: #4282B8;
     padding-top: 26px;
     padding-bottom: 11px;
-    color: #fff;
-    width: 209px;
+    max-width: 209px;
+    width: 100%;
     text-align: center;
 }
 .chart-box {
@@ -59,14 +60,27 @@
     border: #4282B8 3px solid;
     background-color: #4282B8;
     color: #fff;
-    width: 209px;
+    max-width: 209px;
+    width: 100%;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: 46%;
+        right: -30%;
+        width: 10px;
+        height: 1px;
+        border: #4282B8 1px solid;
+        width: 57px;
+    }
 }
 .chart-box2 {
     display: block;
     border: #4282B8 3px solid;
     background-color: #fff;
     color: #4282B8;
-    width: 209px;
+    max-width: 209px;
+    width: 100%;
 }
 
 .chart-no {
@@ -88,7 +102,7 @@
 .sub-contact-inner {
     margin-top: 68px;
     padding-left: 24px;
-    padding-top: 0px;
+    padding-top: 25px;
 }
 .sub-contact-note {
     font-size: 16px;
@@ -126,7 +140,7 @@
     margin-top: 14px;
 }
 
-.form-aria {
+.form {
     margin-top: 60px;
     text-align: left;
 }
@@ -146,7 +160,12 @@
         color: #4282B8;
     }
 }
-
+.sub-message-img {
+    @media screen and (max-width:768px) {
+    width: 100%;
+    padding-top: 30px;
+    }
+}
 .contact-name {
     display: flex;
     gap: 40px;
@@ -183,9 +202,10 @@
    margin-top: 29px;
    padding: 18px 40px 18px 18px;
    border: #B1C6DC solid 1px;
-   width: 216px;
+   max-width: 216px;
+   width: 100%;
 }
-#js-submit {
+#input-submit {
     display: block;
     margin-top: 70px;
     padding: 20px 30px;
@@ -212,6 +232,34 @@
         background-color: #fff;
     }
 }
+/* Style for the submit button */
+.input-submit {
+    padding: 10px 20px; /* Set padding */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Optional: for rounded corners */
+    background-color: #4282B8; /* Set background color */
+    color: #fff; /* Set text color */
+    font-size: 16px; /* Set font size */
+    cursor: pointer; /* Set cursor to pointer */
+    transition: background-color 0.3s; /* Optional: for smooth color transition */
+    text-align: center;
+  }
+  
+  /* Hover State */
+  .input-submit:hover {
+    background-color: #4282B8; /* Darken background color when hovered */
+  }
+  
+  /* Active State */
+  .input-submit:active {
+    background-color: #1c598a; /* Darken background color when active */
+  }
+  
+  /* Focus State */
+  .input-submit:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
+  }
 
 .input-text, .input-email, .input-radio, .input-submit {
     padding: 0;
@@ -250,6 +298,9 @@
     margin-top: 40px;
     padding-left: 0;
     margin-left: 68px;
+    @media screen and (max-width: 1024px) {
+       margin-left: 0px; 
+    }
   }
   .check-box {
     position: relative;

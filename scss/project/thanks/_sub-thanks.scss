@@ -3,9 +3,105 @@
 }
 
 .sub-thanks-box {
-    margin-top: 65px;
+    margin-top: 90px;
 }
 
 .sub-thanks-box-inner {
     text-align: left;
+}
+.sub-thanks-button {
+    margin-top: 45px;
+    @media screen and (max-width: 1280px) {
+        margin-top: 10px;
+    }
+    @media screen and (max-width: 375px) {
+        margin-left: 10%;
+    }
+}
+.sub-thanks-button a {
+    display: inline-block;
+    padding: 22px 70px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1;
+    border-radius: 10px;
+    border: 1px solid #4282B8;
+    background-color: #4282B8;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 25px;
+        right: 20px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    &:hover {
+        background: #fff;
+        color: #4282B8;
+    }
+    &:hover::before {
+        background-color:#4282B8;
+    }
+
+    @media screen and (max-width: 1280px) {
+        margin-top: 40px;
+    }
+}
+.thanks-chart-box {
+    text-align: center;
+    display: block;
+    border: #4282B8 3px solid;
+    background-color: #fff;
+    color: #4282B8;
+    max-width: 209px;
+    width: 100%;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: 46%;
+        right: -30%;
+        width: 30%;
+        height: 1px;
+        border: #4282B8 1px solid;
+        
+    }
+}
+.thanks-chart-box2 {
+    text-align: center;
+    display: block;
+    border: #4282B8 3px solid;
+    background-color: #4282B8;
+    color: #fff;
+    max-width: 209px;
+    width: 100%;
+  
+}
+
+.sub-thanks-inner {
+    margin-top: 165px;
+    padding-left: 26px;
+    padding-top: 0px;
+    padding-bottom: 44px;
+    @media screen and (max-width: 1280px) {
+        padding-top: 20px;
+        margin-top: 60px;
+    }
+}
+.sub-thanks-footer {
+    margin-top: 120px;
+    @media screen and (max-width: 1280px) {
+        margin-top: 56px;
+    }
 }

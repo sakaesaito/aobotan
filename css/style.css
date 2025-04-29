@@ -1592,6 +1592,7 @@ form {
     margin-left: 0;
     padding-left: 20px;
     margin-top: 60px;
+    padding-bottom: 0px;
   }
 }
 
@@ -1619,6 +1620,7 @@ form {
 @media screen and (max-width: 768px) {
   .top-contact-box {
     width: 350px;
+    padding-bottom: 40px;
   }
 }
 
@@ -1813,6 +1815,12 @@ form {
   margin-top: 128px;
   margin-bottom: 30px;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 0;
+    margin-right: 54px;
+  }
 }
 
 .footer-inner {
@@ -2344,12 +2352,16 @@ small {
 }
 @media screen and (max-width: 768px) {
   .sub-title {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 
 .sub-massage-main {
   max-width: 420px;
+  width: 100%;
+}
+.sub-massage-main img {
+  max-width: 156px;
   width: 100%;
 }
 
@@ -2358,7 +2370,7 @@ small {
   font-weight: 400;
   line-height: 1.8;
   max-width: 420px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 @media screen and (max-width: 768px) {
   .sub-message {
@@ -2446,26 +2458,15 @@ small {
   display: block;
 }
 
-.sub-about-works {
-  font-size: 20px;
+.works {
+  font-size: 24px;
   font-weight: 700;
   margin-top: 80px;
 }
-.sub-about-works__works2 {
-  margin-top: 51px;
-}
 @media screen and (max-width: 768px) {
-  .sub-about-works__works2 {
+  .works {
     margin-top: 30px;
     font-size: 20px;
-  }
-}
-.sub-about-works__works3 {
-  margin-top: 56px;
-}
-@media screen and (max-width: 768px) {
-  .sub-about-works__works3 {
-    margin-top: 100px;
   }
 }
 
@@ -2485,11 +2486,11 @@ small {
 }
 
 .sub-about-history {
-  margin-right: 20px;
+  padding-right: 20px;
 }
 @media screen and (max-width: 768px) {
   .sub-about-history {
-    margin-right: 0;
+    padding-right: 0;
   }
 }
 
@@ -2563,7 +2564,6 @@ small {
   margin-top: 58px;
   max-width: 953px;
   width: 100%;
-  margin-right: 20px;
 }
 
 .sub-about-index {
@@ -2629,8 +2629,13 @@ small {
   display: none;
 }
 
-.sub-about-works__works2 {
-  font-size: 24px;
+.sub-about-works {
+  font-size: 32px;
+}
+@media screen and (max-width: 768px) {
+  .sub-about-works {
+    font-size: 20px;
+  }
 }
 
 .sub-about-works-box {
@@ -2686,14 +2691,11 @@ small {
 
 .sub-about-contact {
   padding-left: 24px;
-  padding-bottom: 50px;
   margin-top: 184px;
 }
 @media screen and (max-width: 1280px) {
   .sub-about-contact {
-    padding-top: 27px;
     padding-left: 20px;
-    padding-bottom: 41px;
     margin-top: 64px;
   }
 }
@@ -2710,6 +2712,7 @@ small {
 @media screen and (max-width: 768px) {
   .sub-service-box {
     margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -2950,8 +2953,8 @@ small {
 }
 @media screen and (max-width: 768px) {
   .sub-title-box {
-    margin-right: 10px;
-    margin-left: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 
@@ -2968,6 +2971,7 @@ small {
   max-width: 1120px;
   display: flex;
   gap: 13.5%;
+  padding-top: 24px;
 }
 @media screen and (max-width: 1280px) {
   .sub-contact-box {
@@ -2996,8 +3000,8 @@ small {
   background-color: #4282B8;
   padding-top: 26px;
   padding-bottom: 11px;
-  color: #fff;
-  width: 209px;
+  max-width: 209px;
+  width: 100%;
   text-align: center;
 }
 
@@ -3006,7 +3010,19 @@ small {
   border: #4282B8 3px solid;
   background-color: #4282B8;
   color: #fff;
-  width: 209px;
+  max-width: 209px;
+  width: 100%;
+  position: relative;
+}
+.chart-box::after {
+  position: absolute;
+  content: "";
+  bottom: 46%;
+  right: -30%;
+  width: 10px;
+  height: 1px;
+  border: #4282B8 1px solid;
+  width: 57px;
 }
 
 .chart-box2 {
@@ -3014,7 +3030,8 @@ small {
   border: #4282B8 3px solid;
   background-color: #fff;
   color: #4282B8;
-  width: 209px;
+  max-width: 209px;
+  width: 100%;
 }
 
 .chart-no {
@@ -3040,7 +3057,7 @@ small {
 .sub-contact-inner {
   margin-top: 68px;
   padding-left: 24px;
-  padding-top: 0px;
+  padding-top: 25px;
 }
 
 .sub-contact-note {
@@ -3080,7 +3097,7 @@ small {
   margin-top: 14px;
 }
 
-.form-aria {
+.form {
   margin-top: 60px;
   text-align: left;
 }
@@ -3097,6 +3114,13 @@ small {
 .thanks-button:hover {
   background: #fff;
   color: #4282B8;
+}
+
+@media screen and (max-width: 768px) {
+  .sub-message-img {
+    width: 100%;
+    padding-top: 30px;
+  }
 }
 
 .contact-name {
@@ -3138,10 +3162,11 @@ small {
   margin-top: 29px;
   padding: 18px 40px 18px 18px;
   border: #B1C6DC solid 1px;
-  width: 216px;
+  max-width: 216px;
+  width: 100%;
 }
 
-#js-submit {
+#input-submit {
   display: block;
   margin-top: 70px;
   padding: 20px 30px;
@@ -3157,7 +3182,7 @@ small {
   position: relative;
   cursor: pointer;
 }
-#js-submit::before {
+#input-submit::before {
   position: absolute;
   content: "";
   top: 25px;
@@ -3166,6 +3191,35 @@ small {
   height: 10px;
   border-radius: 50%;
   background-color: #fff;
+}
+
+/* Style for the submit button */
+.input-submit {
+  padding: 10px 20px; /* Set padding */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Optional: for rounded corners */
+  background-color: #4282B8; /* Set background color */
+  color: #fff; /* Set text color */
+  font-size: 16px; /* Set font size */
+  cursor: pointer; /* Set cursor to pointer */
+  transition: background-color 0.3s; /* Optional: for smooth color transition */
+  text-align: center;
+}
+
+/* Hover State */
+.input-submit:hover {
+  background-color: #4282B8; /* Darken background color when hovered */
+}
+
+/* Active State */
+.input-submit:active {
+  background-color: #1c598a; /* Darken background color when active */
+}
+
+/* Focus State */
+.input-submit:focus {
+  outline: none; /* Remove outline */
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
 }
 
 .input-text, .input-email, .input-radio, .input-submit {
@@ -3207,6 +3261,11 @@ small {
   margin-top: 40px;
   padding-left: 0;
   margin-left: 68px;
+}
+@media screen and (max-width: 1024px) {
+  .check-label2 {
+    margin-left: 0px;
+  }
 }
 
 .check-box {
@@ -3286,9 +3345,114 @@ small {
 }
 
 .sub-thanks-box {
-  margin-top: 65px;
+  margin-top: 90px;
 }
 
 .sub-thanks-box-inner {
   text-align: left;
+}
+
+.sub-thanks-button {
+  margin-top: 45px;
+}
+@media screen and (max-width: 1280px) {
+  .sub-thanks-button {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .sub-thanks-button {
+    margin-left: 10%;
+  }
+}
+
+.sub-thanks-button a {
+  display: inline-block;
+  padding: 22px 70px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 10px;
+  border: 1px solid #4282B8;
+  background-color: #4282B8;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  position: relative;
+}
+.sub-thanks-button a::before {
+  position: absolute;
+  content: "";
+  top: 25px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.sub-thanks-button a:hover {
+  background: #fff;
+  color: #4282B8;
+}
+.sub-thanks-button a:hover::before {
+  background-color: #4282B8;
+}
+@media screen and (max-width: 1280px) {
+  .sub-thanks-button a {
+    margin-top: 40px;
+  }
+}
+
+.thanks-chart-box {
+  text-align: center;
+  display: block;
+  border: #4282B8 3px solid;
+  background-color: #fff;
+  color: #4282B8;
+  max-width: 209px;
+  width: 100%;
+  position: relative;
+}
+.thanks-chart-box::after {
+  position: absolute;
+  content: "";
+  bottom: 46%;
+  right: -30%;
+  width: 30%;
+  height: 1px;
+  border: #4282B8 1px solid;
+}
+
+.thanks-chart-box2 {
+  text-align: center;
+  display: block;
+  border: #4282B8 3px solid;
+  background-color: #4282B8;
+  color: #fff;
+  max-width: 209px;
+  width: 100%;
+}
+
+.sub-thanks-inner {
+  margin-top: 165px;
+  padding-left: 26px;
+  padding-top: 0px;
+  padding-bottom: 44px;
+}
+@media screen and (max-width: 1280px) {
+  .sub-thanks-inner {
+    padding-top: 20px;
+    margin-top: 60px;
+  }
+}
+
+.sub-thanks-footer {
+  margin-top: 120px;
+}
+@media screen and (max-width: 1280px) {
+  .sub-thanks-footer {
+    margin-top: 56px;
+  }
 }/*# sourceMappingURL=style.css.map */
