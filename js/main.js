@@ -178,20 +178,54 @@ $(function () {
 
 
 // form ページの読み込みが完了した後に以下の処理を実行
-$(document).ready(function () {
-  $(".form").submit(function (event) { // クラス名「.form」を持つフォームが送信されたときに処理を実行
-    event.preventDefault(); // フォームのデフォルト送信を防ぐ
-    var $form = $(this);  // 送信されたフォームを jQuery オブジェクトとして取得
-    var formData = $form.serialize(); // フォーム内のデータを URL エンコードされた文字列として取得
-    $form.find("#js-submit").fadeOut();// ボタンをフェードアウト
-    setTimeout(function () { // 0.7秒（700ミリ秒）後にメッセージを表示
-      $(".contact_form__item").fadeOut();// 入力フィールドを非表示にする
-      $form[0].reset(); // フォームの内容をリセット
-      //window.location.href = "thanks.html";
-    }, 700);
+$(document).ready(function () { // ページの読み込みが完了したら以下の処理を実行
+  // 入力内容のバリデーション関数を定義
+  function validateForm() {
+      let isValid = true; // 初期状態は「入力OK」とする
+
+      // 「お問い合わせの種類」が1つでも選択されているか確認
+      if ($('input[name="check-name"]:checked').length === 0) isValid = false;
+
+      // 姓の入力が空かどうか確認
+      if ($('input[name="name"]').val().trim() === '') isValid = false;
+
+      // 名の入力が空かどうか確認（2番目の input）
+      if ($('.contact-name input').eq(1).val().trim() === '') isValid = false;
+
+      // メールアドレスが入力されているか確認
+      if ($('input[name="email"]').val().trim() === '') isValid = false;
+
+      // 住所が入力されているか確認
+      if ($('input[name="address"]').val().trim() === '') isValid = false;
+
+      // 「確認チェックボックス」がチェックされているか確認
+      if (!$('.check-box').is(':checked')) isValid = false;
+
+      // isValid が true なら送信ボタンを有効化、false なら無効化
+      $('#js-submit').prop('disabled', !isValid);
+  }
+
+  // 入力フィールドに変化があったらバリデーション関数を実行
+  $('input').on('input change', function () {
+      validateForm(); // 入力ごとにチェック
   });
-},
-)
+
+  // フォームが送信されたときの処理
+  $("form").submit(function (event) {
+      event.preventDefault(); // デフォルトのフォーム送信を防ぐ（リロード防止）
+
+      var $form = $(this); // このフォーム要素を変数に保存
+      var formData = $form.serialize(); // 入力内容を URL エンコード形式で取得（今回は使わない）
+
+      $form.find("#js-submit").fadeOut(); // 「送信する」ボタンをフェードアウトで非表示にする
+
+      setTimeout(function () { // 0.7秒後に以下の処理を実行
+          $(".contact_form__item").fadeOut(); // 入力フォームを非表示にする（このクラスが無ければ削除可）
+          $form[0].reset(); // フォームの入力内容をリセット（初期状態に戻す）
+          window.location.href = "thank/index.html"; // thanksページに遷移する
+      }, 700); // 700ミリ秒後に実行
+  });
+});
 
 
 
@@ -202,12 +236,12 @@ $(document).ready(function () {
   const $submitBtn = $('#js-submit')
   // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
   // ユーザーが値を変更するたびに、以下の処理が実行
-  $('.form input,.form textarea').on('change', function () {
+  $('#form input,#form textarea').on('change', function () {
     // 入力フィールドがすべて空でないか確認する
     if (
-      $('.form input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
-      $('.form input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
-      $('.form input[type="address"]').val() !== ""// 住所入力フィールドが空でないか確認
+      $('#form input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
+      $('#form input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
+      $('#form input[type="address"]').val() !== ""// 住所入力フィールドが空でないか確認
     ) {
       // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
       $submitBtn.prop('disabled', false);
@@ -217,6 +251,7 @@ $(document).ready(function () {
     }
   });
 });
+
 
 
 // スムーススクロール

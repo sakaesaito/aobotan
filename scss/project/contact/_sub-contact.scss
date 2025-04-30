@@ -148,7 +148,8 @@
   margin-top: 143px;
 }
 
-.form {
+
+#form {
     margin-top: 60px;
     text-align: left;
 }
@@ -210,6 +211,9 @@
    color: #000;
 }
 
+input::placeholder {
+  color: #C2C2C2;
+}
 
 .input-text, .input-email, .input-radio, .input-submit {
     padding: 0;
