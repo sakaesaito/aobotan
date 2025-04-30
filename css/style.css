@@ -2944,7 +2944,7 @@ small {
 }
 
 #sub-contact {
-  margin-top: 65px;
+  margin-top: 66px;
 }
 
 .sub-title-box {
@@ -2962,16 +2962,11 @@ small {
   display: inline-block;
 }
 
-.sub-contact-message {
-  margin-bottom: -20px;
-}
-
 .sub-contact-box {
-  margin-top: 90px;
+  margin-top: 60px;
   max-width: 1120px;
   display: flex;
   gap: 13.5%;
-  padding-top: 24px;
 }
 @media screen and (max-width: 1280px) {
   .sub-contact-box {
@@ -2979,6 +2974,10 @@ small {
     max-width: 700px;
     width: 100%;
   }
+}
+
+.sub-contact-message {
+  margin-top: 70px;
 }
 
 .sub-contact-box-inner {
@@ -3055,9 +3054,9 @@ small {
 }
 
 .sub-contact-inner {
-  margin-top: 68px;
+  margin-top: 60px;
   padding-left: 24px;
-  padding-top: 25px;
+  padding-bottom: 24px;
 }
 @media screen and (max-width: 768px) {
   .sub-contact-inner {
@@ -3097,9 +3096,17 @@ small {
   padding-right: 32px;
 }
 
+.sub-contact-text-tel {
+  margin-left: 5px;
+}
+
 .sub-contact-time {
   font-size: 12px;
   margin-top: 14px;
+}
+
+.sub-footer {
+  margin-top: 143px;
 }
 
 .form {
@@ -3160,33 +3167,8 @@ small {
   border: #B1C6DC solid 1px;
   max-width: 216px;
   width: 100%;
-}
-
-#input-submit {
-  display: block;
-  margin-top: 70px;
-  padding: 20px 30px;
-  border: #B1C6DC solid 1px;
-  background-color: #4282B8;
-  max-width: 284px;
-  width: 100%;
-  color: #fff;
-  border-radius: 10px;
-  margin-inline: auto;
-  text-align: center;
-  transition: all 0.3s ease 0s;
-  position: relative;
-  cursor: pointer;
-}
-#input-submit::before {
-  position: absolute;
-  content: "";
-  top: 25px;
-  right: 20px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #fff;
+  background-color: #F8F8F8;
+  color: #000;
 }
 
 .input-text, .input-email, .input-radio, .input-submit {
@@ -3199,7 +3181,6 @@ small {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  /* リセットじゃない部分 */
 }
 
 .input-text:focus,
@@ -3226,6 +3207,7 @@ small {
   margin-top: 40px;
   padding-left: 0;
   margin-left: 68px;
+  font-weight: 400;
 }
 @media screen and (max-width: 1024px) {
   .check-label2 {
@@ -3307,18 +3289,36 @@ small {
 
 /* Style for the submit button */
 .input-submit {
-  margin-top: 27px;
-  padding: 20px 30px; /* Set padding */
+  display: block;
+  margin-top: 70px;
+  margin-inline: auto;
+  padding: 22px 110px; /* Set padding */
   border: #B1C6DC solid 1px; /* Remove border */
-  border-radius: 4px; /* Optional: for rounded corners */
-  background-color: #3498db; /* Set background color */
+  border-radius: 10px; /* Optional: for rounded corners */
+  background-color: #4282B8; /* Set background color */
   color: #fff; /* Set text color */
   font-size: 16px; /* Set font size */
   cursor: pointer; /* Set cursor to pointer */
-  transition: background-color 0.3s; /* Optional: for smooth color transition */
+  transition: background-color all 0.3s ease 0s; /* Optional: for smooth color transition */
   text-align: center;
-  max-width: 209px;
+  max-width: 284px;
   width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+#input-submit {
+  margin-inline: auto;
+}
+#input-submit::before {
+  position: absolute;
+  content: "";
+  top: 25px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
 }
 
 /* Hover State */
