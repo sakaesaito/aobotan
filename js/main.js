@@ -220,7 +220,7 @@ $(document).ready(function () { // ページの読み込みが完了したら以
       $form.find("#js-submit").fadeOut(); // 「送信する」ボタンをフェードアウトで非表示にする
 
       setTimeout(function () { // 0.7秒後に以下の処理を実行
-          $(".contact_form__item").fadeOut(); // 入力フォームを非表示にする（このクラスが無ければ削除可）
+          
           $form[0].reset(); // フォームの入力内容をリセット（初期状態に戻す）
           window.location.href = "thank/index.html"; // thanksページに遷移する
       }, 700); // 700ミリ秒後に実行

@@ -3325,11 +3325,6 @@ input::placeholder {
   background-color: #fff;
 }
 
-/* Hover State */
-.input-submit:hover {
-  background-color: #2980b9; /* Darken background color when hovered */
-}
-
 /* Active State */
 .input-submit:active {
   background-color: #1c598a; /* Darken background color when active */
