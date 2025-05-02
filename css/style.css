@@ -3114,20 +3114,6 @@ small {
   text-align: left;
 }
 
-.thanks-button {
-  margin-top: 50px;
-  background-color: #4282B8;
-  color: #fff;
-  border-color: #4282B8;
-}
-.thanks-button::before {
-  background-color: #fff;
-}
-.thanks-button:hover {
-  background: #fff;
-  color: #4282B8;
-}
-
 @media screen and (max-width: 768px) {
   .sub-message-img {
     width: 100%;
@@ -3175,7 +3161,10 @@ input::placeholder {
   color: #C2C2C2;
 }
 
-.input-text, .input-email, .input-radio, .input-submit {
+.input-text,
+.input-email,
+.input-radio,
+.input-submit {
   padding: 0;
   border: none;
   border-radius: 0;
@@ -3202,7 +3191,8 @@ input::placeholder {
 .check-label {
   position: relative;
   display: inline-block;
-  padding-left: 26px; /* カスタムチェックボックスにスペースを確保 */
+  padding-left: 26px;
+  /* カスタムチェックボックスにスペースを確保 */
   cursor: pointer;
   margin-top: 14px;
 }
@@ -3222,7 +3212,8 @@ input::placeholder {
 .check-box {
   position: relative;
   display: inline-block;
-  padding-left: 3px; /* カスタムチェックボックスにスペースを確保 */
+  padding-left: 3px;
+  /* カスタムチェックボックスにスペースを確保 */
   cursor: pointer;
 }
 
@@ -3231,8 +3222,10 @@ input::placeholder {
   display: inline-block;
   width: 18px;
   height: 18px;
-  border: 2px solid #4282B8; /* Border color */
-  border-radius: 2px; /* Optional: for rounded corners */
+  border: 2px solid #4282B8;
+  /* Border color */
+  border-radius: 2px;
+  /* Optional: for rounded corners */
   position: absolute;
   left: 0;
   top: 50%;
@@ -3257,8 +3250,10 @@ input::placeholder {
   display: inline-block;
   width: 18px;
   height: 18px;
-  border: 2px solid #4282B8; /* Border color */
-  border-radius: 10px; /* Optional: for rounded corners */
+  border: 2px solid #4282B8;
+  /* Border color */
+  border-radius: 10px;
+  /* Optional: for rounded corners */
   position: absolute;
   left: 0;
   top: 50%;
@@ -3275,7 +3270,8 @@ input::placeholder {
   border: solid #4282B8;
   position: absolute;
   top: 3px;
-  left: 4px; /* Adjusted position */
+  left: 4px;
+  /* Adjusted position */
 }
 
 .check-box:checked + .check-label-span2::after {
@@ -3287,7 +3283,8 @@ input::placeholder {
   border-width: 0 2px 2px 0;
   position: absolute;
   top: 50%;
-  left: 8px; /* Adjusted position */
+  left: 8px;
+  /* Adjusted position */
   transform: translateY(-50%) rotate(45deg);
 }
 
@@ -3296,14 +3293,22 @@ input::placeholder {
   display: block;
   margin-top: 70px;
   margin-inline: auto;
-  padding: 22px 110px; /* Set padding */
-  border: #B1C6DC solid 1px; /* Remove border */
-  border-radius: 10px; /* Optional: for rounded corners */
-  background-color: #4282B8; /* Set background color */
-  color: #fff; /* Set text color */
-  font-size: 16px; /* Set font size */
-  cursor: pointer; /* Set cursor to pointer */
-  transition: background-color all 0.3s ease 0s; /* Optional: for smooth color transition */
+  padding: 22px 110px;
+  /* Set padding */
+  border: #B1C6DC solid 1px;
+  /* Remove border */
+  border-radius: 10px;
+  /* Optional: for rounded corners */
+  background-color: #4282B8;
+  /* Set background color */
+  color: #fff;
+  /* Set text color */
+  font-size: 16px;
+  /* Set font size */
+  cursor: pointer;
+  /* Set cursor to pointer */
+  transition: background-color all 0.3s ease 0s;
+  /* Optional: for smooth color transition */
   text-align: center;
   max-width: 284px;
   width: 100%;
@@ -3325,42 +3330,27 @@ input::placeholder {
   background-color: #fff;
 }
 
+.input-submit:disabled {
+  background-color: #ccc !important;
+  color: #999 !important;
+  cursor: not-allowed;
+}
+
 /* Active State */
 .input-submit:active {
-  background-color: #1c598a; /* Darken background color when active */
+  background-color: #1c598a;
+  /* Darken background color when active */
 }
 
-/* Focus State */
-.input-submit:focus {
-  outline: none; /* Remove outline */
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
+.form-wrapper {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.custom-file-upload {
-  position: relative;
-  display: inline-block;
-}
-
-.input-file {
-  display: none;
-}
-
-.custom-file-upload button {
-  padding: 10px;
-  border: 2px solid #000;
-  background-color: #f0f0f0;
-  border-radius: 4px;
-  cursor: pointer;
-  color: #000;
-}
-
-.custom-file-upload button:hover {
-  background-color: #d0d0d0;
-}
-
-.custom-file-upload button:focus {
-  border-color: #3498db; /* Border color when focused */
-  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
+.flex-box {
+  display: flex;
+  align-items: center;
 }
 
 #sub-thanks {

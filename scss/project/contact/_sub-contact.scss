@@ -1,336 +1,375 @@
 #sub-contact {
-    margin-top: 66px;
+  margin-top: 66px;
 }
 
 .sub-title-box {
-    max-width: 1120px;
-    width: 100%;
-    @media screen and (max-width: 768px) {
+  max-width: 1120px;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
     padding-right: 10px;
     padding-left: 10px;
-    }
+  }
 }
 
 .sub-title {
-    display: inline-block;
+  display: inline-block;
 }
 
 .sub-contact-box {
-    margin-top: 60px;
-    max-width: 1120px;
-    display: flex;
-    gap: 13.5%;
+  margin-top: 60px;
+  max-width: 1120px;
+  display: flex;
+  gap: 13.5%;
 
-    @media screen and (max-width: 1280px) {
-        display: block;
-        max-width: 700px;
-        width: 100%;
-    }
+  @media screen and (max-width: 1280px) {
+    display: block;
+    max-width: 700px;
+    width: 100%;
+  }
 }
+
 .sub-contact-message {
   margin-top: 70px;
 }
+
 .sub-contact-box-inner {
-    text-align: center;
-    max-width: 470px;
-    width: 100%;
+  text-align: center;
+  max-width: 470px;
+  width: 100%;
 }
 
 .sub-contact-button {
-    display: flex;
-    width: 100%;
-    gap: 12%;
+  display: flex;
+  width: 100%;
+  gap: 12%;
 }
 
 .chart {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1;
-    background-color: #4282B8;
-    padding-top: 26px;
-    padding-bottom: 11px;
-    max-width: 209px;
-    width: 100%;
-    text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  background-color: #4282B8;
+  padding-top: 26px;
+  padding-bottom: 11px;
+  max-width: 209px;
+  width: 100%;
+  text-align: center;
 }
+
 .chart-box {
-    display: block;
-    border: #4282B8 3px solid;
-    background-color: #4282B8;
-    color: #fff;
-    max-width: 209px;
-    width: 100%;
-    position: relative;
-    &::after {
-        position: absolute;
-        content: "";
-        bottom: 46%;
-        right: -30%;
-        width: 10px;
-        height: 1px;
-        border: #4282B8 1px solid;
-        width: 57px;
-    }
+  display: block;
+  border: #4282B8 3px solid;
+  background-color: #4282B8;
+  color: #fff;
+  max-width: 209px;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 46%;
+    right: -30%;
+    width: 10px;
+    height: 1px;
+    border: #4282B8 1px solid;
+    width: 57px;
+  }
 }
+
 .chart-box2 {
-    display: block;
-    border: #4282B8 3px solid;
-    background-color: #fff;
-    color: #4282B8;
-    max-width: 209px;
-    width: 100%;
+  display: block;
+  border: #4282B8 3px solid;
+  background-color: #fff;
+  color: #4282B8;
+  max-width: 209px;
+  width: 100%;
 }
 
 .chart-no {
-    font-size: 12px;
-    padding-top: 2px;   
+  font-size: 12px;
+  padding-top: 2px;
 }
+
 .chart-text {
-    margin-top: 12px;
-    padding-bottom: 9px;
+  margin-top: 12px;
+  padding-bottom: 9px;
 }
 
 .sub-contact-info {
-    max-width: 260px;
-    width: 100%;
-    @media screen and (max-width: 1280px) {
-        margin-top: 50px;
-    }
+  max-width: 260px;
+  width: 100%;
+
+  @media screen and (max-width: 1280px) {
+    margin-top: 50px;
+  }
 }
+
 .sub-contact-inner {
-    margin-top: 60px;
-    padding-left: 24px;
-    padding-bottom: 24px;
-    @media screen and (max-width: 768px) {
-        padding-bottom: 20px;
-    }
+  margin-top: 60px;
+  padding-left: 24px;
+  padding-bottom: 24px;
+
+  @media screen and (max-width: 768px) {
+    padding-bottom: 20px;
+  }
 
 }
+
 .sub-contact-note {
-    font-size: 16px;
-    line-height: 1;
+  font-size: 16px;
+  line-height: 1;
 }
+
 .sub-contact-access {
-    margin-top: 43px;
+  margin-top: 43px;
 }
+
 .sub-contact-tel {
-    font-family: Kanit;
-    font-weight: 400;
-    font-size: 32px;
-    margin-top: 29px;
+  font-family: Kanit;
+  font-weight: 400;
+  font-size: 32px;
+  margin-top: 29px;
 
+  a[href*="tel:"] {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width:1280px) {
     a[href*="tel:"] {
-        pointer-events: none;
-        cursor: default;
-        text-decoration: none;
+      pointer-events: all;
+      cursor: pointer;
+      text-decoration: none;
     }
-
-    @media screen and (max-width:1280px) {
-        a[href*="tel:"] {
-            pointer-events: all;
-            cursor: pointer;
-            text-decoration: none;
-        }
-    }
+  }
 
 }
+
 .sub-contact-text {
-    padding-right: 32px;
+  padding-right: 32px;
 }
+
 .sub-contact-text-tel {
   margin-left: 5px;
 }
+
 .sub-contact-time {
-    font-size: 12px;
-    margin-top: 14px;
+  font-size: 12px;
+  margin-top: 14px;
 }
+
 .sub-footer {
   margin-top: 143px;
 }
 
 
 #form {
-    margin-top: 60px;
-    text-align: left;
+  margin-top: 60px;
+  text-align: left;
 }
 
-.thanks-button {
-    margin-top: 50px;
-    background-color: #4282B8;
-    color: #fff;
-    border-color: #4282B8;
+// .thanks-button {
+//   margin-top: 50px;
+//   background-color: #4282B8;
+//   color: #fff;
+//   border-color: #4282B8;
 
-    &::before {
-        background-color: #fff;
-    }
+//   &::before {
+//     background-color: #fff;
+//   }
 
-    &:hover {
-        background: #fff;
-        color: #4282B8;
-    }
-}
+//   &:hover {
+//     background: #fff;
+//     color: #4282B8;
+//   }
+// }
+
 .sub-message-img {
-    @media screen and (max-width:768px) {
+  @media screen and (max-width:768px) {
     width: 100%;
     padding-top: 30px;
-    }
+  }
 }
+
 .contact-name {
-    display: flex;
-    gap: 40px;
-    max-width: 470px;
-    width: 100%;
+  display: flex;
+  gap: 40px;
+  max-width: 470px;
+  width: 100%;
 }
+
 .form-radio {
-    display: block;
+  display: block;
 }
 
 .label {
-    display: block;
-    margin-top: 26px;
+  display: block;
+  margin-top: 26px;
 }
+
 .input {
-    margin-top: 8px;
-    padding: 18px 30px 18px 18px;
-    border: #B1C6DC solid 1px;
-    background-color: #F8F8F8;
-    max-width: 470px;
-    width: 100%;
-    color: #000;
+  margin-top: 8px;
+  padding: 18px 30px 18px 18px;
+  border: #B1C6DC solid 1px;
+  background-color: #F8F8F8;
+  max-width: 470px;
+  width: 100%;
+  color: #000;
 }
 
 
 
 .input-name {
-   margin-top: 29px;
-   padding: 18px 40px 18px 18px;
-   border: #B1C6DC solid 1px;
-   max-width: 216px;
-   width: 100%;
-   background-color: #F8F8F8;
-   color: #000;
+  margin-top: 29px;
+  padding: 18px 40px 18px 18px;
+  border: #B1C6DC solid 1px;
+  max-width: 216px;
+  width: 100%;
+  background-color: #F8F8F8;
+  color: #000;
 }
 
 input::placeholder {
   color: #C2C2C2;
 }
 
-.input-text, .input-email, .input-radio, .input-submit {
-    padding: 0;
-    border: none;
-    border-radius: 0;
-    outline: none;
-    background: none;
-    box-shadow: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-  .input-text:focus,
-  .input-email:focus {
-    outline: 2px solid #3498db;
-    outline-offset: 0;
-  }
+.input-text,
+.input-email,
+.input-radio,
+.input-submit {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
-  .check-test {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-  }
-  
-  .check-label {
-    position: relative;
-    display: inline-block;
-    padding-left: 26px;  /* カスタムチェックボックスにスペースを確保 */
-    cursor: pointer;
-    margin-top: 14px;
-  }
-  .check-label2 {
-    margin-top: 40px;
-    padding-left: 0;
-    margin-left: 68px;
-    font-weight: 400;
-    @media screen and (max-width: 1024px) {
-       margin-left: 0px; 
-    }
-  }
-  .check-box {
-    position: relative;
-    display: inline-block;
-    padding-left: 3px;  /* カスタムチェックボックスにスペースを確保 */
-   
-    cursor: pointer;
-  }
-  .check-label-span2::before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #4282B8; /* Border color */
-    border-radius: 2px; /* Optional: for rounded corners */
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    
-  }
-  .star {
-    color: #FE0000;
-    font-size: 12px;
-    display: inline-block;
-    margin-left: 10px;
-  }
-  .required {
-    color: #000;
-    font-size: 12px;
-  }
+.input-text:focus,
+.input-email:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 0;
+}
 
-  /* Custom Checkbox Design */
-  .check-label-span::before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #4282B8; /* Border color */
-    border-radius: 10px; /* Optional: for rounded corners */
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+.check-test {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.check-label {
+  position: relative;
+  display: inline-block;
+  padding-left: 26px;
+  /* カスタムチェックボックスにスペースを確保 */
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+.check-label2 {
+  margin-top: 40px;
+  padding-left: 0;
+  margin-left: 68px;
+  font-weight: 400;
+
+  @media screen and (max-width: 1024px) {
+    margin-left: 0px;
   }
-  
+}
+
+.check-box {
+  position: relative;
+  display: inline-block;
+  padding-left: 3px;
+  /* カスタムチェックボックスにスペースを確保 */
+
+  cursor: pointer;
+}
+
+.check-label-span2::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #4282B8;
+  /* Border color */
+  border-radius: 2px;
+  /* Optional: for rounded corners */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+.star {
+  color: #FE0000;
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.required {
+  color: #000;
+  font-size: 12px;
+}
+
+/* Custom Checkbox Design */
+.check-label-span::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #4282B8;
+  /* Border color */
+  border-radius: 10px;
+  /* Optional: for rounded corners */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 //   /* Custom Checkbox Checked State */
 //   .check-test:checked + .check-label-span::before {
 //     border-color: #3498db; /* Border color when checked */
 //   }
-  
+
 // ラジオボタンの内側の丸印
-  .check-test:checked + .check-label-span::after {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #4282B8;
-    border: solid #4282B8;
-    position: absolute;
-    top: 3px;
-    left: 4px;  /* Adjusted position */
-  }
-  
-  .check-box:checked + .check-label-span2::after {
-    content: "";
-    display: block;
-    width: 5px;
-    height: 10px;
-    border: solid #000;
-    border-width: 0 2px 2px 0;
-    position: absolute;
-    top: 50%;
-    left: 8px;  /* Adjusted position */
-    transform: translateY(-50%) rotate(45deg);
-  }
-  
+.check-test:checked+.check-label-span::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4282B8;
+  border: solid #4282B8;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  /* Adjusted position */
+}
+
+.check-box:checked+.check-label-span2::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  /* Adjusted position */
+  transform: translateY(-50%) rotate(45deg);
+}
+
 //   /* Focus State */
 //   .check-test:focus + .check-label-span::before {
 //     outline: 2px solid #3498db; /* Outline color when focused */
@@ -340,80 +379,104 @@ input::placeholder {
 // button
 /* Style for the submit button */
 .input-submit {
-    display: block;
-    margin-top: 70px;
-    margin-inline: auto;
-    padding: 22px 110px; /* Set padding */
-    border:  #B1C6DC solid 1px; /* Remove border */
-    border-radius: 10px; /* Optional: for rounded corners */
-    background-color: #4282B8; /* Set background color */
-    color: #fff; /* Set text color */
-    font-size: 16px; /* Set font size */
-    cursor: pointer; /* Set cursor to pointer */
-    transition: background-color all 0.3s ease 0s; /* Optional: for smooth color transition */
-    text-align: center;
-    max-width: 284px;
-    width: 100%;
-    position: relative;
-    cursor: pointer;
+  display: block;
+  margin-top: 70px;
+  margin-inline: auto;
+  padding: 22px 110px;
+  /* Set padding */
+  border: #B1C6DC solid 1px;
+  /* Remove border */
+  border-radius: 10px;
+  /* Optional: for rounded corners */
+  background-color: #4282B8;
+  /* Set background color */
+  color: #fff;
+  /* Set text color */
+  font-size: 16px;
+  /* Set font size */
+  cursor: pointer;
+  /* Set cursor to pointer */
+  transition: background-color all 0.3s ease 0s;
+  /* Optional: for smooth color transition */
+  text-align: center;
+  max-width: 284px;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
 
+}
+
+#input-submit {
+  margin-inline: auto;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
   }
-  #input-submit {
-   
-   
-    
-    margin-inline: auto;
-   
-   
-   
+}
 
-    &::before {
-        position: absolute;
-        content: "";
-        top: 25px;
-        right: 20px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #fff;
-    }
+.input-submit:disabled {
+  background-color: #ccc !important;
+  color: #999 !important;
+  cursor: not-allowed;
 }
 
 
-  
-  /* Active State */
-  .input-submit:active {
-    background-color: #1c598a; /* Darken background color when active */
-  }
-  
-  /* Focus State */
-  .input-submit:focus {
-    outline: none; /* Remove outline */
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
-  }
-  .custom-file-upload {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .input-file {
-    display: none;
-  }
-  
-  .custom-file-upload button {
-    padding: 10px;
-    border: 2px solid #000;
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    cursor: pointer;
-    color: #000;
-  }
-  
-  .custom-file-upload button:hover {
-    background-color: #d0d0d0;
-  }
-  
-  .custom-file-upload button:focus {
-    border-color: #3498db; /* Border color when focused */
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
-  }
+
+/* Active State */
+.input-submit:active {
+  background-color: #1c598a;
+  /* Darken background color when active */
+}
+
+// /* Focus State */
+// .input-submit:focus {
+//   outline: none; /* Remove outline */
+//   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
+// }
+// .custom-file-upload {
+//   position: relative;
+//   display: inline-block;
+// }
+
+// .input-file {
+//   display: none;
+// }
+
+// .custom-file-upload button {
+//   padding: 10px;
+//   border: 2px solid #000;
+//   background-color: #f0f0f0;
+//   border-radius: 4px;
+//   cursor: pointer;
+//   color: #000;
+// }
+
+// .custom-file-upload button:hover {
+//   background-color: #d0d0d0;
+// }
+
+// .custom-file-upload button:focus {
+//   border-color: #3498db; /* Border color when focused */
+//   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
+// }
+
+
+
+
+
+.form-wrapper {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex-box {
+  display: flex;
+  align-items: center;
+}

@@ -176,80 +176,66 @@ $(function () {
 
 
 
+// フォームの実装
+// const $submitBtn = $('#js-submit');
+// $('#form input').on('change input', function () {
+//   const allTextFilled = $('#form input[type="text"]').filter(function () {
+//     return $(this).val().trim() === "";
+//   }).length === 0;
 
-// form ページの読み込みが完了した後に以下の処理を実行
-$(document).ready(function () { // ページの読み込みが完了したら以下の処理を実行
-  // 入力内容のバリデーション関数を定義
-  function validateForm() {
-      let isValid = true; // 初期状態は「入力OK」とする
+//   const emailFilled = $('#form input[type="email"]').val().trim() !== "";
+//   const radioChecked = $('#form input[type="radio"]:checked').length > 0;
+//   const checkboxChecked = $('#form input[type="checkbox"]').is(':checked');
 
-      // 「お問い合わせの種類」が1つでも選択されているか確認
-      if ($('input[name="check-name"]:checked').length === 0) isValid = false;
-
-      // 姓の入力が空かどうか確認
-      if ($('input[name="name"]').val().trim() === '') isValid = false;
-
-      // 名の入力が空かどうか確認（2番目の input）
-      if ($('.contact-name input').eq(1).val().trim() === '') isValid = false;
-
-      // メールアドレスが入力されているか確認
-      if ($('input[name="email"]').val().trim() === '') isValid = false;
-
-      // 住所が入力されているか確認
-      if ($('input[name="address"]').val().trim() === '') isValid = false;
-
-      // 「確認チェックボックス」がチェックされているか確認
-      if (!$('.check-box').is(':checked')) isValid = false;
-
-      // isValid が true なら送信ボタンを有効化、false なら無効化
-      $('#js-submit').prop('disabled', !isValid);
-  }
-
-  // 入力フィールドに変化があったらバリデーション関数を実行
-  $('input').on('input change', function () {
-      validateForm(); // 入力ごとにチェック
-  });
-
-  // フォームが送信されたときの処理
-  $("form").submit(function (event) {
-      event.preventDefault(); // デフォルトのフォーム送信を防ぐ（リロード防止）
-
-      var $form = $(this); // このフォーム要素を変数に保存
-      var formData = $form.serialize(); // 入力内容を URL エンコード形式で取得（今回は使わない）
-
-      $form.find("#js-submit").fadeOut(); // 「送信する」ボタンをフェードアウトで非表示にする
-
-      setTimeout(function () { // 0.7秒後に以下の処理を実行
-          
-          $form[0].reset(); // フォームの入力内容をリセット（初期状態に戻す）
-          window.location.href = "thank/index.html"; // thanksページに遷移する
-      }, 700); // 700ミリ秒後に実行
-  });
-});
+//   if (allTextFilled && emailFilled && radioChecked && checkboxChecked) {
+//     $submitBtn.prop('disabled', false);
+//   } else {
+//     $submitBtn.prop('disabled', true);
+//   }
+// });
 
 
+// //フォームの必須項目チェックでメール送信可能にする実装
+// // ページの読み込みが完了したら、以下の処理を実行する
+// $(document).ready(function () {
+//   // ID「js-submit」のボタン要素を取得し、変数 `$submitBtn` に代入します
+//   const $submitBtn = $('#js-submit')
+//   // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
+//   // ユーザーが値を変更するたびに、以下の処理が実行
+//   $('#form input,#form textarea').on('change', function () {
+//     // 入力フィールドがすべて空でないか確認する
+//     if (
+//       $('#form input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
+//       $('#form input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
+//       $('#form input[type="address"]').val() !== ""// 住所入力フィールドが空でないか確認
+//     ) {
+//       // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
+//       $submitBtn.prop('disabled', false);
+//       // 条件が一つでも満たされない場合、送信ボタン（$submitBtn）を無効化（disabledを有効化）
+//     } else {
+//       $submitBtn.prop('disabled', true);
+//     }
+//   });
+// });
 
-//フォームの必須項目チェックでメール送信可能にする実装
-// ページの読み込みが完了したら、以下の処理を実行する
+
 $(document).ready(function () {
-  // ID「js-submit」のボタン要素を取得し、変数 `$submitBtn` に代入します
+
   const $submitBtn = $('#js-submit')
-  // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
-  // ユーザーが値を変更するたびに、以下の処理が実行
   $('#form input,#form textarea').on('change', function () {
-    // 入力フィールドがすべて空でないか確認する
     if (
-      $('#form input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
-      $('#form input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
-      $('#form input[type="address"]').val() !== ""// 住所入力フィールドが空でないか確認
+      $('#form input[type="text"]').val() !== "" &&
+      $('#form input[type="email"]').val() !== "" &&
+      $('#form input[type="checkbox"]').val() !== "" &&
+      $('#form #privacyCheck').prop('checked') === true
     ) {
-      // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
       $submitBtn.prop('disabled', false);
-      // 条件が一つでも満たされない場合、送信ボタン（$submitBtn）を無効化（disabledを有効化）
+
     } else {
       $submitBtn.prop('disabled', true);
     }
   });
+
 });
 
 
@@ -260,18 +246,10 @@ $(function () {
   
   // id属性（#で始まるリンク）がクリックされた時に処理を実行
   $('a[href^="#"]').click(function () {
-    
-    // クリックされたリンクのhref属性の値を取得
-    var href = $(this).attr("href");
-    
-    // hrefが"#"または空文字ならhtml要素、それ以外ならそのhref先の要素を取得
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    
-    // 対象要素の縦位置（画面上からの距離）を取得
-    var position = target.offset().top;
-    
-    // スクロールの速さ（500ミリ秒）を設定
-    var speed = 500;
+    const speed = 800;
+  let href = $(this).attr("href");
+  let target = $(href == "#" || href == "" ? "html" : href);
+  let position = target.offset().top;
     
     // ページを対象位置までアニメーションしながらスクロール
     $("html, body").animate({
