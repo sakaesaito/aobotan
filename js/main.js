@@ -177,66 +177,27 @@ $(function () {
 
 
 // フォームの実装
-// const $submitBtn = $('#js-submit');
-// $('#form input').on('change input', function () {
-//   const allTextFilled = $('#form input[type="text"]').filter(function () {
-//     return $(this).val().trim() === "";
-//   }).length === 0;
-
-//   const emailFilled = $('#form input[type="email"]').val().trim() !== "";
-//   const radioChecked = $('#form input[type="radio"]:checked').length > 0;
-//   const checkboxChecked = $('#form input[type="checkbox"]').is(':checked');
-
-//   if (allTextFilled && emailFilled && radioChecked && checkboxChecked) {
-//     $submitBtn.prop('disabled', false);
-//   } else {
-//     $submitBtn.prop('disabled', true);
-//   }
-// });
-
-
-// //フォームの必須項目チェックでメール送信可能にする実装
-// // ページの読み込みが完了したら、以下の処理を実行する
-// $(document).ready(function () {
-//   // ID「js-submit」のボタン要素を取得し、変数 `$submitBtn` に代入します
-//   const $submitBtn = $('#js-submit')
-//   // フォーム内のすべての `input` 要素や `textarea` 要素に「change」イベントを監視
-//   // ユーザーが値を変更するたびに、以下の処理が実行
-//   $('#form input,#form textarea').on('change', function () {
-//     // 入力フィールドがすべて空でないか確認する
-//     if (
-//       $('#form input[type="text"]').val() !== "" && // テキスト入力フィールドが空でないか確認
-//       $('#form input[type="email"]').val() !== "" && // メールアドレス入力フィールドが空でないか確認
-//       $('#form input[type="address"]').val() !== ""// 住所入力フィールドが空でないか確認
-//     ) {
-//       // 上記すべての条件が満たされていれば、送信ボタン（$submitBtn）を有効化（disabledを解除）
-//       $submitBtn.prop('disabled', false);
-//       // 条件が一つでも満たされない場合、送信ボタン（$submitBtn）を無効化（disabledを有効化）
-//     } else {
-//       $submitBtn.prop('disabled', true);
-//     }
-//   });
-// });
-
-
 $(document).ready(function () {
+  const $submitBtn = $('#js-submit');
+  $('#form input,#form textarea').on('change input', function () {
+    const textInputs = $('#form input[type="text"]');
+    const allTextFilled = textInputs.filter(function () {
+      return $(this).val().trim() === "";
+    }).length === 0;
 
-  const $submitBtn = $('#js-submit')
-  $('#form input,#form textarea').on('change', function () {
-    if (
-      $('#form input[type="text"]').val() !== "" &&
-      $('#form input[type="email"]').val() !== "" &&
-      $('#form input[type="checkbox"]').val() !== "" &&
-      $('#form #privacyCheck').prop('checked') === true
-    ) {
+    const emailFilled = $('#form input[type="email"]').val().trim() !== "";
+    const addressFilled = $('#form input[name="address"]').val().trim() !== "";
+    const radioChecked = $('#form input[type="radio"]:checked').length > 0;
+    const checkboxChecked = $('#form input[type="checkbox"]').is(':checked');
+
+    if (allTextFilled && emailFilled && addressFilled && radioChecked && checkboxChecked) {
       $submitBtn.prop('disabled', false);
-
     } else {
       $submitBtn.prop('disabled', true);
     }
   });
-
 });
+
 
 
 
