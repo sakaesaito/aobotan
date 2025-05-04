@@ -174,29 +174,32 @@ $(function () {
   });
 });
 
-
-
-// フォームの実装
+// formの実装
 $(document).ready(function () {
-  const $submitBtn = $('#js-submit');
-  $('#form input,#form textarea').on('change input', function () {
-    const textInputs = $('#form input[type="text"]');
-    const allTextFilled = textInputs.filter(function () {
-      return $(this).val().trim() === "";
-    }).length === 0;
+  const $submitBtn = $('#js-submit');// 送信ボタン（id="js-submit"）を取得し、変数 $submitBtn に格納
 
-    const emailFilled = $('#form input[type="email"]').val().trim() !== "";
-    const addressFilled = $('#form input[name="address"]').val().trim() !== "";
-    const radioChecked = $('#form input[type="radio"]:checked').length > 0;
-    const checkboxChecked = $('#form input[type="checkbox"]').is(':checked');
+  function validateForm() { // フォームの入力をチェックする関数を定義
+    const isRadioChecked = $('input[name="check-name"]:checked').length > 0; // ラジオボタン（name="check-name"）の中で選ばれているものがあるかを判定（1つ以上なら true）
+    const isLastNameFilled = $('input[name="last_name"]').val().trim() !== ''; // 姓（last_name）の入力欄が空でないかを確認（空白も除去）
+    const isFirstNameFilled = $('input[name="first_name"]').val().trim() !== ''; // 名（first_name）の入力欄が空でないかを確認
+    const isEmailFilled = $('input[name="email"]').val().trim() !== '';
+    const isAddressFilled = $('input[name="address"]').val().trim() !== ''; // アドレスの入力欄が空でないかを確認
+    const isCheckboxChecked = $('input[name="confirm"]').is(':checked'); // チェックボックスがチェックされているかを判定
 
-    if (allTextFilled && emailFilled && addressFilled && radioChecked && checkboxChecked) {
+    if (isRadioChecked && isLastNameFilled && isFirstNameFilled && isEmailFilled && isAddressFilled && isCheckboxChecked) {
       $submitBtn.prop('disabled', false);
     } else {
       $submitBtn.prop('disabled', true);
     }
+  }
+
+  $('#form input').on('input change', validateForm);
+    // フォーム送信時のページ遷移処理
+    $('#form').on('submit', function (event) {
+      event.preventDefault(); // デフォルト送信を止める
+      window.location.href = '../thanks/'; // 完了ページへ遷移
+    });
   });
-});
 
 
 

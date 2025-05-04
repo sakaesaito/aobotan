@@ -171,21 +171,6 @@
   text-align: left;
 }
 
-// .thanks-button {
-//   margin-top: 50px;
-//   background-color: #4282B8;
-//   color: #fff;
-//   border-color: #4282B8;
-
-//   &::before {
-//     background-color: #fff;
-//   }
-
-//   &:hover {
-//     background: #fff;
-//     color: #4282B8;
-//   }
-// }
 
 .sub-message-img {
   @media screen and (max-width:768px) {
@@ -194,10 +179,14 @@
   }
 }
 
-.contact-name {
+.contact-name-sec {
   display: flex;
   gap: 40px;
   max-width: 470px;
+  width: 100%;
+}
+.contact-name-field {
+  max-width: 216px;
   width: 100%;
 }
 
@@ -206,12 +195,16 @@
 }
 
 .label {
-  display: block;
+  display: inline-block;
   margin-top: 26px;
+}
+#first_name {
+  margin-top: 43px;
 }
 
 .input {
-  margin-top: 8px;
+  display: block;
+  margin-top: 30px;
   padding: 18px 30px 18px 18px;
   border: #B1C6DC solid 1px;
   background-color: #F8F8F8;
@@ -219,8 +212,6 @@
   width: 100%;
   color: #000;
 }
-
-
 
 .input-name {
   margin-top: 29px;
@@ -267,7 +258,6 @@ input::placeholder {
   position: relative;
   display: inline-block;
   padding-left: 26px;
-  /* カスタムチェックボックスにスペースを確保 */
   cursor: pointer;
   margin-top: 14px;
 }
@@ -287,8 +277,6 @@ input::placeholder {
   position: relative;
   display: inline-block;
   padding-left: 3px;
-  /* カスタムチェックボックスにスペースを確保 */
-
   cursor: pointer;
 }
 
@@ -298,14 +286,54 @@ input::placeholder {
   width: 18px;
   height: 18px;
   border: 2px solid #4282B8;
-  /* Border color */
   border-radius: 2px;
-  /* Optional: for rounded corners */
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
 
+}
+
+/* Custom Checkbox Design */
+.check-label-span::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #4282B8;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+// ラジオボタンの内側の丸印
+.check-test:checked+.check-label-span::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #4282B8;
+  border: solid #4282B8;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+}
+
+.check-box:checked+.check-label-span2::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .star {
@@ -320,95 +348,29 @@ input::placeholder {
   font-size: 12px;
 }
 
-/* Custom Checkbox Design */
-.check-label-span::before {
-  content: "";
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #4282B8;
-  /* Border color */
-  border-radius: 10px;
-  /* Optional: for rounded corners */
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-//   /* Custom Checkbox Checked State */
-//   .check-test:checked + .check-label-span::before {
-//     border-color: #3498db; /* Border color when checked */
-//   }
-
-// ラジオボタンの内側の丸印
-.check-test:checked+.check-label-span::after {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #4282B8;
-  border: solid #4282B8;
-  position: absolute;
-  top: 3px;
-  left: 4px;
-  /* Adjusted position */
-}
-
-.check-box:checked+.check-label-span2::after {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 10px;
-  border: solid #000;
-  border-width: 0 2px 2px 0;
-  position: absolute;
-  top: 50%;
-  left: 8px;
-  /* Adjusted position */
-  transform: translateY(-50%) rotate(45deg);
-}
 
 
 // button
-/* Style for the submit button */
-.input-submit {
+#js-submit {
   display: block;
   margin-top: 70px;
   margin-inline: auto;
   padding: 22px 110px;
-  /* Set padding */
   border: #B1C6DC solid 1px;
-  /* Remove border */
   border-radius: 10px;
-  /* Optional: for rounded corners */
   background-color: #4282B8;
-  /* Set background color */
   color: #fff;
-  /* Set text color */
   font-size: 16px;
-  /* Set font size */
-  cursor: pointer;
-  /* Set cursor to pointer */
   transition: background-color all 0.3s ease 0s;
-  /* Optional: for smooth color transition */
   text-align: center;
-  max-width: 284px;
-  width: 100%;
   position: relative;
   cursor: pointer;
-
-}
-
-#input-submit {
-  margin-inline: auto;
 
   &::before {
     position: absolute;
     content: "";
-    top: 25px;
-    right: 20px;
+    top: 0px;
+    right: 0px;
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -416,62 +378,9 @@ input::placeholder {
   }
 }
 
-.input-submit:disabled {
+ 
+#js-submit:disabled {
   background-color: #ccc !important;
   color: #999 !important;
   cursor: not-allowed;
-}
-
-
-
-/* Active State */
-.input-submit:active {
-  background-color: #1c598a;
-  /* Darken background color when active */
-}
-
-// /* Focus State */
-// .input-submit:focus {
-//   outline: none; /* Remove outline */
-//   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
-// }
-// .custom-file-upload {
-//   position: relative;
-//   display: inline-block;
-// }
-
-// .input-file {
-//   display: none;
-// }
-
-// .custom-file-upload button {
-//   padding: 10px;
-//   border: 2px solid #000;
-//   background-color: #f0f0f0;
-//   border-radius: 4px;
-//   cursor: pointer;
-//   color: #000;
-// }
-
-// .custom-file-upload button:hover {
-//   background-color: #d0d0d0;
-// }
-
-// .custom-file-upload button:focus {
-//   border-color: #3498db; /* Border color when focused */
-//   box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.5); /* Add a soft outline */
-// }
-
-
-
-
-
-.form-wrapper {
-  width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.flex-box {
-  display: flex;
-  align-items: center;
 }
