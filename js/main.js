@@ -38,23 +38,25 @@ window.addEventListener('load', function () {
 
 // ハンバーガーメニューとドロワーメニューの設定
 
-$(function () {
-  //メニューボタンをクリックしたら
-  $(".sp_menu").click(function () {
-    //「.sp_menu」に「.active」を追加・削除
-    $(this).toggleClass("active");
-    //「.nav」に「.active」を追加・削除
-    $(".drawer_nav").toggleClass("active");
-    // ナビゲーションメニュー内のリンク（.drawer_item a）がクリックされたときの処理を定義
-    $(".drawer_item a").click(function () {
-      //メニューボタンから「.active」クラスを削除
-      $(".sp_menu").removeClass("active")
-      // ナビゲーションメニューから「.active」クラスを削除
-      $(".drawer_nav").removeClass("active")
-    })
+$(function () { // ページの読み込みが完了したときに実行
+  $(".sp_menu").click(function () { // ハンバーガーメニューがクリックされたとき
+    $(this).toggleClass("active"); // active クラスを付け外し
+    $(".drawer_nav").toggleClass("active"); // ドロワーナビにも active クラスを付け外し
+
+    // ドロワーが表示されている場合、スクロールを無効にする
+    if ($(".drawer_nav").hasClass("active")) {
+      $("body").css("overflow", "hidden"); // body のスクロールを無効化
+    } else {
+      $("body").css("overflow", "auto"); // スクロールを元に戻す
+    }
+
+    $(".drawer_item a").click(function () { // メニュー内のリンクがクリックされたとき
+      $(".sp_menu").removeClass("active"); // メニューボタンの active クラスを削除
+      $(".drawer_nav").removeClass("active"); // ドロワーメニューの active クラスを削除
+      $("body").css("overflow", "auto"); // スクロールを元に戻す
+    });
   });
 });
-
 
 
 

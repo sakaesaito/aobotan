@@ -20,7 +20,9 @@
         rel="stylesheet">
     <link rel="icon" href="img/favicon-aobotan 1.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -242,15 +244,17 @@
                     <h2 class="sec-main-news">お知らせ</h2>
                     <p class="sec-title">NEWS</p>
                     <div class="top-news-list">     
-                        <div id="js-overlay" class="overlay"></div>
+                        <div id="js-overlay" class="overlay">
+                            <div class="modal-close__wrap">
+                                <button class="modal-close-bar" id="js-close">
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
                         <!-- モーダル１ -->
                         <div class="modal-window" data-id="modal1">
-                           
                             <div class="modal-inner">
-                                <div class="modal-close-bar">
-                                    <span></span>
-                                    <span></span>
-                                </div>
                                 <div class="modal-item">
                                     <div class="modal-menu">イベント情報</div>
                                     <time class="modal-date" datetime="2024.06.03">2024.06.03</time>
@@ -281,14 +285,14 @@
                         </div>
                        
                         <!-- モーダル２ -->
-                        <div id="js-overlay" class="overlay">
-                           
-                        </div>
+                        <div id="js-overlay" class="overlay"></div>
                         <div class="modal-window" data-id="modal2">
                             <div class="modal-inner">
-                                <div class="modal-close-bar">
-                                    <span></span>
-                                    <span></span>
+                                <div class="modal-close__wrap">
+                                    <button class="modal-close-bar" id="js-close">
+                                        <span></span>
+                                        <span></span>
+                                    </button>
                                 </div>
                                 <div class="modal-item">
                                     <div class="modal-menu">イベント情報</div>
@@ -319,11 +323,13 @@
                        
                          <!-- モーダル3 -->
                          <div id="js-overlay" class="overlay"></div>
-                         <div class="modal-window" data-id="modal3">
+                         <div class="modal-window" data-id="modal3" id="js-close">
                              <div class="modal-inner">
-                                <div class="modal-close-bar">
-                                    <span></span>
-                                    <span></span>
+                                <div class="modal-close__wrap">
+                                    <button class="modal-close-bar" id="js-close">
+                                        <span></span>
+                                        <span></span>
+                                    </button>
                                 </div>
                                  <div class="modal-item">
                                      <div class="modal-menu">イベント情報</div>
