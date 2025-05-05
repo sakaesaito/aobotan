@@ -176,50 +176,32 @@ $(function () {
 
 // formの実装
 $(document).ready(function () {
-  const $submitBtn = $('#js-submit');// 送信ボタン（id="js-submit"）を取得し、変数 $submitBtn に格納
-
-  function validateForm() { // フォームの入力をチェックする関数を定義
-    const isRadioChecked = $('input[name="check-name"]:checked').length > 0; // ラジオボタン（name="check-name"）の中で選ばれているものがあるかを判定（1つ以上なら true）
-    const isLastNameFilled = $('input[name="last_name"]').val().trim() !== ''; // 姓（last_name）の入力欄が空でないかを確認（空白も除去）
-    const isFirstNameFilled = $('input[name="first_name"]').val().trim() !== ''; // 名（first_name）の入力欄が空でないかを確認
-    const isEmailFilled = $('input[name="email"]').val().trim() !== '';
-    const isAddressFilled = $('input[name="address"]').val().trim() !== ''; // アドレスの入力欄が空でないかを確認
-    const isCheckboxChecked = $('input[name="confirm"]').is(':checked'); // チェックボックスがチェックされているかを判定
-
-    if (isRadioChecked && isLastNameFilled && isFirstNameFilled && isEmailFilled && isAddressFilled && isCheckboxChecked) {
-      $submitBtn.prop('disabled', false);
+  const $submitBtn = $('#js-submit')
+  $('#form input,#form textarea').on('change', function () {
+    if (
+      $('#form input[type="text"]').val() !== "" &&
+      $('#form input[type="email"]').val() !== "" &&
+      $('#form input[name="check-name"]:checked').length > 0 &&
+      $('#form .check-box').prop('checked') === true
+    ) {
+      $submitBtn.prop('disabled', false); // 全ての条件が揃っていれば送信ボタンを有効化
     } else {
-      $submitBtn.prop('disabled', true);
+      $submitBtn.prop('disabled', true);  // 条件を満たさない場合は無効化
     }
-  }
-
-  $('#form input').on('input change', validateForm);
-    // フォーム送信時のページ遷移処理
-    $('#form').on('submit', function (event) {
-      event.preventDefault(); // デフォルト送信を止める
-      window.location.href = '../thanks/'; // 完了ページへ遷移
-    });
   });
-
-
-
+});
 
 // スムーススクロール
 // ページの読み込みが完了したら実行
 $(function () {
-  
   // id属性（#で始まるリンク）がクリックされた時に処理を実行
   $('a[href^="#"]').click(function () {
-    const speed = 800;
-  let href = $(this).attr("href");
-  let target = $(href == "#" || href == "" ? "html" : href);
-  let position = target.offset().top;
-    
+    const speed = 600;
+    let href = $(this).attr("href");
+    let target = $(href == "#" || href == "" ? "html" : href);
+    let position = target.offset().top;
     // ページを対象位置までアニメーションしながらスクロール
-    $("html, body").animate({
-      scrollTop: position
-    }, speed, "swing");
-    
+    $("html,body").animate({ scrollTop: position}, speed, "swing");
     // リンク本来の動作をキャンセル（ページジャンプを防ぐ）
     return false;
   });
