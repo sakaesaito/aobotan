@@ -2350,20 +2350,20 @@ html:has(dialog[open]) {
 
 .sub-about-us {
   width: 100%;
-  margin-top: 64px;
+  margin-top: 60px;
 }
 
-.sub-message-box {
+.sub-about-message-box {
   display: flex;
   align-items: end;
   gap: 12.6%;
 }
-.sub-message-box img {
+.sub-about-message-box img {
   max-width: 156px;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  .sub-message-box img {
+  .sub-about-message-box img {
     display: block;
     margin: 20px auto;
     align-items: center;
@@ -2372,31 +2372,31 @@ html:has(dialog[open]) {
   }
 }
 @media screen and (max-width: 768px) {
-  .sub-message-box {
+  .sub-about-message-box {
     display: block;
     margin-top: 40px;
   }
 }
 
-.sub-title {
+.sub-about-title {
   font-size: 40px;
 }
 @media screen and (max-width: 768px) {
-  .sub-title {
+  .sub-about-title {
     font-size: 24px;
   }
 }
 
-.sub-massage-main {
+.sub-about-massage-main {
   max-width: 420px;
   width: 100%;
 }
-.sub-massage-main img {
+.sub-about-massage-main img {
   max-width: 156px;
   width: 100%;
 }
 
-.sub-message {
+.sub-about-message {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
@@ -2404,7 +2404,7 @@ html:has(dialog[open]) {
   margin-top: 40px;
 }
 @media screen and (max-width: 768px) {
-  .sub-message {
+  .sub-about-message {
     font-size: 16px;
   }
 }
@@ -2453,7 +2453,7 @@ html:has(dialog[open]) {
   position: absolute;
   content: "";
   bottom: 15%;
-  right: 50%;
+  right: 47%;
   width: 10px;
   height: 10px;
   -webkit-mask-position: center;
@@ -2714,30 +2714,84 @@ html:has(dialog[open]) {
   }
 }
 
+.sub-contact-group {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.sub-contact-inner {
+  margin-top: 160px;
+  padding-left: 24px;
+  padding-bottom: 24px;
+}
 @media screen and (max-width: 768px) {
-  .sub-about-contact-inner {
+  .sub-contact-inner {
     margin-top: 36px;
   }
 }
 
-.sub-about-contact {
-  padding-left: 24px;
-  margin-top: 184px;
+#sub-contact {
+  width: 100%;
+  height: auto;
+  background-color: #f8f8f8;
+  border-radius: 50px 0 0 50px;
+  padding-left: 0px;
+  margin-top: 60px;
 }
 @media screen and (max-width: 1280px) {
-  .sub-about-contact {
+  #sub-contact {
     padding-left: 20px;
     margin-top: 64px;
   }
 }
 @media screen and (max-width: 768px) {
-  .sub-about-contact {
+  #sub-contact {
     margin-left: 0;
   }
 }
 
+.sub-contact-box {
+  margin-top: 48px;
+  max-width: 1120px;
+  display: flex;
+}
+@media screen and (max-width: 1280px) {
+  .sub-contact-box {
+    display: block;
+    max-width: 700px;
+    width: 100%;
+  }
+}
+
+.sub-contact-no {
+  padding-inline: 31px;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  display: inline-block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.sub-contact-text-tel {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.sub-contact-no-open {
+  font-size: 12px;
+  margin-top: 2px;
+  font-weight: 700;
+}
+
+.sub-footer {
+  margin-top: 143px;
+}
+
 .sub-service-box {
-  margin-top: 47px;
   margin-right: 20px;
 }
 @media screen and (max-width: 768px) {
@@ -2748,44 +2802,71 @@ html:has(dialog[open]) {
 }
 
 .sub-service-img {
+  margin-top: 70px;
+  max-width: 956px;
   width: 100%;
 }
 .sub-service-img img {
   width: 100%;
 }
 
-.sub-message-box {
+.sub-service-message-box {
   display: flex;
+  align-items: end;
   max-width: 1120px;
   width: 100%;
   gap: 11%;
 }
+.sub-service-message-box img {
+  max-width: 156px;
+  width: 100%;
+}
 @media screen and (max-width: 768px) {
-  .sub-message-box {
+  .sub-service-message-box img {
     display: block;
+    margin: 20px auto;
+    align-items: center;
+    max-width: 200px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sub-service-message-box {
+    display: block;
+    margin-top: 40px;
   }
 }
 
 .sub-service-message {
-  max-width: 422px;
-  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  max-width: 420px;
+  margin-top: 64px;
 }
 @media screen and (max-width: 768px) {
   .sub-service-message {
+    font-size: 16px;
     text-align: left;
   }
 }
 
-.sub-message-img {
+.sub-service-massage-main {
+  max-width: 420px;
+  width: 100%;
+}
+
+.sub-service-message-img {
+  margin-top: 54px;
   max-width: 165px;
   width: 100%;
 }
 @media screen and (max-width: 768px) {
-  .sub-message-img {
+  .sub-service-message-img {
     margin: 0 auto;
   }
 }
-.sub-message-img img {
+.sub-service-message-img img {
   width: 100%;
 }
 
@@ -2807,12 +2888,13 @@ html:has(dialog[open]) {
   }
 }
 
-.sub-service-img {
-  max-width: 960px;
-  width: 100%;
+.sub-service1, .sub-service2, .sub-service3 {
+  margin-top: 70px;
 }
-.sub-service-img img {
-  width: 100%;
+@media screen and (max-width: 768px) {
+  .sub-service1, .sub-service2, .sub-service3 {
+    margin-top: 100px;
+  }
 }
 
 .sub-service-inner {
@@ -2832,7 +2914,7 @@ html:has(dialog[open]) {
 }
 
 .sub-service-title {
-  margin-top: 56px;
+  margin-top: 55px;
   font-size: 24px;
   margin-bottom: 39px;
 }
@@ -2911,7 +2993,7 @@ html:has(dialog[open]) {
 }
 
 .sub-service-jirei {
-  margin-top: 85px;
+  margin-top: 90px;
   max-width: 352px;
   width: 100%;
   display: inline-block;
@@ -2925,7 +3007,7 @@ html:has(dialog[open]) {
   }
 }
 .sub-service-jirei.jirei3 {
-  margin-top: 140px;
+  margin-top: 146px;
 }
 @media screen and (max-width: 768px) {
   .sub-service-jirei.jirei3 {
@@ -2974,8 +3056,87 @@ html:has(dialog[open]) {
   }
 }
 
-#sub-contact {
-  margin-top: 66px;
+.sub-contact-page-box {
+  margin-right: 20px;
+}
+@media screen and (max-width: 768px) {
+  .sub-contact-page-box {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.sub-contact-img {
+  margin-top: 70px;
+  max-width: 956px;
+  width: 100%;
+}
+.sub-contact-img img {
+  width: 100%;
+}
+
+.sub-contact-message-box {
+  display: flex;
+  align-items: end;
+  max-width: 1120px;
+  width: 100%;
+  gap: 125px;
+}
+.sub-contact-message-box img {
+  max-width: 156px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .sub-contact-message-box img {
+    display: block;
+    margin: 20px auto;
+    align-items: center;
+    max-width: 200px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sub-contact-message-box {
+    display: block;
+    margin-top: 40px;
+  }
+}
+
+.sub-message-img {
+  margin-bottom: 28px;
+}
+
+.sub-service-message {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  max-width: 420px;
+  margin-top: 64px;
+}
+@media screen and (max-width: 768px) {
+  .sub-service-message {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+.sub-service-massage-main {
+  max-width: 420px;
+  width: 100%;
+}
+
+.sub-service-message-img {
+  margin-top: 54px;
+  max-width: 165px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .sub-service-message-img {
+    margin: 0 auto;
+  }
+}
+.sub-service-message-img img {
+  width: 100%;
 }
 
 .sub-title-box {
@@ -2991,16 +3152,17 @@ html:has(dialog[open]) {
 
 .sub-title {
   display: inline-block;
+  font-size: 32px;
 }
 
-.sub-contact-box {
+.sub-contact-chart-box {
   margin-top: 60px;
   max-width: 1120px;
   display: flex;
   gap: 13.5%;
 }
 @media screen and (max-width: 1280px) {
-  .sub-contact-box {
+  .sub-contact-chart-box {
     display: block;
     max-width: 700px;
     width: 100%;
@@ -3011,7 +3173,7 @@ html:has(dialog[open]) {
   margin-top: 70px;
 }
 
-.sub-contact-box-inner {
+.sub-contact-chart-inner {
   text-align: center;
   max-width: 470px;
   width: 100%;
@@ -3074,18 +3236,35 @@ html:has(dialog[open]) {
   padding-bottom: 9px;
 }
 
-.sub-contact-info {
+.sub-contact-page-info {
   max-width: 260px;
   width: 100%;
 }
 @media screen and (max-width: 1280px) {
-  .sub-contact-info {
+  .sub-contact-page-info {
     margin-top: 50px;
   }
 }
 
+.sub-contact-page-note {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.sub-contact-page-time {
+  font-size: 12px;
+  margin-top: 14px;
+}
+
+.sub-contact-page-tel {
+  margin-top: 30px;
+  font-size: 32px;
+  font-family: Kanit;
+  font-weight: 400;
+}
+
 .sub-contact-inner {
-  margin-top: 60px;
+  margin-top: 185px;
   padding-left: 24px;
   padding-bottom: 24px;
 }
@@ -3093,11 +3272,6 @@ html:has(dialog[open]) {
   .sub-contact-inner {
     padding-bottom: 20px;
   }
-}
-
-.sub-contact-note {
-  font-size: 16px;
-  line-height: 1;
 }
 
 .sub-contact-access {
@@ -3123,17 +3297,8 @@ html:has(dialog[open]) {
   }
 }
 
-.sub-contact-text {
-  padding-right: 32px;
-}
-
 .sub-contact-text-tel {
   margin-left: 5px;
-}
-
-.sub-contact-time {
-  font-size: 12px;
-  margin-top: 14px;
 }
 
 .sub-footer {
@@ -3179,7 +3344,7 @@ html:has(dialog[open]) {
 
 .input {
   display: block;
-  margin-top: 30px;
+  margin-top: 24px;
   padding: 18px 30px 18px 18px;
   border: #B1C6DC solid 1px;
   background-color: #F8F8F8;
@@ -3238,7 +3403,7 @@ input::placeholder {
 }
 
 .check-label2 {
-  margin-top: 40px;
+  margin-top: 24px;
   padding-left: 0;
   margin-left: 68px;
   font-weight: 400;
@@ -3325,7 +3490,7 @@ input::placeholder {
   display: block;
   margin-top: 70px;
   margin-inline: auto;
-  padding: 22px 110px;
+  padding: 16px 50px;
   border: #B1C6DC solid 1px;
   border-radius: 10px;
   background-color: #4282B8;
@@ -3352,7 +3517,7 @@ input::placeholder {
 }
 
 .sec-button:hover::before {
-  background-color: #fff;
+  background-color: #1355d8;
 }
 
 #js-submit:disabled {

@@ -1,5 +1,4 @@
 .sub-service-box {
-    margin-top: 47px;
     margin-right: 20px;
 
     @media screen and (max-width: 768px) {
@@ -9,43 +8,67 @@
 }
 
 .sub-service-img {
+    margin-top: 70px;
+    max-width: 956px;
     width: 100%;
     img {
         width: 100%;
     }
 }
 
-.sub-message-box {
+.sub-service-message-box {
     display: flex;
+    align-items: end;
     max-width: 1120px;
     width: 100%;
     gap: 11%;
 
+    img {
+        max-width: 156px;
+        width: 100%; 
+      @media screen and (max-width:768px) {
+        display: block;
+        margin: 20px auto;
+        align-items: center;
+        max-width: 200px;
+        width: 100%;
+      }
+    }
+  
     @media screen and (max-width: 768px) {
         display: block;
+        margin-top: 40px;
     }
 }
 
 .sub-service-message {
-    max-width: 422px;
-    width: 100%;
-
-    @media screen and (max-width: 768px) {
-        text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    max-width: 420px;
+    margin-top: 64px;
+  
+    @media screen and (max-width:768px) {
+      font-size: 16px;
+      text-align: left;
     }
-}
+  }
 
-.sub-message-img {
+.sub-service-massage-main {
+    max-width: 420px;
+    width: 100%;
+  }
+
+.sub-service-message-img {
+    margin-top: 54px;
     max-width: 165px;
     width: 100%;
 
     @media screen and (max-width: 768px) {
         margin: 0 auto;
     }
-
     img {
         width: 100%;
-
     }
 }
 
@@ -63,13 +86,11 @@
         margin-top: 100px;
     }
 }
+.sub-service1,.sub-service2,.sub-service3 {
+    margin-top: 70px;
 
-.sub-service-img {
-    max-width: 960px;
-    width: 100%;
-
-    img {
-        width: 100%;
+    @media screen and (max-width: 768px) {
+        margin-top: 100px;
     }
 }
 
@@ -89,7 +110,7 @@
 }
 
 .sub-service-title {
-    margin-top: 56px;
+    margin-top: 55px;
     font-size: 24px;
     margin-bottom: 39px;
 }
@@ -163,7 +184,7 @@
 }
 
 .sub-service-jirei {
-    margin-top: 85px;
+    margin-top: 90px;
     max-width: 352px;
     width: 100%;
     display: inline-block;
@@ -177,7 +198,7 @@
     }
 
     &.jirei3 {
-        margin-top: 140px;
+        margin-top: 146px;
 
         @media screen and (max-width: 768px) {
             margin-top: 30px;
