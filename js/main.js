@@ -35,7 +35,6 @@ window.addEventListener('load', function () {
 });
 
 
-
 // ハンバーガーメニューとドロワーメニューの設定
 
 $(function () { // ページの読み込みが完了したときに実行
@@ -102,15 +101,19 @@ $('.header-nav-main').hover(function () {
 $(document).ready(function () {
   $(window).on("scroll", function () {
     var fvMessage = $(".fv-message");
-    var fvOffset = fvMessage.offset().top; // 要素の位置
-    var scrollPos = $(window).scrollTop(); // 現在のスクロール位置
-    var windowHeight = $(window).height(); // 画面の高さ
 
-    if (scrollPos > fvOffset - windowHeight + 100) {
-      fvMessage.addClass("show");
+    if (fvMessage.length > 0) { // 要素が存在するか確認
+      var fvOffset = fvMessage.offset().top;
+      var scrollPos = $(window).scrollTop();
+      var windowHeight = $(window).height();
+
+      if (scrollPos > fvOffset - windowHeight + 100) {
+        fvMessage.addClass("show");
+      }
     }
   });
 });
+
 
 $(document).ready(function () {
   $(window).on("scroll", function () {
