@@ -26,7 +26,7 @@ form {
         margin-left: 0;
         padding-left: 20px;
         margin-top: 60px;
-        padding-bottom: 20px;
+        padding-bottom: 0px;
     }
 }
 
@@ -235,8 +235,11 @@ form {
     img {
         width: 100%;
         height: auto;
-    }
+        @media screen and (max-width:375px) {
+            width: 140%;
+        }
 
+    }
 
     @media screen and (max-width:1280px) {
         top: -14.5%;
@@ -244,5 +247,9 @@ form {
         width: 16%;
         height: auto;
         position: absolute;
+    }
+    @media screen and (max-width:375px) {
+        top: -16.5%;
+        left: -4%;
     }
 }

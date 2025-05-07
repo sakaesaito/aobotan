@@ -1592,7 +1592,7 @@ form {
     margin-left: 0;
     padding-left: 20px;
     margin-top: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
   }
 }
 
@@ -1801,6 +1801,11 @@ form {
   width: 100%;
   height: auto;
 }
+@media screen and (max-width: 375px) {
+  .top-contact-img img {
+    width: 140%;
+  }
+}
 @media screen and (max-width: 1280px) {
   .top-contact-img {
     top: -14.5%;
@@ -1808,6 +1813,12 @@ form {
     width: 16%;
     height: auto;
     position: absolute;
+  }
+}
+@media screen and (max-width: 375px) {
+  .top-contact-img {
+    top: -16.5%;
+    left: -4%;
   }
 }
 
@@ -2353,6 +2364,11 @@ html:has(dialog[open]) {
   margin-top: 60px;
 }
 
+.sub-about-message-img {
+  max-width: 156px;
+  width: 100%;
+}
+
 .sub-about-message-box {
   display: flex;
   align-items: end;
@@ -2714,6 +2730,10 @@ html:has(dialog[open]) {
   }
 }
 
+.works-sec {
+  margin-top: 50px;
+}
+
 .sub-contact-group {
   display: flex;
   justify-content: space-between;
@@ -2723,7 +2743,6 @@ html:has(dialog[open]) {
 }
 
 .sub-contact-inner {
-  margin-top: 160px;
   padding-left: 24px;
   padding-bottom: 24px;
 }
@@ -2739,7 +2758,6 @@ html:has(dialog[open]) {
   background-color: #f8f8f8;
   border-radius: 50px 0 0 50px;
   padding-left: 0px;
-  margin-top: 60px;
 }
 @media screen and (max-width: 1280px) {
   #sub-contact {
@@ -2789,6 +2807,22 @@ html:has(dialog[open]) {
 
 .sub-footer {
   margin-top: 143px;
+}
+
+.about-contact-inner {
+  margin-top: 190px;
+  padding-left: 24px;
+  padding-bottom: 24px;
+}
+@media screen and (max-width: 768px) {
+  .about-contact-inner {
+    padding-top: 20px;
+    padding-left: 0px;
+  }
+}
+
+.about-footer {
+  margin-top: 142px;
 }
 
 .sub-service-box {
@@ -3045,15 +3079,20 @@ html:has(dialog[open]) {
   margin-top: 16px;
 }
 
-.sub-sevice-contact-inner {
-  margin-top: 40px;
+.service-contact-inner {
+  margin-top: 58px;
   padding-top: 0px;
+  padding-left: 22.5px;
 }
 
 @media screen and (max-width: 768px) {
   .br-sp-none {
     display: none;
   }
+}
+
+.service-footer {
+  margin-top: 125px;
 }
 
 .sub-contact-page-box {
@@ -3081,6 +3120,7 @@ html:has(dialog[open]) {
   max-width: 1120px;
   width: 100%;
   gap: 125px;
+  margin-top: 64px;
 }
 .sub-contact-message-box img {
   max-width: 156px;
@@ -3263,13 +3303,13 @@ html:has(dialog[open]) {
   font-weight: 400;
 }
 
-.sub-contact-inner {
-  margin-top: 185px;
+.contact-contact-inner {
+  margin-top: 35px;
   padding-left: 24px;
   padding-bottom: 24px;
 }
 @media screen and (max-width: 768px) {
-  .sub-contact-inner {
+  .contact-contact-inner {
     padding-bottom: 20px;
   }
 }
@@ -3487,25 +3527,23 @@ input::placeholder {
 }
 
 #js-submit {
-  display: block;
   margin-top: 70px;
   margin-inline: auto;
-  padding: 16px 50px;
-  border: #B1C6DC solid 1px;
-  border-radius: 10px;
-  background-color: #4282B8;
+  display: block;
+  padding: 22px 108px;
   color: #fff;
   font-size: 16px;
-  transition: background-color all 0.3s ease 0s;
+  font-weight: 700;
   text-align: center;
-  position: relative;
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 10px;
+  border: 1px solid #4282B8;
+  background-color: #4282B8;
   cursor: pointer;
+  transition: all 0.3s ease 0s;
 }
-#js-submit::before {
-  position: absolute;
-  content: "";
-  top: 25px;
-  right: 20px;
+#js-submit::span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -3526,12 +3564,16 @@ input::placeholder {
   cursor: not-allowed;
 }
 
+.sub-text-tel {
+  margin-left: 0px;
+}
+
 #sub-thanks {
   margin-top: 64px;
 }
 
 .sub-thanks-box {
-  margin-top: 90px;
+  margin-top: 60px;
 }
 
 .sub-thanks-box-inner {
@@ -3553,7 +3595,8 @@ input::placeholder {
 }
 
 .sub-thanks-button a {
-  display: inline-block;
+  display: block;
+  margin-inline: auto;
   padding: 22px 70px;
   color: #fff;
   font-size: 16px;
@@ -3622,8 +3665,8 @@ input::placeholder {
 }
 
 .sub-thanks-inner {
-  margin-top: 165px;
-  padding-left: 26px;
+  margin-top: 130px;
+  padding-left: 23px;
   padding-bottom: 44px;
 }
 @media screen and (max-width: 1280px) {

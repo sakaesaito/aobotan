@@ -235,14 +235,17 @@
     margin-top: 16px;
 }
 
-.sub-sevice-contact-inner {
-    margin-top: 40px;
+.service-contact-inner {
+    margin-top: 58px;
     padding-top: 0px;
+    padding-left: 22.5px;
 }
 
 .br-sp-none {
     @media screen and (max-width: 768px) {
         display: none;
     }
-
+}
+.service-footer {
+    margin-top: 125px;
 }

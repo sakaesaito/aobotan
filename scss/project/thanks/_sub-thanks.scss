@@ -3,7 +3,7 @@
 }
 
 .sub-thanks-box {
-    margin-top: 90px;
+    margin-top: 60px;
 }
 
 .sub-thanks-box-inner {
@@ -19,8 +19,10 @@
     }
 }
 .sub-thanks-button a {
-    display: inline-block;
+    display: block;
+    margin-inline: auto;
     padding: 22px 70px;
+
     color: #fff;
     font-size: 16px;
     font-weight: 700;
@@ -90,8 +92,8 @@
 }
 
 .sub-thanks-inner {
-    margin-top: 165px;
-    padding-left: 26px;
+    margin-top: 130px;
+    padding-left: 23px;
     padding-bottom: 44px;
     @media screen and (max-width: 1280px) {
         padding-top: 20px;

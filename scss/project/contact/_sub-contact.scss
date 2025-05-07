@@ -23,6 +23,7 @@
   max-width: 1120px;
   width: 100%;
   gap: 125px;
+  margin-top: 64px;
 
   img {
       max-width: 156px;
@@ -195,20 +196,15 @@
   font-family: Kanit;
   font-weight: 400;
 }
-
-
-
-.sub-contact-inner {
-  margin-top: 185px;
+.contact-contact-inner {
+  margin-top: 35px;
   padding-left: 24px;
   padding-bottom: 24px;
 
   @media screen and (max-width: 768px) {
     padding-bottom: 20px;
   }
-
 }
-
 
 .sub-contact-access {
   margin-top: 43px;
@@ -235,25 +231,18 @@
   }
 }
 
-
-
-
 .sub-contact-text-tel {
   margin-left: 5px;
 }
-
-
 
 .sub-footer {
   margin-top: 143px;
 }
 
-
 #form {
   margin-top: 60px;
   text-align: left;
 }
-
 
 .sub-message-img {
   @media screen and (max-width:768px) {
@@ -437,25 +426,23 @@ input::placeholder {
 
 // button
 #js-submit {
-  display: block;
   margin-top: 70px;
   margin-inline: auto;
-  padding: 16px 50px;
-  border: #B1C6DC solid 1px;
-  border-radius: 10px;
-  background-color: #4282B8;
+  display: block;
+  padding: 22px 108px;
   color: #fff;
   font-size: 16px;
-  transition: background-color all 0.3s ease 0s;
+  font-weight: 700;
   text-align: center;
-  position: relative;
+  text-decoration: none;
+  line-height: 1;
+  border-radius: 10px;
+  border: 1px solid #4282B8;
+  background-color: #4282B8;
   cursor: pointer;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 25px;
-    right: 20px;
+  transition: all 0.3s ease 0s;
+  
+  &::span {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -477,4 +464,7 @@ input::placeholder {
   background-color: #ccc !important;
   color: #999 !important;
   cursor: not-allowed;
+}
+.sub-text-tel {
+  margin-left: 0px;
 }
