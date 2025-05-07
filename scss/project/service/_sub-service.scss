@@ -239,6 +239,9 @@
     margin-top: 58px;
     padding-top: 0px;
     padding-left: 22.5px;
+    @media screen and (max-width: 768px) {
+        padding-top: 20px;
+    }
 }
 
 .br-sp-none {
@@ -248,4 +251,7 @@
 }
 .service-footer {
     margin-top: 125px;
+    @media screen and (max-width: 768px) {
+        margin-top: 27px;
+    }
 }

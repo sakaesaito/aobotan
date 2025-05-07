@@ -51,6 +51,7 @@
   padding-inline: 11.8%;
   padding-top: 16px;
   padding-bottom: 4%;
+
   @media screen and (max-width: 768px) {
     padding-inline: 5%;
   }
@@ -63,14 +64,17 @@
 .modal-window.open {
   display: block;
 }
+
 .modal-button {
   text-align: center;
 }
+
 .modal-news {
   font-size: 24px;
   text-align: left;
   line-height: 1.8;
   margin-top: 16px;
+
   @media screen and (max-width: 768px) {
     font-size: 20px;
   }
@@ -85,6 +89,7 @@
   @media screen and (max-width: 1024px) {
     margin-top: 35px;
   }
+
   @media screen and (max-width: 768px) {
     font-size: 14px;
   }
@@ -131,6 +136,7 @@
   background-color: #fff;
   z-index: 100;
   box-sizing: border-box;
+
   @media screen and (max-width: 768px) {
     width: 80%;
     left: 46%;
@@ -168,6 +174,7 @@
     background: #000;
     color: #fff;
   }
+
   &:hover::before {
     background-color: #fff;
   }

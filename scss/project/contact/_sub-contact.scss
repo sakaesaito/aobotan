@@ -237,6 +237,9 @@
 
 .sub-footer {
   margin-top: 143px;
+  @media screen and (max-width:768px) {
+    margin-top: 60px;
+  }
 }
 
 #form {
@@ -427,7 +430,7 @@ input::placeholder {
 // button
 #js-submit {
   margin-top: 70px;
-  margin-inline: auto;
+  margin: 70px 30px 0;
   display: block;
   padding: 22px 108px;
   color: #fff;
@@ -464,7 +467,26 @@ input::placeholder {
   background-color: #ccc !important;
   color: #999 !important;
   cursor: not-allowed;
+  text-align: center;
+  margin: 30px 30px 0
 }
 .sub-text-tel {
   margin-left: 0px;
+}
+.btn-wrapper {
+  position: relative;
+  display: inline-block; 
+}
+
+.btn-wrapper::after {
+  position: absolute;
+	content: "";
+  background-image:url(/img/contact/Ellipse\ 15.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 16px;
 }

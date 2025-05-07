@@ -206,7 +206,7 @@ $(function () {
     let target = $(href == "#" || href == "" ? "html" : href);
     let position = target.offset().top;
     // ページを対象位置までアニメーションしながらスクロール
-    $("html,body").animate({ scrollTop: position}, speed, "swing");
+    $("html,body").animate({ scrollTop: position }, speed, "swing");
     // リンク本来の動作をキャンセル（ページジャンプを防ぐ）
     return false;
   });
