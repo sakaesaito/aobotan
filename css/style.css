@@ -751,7 +751,7 @@ nav {
   content: "";
   display: block;
   width: 62.5%;
-  height: 84%;
+  height: 86%;
   aspect-ratio: 1/1;
   background: #4282B8;
   position: absolute;
@@ -998,7 +998,7 @@ nav {
 }
 @media screen and (max-width: 1024px) {
   .sec-main-contact {
-    margin-top: 0;
+    margin-top: 20px;
     font-size: 20px;
   }
 }
@@ -1847,6 +1847,7 @@ form {
 
 .footer-left {
   width: 41%;
+  margin-top: 8px;
 }
 @media screen and (max-width: 1380px) {
   .footer-left {
@@ -2734,6 +2735,10 @@ html:has(dialog[open]) {
   margin-top: 50px;
 }
 
+.works-sec2 {
+  margin-top: 54px;
+}
+
 .sub-contact-group {
   display: flex;
   justify-content: space-between;
@@ -2760,7 +2765,6 @@ html:has(dialog[open]) {
 }
 @media screen and (max-width: 1280px) {
   #sub-contact {
-    padding-left: 20px;
     margin-top: 64px;
   }
 }
@@ -2822,12 +2826,32 @@ html:has(dialog[open]) {
 }
 
 .about-footer {
-  margin-top: 142px;
+  margin-top: 136px;
 }
 @media screen and (max-width: 768px) {
   .about-footer {
     margin-top: 27px;
   }
+}
+
+.about-sec-main-contact {
+  margin-top: 32px;
+  letter-spacing: -1.6px;
+}
+
+.footer-left-add {
+  margin-top: 22px;
+  font-weight: 400;
+  font-size: 18px;
+  padding-left: 1px;
+  line-height: 0.9;
+}
+
+.sub-footer-right-list {
+  display: flex;
+  margin-top: 23px;
+  line-height: 2.1;
+  gap: 24px;
 }
 
 .sub-service-box {
@@ -2841,12 +2865,16 @@ html:has(dialog[open]) {
 }
 
 .sub-service-img {
-  margin-top: 70px;
+  margin-top: 75px;
   max-width: 956px;
   width: 100%;
 }
 .sub-service-img img {
   width: 100%;
+}
+
+.service2-img, .service3-img {
+  margin-top: 68px;
 }
 
 .sub-service-message-box {
@@ -2918,20 +2946,8 @@ html:has(dialog[open]) {
   padding-right: 20px;
 }
 
-.sub-service-sec {
-  margin-top: 70px;
-}
 @media screen and (max-width: 768px) {
   .sub-service-sec {
-    margin-top: 100px;
-  }
-}
-
-.sub-service1, .sub-service2, .sub-service3 {
-  margin-top: 70px;
-}
-@media screen and (max-width: 768px) {
-  .sub-service1, .sub-service2, .sub-service3 {
     margin-top: 100px;
   }
 }
@@ -3102,7 +3118,7 @@ html:has(dialog[open]) {
 }
 
 .service-footer {
-  margin-top: 125px;
+  margin-top: 120px;
 }
 @media screen and (max-width: 768px) {
   .service-footer {
@@ -3353,7 +3369,7 @@ html:has(dialog[open]) {
 }
 
 .sub-contact-text-tel {
-  margin-left: 5px;
+  margin-left: 1px;
 }
 
 .sub-footer {
@@ -3546,8 +3562,7 @@ input::placeholder {
   font-size: 12px;
 }
 
-#js-submit {
-  margin-top: 70px;
+.input-submit {
   margin: 70px 30px 0;
   display: block;
   padding: 22px 108px;
@@ -3563,13 +3578,13 @@ input::placeholder {
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
-#js-submit::span {
+.input-submit::span {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: #fff;
 }
-#js-submit:hover {
+.input-submit:hover {
   background: #4282B8;
   color: #fff;
 }
@@ -3583,7 +3598,6 @@ input::placeholder {
   color: #999 !important;
   cursor: not-allowed;
   text-align: center;
-  margin: 30px 30px 0;
 }
 
 .sub-text-tel {
@@ -3593,6 +3607,7 @@ input::placeholder {
 .btn-wrapper {
   position: relative;
   display: inline-block;
+  margin-top: 70px;
 }
 
 .btn-wrapper::after {
@@ -3635,7 +3650,7 @@ input::placeholder {
 }
 
 .sub-thanks-button a {
-  display: block;
+  display: inline-block;
   margin-inline: auto;
   padding: 22px 70px;
   color: #fff;

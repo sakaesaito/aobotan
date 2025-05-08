@@ -113,8 +113,6 @@ $(document).ready(function () {
     }
   });
 });
-
-
 $(document).ready(function () {
   $(window).on("scroll", function () {
     var aboutMessage = $(".top-about-message");

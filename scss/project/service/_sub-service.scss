@@ -8,12 +8,15 @@
 }
 
 .sub-service-img {
-    margin-top: 70px;
+    margin-top: 75px;
     max-width: 956px;
     width: 100%;
     img {
         width: 100%;
     }
+}
+.service2-img , .service3-img{
+    margin-top: 68px;
 }
 
 .sub-service-message-box {
@@ -80,14 +83,7 @@
     padding-right: 20px;
 }
 .sub-service-sec {
-    margin-top: 70px;
-
-    @media screen and (max-width: 768px) {
-        margin-top: 100px;
-    }
-}
-.sub-service1,.sub-service2,.sub-service3 {
-    margin-top: 70px;
+    // margin-top: 70px;
 
     @media screen and (max-width: 768px) {
         margin-top: 100px;
@@ -250,7 +246,7 @@
     }
 }
 .service-footer {
-    margin-top: 125px;
+    margin-top: 120px;
     @media screen and (max-width: 768px) {
         margin-top: 27px;
     }
