@@ -3563,9 +3563,9 @@ input::placeholder {
 }
 
 .input-submit {
-  margin: 70px 30px 0;
+  margin: 70px 0 0 60px;
   display: block;
-  padding: 22px 108px;
+  padding: 20px 108px;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -3595,9 +3595,10 @@ input::placeholder {
 
 #js-submit:disabled {
   background-color: #ccc !important;
-  color: #999 !important;
+  color: #fff !important;
   cursor: not-allowed;
   text-align: center;
+  margin-top: 70px;
 }
 
 .sub-text-tel {
@@ -3607,7 +3608,6 @@ input::placeholder {
 .btn-wrapper {
   position: relative;
   display: inline-block;
-  margin-top: 70px;
 }
 
 .btn-wrapper::after {
@@ -3618,9 +3618,9 @@ input::placeholder {
   background-size: cover;
   width: 10px;
   height: 10px;
-  top: 50%;
+  top: 77%;
   transform: translateY(-50%);
-  right: 16px;
+  right: 24px;
 }
 
 #sub-thanks {
