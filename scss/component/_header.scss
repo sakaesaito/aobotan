@@ -25,7 +25,7 @@
   flex-direction: column;
   max-width: 280px;
   height: 100%;
-  z-index: 20;
+  z-index: 10;
   margin-top: 74px;
 
   @media screen and (max-width:1024px) {
@@ -232,9 +232,6 @@
   a {
     padding-left: 40px;
     display: flex;
-
-
-
     &::before {
       content: "";
       display: block;
@@ -245,7 +242,8 @@
       background-repeat: no-repeat;
       background-position: center center;
       background-size: contain;
-      left: 2%;
+      transform: translateX(-50%);
+      left: 5%;
     }
   }
 }

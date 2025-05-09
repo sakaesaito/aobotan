@@ -474,6 +474,8 @@ input::placeholder {
 .btn-wrapper {
   position: relative;
   display: block; 
+  max-width: 286px;
+  margin: 0 auto;
 }
 
 .btn-wrapper::after {
@@ -484,14 +486,7 @@ input::placeholder {
   background-size: cover;
   width: 10px;
   height: 10px;
-  top: 55%;
+  top: 50%;
   transform: translateY(-50%);
-  right: 110px;
-  @media screen and (max-width:768px) {
-    right: 100px;
-  }
-
-  @media screen and (max-width:357px) {
-    right: 66px;
-  }
+  right: 24px;
 }

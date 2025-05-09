@@ -418,7 +418,7 @@ nav {
   flex-direction: column;
   max-width: 280px;
   height: 100%;
-  z-index: 20;
+  z-index: 10;
   margin-top: 74px;
 }
 @media screen and (max-width: 1024px) {
@@ -623,7 +623,8 @@ nav {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  left: 2%;
+  transform: translateX(-50%);
+  left: 5%;
 }
 
 /* ドロワーメニュー */
@@ -714,7 +715,7 @@ nav {
 }
 @media screen and (max-width: 1024px) {
   .drawer-mail-icon {
-    margin: 27px auto 0;
+    margin: 0 auto;
     max-width: 150px;
   }
   .drawer-mail-icon::before {
@@ -792,7 +793,7 @@ nav {
   content: "";
   display: block;
   width: 62.5%;
-  height: 86%;
+  height: 84%;
   aspect-ratio: 1/1;
   background: #4282B8;
   position: absolute;
@@ -3657,6 +3658,8 @@ input::placeholder {
 .btn-wrapper {
   position: relative;
   display: block;
+  max-width: 286px;
+  margin: 0 auto;
 }
 
 .btn-wrapper::after {
@@ -3667,24 +3670,13 @@ input::placeholder {
   background-size: cover;
   width: 10px;
   height: 10px;
-  top: 55%;
+  top: 50%;
   transform: translateY(-50%);
-  right: 110px;
-}
-@media screen and (max-width: 768px) {
-  .btn-wrapper::after {
-    right: 100px;
-  }
-}
-@media screen and (max-width: 357px) {
-  .btn-wrapper::after {
-    right: 66px;
-  }
+  right: 24px;
 }
 
 #sub-thanks {
   margin-top: 64px;
-  padding-left: 20px;
 }
 
 .sub-thanks-box {
