@@ -70,3 +70,45 @@
     margin-bottom: 24px;
   }
 }
+
+.drawer-mail-icon {
+  position: relative;
+  display: flex;
+  padding-left: 30px;
+  transition: 0.3s;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(../img/mail-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    left: -4px;
+    top: 15%;
+  }
+
+  &:hover {
+    opacity: .5;
+  }
+  @media screen and (max-width: 1024px) {
+    margin: 27px auto 0;
+    max-width: 150px;
+
+    &::before {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background-image: url(../img/mail-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        left: 0px;
+        top: -11%;
+    }
+}
+}

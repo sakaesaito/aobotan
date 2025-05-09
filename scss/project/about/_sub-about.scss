@@ -473,7 +473,7 @@
 
   @media screen and (max-width: 768px) {
     padding-top: 20px;
-    padding-left: 0px;
+    padding-left: 20px;
     margin-top: 60px;
   }
 }
@@ -504,4 +504,7 @@
   margin-top: 23px;
   line-height: 2.1;
   gap: 24px;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 }

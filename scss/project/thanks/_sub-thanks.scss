@@ -1,5 +1,6 @@
 #sub-thanks {
     margin-top: 64px;
+    padding-left: 20px;
 }
 
 .sub-thanks-box {
@@ -10,23 +11,10 @@
     text-align: left;
 }
 
-.sub-thanks-button {
-    margin-top: 45px;
-
-    @media screen and (max-width: 1280px) {
-        margin-top: 10px;
-    }
-
-    @media screen and (max-width: 375px) {
-        margin-left: 10%;
-    }
-}
-
 .sub-thanks-button a {
     display: inline-block;
     margin-inline: auto;
     padding: 22px 70px;
-
     color: #fff;
     font-size: 16px;
     font-weight: 700;

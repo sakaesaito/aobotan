@@ -429,9 +429,9 @@ input::placeholder {
 
 // button
 .input-submit {
-  margin: 70px 0 0 60px;
+  margin: 70px auto 0 auto;
   display: block;
-  padding: 20px 108px;
+  padding: 20px 110px;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -457,7 +457,7 @@ input::placeholder {
   }
 }
 
-.sec-button:hover::before {
+.input-submit:hover::before {
   background-color: #1355d8;
 }
 
@@ -467,14 +467,13 @@ input::placeholder {
   color: #fff !important;
   cursor: not-allowed;
   text-align: center;
-  margin-top: 70px;
 }
 .sub-text-tel {
   margin-left: 0px;
 }
 .btn-wrapper {
   position: relative;
-  display: inline-block; 
+  display: block; 
 }
 
 .btn-wrapper::after {
@@ -485,7 +484,14 @@ input::placeholder {
   background-size: cover;
   width: 10px;
   height: 10px;
-  top: 77%;
+  top: 55%;
   transform: translateY(-50%);
-  right: 24px;
+  right: 110px;
+  @media screen and (max-width:768px) {
+    right: 100px;
+  }
+
+  @media screen and (max-width:357px) {
+    right: 66px;
+  }
 }

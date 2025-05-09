@@ -550,7 +550,7 @@ nav {
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 44%;
+  top: 50%;
   right: 0px;
   transform: translateY(-50%);
 }
@@ -690,6 +690,47 @@ nav {
     margin-bottom: 24px;
   }
 }
+.drawer-mail-icon {
+  position: relative;
+  display: flex;
+  padding-left: 30px;
+  transition: 0.3s;
+}
+.drawer-mail-icon::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url(../img/mail-icon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  left: -4px;
+  top: 15%;
+}
+.drawer-mail-icon:hover {
+  opacity: 0.5;
+}
+@media screen and (max-width: 1024px) {
+  .drawer-mail-icon {
+    margin: 27px auto 0;
+    max-width: 150px;
+  }
+  .drawer-mail-icon::before {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(../img/mail-icon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    left: 0px;
+    top: -11%;
+  }
+}
+
 .hidden {
   display: none;
 }
@@ -1212,7 +1253,7 @@ section {
   content: "";
   display: block;
   width: 62.5%;
-  height: 84%;
+  height: 87%;
   aspect-ratio: 1/1;
   background: #4282B8;
   position: absolute;
@@ -1462,6 +1503,10 @@ section {
     margin-top: 50px;
     width: 100%;
   }
+}
+
+.top-service-link {
+  background-color: #fff;
 }
 
 .top-news-inner {
@@ -2820,7 +2865,7 @@ html:has(dialog[open]) {
 @media screen and (max-width: 768px) {
   .about-contact-inner {
     padding-top: 20px;
-    padding-left: 0px;
+    padding-left: 20px;
     margin-top: 60px;
   }
 }
@@ -2852,6 +2897,11 @@ html:has(dialog[open]) {
   margin-top: 23px;
   line-height: 2.1;
   gap: 24px;
+}
+@media screen and (max-width: 768px) {
+  .sub-footer-right-list {
+    display: block;
+  }
 }
 
 .sub-service-box {
@@ -3563,9 +3613,9 @@ input::placeholder {
 }
 
 .input-submit {
-  margin: 70px 0 0 60px;
+  margin: 70px auto 0 auto;
   display: block;
-  padding: 20px 108px;
+  padding: 20px 110px;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
@@ -3589,7 +3639,7 @@ input::placeholder {
   color: #fff;
 }
 
-.sec-button:hover::before {
+.input-submit:hover::before {
   background-color: #1355d8;
 }
 
@@ -3598,7 +3648,6 @@ input::placeholder {
   color: #fff !important;
   cursor: not-allowed;
   text-align: center;
-  margin-top: 70px;
 }
 
 .sub-text-tel {
@@ -3607,7 +3656,7 @@ input::placeholder {
 
 .btn-wrapper {
   position: relative;
-  display: inline-block;
+  display: block;
 }
 
 .btn-wrapper::after {
@@ -3618,13 +3667,24 @@ input::placeholder {
   background-size: cover;
   width: 10px;
   height: 10px;
-  top: 77%;
+  top: 55%;
   transform: translateY(-50%);
-  right: 24px;
+  right: 110px;
+}
+@media screen and (max-width: 768px) {
+  .btn-wrapper::after {
+    right: 100px;
+  }
+}
+@media screen and (max-width: 357px) {
+  .btn-wrapper::after {
+    right: 66px;
+  }
 }
 
 #sub-thanks {
   margin-top: 64px;
+  padding-left: 20px;
 }
 
 .sub-thanks-box {
@@ -3633,20 +3693,6 @@ input::placeholder {
 
 .sub-thanks-box-inner {
   text-align: left;
-}
-
-.sub-thanks-button {
-  margin-top: 45px;
-}
-@media screen and (max-width: 1280px) {
-  .sub-thanks-button {
-    margin-top: 10px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .sub-thanks-button {
-    margin-left: 10%;
-  }
 }
 
 .sub-thanks-button a {
