@@ -509,7 +509,7 @@ nav {
   width: 100%;
   background: #fff;
   font-size: 14px;
-  padding: 20px 17px;
+  padding: 25px 17px 13px;
   border-bottom: 1px solid #B1C6DC;
 }
 .header-nav-drop a {
@@ -521,14 +521,14 @@ nav {
 }
 
 .header-nav-main-box a {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 31px;
+  padding-bottom: 31px;
   display: inline-block;
   width: 200px;
 }
 
 .header-nav-drop-link a {
-  padding-top: 6px;
+  padding-top: 7px;
   margin-bottom: 6px;
 }
 
@@ -540,8 +540,8 @@ nav {
   display: block;
 }
 .header-nav-main2 a {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 32px;
+  padding-bottom: 31px;
   display: inline-block;
   width: 200px;
 }
@@ -624,7 +624,8 @@ nav {
   background-position: center center;
   background-size: contain;
   transform: translateX(-50%);
-  left: 5%;
+  top: 36%;
+  left: 6%;
 }
 
 /* ドロワーメニュー */
@@ -792,7 +793,7 @@ nav {
 .fv-inner::before {
   content: "";
   display: block;
-  width: 62.5%;
+  width: 62.6%;
   height: 84%;
   aspect-ratio: 1/1;
   background: #4282B8;
@@ -812,6 +813,7 @@ nav {
 }
 
 .fv-bg {
+  max-width: 1120px;
   width: 100%;
   height: auto;
   margin: 0;
@@ -837,8 +839,8 @@ nav {
   color: #4282B8;
   font-size: 10px;
   position: absolute;
-  top: 92%;
-  left: 0%;
+  top: 91.5%;
+  left: -0.5%;
   width: 54px;
   opacity: 1;
   margin-left: 2%;
@@ -856,7 +858,7 @@ nav {
 .scroll::after {
   content: "";
   position: absolute;
-  left: 38%;
+  left: 43%;
   width: 1px;
   height: 114px;
   bottom: -120px;
@@ -900,8 +902,8 @@ nav {
 }
 .fv-message {
   position: absolute;
-  top: 73%;
-  left: 42%;
+  top: 72.5%;
+  left: 41.5%;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -942,7 +944,7 @@ nav {
     font-size: 32px;
     color: #000;
     background-color: #fff;
-    padding: 13px 14px;
+    padding: 9px 10px;
     border-radius: 10px;
     transition: opacity 0.5s;
     display: inline-block;
@@ -960,7 +962,7 @@ nav {
   font-weight: 700;
   line-height: 2;
   color: #000;
-  margin-top: 20px;
+  margin-top: 22px;
   display: inline-block;
 }
 @media screen and (max-width: 1024px) {
@@ -983,10 +985,10 @@ nav {
 /* 写真無限スライダー */
 .slider {
   width: 100%;
-  margin-top: 80px;
+  margin-top: 76px;
   background-color: #f8f8f8;
-  padding-top: 4.9%;
-  padding-bottom: 5.6%;
+  padding-top: 5.5%;
+  padding-bottom: 6%;
 }
 @media screen and (max-width: 768px) {
   .slider {
@@ -1019,12 +1021,12 @@ nav {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-weight: 700;
   font-size: 24px;
-  margin-top: 72px;
+  margin-top: 69px;
 }
 
 .sec-main-news {
   /*news sectionの見出し*/
-  margin-top: 208px;
+  margin-top: 204px;
   font-size: 24px;
 }
 @media screen and (max-width: 768px) {
@@ -1036,7 +1038,7 @@ nav {
 .sec-main-contact {
   /*contact sectionの見出し*/
   font-size: 25px;
-  margin-top: 38px;
+  letter-spacing: -0.9px;
 }
 @media screen and (max-width: 1024px) {
   .sec-main-contact {
@@ -1052,7 +1054,7 @@ nav {
   font-family: kanit;
   font-weight: 700;
   font-size: 128px;
-  margin-top: 20px;
+  margin-top: 21px;
 }
 
 section {
@@ -1129,7 +1131,7 @@ section {
   margin-top: 40px;
   line-height: 1.8;
   width: 68%;
-  max-width: 450px;
+  max-width: 430px;
 }
 @media screen and (max-width: 768px) {
   .top-about-text {
@@ -1150,9 +1152,9 @@ section {
 .top-about-img {
   display: flex;
   position: absolute;
-  bottom: 52%;
+  bottom: 55%;
   right: 15%;
-  gap: 16px;
+  gap: 18px;
 }
 @media screen and (max-width: 1280px) {
   .top-about-img {
@@ -1193,7 +1195,7 @@ section {
   flex-direction: row-reverse;
   background-color: #f8f8f8;
   gap: 12px;
-  padding: 30px 45px 20px;
+  padding: 28px 45px 9px;
   z-index: 10;
   opacity: 0;
   transform: translateY(50px);
@@ -1242,7 +1244,7 @@ section {
   }
 }
 
-.fv-inner {
+.sub-fv-inner {
   padding-top: 40px;
   padding-right: 40px;
   box-sizing: border-box;
@@ -1250,7 +1252,7 @@ section {
   width: 100%;
   position: relative;
 }
-.fv-inner::before {
+.sub-fv-inner::before {
   content: "";
   display: block;
   width: 62.5%;
@@ -1263,12 +1265,12 @@ section {
   z-index: -1;
 }
 @media screen and (max-width: 768px) {
-  .fv-inner {
+  .sub-fv-inner {
     padding-top: 0;
     padding-left: 10px;
     padding-right: 0;
   }
-  .fv-inner::before {
+  .sub-fv-inner::before {
     display: none;
   }
 }
@@ -1344,6 +1346,8 @@ section {
 .top-service-main--left {
   max-width: 490px;
   width: 100%;
+  margin-top: 3px;
+  padding-left: 3px;
 }
 @media screen and (max-width: 1024px) {
   .top-service-main {
@@ -1353,7 +1357,7 @@ section {
 }
 
 .top-service-box {
-  margin-top: 68px;
+  margin-top: 66px;
   width: 100%;
   height: auto;
   display: flex;
@@ -1402,7 +1406,7 @@ section {
 }
 .top-service-no--second {
   top: 0;
-  left: 28%;
+  left: 28.5%;
 }
 @media screen and (max-width: 1024px) {
   .top-service-no {
@@ -1443,7 +1447,7 @@ section {
   font-size: 16px;
   line-height: 180%;
   color: #000;
-  margin-top: 47px;
+  margin-top: 47.5px;
   width: 100%;
   max-width: 430px;
 }
@@ -1456,6 +1460,10 @@ section {
 }
 .top-service-text-text2 {
   margin-top: 10px;
+}
+
+.top-service-text3 {
+  margin-top: 50.5px;
 }
 
 .top-service-link {
@@ -1547,6 +1555,7 @@ section {
   border: 1px solid #4282B8;
   width: 116px;
   text-align: center;
+  line-height: 1.5;
 }
 
 .top-news-item {
@@ -1554,7 +1563,7 @@ section {
   border: 1px solid #4282B8;
   position: relative;
   transition: 0.3s;
-  padding-top: 28px;
+  padding-top: 31px;
   line-height: 1.5;
 }
 .top-news-item:hover {
@@ -1591,7 +1600,7 @@ section {
 }
 
 .top-news-item-title {
-  margin-top: 24px;
+  margin-top: 19px;
   margin-bottom: 24px;
   line-height: 1.8;
 }
@@ -1624,9 +1633,9 @@ form {
 
 .top-contact-inner {
   padding-top: 27px;
-  padding-left: 20px;
+  padding-left: 24px;
   padding-bottom: 41px;
-  margin-top: 96px;
+  margin-top: 138px;
 }
 @media screen and (max-width: 1280px) {
   .top-contact-inner {
@@ -1653,7 +1662,7 @@ form {
 .top-contact-box {
   display: flex;
   justify-content: flex-start;
-  margin-top: 44px;
+  margin-top: 42px;
   align-items: center;
   width: 71.2890625vw;
 }
@@ -1671,7 +1680,7 @@ form {
 }
 
 .top-contact-text {
-  padding-right: 34px;
+  padding-right: 33px;
 }
 @media screen and (max-width: 1280px) {
   .top-contact-text {
@@ -1693,8 +1702,6 @@ form {
 
 .top-contact-text-tel {
   font-size: 12px;
-  margin-top: 10px;
-  margin-left: 10px;
 }
 @media screen and (max-width: 768px) {
   .top-contact-text-tel {
@@ -1795,7 +1802,7 @@ form {
   -webkit-mask-image: url(../img/mail-icon.svg);
   mask-image: url(../img/mail-icon.svg);
   background: #000;
-  left: 13%;
+  left: 14%;
   top: 50%;
   transform: translateY(-50%);
   background-color: #000;
@@ -1840,8 +1847,7 @@ form {
   max-width: 12vw;
   height: auto;
   position: absolute;
-  margin-top: 3.5%;
-  margin-left: 82%;
+  margin-left: 82.5%;
 }
 .top-contact-img img {
   width: 100%;
@@ -1893,7 +1899,7 @@ form {
 
 .footer-left {
   width: 41%;
-  margin-top: 8px;
+  margin-top: 3px;
 }
 @media screen and (max-width: 1380px) {
   .footer-left {
@@ -2004,9 +2010,9 @@ form {
 
 .footer-right-list {
   display: flex;
-  margin-top: 22px;
-  line-height: 2.1;
-  gap: 25px;
+  margin-top: 20px;
+  line-height: 2.2;
+  gap: 24px;
 }
 @media screen and (max-width: 1024px) {
   .footer-right-list {
@@ -2034,7 +2040,7 @@ form {
 .footer-menu-contact {
   position: relative;
   display: flex;
-  padding-left: 30px;
+  padding-left: 27px;
   transition: 0.3s;
 }
 .footer-menu-contact::before {
@@ -2047,8 +2053,8 @@ form {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  left: -4px;
-  top: 15%;
+  left: -1px;
+  top: 17%;
 }
 .footer-menu-contact:hover {
   opacity: 0.5;
@@ -2393,6 +2399,36 @@ html:has(dialog[open]) {
   .sub-fv-image img {
     border-radius: 10px;
     height: auto;
+  }
+}
+
+.sub-fv-inner {
+  padding-top: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+}
+.sub-fv-inner::before {
+  content: "";
+  display: block;
+  width: 62.5%;
+  height: 84%;
+  aspect-ratio: 1/1;
+  background: #4282B8;
+  position: absolute;
+  top: -40px;
+  right: 0px;
+}
+@media screen and (max-width: 768px) {
+  .sub-fv-inner {
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 0;
+  }
+  .sub-fv-inner::before {
+    display: none;
   }
 }
 

@@ -16,9 +16,9 @@ form {
 
 .top-contact-inner {
     padding-top: 27px;
-    padding-left: 20px;
+    padding-left: 24px;
     padding-bottom: 41px;
-    margin-top: 96px;
+    margin-top: 138px;
 
     @media screen and (max-width:1280px) {
         margin-top: 64px;
@@ -43,7 +43,7 @@ form {
 .top-contact-box {
     display: flex;
     justify-content: flex-start;
-    margin-top: 44px;
+    margin-top: 42px;
     align-items: center;
     width: calc((730/ 1024) * 100vw);
 
@@ -59,7 +59,7 @@ form {
 }
 
 .top-contact-text {
-    padding-right: 34px;
+    padding-right: 33px;
 
     @media screen and (max-width:1280px) {
         display: flex;
@@ -80,8 +80,6 @@ form {
 
 .top-contact-text-tel {
     font-size: 12px;
-    margin-top: 10px;
-    margin-left: 10px;
 
     @media screen and (max-width:768px) {
         font-size: 13px;
@@ -189,7 +187,7 @@ form {
             -webkit-mask-image: url(../img/mail-icon.svg);
             mask-image: url(../img/mail-icon.svg);
             background: #000;
-            left: 13%;
+            left: 14%;
             top: 50%;
             transform: translateY(-50%);
             background-color: #000;
@@ -237,8 +235,7 @@ form {
     max-width: 12vw;
     height: auto;
     position: absolute;
-    margin-top: 3.5%;
-    margin-left: 82%;
+    margin-left: 82.5%;
 
     img {
         width: 100%;

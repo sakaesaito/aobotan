@@ -21,7 +21,7 @@
   &::before {
     content: "";
     display: block;
-    width: 62.5%;
+    width: 62.6%;
     height: 84%;
     aspect-ratio: 1 / 1;
     background: #4282B8;
@@ -43,6 +43,7 @@
 
 
 .fv-bg {
+  max-width: 1120px;
   width: 100%;
   height: auto;
   margin: 0;
@@ -68,8 +69,8 @@
   color: #4282B8;
   font-size: 10px;
   position: absolute;
-  top: 92%;
-  left: 0%;
+  top: 91.5%;
+  left: -0.5%;
   width: 54px;
   opacity: 1;
   margin-left: 2%;
@@ -87,7 +88,7 @@
 .scroll::after {
   content: "";
   position: absolute;
-  left: 38%;
+  left: 43%;
   width: 1px;
   height: 114px;
   bottom: -120px;
@@ -134,8 +135,8 @@
 
 .fv-message {
   position: absolute;
-  top: 73%;
-  left: 42%;
+  top: 72.5%;
+  left: 41.5%;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -174,7 +175,7 @@
     font-size: 32px;
     color: #000;
     background-color: #fff;
-    padding: 13px 14px;
+    padding: 9px 10px;
     border-radius: 10px;
     transition: opacity 0.5s;
     display: inline-block;
@@ -191,7 +192,7 @@
   font-weight: 700;
   line-height: 2;
   color: #000;
-  margin-top: 20px;
+  margin-top: 22px;
   display: inline-block;
 
   @media screen and (max-width:1024px) {

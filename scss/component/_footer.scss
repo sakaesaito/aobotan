@@ -19,7 +19,7 @@
 
 .footer-left {
     width: 41%;
-    margin-top: 8px;
+    margin-top: 3px;
 
     @media screen and (max-width: 1380px) {
         width: 100%;
@@ -34,8 +34,6 @@
         margin-top: 24px;
     }
 }
-
-
 
 .footer-left-add {
     margin-top: 20px;
@@ -123,9 +121,9 @@
 
 .footer-right-list {
     display: flex;
-    margin-top: 22px;
-    line-height: 2.1;
-    gap: 25px;
+    margin-top: 20px;
+    line-height: 2.2;
+    gap: 24px;
 
     @media screen and (max-width: 1024px) {
         display: block;
@@ -154,7 +152,7 @@
 .footer-menu-contact {
     position: relative;
     display: flex;
-    padding-left: 30px;
+    padding-left: 27px;
     transition: .3s;
 
     &::before {
@@ -167,8 +165,8 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
-        left: -4px;
-        top: 15%;
+        left: -1px;
+        top: 17%;
     }
 
     &:hover {

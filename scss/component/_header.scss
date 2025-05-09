@@ -124,7 +124,7 @@
   width: 100%;
   background: #fff;
   font-size: 14px;
-  padding: 20px 17px;
+  padding: 25px 17px 13px;
   border-bottom: 1px solid #B1C6DC;
 
   a {
@@ -140,14 +140,14 @@
 
 .header-nav-main-box {
   a {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 31px;
+    padding-bottom: 31px;
     display: inline-block;
     width: 200px;
   }
 }
 .header-nav-drop-link a {
-  padding-top: 6px;
+  padding-top: 7px;
   margin-bottom: 6px;
 }
 
@@ -158,8 +158,8 @@
   width: 100%;
   display: block;
   a {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 32px;
+    padding-bottom: 31px;
     display: inline-block;
     width: 200px;
 
@@ -243,7 +243,8 @@
       background-position: center center;
       background-size: contain;
       transform: translateX(-50%);
-      left: 5%;
+      top: 36%;
+      left: 6%;
     }
   }
 }

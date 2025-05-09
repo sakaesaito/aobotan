@@ -67,6 +67,8 @@
     &--left {
         max-width: 490px;
         width: 100%;
+        margin-top: 3px;
+        padding-left: 3px;   
     }
 
     @media screen and (max-width: 1024px) {
@@ -79,7 +81,7 @@
 
 // serviceーbox共通の指示
 .top-service-box {
-    margin-top: 68px;
+    margin-top: 66px;
     width: 100%;
     height: auto;
     display: flex;
@@ -127,7 +129,7 @@
 
     &--second {
         top: 0;
-        left: 28%;
+        left: 28.5%;
     }
 
     @media screen and (max-width: 1024px) {
@@ -166,7 +168,7 @@
     font-size: 16px;
     line-height: 180%;
     color: #000;
-    margin-top: 47px;
+    margin-top: 47.5px;
     width: 100%;
     max-width: 430px;
 
@@ -179,8 +181,11 @@
     &-text2 {
         margin-top: 10px;
     }
+   
 }
-
+.top-service-text3 {
+    margin-top: 50.5px;
+}
 
 .top-service-link {
     margin-top: 30px;
