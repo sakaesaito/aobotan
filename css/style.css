@@ -646,6 +646,8 @@ nav {
     opacity: 0;
     pointer-events: none;
     color: #000;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .drawer_nav.active {
     transform: translateX(0%);
@@ -1057,6 +1059,21 @@ nav {
   margin-top: 21px;
 }
 
+.sec-contact-title {
+  color: #f8f8f8;
+  -webkit-text-stroke: 1px #4282B8;
+  text-stroke: 1px #4282B8;
+  font-family: kanit;
+  font-weight: 700;
+  font-size: 128px;
+  margin-top: 21px;
+}
+@media screen and (max-width: 1024px) {
+  .sec-contact-title {
+    font-size: 72px;
+  }
+}
+
 section {
   width: 100%;
   height: auto;
@@ -1172,7 +1189,7 @@ section {
 
 .top-about-viw {
   display: flex;
-  z-index: 11;
+  z-index: 9;
   max-width: 161px;
   height: 100%;
   margin-top: 55%;
@@ -1196,7 +1213,7 @@ section {
   background-color: #f8f8f8;
   gap: 12px;
   padding: 28px 45px 9px;
-  z-index: 10;
+  z-index: 9;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
@@ -1632,9 +1649,9 @@ form {
 }
 
 .top-contact-inner {
-  padding-top: 27px;
+  padding-top: 30px;
   padding-left: 24px;
-  padding-bottom: 41px;
+  padding-bottom: 52px;
   margin-top: 138px;
 }
 @media screen and (max-width: 1280px) {
@@ -1693,6 +1710,7 @@ form {
   font-size: 32px;
   font-family: kanit;
   font-weight: 400;
+  padding-bottom: 7px;
 }
 @media screen and (max-width: 1280px) {
   .top-contact-text-name {
@@ -1712,7 +1730,7 @@ form {
 }
 
 .top-contact-no {
-  padding-inline: 31px;
+  padding-inline: 32px;
   border-right: 1px solid #000;
   border-left: 1px solid #000;
   display: inline-block;
@@ -1735,7 +1753,7 @@ form {
 
 .top-contact-no-open {
   font-size: 12px;
-  margin-top: 10px;
+  margin-top: 8px;
   font-weight: 700;
 }
 @media screen and (max-width: 1280px) {
@@ -1875,7 +1893,7 @@ form {
 }
 
 .footer {
-  margin-top: 128px;
+  margin-top: 114px;
   margin-bottom: 30px;
   width: 100%;
 }
@@ -1899,7 +1917,7 @@ form {
 
 .footer-left {
   width: 41%;
-  margin-top: 3px;
+  margin-top: 6px;
 }
 @media screen and (max-width: 1380px) {
   .footer-left {
@@ -1923,7 +1941,6 @@ form {
   margin-top: 20px;
   font-weight: 400;
   font-size: 18px;
-  padding-left: 3px;
 }
 @media screen and (max-width: 1024px) {
   .footer-left-add {
@@ -2035,6 +2052,10 @@ form {
     display: block;
     margin: 33px auto 0;
   }
+}
+
+.foter-date {
+  margin-top: 19px;
 }
 
 .footer-menu-contact {
@@ -2414,7 +2435,7 @@ html:has(dialog[open]) {
   content: "";
   display: block;
   width: 62.5%;
-  height: 84%;
+  height: 86%;
   aspect-ratio: 1/1;
   background: #4282B8;
   position: absolute;
@@ -2444,7 +2465,7 @@ html:has(dialog[open]) {
 
 .sub-about-us {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 63px;
 }
 
 .sub-about-message-img {
@@ -2821,124 +2842,8 @@ html:has(dialog[open]) {
   margin-top: 54px;
 }
 
-.sub-contact-group {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  max-width: 1120px;
-  width: 100%;
-}
-
-.sub-contact-inner {
-  padding-left: 24px;
-  padding-bottom: 24px;
-}
-@media screen and (max-width: 768px) {
-  .sub-contact-inner {
-    margin-top: 36px;
-  }
-}
-
-#sub-contact {
-  width: 100%;
-  height: auto;
-  background-color: #f8f8f8;
-  padding-left: 0px;
-}
-@media screen and (max-width: 1280px) {
-  #sub-contact {
-    margin-top: 64px;
-  }
-}
-@media screen and (max-width: 768px) {
-  #sub-contact {
-    margin-left: 0;
-  }
-}
-
-.sub-contact-box {
-  margin-top: 48px;
-  max-width: 1120px;
-  display: flex;
-}
-@media screen and (max-width: 1280px) {
-  .sub-contact-box {
-    display: block;
-    max-width: 700px;
-    width: 100%;
-  }
-}
-
-.sub-contact-no {
-  padding-inline: 31px;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  display: inline-block;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-.sub-contact-text-tel {
-  font-size: 12px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.sub-contact-no-open {
-  font-size: 12px;
-  margin-top: 2px;
-  font-weight: 700;
-}
-
-.sub-footer {
-  margin-top: 143px;
-}
-
 .about-contact-inner {
-  margin-top: 190px;
-  padding-left: 24px;
-  padding-bottom: 24px;
-}
-@media screen and (max-width: 768px) {
-  .about-contact-inner {
-    padding-top: 20px;
-    padding-left: 20px;
-    margin-top: 60px;
-  }
-}
-
-.about-footer {
-  margin-top: 136px;
-}
-@media screen and (max-width: 768px) {
-  .about-footer {
-    margin-top: 27px;
-  }
-}
-
-.about-sec-main-contact {
-  margin-top: 32px;
-  letter-spacing: -1.6px;
-}
-
-.footer-left-add {
-  margin-top: 22px;
-  font-weight: 400;
-  font-size: 18px;
-  padding-left: 1px;
-  line-height: 0.9;
-}
-
-.sub-footer-right-list {
-  display: flex;
-  margin-top: 23px;
-  line-height: 2.1;
-  gap: 24px;
-}
-@media screen and (max-width: 768px) {
-  .sub-footer-right-list {
-    display: block;
-  }
+  margin-top: 194px;
 }
 
 .sub-service-box {
@@ -3135,7 +3040,7 @@ html:has(dialog[open]) {
 }
 
 .sub-service-jirei {
-  margin-top: 90px;
+  margin-top: 88px;
   max-width: 352px;
   width: 100%;
   display: inline-block;
@@ -3188,9 +3093,7 @@ html:has(dialog[open]) {
 }
 
 .service-contact-inner {
-  margin-top: 58px;
-  padding-top: 0px;
-  padding-left: 22.5px;
+  margin-top: 68px;
 }
 @media screen and (max-width: 768px) {
   .service-contact-inner {
@@ -3205,7 +3108,7 @@ html:has(dialog[open]) {
 }
 
 .service-footer {
-  margin-top: 120px;
+  margin-top: 114px;
 }
 @media screen and (max-width: 768px) {
   .service-footer {

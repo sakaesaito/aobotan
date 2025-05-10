@@ -1,5 +1,5 @@
 .footer {
-    margin-top: 128px;
+    margin-top: 114px;
     margin-bottom: 30px;
     width: 100%;
     @media screen and (max-width: 768px) {
@@ -19,7 +19,7 @@
 
 .footer-left {
     width: 41%;
-    margin-top: 3px;
+    margin-top: 6px;
 
     @media screen and (max-width: 1380px) {
         width: 100%;
@@ -39,7 +39,6 @@
     margin-top: 20px;
     font-weight: 400;
     font-size: 18px;
-    padding-left: 3px;
 
     @media screen and (max-width: 1024px) {
         margin-top: 36px;
@@ -146,9 +145,10 @@
         display: block;
         margin: 33px auto 0;
     }
-
 }
-
+.foter-date {
+    margin-top: 19px;
+}
 .footer-menu-contact {
     position: relative;
     display: flex;

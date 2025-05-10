@@ -15,9 +15,9 @@ form {
 }
 
 .top-contact-inner {
-    padding-top: 27px;
+    padding-top: 30px;
     padding-left: 24px;
-    padding-bottom: 41px;
+    padding-bottom: 52px;
     margin-top: 138px;
 
     @media screen and (max-width:1280px) {
@@ -72,6 +72,7 @@ form {
     font-size: 32px;
     font-family: kanit;
     font-weight: 400;
+    padding-bottom: 7px;
 
     @media screen and (max-width:1280px) {
         padding-right: 5px;
@@ -90,7 +91,7 @@ form {
 }
 
 .top-contact-no {
-    padding-inline: 31px;
+    padding-inline: 32px;
     border-right: 1px solid #000;
     border-left: 1px solid #000;
     display: inline-block;
@@ -112,7 +113,7 @@ form {
 
 .top-contact-no-open {
     font-size: 12px;
-    margin-top: 10px;
+    margin-top: 8px;
     font-weight: 700;
 
     @media screen and (max-width:1280px) {

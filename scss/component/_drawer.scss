@@ -17,6 +17,8 @@
     opacity: 0;
     pointer-events: none;
     color: #000;
+    overflow-y: auto; //スクロール
+    -webkit-overflow-scrolling: touch;
   }
 
   .drawer_nav.active {

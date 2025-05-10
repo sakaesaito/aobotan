@@ -13,7 +13,6 @@
   }
 }
 
-
 .sub-fv-inner {
   padding-top: 40px;
   padding-right: 40px;
@@ -26,7 +25,7 @@
     content: "";
     display: block;
     width: 62.5%;
-    height: 84%;
+    height: 86%;
     aspect-ratio: 1 / 1;
     background: #4282B8;
     position: absolute;
@@ -57,7 +56,7 @@
 
 .sub-about-us {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 63px;
 }
 
 .sub-about-message-img {
@@ -429,115 +428,7 @@
 .works-sec2 {
   margin-top: 54px;
 }
-
-.sub-contact-group {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  max-width: 1120px;
-  width: 100%;
-}
-
-.sub-contact-inner {
-  padding-left: 24px;
-  padding-bottom: 24px;
-
-  @media screen and (max-width:768px) {
-    margin-top: 36px;
-  }
-}
-
-#sub-contact {
-  width: 100%;
-  height: auto;
-  background-color: #f8f8f8;
-  padding-left: 0px;
-
-  @media screen and (max-width:1280px) {
-    margin-top: 64px;
-  }
-
-  @media screen and (max-width:768px) {
-    margin-left: 0;
-  }
-}
-
-.sub-contact-box {
-  margin-top: 48px;
-  max-width: 1120px;
-  display: flex;
-
-  @media screen and (max-width: 1280px) {
-    display: block;
-    max-width: 700px;
-    width: 100%;
-  }
-}
-
-.sub-contact-no {
-  padding-inline: 31px;
-  border-right: 1px solid #000;
-  border-left: 1px solid #000;
-  display: inline-block;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-.sub-contact-text-tel {
-  font-size: 12px;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.sub-contact-no-open {
-  font-size: 12px;
-  margin-top: 2px;
-  font-weight: 700;
-}
-
-.sub-footer {
-  margin-top: 143px;
-}
-
 .about-contact-inner {
-  margin-top: 190px;
-  padding-left: 24px;
-  padding-bottom: 24px;
-
-  @media screen and (max-width: 768px) {
-    padding-top: 20px;
-    padding-left: 20px;
-    margin-top: 60px;
-  }
+  margin-top: 194px;
 }
 
-.about-footer {
-  margin-top: 136px;
-
-  @media screen and (max-width: 768px) {
-    margin-top: 27px;
-  }
-}
-
-.about-sec-main-contact {
-  margin-top: 32px;
-  letter-spacing: -1.6px;
-}
-
-.footer-left-add {
-  margin-top: 22px;
-  font-weight: 400;
-  font-size: 18px;
-  padding-left: 1px;
-  line-height: 0.9;
-}
-
-.sub-footer-right-list {
-  display: flex;
-  margin-top: 23px;
-  line-height: 2.1;
-  gap: 24px;
-  @media screen and (max-width: 768px) {
-    display: block;
-  }
-}
