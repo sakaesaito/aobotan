@@ -1941,6 +1941,7 @@ form {
   margin-top: 20px;
   font-weight: 400;
   font-size: 18px;
+  line-height: 0.9;
 }
 @media screen and (max-width: 1024px) {
   .footer-left-add {
@@ -1950,9 +1951,10 @@ form {
 
 .footer-left-box {
   display: flex;
-  gap: 15px;
+  gap: 17px;
   font-weight: 400;
   font-size: 20px;
+  line-height: 0.85;
 }
 @media screen and (max-width: 1024px) {
   .footer-left-box {
@@ -2981,7 +2983,7 @@ html:has(dialog[open]) {
 
 .sub-service-read-left {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.8;
   max-width: 374px;
   width: 100%;
@@ -3141,7 +3143,7 @@ html:has(dialog[open]) {
   max-width: 1120px;
   width: 100%;
   gap: 125px;
-  margin-top: 64px;
+  margin-top: 70px;
 }
 .sub-contact-message-box img {
   max-width: 156px;
@@ -3164,7 +3166,7 @@ html:has(dialog[open]) {
 }
 
 .sub-message-img {
-  margin-bottom: 28px;
+  margin-bottom: 23px;
 }
 
 .sub-service-message {
@@ -3231,7 +3233,7 @@ html:has(dialog[open]) {
 }
 
 .sub-contact-message {
-  margin-top: 70px;
+  margin-top: 64px;
 }
 
 .sub-contact-chart-inner {
@@ -3325,9 +3327,8 @@ html:has(dialog[open]) {
 }
 
 .contact-contact-inner {
-  margin-top: 35px;
-  padding-left: 24px;
-  padding-bottom: 24px;
+  margin-top: 73px;
+  padding-left: 25px;
 }
 @media screen and (max-width: 768px) {
   .contact-contact-inner {
@@ -3372,7 +3373,7 @@ html:has(dialog[open]) {
 }
 
 #form {
-  margin-top: 60px;
+  margin-top: 63px;
   text-align: left;
 }
 
@@ -3405,12 +3406,12 @@ html:has(dialog[open]) {
 }
 
 #first_name {
-  margin-top: 43px;
+  margin-top: 40px;
 }
 
 .input {
   display: block;
-  margin-top: 24px;
+  margin-top: 26px;
   padding: 18px 30px 18px 18px;
   border: #B1C6DC solid 1px;
   background-color: #F8F8F8;
@@ -3420,7 +3421,7 @@ html:has(dialog[open]) {
 }
 
 .input-name {
-  margin-top: 29px;
+  margin-top: 24px;
   padding: 18px 40px 18px 18px;
   border: #B1C6DC solid 1px;
   max-width: 216px;
@@ -3469,7 +3470,7 @@ input::placeholder {
 }
 
 .check-label2 {
-  margin-top: 24px;
+  margin-top: 21px;
   padding-left: 0;
   margin-left: 68px;
   font-weight: 400;
@@ -3495,7 +3496,7 @@ input::placeholder {
   border: 2px solid #4282B8;
   border-radius: 2px;
   position: absolute;
-  left: 0;
+  left: 3;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -3611,7 +3612,7 @@ input::placeholder {
   height: 10px;
   top: 50%;
   transform: translateY(-50%);
-  right: 24px;
+  right: 21px;
 }
 
 #sub-thanks {
