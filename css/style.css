@@ -2249,14 +2249,16 @@ small {
 .modal-menu {
   border: #4282B8 1px solid;
   padding-inline: 16px;
+  line-height: 1.5;
 }
 
 .modal-inner {
   width: 100%;
   height: auto;
-  padding-inline: 11.8%;
+  padding-left: 11.9%;
+  padding-right: 11.7%;
   padding-top: 16px;
-  padding-bottom: 4%;
+  padding-bottom: 3%;
 }
 @media screen and (max-width: 768px) {
   .modal-inner {
@@ -2288,11 +2290,16 @@ small {
   }
 }
 
+.modal-date {
+  line-height: 1.8;
+}
+
 .modal-message {
   font-size: 16px;
   font-weight: 400;
   margin-top: 90px;
   text-align: left;
+  line-height: 1.8;
 }
 @media screen and (max-width: 1024px) {
   .modal-message {
@@ -2339,7 +2346,7 @@ small {
   transform: translate(-50%, -50%);
   max-width: 860px;
   width: 90%;
-  max-height: 90vh;
+  max-height: 79.5vh;
   overflow-y: auto;
   background-color: #fff;
   z-index: 100;
@@ -2357,7 +2364,7 @@ small {
   display: block;
   position: relative;
   width: 240px;
-  padding: 16px 30px;
+  padding: 21px 30px;
   background-color: #fff;
   color: #000;
   border-radius: 10px;
@@ -2365,14 +2372,14 @@ small {
   font-size: 16px;
   text-align: center;
   border: 0.5px solid #000;
-  margin: 20px auto 0;
+  margin: 27px auto 0;
   transition: all 0.3s ease 0s;
 }
 .button-close::before {
   position: absolute;
   content: "";
   top: 24px;
-  right: 17px;
+  right: 20px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
