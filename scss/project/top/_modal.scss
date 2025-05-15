@@ -1,40 +1,45 @@
 .modal-close-bar {
-    color: #fff;
-    cursor: pointer;
-    display: none;
-    left: calc(50vw + 430.5px);
-    line-height: 1;
-    padding: 10px;
-    position: fixed;
-    top: 224px;
-    -webkit-transition: color .4s ease;
-    transition: color .4s ease;
-    z-index: 10;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  left: calc(50vw + 430.5px);
+  line-height: 1;
+  padding: 10px;
+  position: fixed;
+  top: 175px;
+  -webkit-transition: color .4s ease;
+  transition: color .4s ease;
+  z-index: 11;
 
-    @media screen and (max-width: 1024px) {
-      top: calc(50vw + 40.5px);
-      left: calc(50vw + 40.5px);
-    }
+  @media screen and (max-width: 1024px) {
+    color: #000;
+    top: calc(20vw);
+        left: calc(88vw);
+  }
 
-    @media screen and (max-width: 768px) {
-      top: 170px;
-      left: 80vw;
-    }
+  @media screen and (max-width: 768px) {
+    top: 170px;
+    left: 80vw;
+  }
 }
 
 .modal-close-bar .c-ico {
   display: block;
   font-size: 4rem;
   text-align: center;
+
   @media screen and (max-width: 768px) {
-   font-size: 3rem;
+    font-size: 3rem;
   }
 
 }
-.c-ico img, .c-ico svg {
+
+.c-ico img,
+.c-ico svg {
   height: 0.85em;
   width: auto;
 }
+
 svg {
   overflow: hidden;
 }
@@ -99,6 +104,9 @@ svg {
 .modal-window.open {
   display: block;
 }
+.modal-close-bar.open {
+  display: none;
+}
 
 .modal-button {
   text-align: center;
@@ -114,23 +122,31 @@ svg {
     font-size: 20px;
   }
 }
+
 .modal-date {
   line-height: 1.8;
 }
+
 .modal-message {
   font-size: 16px;
   font-weight: 400;
-  margin-top: 34px;
+  margin-top: 78px;
   text-align: left;
   line-height: 1.8;
 
   @media screen and (max-width: 1024px) {
-    margin-top: 35px;
+    margin-top: 45px;
   }
 
   @media screen and (max-width: 768px) {
     font-size: 14px;
   }
+}
+.first-modal-message {
+  margin-top: 34px;
+}
+.second-modal-message {
+  margin-top: 45px;
 }
 
 .modal-photo {

@@ -2212,15 +2212,16 @@ small {
   line-height: 1;
   padding: 10px;
   position: fixed;
-  top: 224px;
+  top: 175px;
   -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
-  z-index: 10;
+  z-index: 11;
 }
 @media screen and (max-width: 1024px) {
   .modal-close-bar {
-    top: calc(50vw + 40.5px);
-    left: calc(50vw + 40.5px);
+    color: #000;
+    top: 20vw;
+    left: 88vw;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2241,7 +2242,8 @@ small {
   }
 }
 
-.c-ico img, .c-ico svg {
+.c-ico img,
+.c-ico svg {
   height: 0.85em;
   width: auto;
 }
@@ -2311,6 +2313,10 @@ svg {
   display: block;
 }
 
+.modal-close-bar.open {
+  display: none;
+}
+
 .modal-button {
   text-align: center;
 }
@@ -2334,19 +2340,27 @@ svg {
 .modal-message {
   font-size: 16px;
   font-weight: 400;
-  margin-top: 34px;
+  margin-top: 78px;
   text-align: left;
   line-height: 1.8;
 }
 @media screen and (max-width: 1024px) {
   .modal-message {
-    margin-top: 35px;
+    margin-top: 45px;
   }
 }
 @media screen and (max-width: 768px) {
   .modal-message {
     font-size: 14px;
   }
+}
+
+.first-modal-message {
+  margin-top: 34px;
+}
+
+.second-modal-message {
+  margin-top: 45px;
 }
 
 .modal-photo {
