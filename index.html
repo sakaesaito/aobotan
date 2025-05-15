@@ -126,23 +126,6 @@
                         <small>© AOBOTAN INC.</small>
                     </p>
                 </nav>
-                <!-- <nav class="drawer_nav">
-                    <ul class="drawer_list">
-                        <li class="drawer_item"><a href="/">トップページ</a></li>
-                        <li class="drawer_item"><a href="/about/">私達について</a></li>
-                        <li class="drawer_item"><a href="/about/#sub-about">会社概要</a></li>
-                        <li class="drawer_item"><a href="/about/#about-history">代表者あいさつ</a></li>
-                        <li class="drawer_item"><a href="/about/#about-safty">安全への取り組み</a></li>
-                        <li class="drawer_item"><a href="/service/#sub-service">事業内容</a></li>
-                        <li class="drawer_item"><a href="/service/#sub-service1">住宅建築・リフォーム</a></li>
-                        <li class="drawer_item"><a href="/service/#sub-service2">法人新築・リフォーム</a></li>
-                        <li class="drawer_item"><a href="/service/#sub-service3">公共事業</a></li>
-                        <li class="drawer_item"><a href="/#top-news">お知らせ</a></li>
-                        <li class="drawer_item"><a href="/contact/" class="drawer-mail-icon">お問い合わせ</a></li>
-                        <li class="drawer_list_coppyright"><small>© AOBOTAN INC.</small></li>
-                    </ul>
-                </nav> -->
-                <!-- /ドロワーメニュ終了 -->
             </header>
         </div>
         <div class="main">
@@ -264,17 +247,18 @@
                     <h2 class="sec-main-news">お知らせ</h2>
                     <p class="sec-title">NEWS</p>
                     <div class="top-news-list">
-
-                     <!-- オーバーレイと右上のバツボタン（モーダル全体で1つだけ設定し使い回し） -->
-                     <div id="js-overlay" class="overlay"></div>
-                   
-                    <!-- オーバーレイと右上のバツボタン（モーダル全体で1つだけ設定し使い回し） -->
-                <!-- <div class="c-overlay js-modal_overlay"></div>
-                    <div class="c-modal_close js-modal_button">
-                        <i class="c-ico"><img decoding="async"  class="js-svg"
-                                alt="">
-                        </i>
-                    </div> -->
+                       
+                        <!-- オーバーレイと右上のバツボタン（モーダル全体で1つだけ設定し使い回し） -->
+                        <div class="overlay js-modal-overlay" data-id="modal01" ></div>
+                        <div class="modal-close-bar js-modal_button" data-id="modal01"
+                            style="display: block; visibility: inherit;">
+                            <i class="c-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+                                    class="js-svg replaced-svg"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M345 137c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-119 119L73 103c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l119 119L39 375c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l119-119L311 409c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-119-119L345 137z">
+                                    </path>
+                                </svg></i>
+                        </div>
                         <!-- モーダル１ボタン -->
                         <button class="js-open button-open top-news-item" data-id="1">
                             <div class="top-news-name">
@@ -300,18 +284,10 @@
                             <h3 class="top-news-item-title">ホームページをリニューアルしました！！</h3>
                         </button>
                     </div>
-               
-                    <!-- モーダル１ -->  
+
+                    <!-- モーダル１ -->
                     <div class="modal-window" data-id="modal1">
                         <div class="modal-inner">
-                            <div class="modal-wrapper">
-                                <div class="modal-close__wrap">
-                                    <button class="modal-close-bar" id="js-close">
-                                        <span></span>
-                                        <span></span>
-                                    </button>
-                                </div>
-                            </div>
                             <div class="modal-item">
                                 <div class="modal-menu">イベント情報</div>
                                 <time class="modal-date" datetime="2024.06.03">2024.06.03</time>
