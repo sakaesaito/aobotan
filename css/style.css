@@ -3580,7 +3580,7 @@ input::placeholder {
   border-width: 0 2px 2px 0;
   position: absolute;
   top: 50%;
-  left: 8px;
+  left: 10px;
   transform: translateY(-50%) rotate(45deg);
 }
 
@@ -3711,6 +3711,11 @@ input::placeholder {
 @media screen and (max-width: 1280px) {
   .sub-thanks-button a {
     margin-top: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sub-thanks-button a {
+    margin-left: 20px;
   }
 }
 

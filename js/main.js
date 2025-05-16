@@ -117,12 +117,15 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(window).on("scroll", function () {
     var aboutMessage = $(".top-about-message");
-    var messageOffset = aboutMessage.offset().top; // 要素の位置
-    var scrollPos = $(window).scrollTop(); // 現在のスクロール位置
-    var windowHeight = $(window).height(); // 画面の高さ
 
-    if (scrollPos > messageOffset - windowHeight + 100) {
-      aboutMessage.addClass("show");
+    if (aboutMessage.length > 0) { // 要素が存在するか確認
+      var messageOffset = aboutMessage.offset().top; // 要素の位置
+      var scrollPos = $(window).scrollTop(); // 現在のスクロール位置
+      var windowHeight = $(window).height(); // 画面の高さ
+
+      if (scrollPos > messageOffset - windowHeight + 100) {
+        aboutMessage.addClass("show");
+      }
     }
   });
 });
