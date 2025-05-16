@@ -5,7 +5,7 @@
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 700;
     font-size: 24px;
-    margin-top:69px;
+    margin-top: 69px;
 }
 
 .sec-main-news {
@@ -38,14 +38,16 @@
     font-size: 128px;
     margin-top: 21px;
 }
+
 .sec-contact-title {
-    color:#f8f8f8;
+    color: #f8f8f8;
     -webkit-text-stroke: 1px #4282B8;
     text-stroke: 1px #4282B8;
     font-family: kanit;
     font-weight: 700;
     font-size: 128px;
     margin-top: 21px;
+
     @media screen and (max-width:1024px) {
         font-size: 72px;
     }

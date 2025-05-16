@@ -2209,34 +2209,26 @@ small {
   cursor: pointer;
   display: none;
   left: calc(50vw + 430.5px);
-  line-height: 1;
-  padding: 10px;
+  padding-inline: 10px;
   position: fixed;
-  top: 175px;
+  top: 45px;
   -webkit-transition: color 0.4s ease;
   transition: color 0.4s ease;
   z-index: 11;
 }
 @media screen and (max-width: 1024px) {
   .modal-close-bar {
-    color: #000;
-    top: 20vw;
-    left: 88vw;
-  }
-}
-@media screen and (max-width: 768px) {
-  .modal-close-bar {
-    top: 170px;
-    left: 80vw;
+    top: 15px;
+    left: auto;
+    right: 5%;
   }
 }
 
 .modal-close-bar .c-ico {
-  display: block;
   font-size: 4rem;
   text-align: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .modal-close-bar .c-ico {
     font-size: 3rem;
   }
@@ -2244,7 +2236,7 @@ small {
 
 .c-ico img,
 .c-ico svg {
-  height: 0.85em;
+  height: 0.8em;
   width: auto;
 }
 
@@ -2267,17 +2259,6 @@ svg {
   justify-content: center;
 }
 
-.modal-window {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  width: 90%;
-  max-width: 860px;
-  z-index: 11;
-}
-
 .modal-item {
   display: flex;
   gap: 16px;
@@ -2294,8 +2275,8 @@ svg {
 .modal-inner {
   width: 100%;
   height: auto;
-  padding-left: 11.9%;
-  padding-right: 11.7%;
+  padding-left: 12%;
+  padding-right: 10%;
   padding-top: 16px;
   padding-bottom: 25.5px;
 }
@@ -2392,20 +2373,20 @@ svg {
 .modal-window {
   display: none;
   position: fixed;
-  top: 50%;
+  top: 55px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   max-width: 860px;
   width: 90%;
   max-height: 79.5vh;
   overflow-y: auto;
   background-color: #fff;
-  z-index: 10;
+  z-index: 11;
   box-sizing: border-box;
 }
 @media screen and (max-width: 768px) {
   .modal-window {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -2924,7 +2905,8 @@ html:has(dialog[open]) {
   width: 100%;
 }
 
-.service2-img, .service3-img {
+.service2-img,
+.service3-img {
   margin-top: 68px;
 }
 

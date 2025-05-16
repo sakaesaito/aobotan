@@ -30,8 +30,8 @@ window.addEventListener('load', function () {
     // 2回目以降のアクセス時の処理を記述
     // コンテンツ要素を表示
     const contentsElement = document.querySelector('.contents.hidden');
-    if(contentsElement)
-    contentsElement.classList.remove('hidden'); // hiddenクラスを取り除くことでコンテンツを表示
+    if (contentsElement)
+      contentsElement.classList.remove('hidden'); // hiddenクラスを取り除くことでコンテンツを表示
   }
 });
 
