@@ -1050,7 +1050,7 @@ nav {
 }
 
 .sec-title {
-  color: #fff;
+  color: transparent;
   -webkit-text-stroke: 1px #4282B8;
   text-stroke: 1px #4282B8;
   font-family: kanit;
@@ -2076,8 +2076,8 @@ form {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  left: -1px;
-  top: 17%;
+  left: 1px;
+  top: 25%;
 }
 .footer-menu-contact:hover {
   opacity: 0.5;
