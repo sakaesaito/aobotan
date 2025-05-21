@@ -176,7 +176,7 @@ $(function () {
 
   // オーバーレイクリックでもモーダルを閉じるように
   $('.js-close , .overlay , .modal-close-bar').click(function () {
-    $('.overlay, .modal-window ').fadeOut();
+    $('.overlay, .modal-close-bar, .modal-window').fadeOut();
     $('body').removeClass('no-scroll'); // ← スクロール許可
   });
 });

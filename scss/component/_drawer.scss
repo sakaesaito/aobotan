@@ -19,6 +19,7 @@
     color: #000;
     overflow-y: auto; //スクロール
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 10%;
   }
 
   .drawer_nav.active {
@@ -96,21 +97,22 @@
   &:hover {
     opacity: .5;
   }
+
   @media screen and (max-width: 1024px) {
-    margin: 0 auto ;
+    margin: 0 auto;
     max-width: 150px;
 
     &::before {
-        display: block;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        background-image: url(../img/mail-icon.png);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: contain;
-        left: 0px;
-        top: -11%;
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background-image: url(../img/mail-icon.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      left: 0px;
+      top: -11%;
     }
-}
+  }
 }

@@ -15,7 +15,7 @@ form {
 }
 
 .top-contact-inner {
-    padding-top: 30px;
+    padding-top: 24px;
     padding-left: 24px;
     padding-bottom: 52px;
     margin-top: 138px;
@@ -27,8 +27,9 @@ form {
     @media screen and (max-width:768px) {
         margin-left: 0;
         padding-left: 20px;
-        margin-top: 60px;
+        margin-top: 64px;
         padding-bottom: 0px;
+        padding-top: 17px;
     }
 }
 
@@ -108,6 +109,9 @@ form {
         border-top: 1px solid #000;
         padding-top: 24px;
         width: 335px;
+    }
+    @media screen and (max-width:768px) {
+        margin-top: 18px;
     }
 }
 
@@ -243,10 +247,13 @@ form {
         height: auto;
 
         @media screen and (max-width:375px) {
-            width: 140%;
+            width: 127%;
+            top: 30px;
+            margin-top: 27px;
         }
-
     }
+
+
 
     @media screen and (max-width:1280px) {
         top: -14.5%;

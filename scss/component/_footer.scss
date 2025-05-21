@@ -56,6 +56,9 @@
     @media screen and (max-width: 1024px) {
         justify-content: center;
     }
+    @media screen and (max-width: 768px) {
+        line-height: 1.1;
+    }
 }
 
 .footer-left-box-first {
@@ -145,10 +148,10 @@
 
     @media screen and (max-width: 1024px) {
         display: block;
-        margin: 33px auto 0;
+        margin: 32px auto 0;
     }
 }
-.foter-date {
+.footer-date {
     margin-top: 19px;
 }
 .footer-menu-contact {
@@ -192,12 +195,16 @@
             top: -11%;
         }
     }
-
+}
+.sp-footer-menu-contact {
+    @media screen and (max-width: 768px) {
+    margin-top: 31px;
+    }
 }
 
 small {
-    margin-top: 5px;
-    margin-right: 68px;
+    margin-top: 8px;
+    margin-right: 58px;
     display: block;
     font-weight: 400;
     text-align: right;

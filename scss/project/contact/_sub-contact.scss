@@ -273,12 +273,15 @@
 }
 
 .label {
-  display: inline-block;
+  display: block;
   margin-top: 26px;
+}
+.name-label {
+  display: inline-block;
 }
 
 #first_name {
-  margin-top: 40px;
+  margin-top: 66px;
 }
 
 .input {

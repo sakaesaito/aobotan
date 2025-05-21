@@ -78,8 +78,8 @@
   line-height: 1;
 
   @media screen and (max-width:375px) {
-    top: 92%;
-    left: 1%;
+    top: 92.5%;
+    left: 0.5%;
   }
 
 }
@@ -94,10 +94,10 @@
   bottom: -120px;
 
   @media screen and (max-width:375px) {
-    left: 40%;
+    left: 41%;
     width: 1px;
     height: 52px;
-    bottom: -63px;
+    bottom: -60px;
   }
 }
 
@@ -183,6 +183,7 @@
 
   @media screen and (max-width:768px) {
     font-size: 24px;
+    padding: 12px 14px;
   }
 }
 
@@ -208,5 +209,7 @@
   @media screen and (max-width:768px) {
     font-size: 12px;
     width: calc(720/ 768) * 100vw;
+    margin-top: 23px;
+    margin-left: 2px;
   }
 }

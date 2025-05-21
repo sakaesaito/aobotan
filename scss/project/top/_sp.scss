@@ -7,6 +7,12 @@
   display: none;
 }
 
+.sec-title {
+  font-size: 72px;
+  margin-top: 16px;
+}
+
+
 @media screen and (max-width: 1024px) {
   .sp_header_menu {
     display: block;
@@ -83,12 +89,12 @@
   /*about,service sectionの見出し*/
   .sec-main {
     font-size: 20px;
-    margin-top: 0;
+    margin-top: 2px;
   }
 
   /*news sectionの見出し*/
   .sec-main-news {
-    margin-top: 176px;
+    margin-top: 175px;
   }
 
   /*contact sectionの見出し*/
@@ -97,9 +103,7 @@
     margin-top: 0;
   }
 
-  .sec-title {
-    font-size: 72px;
-    margin-top: 16px;
+  .sp-news-item-title {
+    line-height: 1.2;
   }
-
 }

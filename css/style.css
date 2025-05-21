@@ -648,6 +648,7 @@ nav {
     color: #000;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    padding-bottom: 10%;
   }
   .drawer_nav.active {
     transform: translateX(0%);
@@ -851,8 +852,8 @@ nav {
 }
 @media screen and (max-width: 375px) {
   .scroll {
-    top: 92%;
-    left: 1%;
+    top: 92.5%;
+    left: 0.5%;
   }
 }
 
@@ -868,10 +869,10 @@ nav {
 @media screen and (max-width: 375px) {
   .scroll::before,
   .scroll::after {
-    left: 40%;
+    left: 41%;
     width: 1px;
     height: 52px;
-    bottom: -63px;
+    bottom: -60px;
   }
 }
 
@@ -955,6 +956,7 @@ nav {
 @media screen and (max-width: 768px) {
   .fv-message-main {
     font-size: 24px;
+    padding: 12px 14px;
   }
 }
 
@@ -981,6 +983,8 @@ nav {
   .fv-message-sub {
     font-size: 12px;
     width: 93.75vw;
+    margin-top: 23px;
+    margin-left: 2px;
   }
 }
 
@@ -994,7 +998,7 @@ nav {
 }
 @media screen and (max-width: 768px) {
   .slider {
-    padding-top: 2.5%;
+    padding-top: 3.5%;
     padding-bottom: 15%;
   }
 }
@@ -1033,7 +1037,7 @@ nav {
 }
 @media screen and (max-width: 768px) {
   .sec-main-news {
-    font-size: 21px;
+    font-size: 20px;
   }
 }
 
@@ -1048,8 +1052,30 @@ nav {
     font-size: 20px;
   }
 }
+@media screen and (max-width: 768px) {
+  .sec-main-contact {
+    margin-top: 9px;
+    letter-spacing: 0.3px;
+  }
+}
 
-.sec-title {
+.sec-about-title {
+  color: transparent;
+  -webkit-text-stroke: 1px #4282B8;
+  text-stroke: 1px #4282B8;
+  font-family: kanit;
+  font-weight: 700;
+  font-size: 128px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .sec-about-title {
+    margin-top: 14px;
+    font-size: 72px;
+  }
+}
+
+.sec-title-common {
   color: transparent;
   -webkit-text-stroke: 1px #4282B8;
   text-stroke: 1px #4282B8;
@@ -1058,19 +1084,10 @@ nav {
   font-size: 128px;
   margin-top: 21px;
 }
-
-.sec-contact-title {
-  color: #f8f8f8;
-  -webkit-text-stroke: 1px #4282B8;
-  text-stroke: 1px #4282B8;
-  font-family: kanit;
-  font-weight: 700;
-  font-size: 128px;
-  margin-top: 21px;
-}
 @media screen and (max-width: 1024px) {
-  .sec-contact-title {
+  .sec-title-common {
     font-size: 72px;
+    margin-top: 15px;
   }
 }
 
@@ -1202,7 +1219,7 @@ section {
   .top-about-viw {
     max-width: 60px;
     height: 100%;
-    margin-top: 75%;
+    margin-top: 142px;
   }
 }
 
@@ -1221,7 +1238,8 @@ section {
 @media screen and (max-width: 764px) {
   .top-about-message {
     font-size: 24px;
-    padding: 20px 25px 20px;
+    padding: 22px 25px 20px 24px;
+    gap: 15px;
   }
 }
 
@@ -1312,8 +1330,8 @@ section {
 }
 @media screen and (max-width: 768px) {
   .top-service-inner::before {
-    width: 74%;
-    height: 105%;
+    width: 73.5%;
+    height: 105.5%;
     right: 0;
     top: -24px;
   }
@@ -1348,8 +1366,9 @@ section {
 }
 @media screen and (max-width: 375px) {
   .top-service-icon {
-    width: 68px;
-    height: 156px;
+    width: 69px;
+    top: -74px;
+    left: 76.5%;
   }
 }
 .top-service-icon img {
@@ -1365,6 +1384,12 @@ section {
   width: 100%;
   margin-top: 3px;
   padding-left: 3px;
+}
+@media screen and (max-width: 375px) {
+  .top-service-main--left {
+    margin-top: 0px;
+    padding-left: 1px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .top-service-main {
@@ -1405,8 +1430,16 @@ section {
 @media screen and (max-width: 1024px) {
   .top-service-box--reverse {
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 48px;
     margin-left: 0;
+  }
+}
+.top-service-box--public {
+  margin-top: 90px;
+}
+@media screen and (max-width: 768px) {
+  .top-service-box--public {
+    margin-top: 50px;
   }
 }
 
@@ -1434,7 +1467,7 @@ section {
 }
 @media screen and (max-width: 768px) {
   .top-service-no {
-    margin-top: 20px;
+    margin-top: 22px;
     font-size: 48px;
     margin-left: -24px;
   }
@@ -1446,7 +1479,7 @@ section {
   display: inline-block;
   line-height: 100%;
   background-color: #fff;
-  margin-top: 164px;
+  margin-top: 166px;
 }
 @media screen and (max-width: 1024px) {
   .top-service-title {
@@ -1456,6 +1489,7 @@ section {
 @media screen and (max-width: 768px) {
   .top-service-title {
     margin-left: 0;
+    margin-top: 24px;
   }
 }
 
@@ -1475,21 +1509,22 @@ section {
     margin-top: 14px;
   }
 }
-.top-service-text-text2 {
-  margin-top: 10px;
+@media screen and (max-width: 768px) {
+  .top-service-text br {
+    display: none;
+  }
 }
-
-.top-service-text3 {
-  margin-top: 50.5px;
+.top-service-text.text3 {
+  margin-top: 11px;
 }
 
 .top-service-link {
-  margin-top: 30px;
+  margin-top: 29px;
 }
 @media screen and (max-width: 768px) {
   .top-service-link {
     margin-left: 0;
-    margin-top: 27px;
+    margin-top: 28px;
   }
 }
 
@@ -1532,7 +1567,7 @@ section {
 }
 
 .top-service-link {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .top-news-inner {
@@ -1557,6 +1592,12 @@ section {
 @media screen and (max-width: 1024px) {
   .top-news-list {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top-news-sec-title {
+    margin-top: 16px;
   }
 }
 
@@ -1599,6 +1640,12 @@ section {
   background-position: center center;
   background-size: contain;
 }
+@media screen and (max-width: 768px) {
+  .top-news-item::after {
+    top: 42.5%;
+    left: 95%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .top-news-item {
     padding-top: 16px;
@@ -1619,15 +1666,24 @@ section {
 .top-news-item-title {
   margin-top: 19px;
   margin-bottom: 24px;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 @media screen and (max-width: 1024px) {
   .top-news-item-title {
-    margin-top: 11px;
+    margin-top: 16px;
     font-size: 14px;
-    line-height: 2;
+    line-height: 1.8;
     width: 90%;
-    margin-bottom: 11px;
+    margin-bottom: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top-news-item-title {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.8;
+    width: 90%;
+    margin-bottom: 15px;
   }
 }
 
@@ -1649,7 +1705,7 @@ form {
 }
 
 .top-contact-inner {
-  padding-top: 30px;
+  padding-top: 24px;
   padding-left: 24px;
   padding-bottom: 52px;
   margin-top: 138px;
@@ -1663,8 +1719,9 @@ form {
   .top-contact-inner {
     margin-left: 0;
     padding-left: 20px;
-    margin-top: 60px;
+    margin-top: 64px;
     padding-bottom: 0px;
+    padding-top: 17px;
   }
 }
 
@@ -1748,6 +1805,11 @@ form {
     border-top: 1px solid #000;
     padding-top: 24px;
     width: 335px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .top-contact-no {
+    margin-top: 18px;
   }
 }
 
@@ -1873,7 +1935,9 @@ form {
 }
 @media screen and (max-width: 375px) {
   .top-contact-img img {
-    width: 140%;
+    width: 127%;
+    top: 30px;
+    margin-top: 27px;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -1959,6 +2023,11 @@ form {
 @media screen and (max-width: 1024px) {
   .footer-left-box {
     justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-left-box {
+    line-height: 1.1;
   }
 }
 
@@ -2052,11 +2121,11 @@ form {
 @media screen and (max-width: 1024px) {
   .footer-menu-item {
     display: block;
-    margin: 33px auto 0;
+    margin: 32px auto 0;
   }
 }
 
-.foter-date {
+.footer-date {
   margin-top: 19px;
 }
 
@@ -2101,9 +2170,15 @@ form {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .sp-footer-menu-contact {
+    margin-top: 31px;
+  }
+}
+
 small {
-  margin-top: 5px;
-  margin-right: 68px;
+  margin-top: 8px;
+  margin-right: 58px;
   display: block;
   font-weight: 400;
   text-align: right;
@@ -2124,6 +2199,11 @@ small {
 
 .sp_menu {
   display: none;
+}
+
+.sec-title {
+  font-size: 72px;
+  margin-top: 16px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -2188,20 +2268,19 @@ small {
   /*about,service sectionの見出し*/
   .sec-main {
     font-size: 20px;
-    margin-top: 0;
+    margin-top: 2px;
   }
   /*news sectionの見出し*/
   .sec-main-news {
-    margin-top: 176px;
+    margin-top: 175px;
   }
   /*contact sectionの見出し*/
   .sec-main .sec-main-contact {
     font-size: 20px;
     margin-top: 0;
   }
-  .sec-title {
-    font-size: 72px;
-    margin-top: 16px;
+  .sp-news-item-title {
+    line-height: 1.2;
   }
 }
 .modal-close-bar {
@@ -3444,12 +3523,16 @@ html:has(dialog[open]) {
 }
 
 .label {
-  display: inline-block;
+  display: block;
   margin-top: 26px;
 }
 
+.name-label {
+  display: inline-block;
+}
+
 #first_name {
-  margin-top: 40px;
+  margin-top: 66px;
 }
 
 .input {

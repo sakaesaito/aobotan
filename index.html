@@ -9,10 +9,9 @@
     <meta name="robots" content="noindex">
     <meta name="description"
         content="大阪府大阪市に拠点をおく青牡丹工務店は、丁寧な家造りで理想を現実にします。住宅建築からリフォームまで、高品質なサービスと経験豊富なスタッフがお客様のニーズに応えます。お気軽にご相談ください。">
-
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
         rel="stylesheet">
@@ -21,8 +20,6 @@
     <link rel="icon" href="img/favicon-aobotan 1.svg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -128,7 +125,7 @@
                 </nav>
             </header>
         </div>
-        <div class="main">
+        <main class="main">
             <div class="fv">
                 <div class="fv-inner">
                     <div class="fv-bg">
@@ -166,10 +163,10 @@
                 <div class="top-about-inner">
                     <div class="top-about-box">
                         <h2 class="sec-main">私達について</h2>
-                        <p class="sec-title">ABOUT</p>
-                        <h3 class="top-about-text">
+                        <p class="sec-about-title">ABOUT</p>
+                        <p class="top-about-text">
                             「丁寧な家造りで、理想を現実に」。これは私たちの約束です。青牡丹工務店が手がける家は、ただの建物ではありません。それは、お客様の暮らしや夢を支える、信頼と品質に満ちた温かな空間です。
-                        </h3>
+                        </p>
                         <div class="sec-button top-about-button"><a href="/about/">Read More</a></div>
                     </div>
                     <div class="top-about-img">
@@ -186,7 +183,7 @@
                     <div class="top-service-group">
                         <div class="top-service-name">
                             <h2 class="sec-main">事業内容</h2>
-                            <p class="sec-title">SERVICE</p>
+                            <p class="sec-title-common">SERVICE</p>
                         </div>
                         <div class="top-service-icon">
                             <img src="./img/contract_02.png" alt="">
@@ -223,7 +220,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="top-service-box top-service-box3">
+                    <div class="top-service-box top-service-box--public">
                         <div class="top-service-img">
                             <img src="./img/house03 1.jpg" alt="">
                         </div>
@@ -245,13 +242,12 @@
             <section class="top-news" id="top-news">
                 <div class="top-news-inner">
                     <h2 class="sec-main-news">お知らせ</h2>
-                    <p class="sec-title">NEWS</p>
+                    <p class="sec-title-common top-news-sec-title">NEWS</p>
                     <div class="top-news-list">
-                       
+
                         <!-- オーバーレイと右上のバツボタン（モーダル全体で1つだけ設定し使い回し） -->
-                        <div class="overlay js-modal-overlay" data-id="modal01" ></div>
-                        <div class="modal-close-bar js-modal_button" data-id="modal01"
-                            style=" visibility: inherit;">
+                        <div class="overlay js-modal-overlay" data-id="modal01"></div>
+                        <div class="modal-close-bar js-modal_button" data-id="modal01" style=" visibility: inherit;">
                             <i class="c-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
                                     class="js-svg replaced-svg"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                                     <path
@@ -273,7 +269,7 @@
                                 <div class="top-news-menu">イベント情報</div>
                                 <time class="top-news-date" datetime="2024.05.23">2024.05.23</time>
                             </div>
-                            <h3 class="top-news-item-title">安全管理研修を行いました。</h3>
+                            <h3 class="top-news-item-title sp-news-item-title">安全管理研修を行いました。</h3>
                         </button>
                         <!-- モーダルボタン３ -->
                         <button class="js-open button-open top-news-item" data-id="3">
@@ -281,7 +277,7 @@
                                 <div class="top-news-menu">更新情報</div>
                                 <time class="top-news-date" datetime="2024.05.01">2024.05.01</time>
                             </div>
-                            <h3 class="top-news-item-title">ホームページをリニューアルしました！！</h3>
+                            <h3 class="top-news-item-title sp-news-item-title">ホームページをリニューアルしました！！</h3>
                         </button>
                     </div>
 
@@ -386,7 +382,7 @@
                     <div class="top-contact-group">
                         <div class="top-contact-sec">
                             <h2 class="sec-main-contact">お問い合わせ</h2>
-                            <p class="sec-contact-title">CONTACT</p>
+                            <p class="sec-title-common sec-contact-title">CONTACT</p>
                             <div class="top-contact-box">
                                 <div class="top-contact-text">
                                     <p class="top-contact-text-name">Tel</p>
@@ -444,17 +440,20 @@
                             <a href="/service/#sub-service2" class="footer-menu-item">法人新築・リフォーム</a>
                             <a href="/service/#sub-service3" class="footer-menu-item">公共工事</a>
                             <a href="#top-news" class="footer-menu-item">お知らせ</a>
-                            <a href="/contact/" class="footer-menu-contact">お問い合わせ</a>
+                            <a href="/contact/" class="footer-menu-contact sp-footer-menu-contact">お問い合わせ</a>
                         </div>
                     </div>
                 </div>
                 <small>© AOBOTAN INC.</small>
             </footer>
-        </div>
+        </main>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
