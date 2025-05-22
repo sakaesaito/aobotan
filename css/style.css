@@ -1070,7 +1070,7 @@ nav {
 }
 @media screen and (max-width: 768px) {
   .sec-about-title {
-    margin-top: 14px;
+    margin-top: 16px;
     font-size: 72px;
   }
 }
@@ -2182,6 +2182,7 @@ small {
   display: block;
   font-weight: 400;
   text-align: right;
+  font-size: 85%;
 }
 @media screen and (max-width: 1024px) {
   small {
@@ -2595,7 +2596,7 @@ html:has(dialog[open]) {
 .sub-about-message-box {
   display: flex;
   align-items: end;
-  gap: 12.6%;
+  gap: 12.8%;
 }
 .sub-about-message-box img {
   max-width: 156px;
@@ -2963,6 +2964,7 @@ html:has(dialog[open]) {
 
 .about-contact-inner {
   margin-top: 194px;
+  padding-top: 30px;
 }
 
 .sub-service-box {
@@ -3066,6 +3068,7 @@ html:has(dialog[open]) {
 
 .sub-service-inner {
   margin-left: 50px;
+  padding-top: 30px;
 }
 @media screen and (max-width: 1024px) {
   .sub-service-inner {
@@ -3447,6 +3450,7 @@ html:has(dialog[open]) {
 .contact-contact-inner {
   margin-top: 73px;
   padding-left: 25px;
+  padding-top: 30px;
 }
 @media screen and (max-width: 768px) {
   .contact-contact-inner {
