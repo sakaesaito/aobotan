@@ -392,6 +392,15 @@ nav {
   }
 }
 
+footer {
+  margin-left: 280px;
+}
+@media screen and (max-width: 1024px) {
+  footer {
+    margin-left: 0;
+  }
+}
+
 .contents .contents hidden {
   max-width: 1440px;
   width: 100%;
