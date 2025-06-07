@@ -2923,10 +2923,16 @@ html:has(dialog[open]) {
   margin-top: 31px;
   gap: 20px;
 }
+@media screen and (max-width: 1024px) {
+  .sub-about-works-box {
+    margin-right: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .sub-about-works-box {
     display: block;
     height: 100%;
+    margin-right: 0;
   }
 }
 
