@@ -1968,7 +1968,6 @@ form {
 .footer {
   margin-top: 114px;
   margin-bottom: 30px;
-  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .footer {
@@ -3505,6 +3504,7 @@ html:has(dialog[open]) {
 
 .sub-contact-footer {
   margin-top: 114px;
+  margin-bottom: 30px;
 }
 
 #form {
