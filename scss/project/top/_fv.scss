@@ -137,10 +137,21 @@
   position: absolute;
   top: 72.5%;
   left: 41.5%;
-  opacity: 0;
+  animation-name: fadeIn1s;
+  animation-delay: 1s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
   transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  opacity: 0;
 
+  @keyframes fadeIn1s {
+    0% {
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
 
   @media screen and (max-width:1024px) {
     position: absolute;

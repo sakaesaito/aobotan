@@ -916,9 +916,18 @@ footer {
   position: absolute;
   top: 72.5%;
   left: 41.5%;
-  opacity: 0;
+  animation-name: fadeIn1s;
+  animation-delay: 1s;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
   transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  opacity: 0;
+}
+@keyframes fadeIn1s {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 1024px) {
   .fv-message {
@@ -1619,7 +1628,7 @@ section {
   color: #4282B8;
   font-size: 14px;
   font-weight: 700;
-  border: 1px solid #4282B8;
+  border: 1px solid #B1C6DC;
   width: 116px;
   text-align: center;
   line-height: 1.5;
@@ -1627,7 +1636,7 @@ section {
 
 .top-news-item {
   display: block;
-  border: 1px solid #4282B8;
+  border: 1px solid #B1C6DC;
   position: relative;
   transition: 0.3s;
   padding-top: 31px;
@@ -1669,7 +1678,7 @@ section {
 }
 
 .top-news-item:nth-last-child(1) {
-  border-bottom: 1px solid #4282B8;
+  border-bottom: 1px solid #B1C6DC;
 }
 
 .top-news-item-title {
@@ -2453,7 +2462,7 @@ svg {
   color: #000;
   cursor: pointer;
   border: none;
-  border-top: #4282B8 solid 1px;
+  border-top: #B1C6DC solid 1px;
 }
 
 /* モーダルウィンドウ */

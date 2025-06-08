@@ -99,21 +99,7 @@ $('.header-nav-main').hover(function () {
 /* フェードインアニメ ------------------------------------------ */
 // 動きのきっかけとなるアニメーションの名前を定義 
 
-$(document).ready(function () {
-  $(window).on("scroll", function () {
-    var fvMessage = $(".fv-message");
 
-    if (fvMessage.length > 0) { // 要素が存在するか確認
-      var fvOffset = fvMessage.offset().top;
-      var scrollPos = $(window).scrollTop();
-      var windowHeight = $(window).height();
-
-      if (scrollPos > fvOffset - windowHeight + 100) {
-        fvMessage.addClass("show");
-      }
-    }
-  });
-});
 $(document).ready(function () {
   $(window).on("scroll", function () {
     var aboutMessage = $(".top-about-message");
