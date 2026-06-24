@@ -17,25 +17,47 @@ nav {
   list-style: none;
 }
 
-.main {
+.l-contents {
+  max-width: 1440px;
+  width: 100%;
+}
+
+.l-side {
+  width: 280px;
+  height: auto;
+}
+
+.l-main {
   margin-left: 280px;
   height: auto;
+}
 
-  @media screen and (max-width: 1024px) {
+footer {
+  margin-left: 280px;
+}
+
+@media screen and (max-width: 1024px) {
+  .l-contents {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .l-main {
     width: 100%;
     margin-left: 0;
     padding-left: 20px;
   }
 
-  @media screen and (max-width: 768px) {
-    padding-left: 0;
-    padding-right: 0;
+  footer {
+    margin-left: 0;
   }
 }
-footer {
-  margin-left: 280px;
 
-  @media screen and (max-width: 1024px) {
-    margin-left: 0;
+@media screen and (max-width: 768px) {
+  .l-main {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

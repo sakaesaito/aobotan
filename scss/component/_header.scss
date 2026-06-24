@@ -1,23 +1,4 @@
-.contents .contents hidden {
-  max-width: 1440px;
-  width: 100%;
-}
-
-@media screen and (max-width: 1024px) {
-  .contents {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
-}
-
-.side {
-  width: 280px;
-  height: auto;
-}
-
-.side-header {
+.header {
   position: fixed;
   display: flex;
   padding-left: 40px;
@@ -27,8 +8,151 @@
   height: 100%;
   z-index: 10;
   margin-top: 74px;
+}
 
-  @media screen and (max-width:1024px) {
+.header__logo {
+  transition: .4s;
+}
+
+.header__logo:hover {
+  opacity: .8;
+}
+
+.header__nav {
+  margin-top: 25px;
+  transition: all 0.3s;
+}
+
+.header__nav-list {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header__nav-item {
+  /* nav list item */
+}
+
+.header__nav-item--contact {
+  position: relative;
+}
+
+.header__nav-item--contact a {
+  padding-left: 40px;
+  display: flex;
+}
+
+.header__nav-item--contact a::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  background-image: url(../img/mail-icon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  transform: translateX(-50%);
+  top: 36%;
+  left: 6%;
+}
+
+.header__nav-main {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.header__nav-main-box {
+  position: relative;
+}
+
+.header__nav-main-box a {
+  display: inline-block;
+  width: 200px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  border-bottom: 1px solid #B1C6DC;
+}
+
+.header__nav-main-box.is-open .header__nav-bar-v {
+  transform: translateY(0%) rotate(90deg);
+}
+
+.header__nav-bar {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+}
+
+.header__nav-bar-h {
+  position: absolute;
+  width: 24px;
+  height: 1px;
+  top: 50%;
+  transition: .3s;
+  transform: translateY(-50%);
+  background: #4282B8;
+}
+
+.header__nav-bar-v {
+  position: absolute;
+  width: 1px;
+  height: 24px;
+  top: 0%;
+  right: 50%;
+  transition: all 0.3s;
+  transform: translateX(-50%);
+  transform-origin: center;
+  background: #4282B8;
+}
+
+.header__nav-drop {
+  display: none;
+  width: 100%;
+  background: #fff;
+  font-size: 14px;
+  padding: 25px 17px 13px;
+  border-bottom: 1px solid #B1C6DC;
+}
+
+.header__nav-drop a {
+  padding: 12px 0;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+}
+
+.header__nav-drop a:hover {
+  opacity: .7;
+}
+
+.header__nav-drop-item a {
+  padding-top: 7px;
+  margin-bottom: 6px;
+}
+
+.header__nav-main--simple {
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #B1C6DC;
+  width: 100%;
+  display: block;
+}
+
+.header__nav-main--simple a {
+  padding-top: 32px;
+  padding-bottom: 31px;
+  display: inline-block;
+  width: 200px;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
     position: fixed;
     top: 0;
     left: 0;
@@ -45,203 +169,30 @@
     margin-top: 0;
   }
 
-  @media screen and (max-width:375px) {
-    width: 100%;
-    max-width: 375px;
-  }
-}
-
-.header-nav {
-  margin-top: 25px;
-  transition: all 0.3s;
-
-  @media screen and (max-width: 1024px) {
-    display: none;
-  }
-}
-
-.side-header-logo {
-  transition: .4s;
-
-  @media screen and (max-width: 1024px) {
+  .header__logo {
     margin-top: 10px;
     transition: .3s;
     width: 98px;
     height: 59px;
-
-    &:hover {
-      opacity: .9;
-    }
-
-    img {
-      width: 100%;
-      height: auto;
-    }
   }
 
-  &:hover {
-    opacity: .8;
-  }
-}
-
-.header-nav-list {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.header-nav-main {
-  cursor: pointer;
-  position: relative;
-  width: 100%;
-  display: block;
-}
-
-.header-nav-main-box {
-  position: relative;
-
-  a {
-    display: block;
-    padding-top: 24px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #B1C6DC;
+  .header__logo:hover {
+    opacity: .9;
   }
 
-  &.open {
-
-    .header-nav-main-bar2,
-    .header-nav-main-bar4 {
-      transform: translateY(0%) rotate(90deg);
-    }
+  .header__logo img {
+    width: 100%;
+    height: auto;
   }
 
-}
-
-.header-nav-drop {
-  display: none;
-  width: 100%;
-  background: #fff;
-  font-size: 14px;
-  padding: 25px 17px 13px;
-  border-bottom: 1px solid #B1C6DC;
-
-  a {
-    padding: 12px 0;
-    color: #000;
-    font-size: 14px;
-    font-weight: 700;
-    display: flex;
-
-  }
-
-}
-
-.header-nav-main-box {
-  a {
-    padding-top: 31px;
-    padding-bottom: 31px;
-    display: inline-block;
-    width: 200px;
-  }
-}
-.header-nav-drop-link a {
-  padding-top: 7px;
-  margin-bottom: 6px;
-}
-
-.header-nav-main2 {
-  cursor: pointer;
-  position: relative;
-  border-bottom: 1px solid #B1C6DC;
-  width: 100%;
-  display: block;
-  a {
-    padding-top: 32px;
-    padding-bottom: 31px;
-    display: inline-block;
-    width: 200px;
-
+  .header__nav {
+    display: none;
   }
 }
 
-.header-nav-main-bar {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 50%;
-  right: 0px;
-  transform: translateY(-50%);
-}
-
-.header-nav-main-bar1 {
-  position: absolute;
-  width: 24px;
-  height: 1px;
-  top: 50%;
-  transition: .3s;
-  transform: translateY(-50%);
-  background: #4282B8;
-}
-
-.header-nav-main-bar2 {
-  position: absolute;
-  width: 1px;
-  height: 24px;
-  top: 0%;
-  right: 50%;
-  transition: all 0.3s;
-  transform: translateX(-50%);
-  transform-origin: center;
-  background: #4282B8;
-}
-
-.header-nav-main-bar3 {
-  position: absolute;
-  width: 24px;
-  height: 1px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #4282B8;
-}
-
-.header-nav-main-bar4 {
-  position: absolute;
-  width: 1px;
-  height: 24px;
-  top: 0%;
-  right: 50%;
-  transform: translateY(0%);
-  background: #4282B8;
-  transition: all .3s
-}
-
-.header-nav-main:hover .header-nav—main-bar1 {
-  transition: .3s;
-  transform: rotate(90deg);
-}
-
-.header-nav-drop a:hover {
-  opacity: .7;
-}
-
-.contact {
-  position: relative;
-
-  a {
-    padding-left: 40px;
-    display: flex;
-    &::before {
-      content: "";
-      display: block;
-      width: 24px;
-      height: 24px;
-      position: absolute;
-      background-image: url(../img/mail-icon.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: contain;
-      transform: translateX(-50%);
-      top: 36%;
-      left: 6%;
-    }
+@media screen and (max-width: 375px) {
+  .header {
+    width: 100%;
+    max-width: 375px;
   }
 }

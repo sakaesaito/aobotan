@@ -1,89 +1,50 @@
-
-.sub-contact-page-box {
+.sub-contact__box {
   margin-right: 20px;
-
-  @media screen and (max-width: 768px) {
-      margin-left: 20px;
-      margin-right: 20px;
-  }
 }
 
-.sub-contact-img {
-  margin-top: 70px;
-  max-width: 956px;
-  width: 100%;
-  img {
-      width: 100%;
-  }
-}
-
-.sub-contact-message-box {
+.sub-contact__intro-group {
   display: flex;
   align-items: end;
   max-width: 1120px;
   width: 100%;
   gap: 125px;
   margin-top: 70px;
-
-  img {
-      max-width: 156px;
-      width: 100%; 
-    @media screen and (max-width:768px) {
-      display: block;
-      margin: 20px auto;
-      align-items: center;
-      max-width: 200px;
-      width: 100%;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-      display: block;
-      margin-top: 40px;
-  }
 }
-.sub-message-img {
+
+.sub-contact__intro-group img {
+  max-width: 156px;
+  width: 100%;
+}
+
+.sub-contact__intro-img {
   margin-bottom: 23px;
 }
-.sub-service-message {
+
+.sub-contact__intro-content {
+  /* intro text area */
+}
+
+.sub-contact__intro-text {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.8;
   max-width: 420px;
   margin-top: 64px;
-
-  @media screen and (max-width:768px) {
-    font-size: 16px;
-    text-align: left;
-  }
 }
 
-.sub-service-massage-main {
-  max-width: 420px;
+.sub-contact__img {
+  margin-top: 70px;
+  max-width: 956px;
   width: 100%;
 }
 
-.sub-service-message-img {
-  margin-top: 54px;
-  max-width: 165px;
+.sub-contact__img img {
   width: 100%;
-
-  @media screen and (max-width: 768px) {
-      margin: 0 auto;
-  }
-  img {
-      width: 100%;
-  }
 }
 
 .sub-title-box {
   max-width: 1120px;
   width: 100%;
-
-  @media screen and (max-width: 768px) {
-    padding-right: 10px;
-    padding-left: 10px;
-  }
 }
 
 .sub-title {
@@ -91,48 +52,26 @@
   font-size: 32px;
 }
 
-.sub-contact-chart-box {
+.sub-contact__flow-group {
   margin-top: 60px;
   max-width: 1120px;
   display: flex;
   gap: 13.5%;
-
-  @media screen and (max-width: 1280px) {
-    display: block;
-    max-width: 700px;
-    width: 100%;
-  }
 }
 
-.sub-contact-message {
-  margin-top: 64px;
-}
-
-.sub-contact-chart-inner {
+.sub-contact__flow-main {
   text-align: center;
   max-width: 470px;
   width: 100%;
 }
 
-.sub-contact-button {
+.sub-contact__flow-steps {
   display: flex;
   width: 100%;
   gap: 12%;
 }
 
-.chart {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-  background-color: #4282B8;
-  padding-top: 26px;
-  padding-bottom: 11px;
-  max-width: 209px;
-  width: 100%;
-  text-align: center;
-}
-
-.chart-box {
+.sub-contact__flow-step {
   display: block;
   border: #4282B8 3px solid;
   background-color: #4282B8;
@@ -140,20 +79,20 @@
   max-width: 209px;
   width: 100%;
   position: relative;
-
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: 46%;
-    right: -30%;
-    width: 10px;
-    height: 1px;
-    border: #4282B8 1px solid;
-    width: 57px;
-  }
 }
 
-.chart-box2 {
+.sub-contact__flow-step::after {
+  position: absolute;
+  content: "";
+  bottom: 46%;
+  right: -30%;
+  width: 10px;
+  height: 1px;
+  border: #4282B8 1px solid;
+  width: 57px;
+}
+
+.sub-contact__flow-step--next {
   display: block;
   border: #4282B8 3px solid;
   background-color: #fff;
@@ -162,131 +101,87 @@
   width: 100%;
 }
 
-.chart-no {
+.sub-contact__flow-num {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  padding-top: 26px;
+  padding-bottom: 11px;
+  max-width: 209px;
+  width: 100%;
+  text-align: center;
   font-size: 12px;
   padding-top: 2px;
 }
 
-.chart-text {
+.sub-contact__flow-label {
   margin-top: 12px;
   padding-bottom: 9px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
 }
 
-.sub-contact-page-info {
+.sub-contact__phone {
   max-width: 260px;
   width: 100%;
-
-  @media screen and (max-width: 1280px) {
-    margin-top: 50px;
-  }
 }
 
-.sub-contact-page-note {
+.sub-contact__phone-note {
   font-size: 16px;
   line-height: 1;
 }
-.sub-contact-page-time {
+
+.sub-contact__phone-hours {
   font-size: 12px;
   margin-top: 14px;
 }
 
-.sub-contact-page-tel {
+.sub-contact__phone-number {
   margin-top: 30px;
   font-size: 32px;
   font-family: Kanit;
   font-weight: 400;
 }
-.contact-contact-inner {
-  margin-top: 73px;
-  padding-left: 25px;
-  padding-top: 30px;
 
-  @media screen and (max-width: 768px) {
-    padding-bottom: 20px;
-  }
-}
-
-.sub-contact-access {
-  margin-top: 43px;
-}
-
-.sub-contact-tel {
+.sub-contact__tel {
   font-family: Kanit;
   font-weight: 400;
   font-size: 32px;
   margin-top: 29px;
-
-  a[href*="tel:"] {
-    pointer-events: none;
-    cursor: default;
-    text-decoration: none;
-  }
-
-  @media screen and (max-width:1280px) {
-    a[href*="tel:"] {
-      pointer-events: all;
-      cursor: pointer;
-      text-decoration: none;
-    }
-  }
 }
 
-.sub-contact-text-tel {
-  margin-left: 1px;
+.sub-contact__tel a[href*="tel:"] {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
 }
 
-.sub-footer {
-  margin-top: 143px;
-  @media screen and (max-width:768px) {
-    margin-top: 60px;
-  }
-}
-.sub-contact-footer {
-  margin-top: 114px;
-  margin-bottom: 30px;
+.sub-contact__access {
+  margin-top: 43px;
 }
 
+/* Form elements */
 #form {
   margin-top: 63px;
   text-align: left;
 }
 
-.sub-message-img {
-  @media screen and (max-width:768px) {
-    width: 100%;
-    padding-top: 30px;
-  }
-}
-
-.contact-name-sec {
-  display: flex;
-  gap: 40px;
-  max-width: 470px;
-  width: 100%;
-}
-
-.contact-name-field {
-  max-width: 216px;
-  width: 100%;
-}
-
-.form-radio {
+.form__radio-group {
   display: block;
 }
 
-.label {
+.form__label {
   display: block;
   margin-top: 26px;
 }
-.name-label {
+
+.form__name-label {
   display: inline-block;
 }
 
-#first_name {
-  margin-top: 66px;
-}
-
-.input {
+.form__input {
   display: block;
   margin-top: 26px;
   padding: 18px 30px 18px 18px;
@@ -297,7 +192,7 @@
   color: #000;
 }
 
-.input-name {
+.form__input--name {
   margin-top: 24px;
   padding: 18px 40px 18px 18px;
   border: #B1C6DC solid 1px;
@@ -307,38 +202,25 @@
   color: #000;
 }
 
-input::placeholder {
+.form__input::placeholder,
+.form__input--name::placeholder {
   color: #C2C2C2;
 }
 
-.input-text,
-.input-email,
-.input-radio,
-.input-submit {
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  outline: none;
-  background: none;
-  box-shadow: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+.form__name-group {
+  display: flex;
+  gap: 40px;
+  max-width: 470px;
+  width: 100%;
+  align-items: end;
 }
 
-.input-text:focus,
-.input-email:focus {
-  outline: 2px solid #3498db;
-  outline-offset: 0;
+.form__name-field {
+  max-width: 216px;
+  width: 100%;
 }
 
-.check-test {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
-}
-
-.check-label {
+.form__radio-label {
   position: relative;
   display: inline-block;
   padding-left: 26px;
@@ -346,40 +228,17 @@ input::placeholder {
   margin-top: 14px;
 }
 
-.check-label2 {
-  margin-top: 21px;
-  padding-left: 0;
-  margin-left: 68px;
-  font-weight: 400;
-
-  @media screen and (max-width: 1024px) {
-    margin-left: 0px;
-  }
-}
-
-.check-box {
-  position: relative;
-  display: inline-block;
-  padding-left: 3px;
-  cursor: pointer;
-}
-
-.check-label-span2::before {
-  content: "";
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  border: 2px solid #4282B8;
-  border-radius: 2px;
+.form__radio-input {
   position: absolute;
-  left: 1%;
-  top: 50%;
-  transform: translateY(-50%);
-
+  opacity: 0;
+  z-index: -1;
 }
 
-/* Custom Checkbox Design */
-.check-label-span::before {
+.form__radio-custom {
+  /* custom radio button - default */
+}
+
+.form__radio-custom::before {
   content: "";
   display: inline-block;
   width: 18px;
@@ -392,9 +251,7 @@ input::placeholder {
   transform: translateY(-50%);
 }
 
-
-// ラジオボタンの内側の丸印
-.check-test:checked+.check-label-span::after {
+.form__radio-input:checked + .form__radio-custom::after {
   content: "";
   display: block;
   width: 10px;
@@ -407,7 +264,38 @@ input::placeholder {
   left: 4px;
 }
 
-.check-box:checked+.check-label-span2::after {
+.form__checkbox-wrapper {
+  margin-top: 21px;
+  padding-left: 0;
+  margin-left: 68px;
+  font-weight: 400;
+}
+
+.form__checkbox-input {
+  position: relative;
+  display: inline-block;
+  padding-left: 3px;
+  cursor: pointer;
+}
+
+.form__checkbox-custom {
+  /* custom checkbox - default */
+}
+
+.form__checkbox-custom::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #4282B8;
+  border-radius: 2px;
+  position: absolute;
+  left: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form__checkbox-input:checked + .form__checkbox-custom::after {
   content: "";
   display: block;
   width: 5px;
@@ -420,22 +308,82 @@ input::placeholder {
   transform: translateY(-50%) rotate(45deg);
 }
 
-.star {
+.form__required-star {
   color: #FE0000;
   font-size: 12px;
   display: inline-block;
   margin-left: 10px;
 }
 
-.required {
+.form__required-text {
   color: #000;
   font-size: 12px;
 }
 
+/* Reset for input elements */
+.form__input,
+.form__input--name,
+.form__radio-input,
+.form__submit {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
+.form__input {
+  display: block;
+  margin-top: 26px;
+  padding: 18px 30px 18px 18px;
+  border: #B1C6DC solid 1px;
+  background-color: #F8F8F8;
+  max-width: 470px;
+  width: 100%;
+  color: #000;
+}
 
-// button
-.input-submit {
+.form__input--name {
+  margin-top: 24px;
+  padding: 18px 40px 18px 18px;
+  border: #B1C6DC solid 1px;
+  max-width: 216px;
+  width: 100%;
+  background-color: #F8F8F8;
+  color: #000;
+}
+
+.form__input:focus,
+.form__input--name:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 0;
+}
+
+.form__submit-wrapper {
+  position: relative;
+  display: block;
+  max-width: 286px;
+  margin: 0 auto;
+}
+
+.form__submit-wrapper::after {
+  position: absolute;
+  content: "";
+  background-image: url(/img/contact/Ellipse\ 15.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 21px;
+}
+
+.form__submit {
   margin: 70px auto 0 auto;
   display: block;
   padding: 20px 110px;
@@ -450,24 +398,12 @@ input::placeholder {
   background-color: #4282B8;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  
-  &::span {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #fff;
-  }
-
-  &:hover {
-    background:#4282B8;
-    color: #fff;
-  }
 }
 
-.input-submit:hover::before {
-  background-color: #1355d8;
+.form__submit:hover {
+  background: #4282B8;
+  color: #fff;
 }
-
 
 #js-submit:disabled {
   background-color: #ccc !important;
@@ -475,25 +411,59 @@ input::placeholder {
   cursor: not-allowed;
   text-align: center;
 }
-.sub-text-tel {
-  margin-left: 0px;
-}
-.btn-wrapper {
-  position: relative;
-  display: block; 
-  max-width: 286px;
-  margin: 0 auto;
+
+@media screen and (max-width: 1280px) {
+  .sub-contact__flow-group {
+    display: block;
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .sub-contact__phone {
+    margin-top: 50px;
+  }
 }
 
-.btn-wrapper::after {
-  position: absolute;
-	content: "";
-  background-image:url(/img/contact/Ellipse\ 15.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 10px;
-  height: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 21px;
+@media screen and (max-width: 1280px) {
+  .sub-contact__tel a[href*="tel:"] {
+    pointer-events: all;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .form__checkbox-wrapper {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sub-contact__box {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .sub-contact__intro-group {
+    display: block;
+    margin-top: 40px;
+  }
+
+  .sub-contact__intro-group img {
+    display: block;
+    margin: 20px auto;
+    align-items: center;
+    max-width: 200px;
+    width: 100%;
+  }
+
+  .sub-contact__intro-img {
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .sub-title-box {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }

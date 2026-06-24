@@ -1,11 +1,34 @@
-/* ドロワーメニュー */
-.drawer_nav {
+.drawer {
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
+.drawer__mail-link {
+  position: relative;
+  display: flex;
+  padding-left: 30px;
+  transition: 0.3s;
+}
 
-  .drawer_nav {
+.drawer__mail-link::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url(../img/mail-icon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  left: -4px;
+  top: 15%;
+}
+
+.drawer__mail-link:hover {
+  opacity: .5;
+}
+
+@media screen and (max-width: 1024px) {
+  .drawer {
     position: fixed;
     top: 80px;
     right: 0;
@@ -17,25 +40,25 @@
     opacity: 0;
     pointer-events: none;
     color: #000;
-    overflow-y: auto; //スクロール
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 10%;
   }
 
-  .drawer_nav.active {
+  .drawer.is-active {
     transform: translateX(0%);
     visibility: visible;
     pointer-events: all;
   }
 
-  .drawer_nav a {
+  .drawer a {
     transition: 0.4s;
     display: block;
     height: inherit;
     align-items: center;
   }
 
-  .drawer_list {
+  .drawer__list {
     font-family: "Zen Kaku Gothic New";
     font-size: 16px;
     font-weight: 700;
@@ -47,41 +70,38 @@
     padding-top: 32px;
   }
 
-  .drawer_item {
+  .drawer__item {
     list-style: none;
     padding-top: 32px;
     color: #000;
   }
 
-  .drawer_item img {
+  .drawer__item img {
     width: 24px;
     margin: 0;
     padding: 0;
   }
 
-  .drawer_list span {
+  .drawer__list span {
     margin-right: 12px;
     box-sizing: border-box;
     width: 24px;
   }
 
-  small {
+  .drawer__copyright {
     font-size: 12px;
     display: block;
     text-align: center;
     margin-top: 32px;
     margin-bottom: 24px;
   }
-}
 
-.drawer-mail-icon {
-  position: relative;
-  display: flex;
-  padding-left: 30px;
-  transition: 0.3s;
+  .drawer__mail-link {
+    margin: 0 auto;
+    max-width: 150px;
+  }
 
-  &::before {
-    content: "";
+  .drawer__mail-link::before {
     display: block;
     width: 20px;
     height: 20px;
@@ -90,29 +110,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    left: -4px;
-    top: 15%;
-  }
-
-  &:hover {
-    opacity: .5;
-  }
-
-  @media screen and (max-width: 1024px) {
-    margin: 0 auto;
-    max-width: 150px;
-
-    &::before {
-      display: block;
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      background-image: url(../img/mail-icon.png);
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: contain;
-      left: 0px;
-      top: -11%;
-    }
+    left: 0px;
+    top: -11%;
   }
 }

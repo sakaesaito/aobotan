@@ -1,4 +1,20 @@
-.modal-close-bar {
+.modal__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.modal__overlay.open {
+  display: block;
+}
+
+.modal__close-bar {
   color: #fff;
   cursor: pointer;
   display: none;
@@ -9,34 +25,14 @@
   -webkit-transition: color .4s ease;
   transition: color .4s ease;
   z-index: 11;
-
-  @media screen and (max-width: 1024px) {
-    top: 15px;
-    left:auto;
-    right: 5%;
-  }
 }
 
-.modal-close-bar .c-ico {
+.modal__close-bar .icon {
   font-size: 4rem;
   text-align: center;
-
-  @media screen and (max-width: 1024px) {
-    font-size: 3rem;
-  }
 }
 
-.c-ico img,
-.c-ico svg {
-  height: 0.8em;
-  width: auto;
-}
-
-svg {
-  overflow: hidden;
-}
-
-.c-ico {
+.icon {
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-box-pack: center;
@@ -51,116 +47,17 @@ svg {
   justify-content: center;
 }
 
-.modal-item {
-  display: flex;
-  gap: 16px;
-  color: #4282B8;
-  font-size: 14px;
+.icon img,
+.icon svg {
+  height: 0.8em;
+  width: auto;
 }
 
-.modal-menu {
-  border: #4282B8 1px solid;
-  padding-inline: 16px;
-  line-height: 1.5;
+svg {
+  overflow: hidden;
 }
 
-.modal-inner {
-  width: 100%;
-  height: auto;
-  padding-left: 12%;
-  padding-right: 10%;
-  padding-top: 16px;
-  padding-bottom: 25.5px;
-
-  @media screen and (max-width: 768px) {
-    padding-inline: 5%;
-  }
-}
-
-.overlay.open {
-  display: block;
-}
-
-.modal-window.open {
-  display: block;
-}
-
-.modal-close-bar.open {
-  display: none;
-}
-
-.modal-button {
-  text-align: center;
-}
-
-.modal-news {
-  font-size: 24px;
-  text-align: left;
-  line-height: 1.8;
-  margin-top: 16px;
-
-  @media screen and (max-width: 768px) {
-    font-size: 20px;
-  }
-}
-
-.modal-date {
-  line-height: 1.8;
-}
-
-.modal-message {
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 78px;
-  text-align: left;
-  line-height: 1.8;
-
-  @media screen and (max-width: 1024px) {
-    margin-top: 45px;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 14px;
-  }
-}
-
-.first-modal-message {
-  margin-top: 34px;
-}
-
-.second-modal-message {
-  margin-top: 45px;
-}
-
-.modal-photo {
-  margin-top: 16px;
-  max-width: 656px;
-  max-height: 366px;
-  width: 100%;
-  height: 100%;
-
-  img {
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-}
-
-
-/* 開くボタン */
-.button-open {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
-  border: none;
-  border-top: #B1C6DC solid 1px;
-}
-
-/* モーダルウィンドウ */
-.modal-window {
+.modal {
   display: none;
   position: fixed;
   top: 55px;
@@ -173,14 +70,80 @@ svg {
   background-color: #fff;
   z-index: 11;
   box-sizing: border-box;
-
-  @media screen and (max-width: 768px) {
-    width: 90%;
-  }
 }
 
-/* 閉じるボタン */
-.button-close {
+.modal__inner {
+  width: 100%;
+  height: auto;
+  padding-left: 12%;
+  padding-right: 10%;
+  padding-top: 16px;
+  padding-bottom: 25.5px;
+}
+
+.modal__meta {
+  display: flex;
+  gap: 16px;
+  color: #4282B8;
+  font-size: 14px;
+}
+
+.modal__category {
+  border: #4282B8 1px solid;
+  padding-inline: 16px;
+  line-height: 1.5;
+}
+
+.modal__date {
+  line-height: 1.8;
+}
+
+.modal__body {
+  /* modal body content */
+}
+
+.modal__title {
+  font-size: 24px;
+  text-align: left;
+  line-height: 1.8;
+  margin-top: 16px;
+}
+
+.modal__photo {
+  margin-top: 16px;
+  max-width: 656px;
+  max-height: 366px;
+  width: 100%;
+  height: 100%;
+}
+
+.modal__photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.modal__text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 78px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.modal__text--first {
+  margin-top: 34px;
+}
+
+.modal__text--second {
+  margin-top: 45px;
+}
+
+.modal__footer {
+  text-align: center;
+}
+
+.modal__close-btn {
   display: block;
   position: relative;
   width: 240px;
@@ -194,48 +157,64 @@ svg {
   border: 0.5px solid #000;
   margin: 27px auto 0;
   transition: all 0.3s ease 0s;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 24px;
-    right: 20px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #000;
-  }
-
-  &:hover {
-    background: #000;
-    color: #fff;
-  }
-
-  &:hover::before {
-    background-color: #fff;
-  }
 }
 
-/* オーバーレイ */
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
+.modal__close-btn::before {
+  position: absolute;
+  content: "";
+  top: 24px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
   background-color: #000;
-  opacity: 0.3;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
 }
 
-/* 表示領域外へはスクロールさせない */
+.modal__close-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.modal__close-btn:hover::before {
+  background-color: #fff;
+}
+
 .no-scroll {
   overflow: hidden;
   height: 100%;
 }
 
-/* モーダル開時に背景のスクロールを防ぐ */
 html:has(dialog[open]) {
   overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+  .modal__close-bar {
+    top: 15px;
+    left: auto;
+    right: 5%;
+  }
+
+  .modal__close-bar .icon {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal {
+    width: 90%;
+  }
+
+  .modal__inner {
+    padding-inline: 5%;
+  }
+
+  .modal__title {
+    font-size: 20px;
+  }
+
+  .modal__text {
+    margin-top: 45px;
+    font-size: 14px;
+  }
 }

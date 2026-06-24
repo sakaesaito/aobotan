@@ -1,4 +1,4 @@
-.hidden {
+.is-hidden {
   display: none;
 }
 
@@ -13,27 +13,28 @@
   display: grid;
   place-content: center;
   opacity: 0;
-  /* 初期状態は透明にする */
   transition: opacity 0.5s ease;
-  /* アニメーションを適用 */
   pointer-events: none;
-  /* 背後のコンテンツにマウスイベントが影響しないようにする */
 }
 
-.loading.active {
+.loading__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading--active {
   display: grid;
   opacity: 1;
   transition: opacity 0.5s ease;
-  /* アニメーションを適用 */
 }
 
-/* JS が無効なときのスタイル */
 @media (scripting: none) {
   .loading {
     display: none;
   }
 
-  .hidden {
+  .is-hidden {
     display: block;
   }
 }

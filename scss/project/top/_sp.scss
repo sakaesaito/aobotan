@@ -1,28 +1,17 @@
-/*header*/
-.sp_header_menu {
+.sp-header {
   display: none;
 }
 
-.sp_menu {
+.sp-header__btn {
   display: none;
 }
-
-.sec-title {
-  font-size: 72px;
-  margin-top: 16px;
-}
-
 
 @media screen and (max-width: 1024px) {
-  .sp_header_menu {
+  .sp-header {
     display: block;
   }
 
-  .sp_header_main {
-    display: flex;
-  }
-
-  .sp_menu {
+  .sp-header__btn {
     background-color: #4282b8;
     color: #fff;
     width: 56px;
@@ -40,12 +29,11 @@
     justify-content: center;
   }
 
-  .sp_menu:hover {
+  .sp-header__btn:hover {
     opacity: 0.7;
   }
 
-  /* ハンバーガーの３本線 */
-  .sp_menu span {
+  .sp-header__btn-icon span {
     display: block;
     transition: all .3s;
     top: 12px;
@@ -56,54 +44,42 @@
     margin: 0 auto;
   }
 
-  .sp_menu_icon span:nth-of-type(2) {
+  .sp-header__btn-icon span:nth-of-type(2) {
     margin-top: 12px;
   }
 
-  .sp_menu_icon span:nth-of-type(3) {
+  .sp-header__btn-icon span:nth-of-type(3) {
     margin-top: 12px;
   }
 
-  /* menuクラスがactiveの時のコード*/
-  .sp_menu.active span:nth-child(1) {
+  .sp-header__btn.is-active span:nth-child(1) {
     transform: rotate(45deg) translate(10px, 10px);
   }
 
-  .sp_menu.active span:nth-child(2) {
+  .sp-header__btn.is-active span:nth-child(2) {
     opacity: 0;
   }
 
-  .sp_menu.active span:nth-child(3) {
+  .sp-header__btn.is-active span:nth-child(3) {
     transform: rotate(-45deg) translate(8px, -8px);
   }
 
-  .drawer_nav.active {
+  .drawer.is-active {
     display: block;
     opacity: 1;
   }
 
-
-
-  /*section共通のレスポンシブ*/
-
-  /*about,service sectionの見出し*/
-  .sec-main {
+  .sec__heading {
     font-size: 20px;
     margin-top: 2px;
   }
 
-  /*news sectionの見出し*/
-  .sec-main-news {
+  .sec__heading--news {
     margin-top: 175px;
   }
 
-  /*contact sectionの見出し*/
-  .sec-main .sec-main-contact {
+  .sec__heading--contact {
     font-size: 20px;
     margin-top: 0;
-  }
-
-  .sp-news-item-title {
-    line-height: 1.2;
   }
 }

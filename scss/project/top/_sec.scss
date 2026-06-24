@@ -1,0 +1,69 @@
+section {
+  width: 100%;
+  height: auto;
+}
+
+.sec__heading {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 69px;
+}
+
+.sec__heading--news {
+  margin-top: 204px;
+  font-size: 24px;
+}
+
+.sec__heading--contact {
+  font-size: 25px;
+  letter-spacing: -0.9px;
+}
+
+.sec__label {
+  color: transparent;
+  -webkit-text-stroke: 1px #4282B8;
+  text-stroke: 1px #4282B8;
+  font-family: kanit;
+  font-weight: 700;
+  font-size: 128px;
+  margin-top: 21px;
+}
+
+.sec__label--about {
+  color: transparent;
+  -webkit-text-stroke: 1px #4282B8;
+  text-stroke: 1px #4282B8;
+  font-family: kanit;
+  font-weight: 700;
+  font-size: 128px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .sec__label {
+    font-size: 72px;
+    margin-top: 15px;
+  }
+
+  .sec__heading--contact {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sec__heading--news {
+    font-size: 20px;
+  }
+
+  .sec__label--about {
+    margin-top: 16px;
+    font-size: 72px;
+  }
+
+  .sec__heading--contact {
+    margin-top: 9px;
+    letter-spacing: 0.3px;
+  }
+}

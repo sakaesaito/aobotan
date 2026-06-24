@@ -3,28 +3,19 @@
 @use './component/header';
 @use './component/drawer';
 @use './component/loading';
+@use './component/btn';
 @use './project/top/fv';
-@use './component/swiper';
-@use './project/top/section';
-@use './project/top/top-about';
-@use './project/top/top-service';
-@use './project/top/top-news';
-@use './project/top/top-contact';
+@use './component/slider';
+@use './project/top/sec';
+@use './project/top/about';
+@use './project/top/service';
+@use './project/top/news';
+@use './project/top/contact';
 @use './component/footer';
 @use './project/top/sp';
 @use './project/top/modal';
 
-
-// about-pageの読み込み
 @use './project/about/sub-about';
-
-// service-pageの読み込み
 @use './project/service/sub-service';
-
-// contact-pageの読み込み
 @use './project/contact/sub-contact';
-
-// thanks-pageの読み込み
 @use './project/thanks/sub-thanks';
-
-

@@ -1,0 +1,117 @@
+.news-section__inner {
+  margin-left: 0;
+  padding-right: 40px;
+}
+
+.news-section__list {
+  position: relative;
+  font-weight: 700;
+  font-size: 16px;
+  color: #000;
+  line-height: 1.8;
+  margin-top: 48px;
+}
+
+.news-section__item {
+  display: block;
+  border: 1px solid #B1C6DC;
+  position: relative;
+  transition: .3s;
+  padding-top: 31px;
+  line-height: 1.5;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  border-top: #B1C6DC solid 1px;
+  margin: 0 auto;
+}
+
+.news-section__item:hover {
+  opacity: .6;
+}
+
+.news-section__item::after {
+  content: "";
+  display: block;
+  top: 45%;
+  left: 96%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  background-image: url(../img/arrow-icon-right.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.news-section__item:nth-last-child(1) {
+  border-bottom: 1px solid #B1C6DC;
+}
+
+.news-section__item-meta {
+  display: flex;
+  color: #4282B8;
+}
+
+.news-section__item-category {
+  color: #4282B8;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #B1C6DC;
+  width: 116px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.news-section__item-date {
+  color: #4282B8;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 16px;
+}
+
+.news-section__item-title {
+  margin-top: 19px;
+  margin-bottom: 24px;
+  line-height: 1.9;
+}
+
+@media screen and (max-width: 1024px) {
+  .news-section__inner {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .news-section__list {
+    font-size: 14px;
+  }
+
+  .news-section__item {
+    padding-top: 16px;
+  }
+
+  .news-section__item-title {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.8;
+    width: 90%;
+    margin-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news-section__item::after {
+    top: 42.5%;
+    left: 95%;
+  }
+
+  .news-section__item-title {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.8;
+    width: 90%;
+    margin-bottom: 15px;
+  }
+}

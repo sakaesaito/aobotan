@@ -1,6 +1,6 @@
-'use script';
+'use strict';
 
-//ローディングの設定（初回のみ）
+// ローディングの設定（初回のみ）
 
 // セッションストレージからフラグを取得
 const isFirstLoad = sessionStorage.getItem('isFirstLoad');
@@ -11,49 +11,48 @@ window.addEventListener('load', function () {
   if (isFirstLoad !== 'true') {
     // ローディング画面を表示
     const loadingElement = document.querySelector('.loading');
-    loadingElement.classList.add('active');
+    loadingElement.classList.add('loading--active');
 
     // 2秒後にローディング画面を非表示にする
     setTimeout(function () {
       // ローディング画面を非表示にする
-      loadingElement.classList.remove('active');
+      loadingElement.classList.remove('loading--active');
       // コンテンツ要素を表示
-      const contentsElement = document.querySelector('.contents.hidden');
-      contentsElement.classList.remove('hidden'); // hiddenクラスを取り除くことでコンテンツを表示
+      const contentsElement = document.querySelector('.l-contents.is-hidden');
+      contentsElement.classList.remove('is-hidden');
       // セッションストレージにフラグを保存
       sessionStorage.setItem('isFirstLoad', 'true');
     }, 2000);
     setTimeout(function () {
-      loadingElement.style.display = 'none'; // 非表示にする
+      loadingElement.style.display = 'none';
     }, 2500);
   } else {
-    // 2回目以降のアクセス時の処理を記述
-    // コンテンツ要素を表示
-    const contentsElement = document.querySelector('.contents.hidden');
+    // 2回目以降のアクセス時の処理
+    const contentsElement = document.querySelector('.l-contents.is-hidden');
     if (contentsElement)
-      contentsElement.classList.remove('hidden'); // hiddenクラスを取り除くことでコンテンツを表示
+      contentsElement.classList.remove('is-hidden');
   }
 });
 
 
 // ハンバーガーメニューとドロワーメニューの設定
 
-$(function () { // ページの読み込みが完了したときに実行
-  $(".sp_menu").click(function () { // ハンバーガーメニューがクリックされたとき
-    $(this).toggleClass("active"); // active クラスを付け外し
-    $(".drawer_nav").toggleClass("active"); // ドロワーナビにも active クラスを付け外し
+$(function () {
+  $(".sp-header__btn").click(function () {
+    $(this).toggleClass("is-active");
+    $(".drawer").toggleClass("is-active");
 
     // ドロワーが表示されている場合、スクロールを無効にする
-    if ($(".drawer_nav").hasClass("active")) {
-      $("body").css("overflow", "hidden"); // body のスクロールを無効化
+    if ($(".drawer").hasClass("is-active")) {
+      $("body").css("overflow", "hidden");
     } else {
-      $("body").css("overflow", "auto"); // スクロールを元に戻す
+      $("body").css("overflow", "auto");
     }
 
-    $(".drawer_item a").click(function () { // メニュー内のリンクがクリックされたとき
-      $(".sp_menu").removeClass("active"); // メニューボタンの active クラスを削除
-      $(".drawer_nav").removeClass("active"); // ドロワーメニューの active クラスを削除
-      $("body").css("overflow", "auto"); // スクロールを元に戻す
+    $(".drawer__item a").click(function () {
+      $(".sp-header__btn").removeClass("is-active");
+      $(".drawer").removeClass("is-active");
+      $("body").css("overflow", "auto");
     });
   });
 });
@@ -63,24 +62,16 @@ $(function () { // ページの読み込みが完了したときに実行
 // レスポンシブの375px未満のviewport画面幅を固定
 
 $(function () {
-  // viewport の内容を保留関数を定義
   const viewport = document.querySelector('meta[name="viewport"]');
-  //画面幅が 375px より広い場合は大丈夫設定、それ以外は幅を 375px に固定
   function switchViewport() {
-    // 新しいコンテンツを設定 } }
     const value =
-      //画面幅が 375px より広い場合は大丈夫設定、それ以外は幅を 375px に固定
       window.outerWidth > 375
-        // 375px未満の場合の設定// 現在のビューポートのコンテンツ属性が変更する値と異なる場合のみ設定を更新する
         ? 'width=device-width,initial-scale=1'
         : 'width=375';
-    // 新しいコンテンツを設定 } 
-    // ウィンドウのリサイズイベントに関数を登録（画面サイズ変更実行されるようにする
     if (viewport.getAttribute('content') !== value) {
       viewport.setAttribute('content', value);
     }
   }
-  // ページ読み込み時に最初に一度 viewport の切り替えを実行 
   addEventListener('resize', switchViewport, false);
   switchViewport();
 })
@@ -89,28 +80,25 @@ $(function () {
 
 // ホバーでドロップダウン
 
-// アコーディオンのタイトルをホバーした時の処理  
-$('.header-nav-main').hover(function () {
-  $(this).children(".header-nav-drop").stop().slideToggle(500); // サブメニューを500msかけて表示  
-  $(this).children(".header-nav-main-box").toggleClass('open'); // 'open'クラスを追加    
+$('.header__nav-main').hover(function () {
+  $(this).children(".header__nav-drop").stop().slideToggle(500);
+  $(this).children(".header__nav-main-box").toggleClass('is-open');
 });
 
 
-/* フェードインアニメ ------------------------------------------ */
-// 動きのきっかけとなるアニメーションの名前を定義 
-
+/* フェードインアニメ */
 
 $(document).ready(function () {
   $(window).on("scroll", function () {
-    var aboutMessage = $(".top-about-message");
+    var aboutMessage = $(".about-section__tagline");
 
-    if (aboutMessage.length > 0) { // 要素が存在するか確認
-      var messageOffset = aboutMessage.offset().top; // 要素の位置
-      var scrollPos = $(window).scrollTop(); // 現在のスクロール位置
-      var windowHeight = $(window).height(); // 画面の高さ
+    if (aboutMessage.length > 0) {
+      var messageOffset = aboutMessage.offset().top;
+      var scrollPos = $(window).scrollTop();
+      var windowHeight = $(window).height();
 
       if (scrollPos > messageOffset - windowHeight + 100) {
-        aboutMessage.addClass("show");
+        aboutMessage.addClass("is-show");
       }
     }
   });
@@ -121,23 +109,21 @@ $(document).ready(function () {
 // 写真無限ループのjQuery
 const swiper = new Swiper('.swiper', {
   speed: 5000,
-  loop: true, // プルーさせる
-  allowTouchMove: false,//スワイプ有効
-  centeredSlides: true,//中心を起点にする
+  loop: true,
+  allowTouchMove: false,
+  centeredSlides: true,
   autoplay: {
-    delay: 0, //途切れなくループ
+    delay: 0,
   },
   breakpoints: {
     0: {
-      slidesPerView: 1.8, // 一度に表示するスライドの数
-      spaceBetween: 15, // 要素間の余白
+      slidesPerView: 1.8,
+      spaceBetween: 15,
     },
-
     600: {
       slidesPerView: 2,
       spaceBetween: 35,
     },
-
     1200: {
       slidesPerView: 3,
       spaceBetween: 48,
@@ -145,7 +131,6 @@ const swiper = new Swiper('.swiper', {
     1500: {
       slidesPerView: 4,
       spaceBetween: 48,
-
     }
   }
 });
@@ -155,47 +140,42 @@ const swiper = new Swiper('.swiper', {
 // モーダルの設定
 $(function () {
   $('.js-open').click(function () {
-    var id = $(this).data('id'); // 何番目のキャプション（モーダルウィンドウ）か認識
-    $('.overlay,.modal-close-bar, .modal-window[data-id="modal' + id + '"]').fadeIn();
-    $('body').addClass('no-scroll'); // ←スクロール禁止
+    var id = $(this).data('id');
+    $('.modal__overlay, .modal__close-bar, .modal[data-id="modal' + id + '"]').fadeIn();
+    $('body').addClass('no-scroll');
   });
 
-  // オーバーレイクリックでもモーダルを閉じるように
-  $('.js-close , .overlay , .modal-close-bar').click(function () {
-    $('.overlay, .modal-close-bar, .modal-window').fadeOut();
-    $('body').removeClass('no-scroll'); // ← スクロール許可
+  $('.js-close, .modal__overlay, .modal__close-bar').click(function () {
+    $('.modal__overlay, .modal__close-bar, .modal').fadeOut();
+    $('body').removeClass('no-scroll');
   });
 });
 
 // formの実装
 $(document).ready(function () {
-  const $submitBtn = $('#js-submit')
-  $('#form input,#form textarea').on('change', function () {
+  const $submitBtn = $('#js-submit');
+  $('#form input, #form textarea').on('change', function () {
     if (
       $('#form input[type="text"]').val() !== "" &&
       $('#form input[type="email"]').val() !== "" &&
       $('#form input[name="check-name"]:checked').length > 0 &&
-      $('#form .check-box').prop('checked') === true
+      $('#form input[type="checkbox"]').prop('checked') === true
     ) {
-      $submitBtn.prop('disabled', false); // 全ての条件が揃っていれば送信ボタンを有効化
+      $submitBtn.prop('disabled', false);
     } else {
-      $submitBtn.prop('disabled', true);  // 条件を満たさない場合は無効化
+      $submitBtn.prop('disabled', true);
     }
   });
 });
 
 // スムーススクロール
-// ページの読み込みが完了したら実行
 $(function () {
-  // id属性（#で始まるリンク）がクリックされた時に処理を実行
   $('a[href^="#"]').click(function () {
     const speed = 600;
     let href = $(this).attr("href");
     let target = $(href == "#" || href == "" ? "html" : href);
     let position = target.offset().top;
-    // ページを対象位置までアニメーションしながらスクロール
     $("html,body").animate({ scrollTop: position }, speed, "swing");
-    // リンク本来の動作をキャンセル（ページジャンプを防ぐ）
     return false;
   });
 });
